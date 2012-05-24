@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <div id="container">
+      <div id="content">
+        {% if page.title %}
+          <h1><a href="{{page.url}}">{{ page.title }}</a></h1>
+        {% endif %}
+        {{ content }}
+        {% include footer.html %}
+      </div>
+      {% include bio.html %}
+    </div>
+  </body>
+</html>

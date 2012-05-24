@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>Basic Forking in C</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/basic-forking-c">Basic Forking in C</a>
+          <small class="date">08 Jul 2010</small>
+        </h1>
+        <p>Here&#8217;s a quick intro to some basic multithreading in C using forks. This is by no means the best way to achieve forking (using a 3rd party library would probably be a lot more practical), but I like knowing the more basic, low-level methods for doing things.</p>
+
+<p>Note that the functions we&#8217;ll be using are standard for UNIX systems. If you&#8217;re on windows you&#8217;ll have to use something like <a href='http://www.cygwin.com/'>CygWin</a> to get this working.</p>
+
+<h2 id='forking'>Forking</h2>
+
+<p>Forking in C is done with the <code>fork()</code> function, declared in <code>unistd.h</code>. <code>fork()</code> takes no arguments and returns a <code>pid_t</code>. When <code>fork()</code> is called, a copy is made of the current process of the program. The only difference between the original parent process and the forked child process is the return value from the <code>fork()</code>. For the child process, <code>fork()</code> returns <code>0</code>, which simply tells the child process that it is the child. For the parent process, <code>fork()</code> returns the pid of the newly created child process. If there is an error, <code>fork()</code> will return <code>-1</code>.</p>
+
+<p>Here&#8217;s a quick example:</p>
+<div class='highlight'><pre><code class='cpp'><span class='cp'>    #include &lt;stdio.h&gt;</span>
+<span class='cp'>    #include &lt;unistd.h&gt;</span>
+
+    <span class='kt'>int</span> <span class='n'>main</span><span class='p'>()</span>
+    <span class='p'>{</span>
+      <span class='n'>pid_t</span> <span class='n'>pid</span> <span class='o'>=</span> <span class='n'>fork</span><span class='p'>();</span>
+      <span class='k'>if</span><span class='p'>(</span><span class='n'>pid</span> <span class='o'>==</span> <span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span>
+        <span class='n'>fprintf</span><span class='p'>(</span><span class='n'>stderr</span><span class='p'>,</span><span class='s'>&quot;There was an error</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>);</span>
+      <span class='k'>else</span> <span class='k'>if</span><span class='p'>(</span><span class='n'>pid</span> <span class='o'>==</span> <span class='mi'>0</span><span class='p'>)</span>
+        <span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;I am the child. I do not know my pid.</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>);</span>
+      <span class='k'>else</span>
+        <span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;I am the parent. The child&#39;s pid is %d.</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>,</span><span class='n'>pid</span><span class='p'>);</span>
+
+      <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+    <span class='p'>}</span>
+</code></pre>
+</div>
+<p>Running this program gives this output:</p>
+
+<pre><code>I am the parent. The child&#39;s pid is 2955.
+I am the child. I do not know my pid.</code></pre>
+
+<h2 id='piping'>Piping</h2>
+
+<p>We use piping to allow our two process to have some basic communication. Piping is done using the <code>pipe()</code> function, also declared in <code>unistd.h</code>. <code>pipe()</code> takes as its single parameter an array of two integers. If the pipe is established successfully, the first element in the array will contain a file descriptor for reading from the pipe, and the second element will contain a file descriptor for writing to the pipe. You can read up a bit on file descriptors here. In the example we&#8217;ll be writing and reading to the pipe using the file descriptors and the <code>read()</code> and <code>write()</code> functions declared in <code>stdio.h</code>.</p>
+
+<p>Here&#8217;s some code that demonstrates piping:</p>
+<div class='highlight'><pre><code class='cpp'><span class='cp'>    #include &lt;stdio.h&gt;</span>
+<span class='cp'>    #include &lt;string.h&gt;</span>
+<span class='cp'>    #include &lt;unistd.h&gt;</span>
+
+    <span class='kt'>int</span> <span class='n'>main</span><span class='p'>()</span>
+    <span class='p'>{</span>
+      <span class='kt'>int</span> <span class='n'>pip</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>];</span>
+
+      <span class='k'>if</span><span class='p'>(</span><span class='n'>pipe</span><span class='p'>(</span><span class='n'>pip</span><span class='p'>)</span> <span class='o'>==</span> <span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span>
+      <span class='p'>{</span>
+        <span class='n'>fprintf</span><span class='p'>(</span><span class='n'>stderr</span><span class='p'>,</span><span class='s'>&quot;There was an error establishing the pipe.</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>);</span>
+        <span class='k'>return</span> <span class='mi'>1</span><span class='p'>;</span>
+      <span class='p'>}</span>
+
+      <span class='n'>pid_t</span> <span class='n'>pid</span> <span class='o'>=</span> <span class='n'>fork</span><span class='p'>();</span>
+      <span class='k'>if</span><span class='p'>(</span><span class='n'>pid</span> <span class='o'>==</span> <span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span>
+      <span class='p'>{</span>
+        <span class='n'>fprintf</span><span class='p'>(</span><span class='n'>stderr</span><span class='p'>,</span><span class='s'>&quot;There was an error forking.</span><span class='se'>\n</span><span class='s'>&quot;</span><span class='p'>);</span>
+        <span class='k'>return</span> <span class='mi'>1</span><span class='p'>;</span>
+      <span class='p'>}</span>
+
+      <span class='kt'>char</span> <span class='n'>buffer</span><span class='p'>[</span><span class='mi'>80</span><span class='p'>];</span>
+
+      <span class='k'>if</span><span class='p'>(</span><span class='n'>pid</span> <span class='o'>==</span> <span class='mi'>0</span><span class='p'>)</span>
+      <span class='p'>{</span>
+        <span class='kt'>char</span><span class='o'>*</span> <span class='n'>msg</span> <span class='o'>=</span> <span class='s'>&quot;This is a message from the child: Hello!&quot;</span><span class='p'>;</span>
+        <span class='n'>write</span><span class='p'>(</span><span class='n'>pip</span><span class='p'>[</span><span class='mi'>1</span><span class='p'>],</span><span class='n'>msg</span><span class='p'>,</span><span class='n'>strlen</span><span class='p'>(</span><span class='n'>msg</span><span class='p'>)</span><span class='o'>+</span><span class='mi'>1</span><span class='p'>);</span>
+      <span class='p'>}</span>
+      <span class='k'>else</span>
+      <span class='p'>{</span>
+        <span class='n'>read</span><span class='p'>(</span><span class='n'>pip</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>],</span><span class='n'>buffer</span><span class='p'>,</span><span class='k'>sizeof</span><span class='p'>(</span><span class='n'>buffer</span><span class='p'>));</span>
+        <span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;The parent received this string from the child: </span><span class='se'>\&quot;</span><span class='s'>%s</span><span class='se'>\&quot;\n</span><span class='s'>&quot;</span><span class='p'>,</span><span class='n'>buffer</span><span class='p'>);</span>
+      <span class='p'>}</span>
+      <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+    <span class='p'>}</span>
+</code></pre>
+</div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

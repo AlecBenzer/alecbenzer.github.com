@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>A nice little metaphor for the halting problem</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/metaphor-halting-problem">A nice little metaphor for the halting problem</a>
+          <small class="date">18 Apr 2012</small>
+        </h1>
+        <p>Imagine a company that employs a man named Bob. This company is interested in finding out how people will react to seeing particular images, and they use Bob to figure this out. Bob is given a picture of a person and a second picture, and Bob somehow is able to determine how the pictured person will react to seeing the other picture.</p>
+
+<p>Now, in this universe, &#8220;react&#8221; has a precise, somewhat odd meaning. When a person is shown a picture, they begin to reflect on it. Sometimes, after reflecting, a person will decide they like the picture, and sometimes they will decide they do not like it. However, there is no guarentee that they will ever come to either decision. Some people might just be so confused or enthralled or whatever by a picture that they see that they will never really be able to come up with an opinion on it.</p>
+
+<p>So now back to Bob. Bob gets these pairs of pictures and has to decide how the pictured person will react to the other picture. The company employs Bob for this position not only because he is always right, but because he can never become confused. It might take him a while, but when shown a pair of pictures, Bob can <em>always</em> determine how the pictured person will react to the other picture, even if the reaction is &#8220;they will remain confused by the picture indefinitely&#8221;.</p>
+
+<p>One day, the company&#8217;s interests change. Now, instead of giving Bob a picture of a person and some random other picture, they give him a single picture of a person, and they ask Bob how the pictured person will react to viewing their own picture. Bob has no trouble with this, since there&#8217;s nothing particularlly special about a picture that <em>happens</em> to also be a picture of person.</p>
+
+<p>So Bob goes on with his assignments. Bob likes his job very much. He likes it to the extent that he dislikes all other pictures except pictures related to his job (that is, pictures of people). Furthermore, Bob is saddened by people that do not like their own pictures. Therefore, whenever Bob sees a picture of someone who would not like seeing their own picture, Bob in turn also dislikes that picture. On the other hand, Bob is happy when he sees a picture of someone that would enjoy seeing their own picture.</p>
+
+<p>Now, this is when things get interesting. The company assigns Bob a manager, John. John is a blind man, and thus, can form no opinions of pictures just by looking at them. Instead, when presented with a picture, John passes the picture along to Bob. Bob looks at the picture, and Bob tells John whether the picture makes him happy or sad. John, however, does not like Bob. Bob&#8217;s happiness makes John sad, and Bob&#8217;s saddness makes John happy. Bob knows this. In fact, because of Bob&#8217;s seemingly magic ability to know how people react to pictures, Bob <em>must</em> know this about John, because otherwise, Bob would not be able to predict how John would react to a picture.</p>
+
+<p>Now one day, John gets curious, and decides to take a picture of himself. He does so, and attempts to react to it. But, being blind, John must give the picture to Bob so that John can know his own reaction to the picture. So he does.</p>
+
+<p>What does Bob say?</p>
+
+<p>On the one hand, Bob might say that John would react positively to his own picture. If this were the case, however, then Bob himself would be made happy by looking at John&#8217;s picture. And John, being the spiteful man that he is, would then become sad, which would render Bob&#8217;s prediction incorrect.</p>
+
+<p>On the other hand, Bob might say that John would react negatively to his own picture. But if this were the case, Bob would be made sad from looking at John&#8217;s picture, which would in turn make John happy. So Bob&#8217;s prediction is still incorrect.</p>
+
+<p>This logical paradox is a metaphor for the following theorem: There is no program (turing machine) that can take as input another program (turing machine) and input to feed into that program, and then determine whether the program will accept the input it is given. In other words, Bob cannot exist.</p>
+
+<p>The fundamental issue here has something to do with looping. If indefinite looping was not allowed (ie, if people always had to arrive at a conclusive opinion about a picture they saw), then we could construct a program like the one described in the paragraph above. All we would have to do is run through the program we&#8217;re given, simulating it, and then see what happens when it stops.</p>
+
+<p>The problem is that we don&#8217;t know whether or not any given program will loop forever when presented with a particular input. This problem is known as <a href='http://en.wikipedia.org/wiki/Halting_problem'>the halting problem</a>. If you digested everything above, it&#8217;s actually very easy to prove that the halting problem can&#8217;t be solved by any program.</p>
+
+<p>The entire story with Bob and John proves that there cannot be any program that, given another program and input to that program, determines whether or not that program &#8220;accepts&#8221; its input. This is because if such a program did exist, we would arrive at a logical contradiction. But a few paragraphs above, I explained how, if it is possible to make a program that solves the halting problem, then we can also make a program that solves the problem of deciding whether a particular program likes a particular input (ie, Bob&#8217;s problem). Since we know there can&#8217;t be any program that solves Bob&#8217;s problem, we also know that there can&#8217;t be any program that solves the halting problem.</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

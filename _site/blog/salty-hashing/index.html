@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>Salty Hashing</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/salty-hashing">Salty Hashing</a>
+          <small class="date">24 Mar 2012</small>
+        </h1>
+        <p>I threw up a stupid little gem the other day for salted hashing. It&#8217;s called <a href='https://rubygems.org/gems/salty'>salty</a> (I couldn&#8217;t believe that wasn&#8217;t taken). Anyway, it&#8217;s nothing too special, I just got tired of constantly re-implementing password hashing code.</p>
+
+<p>Just <code>gem install salty</code> to get it. Or you can just grab the one source file if you want, it&#8217;s less than 1KB</p>
+
+<pre><code>$ wget https://raw.github.com/alecbenzer/salty/master/lib/salty.rb</code></pre>
+
+<p>Usage is pretty simple:</p>
+<div class='highlight'><pre><code class='ruby'><span class='nb'>require</span> <span class='s1'>&#39;salty&#39;</span>
+
+<span class='n'>password</span> <span class='o'>=</span> <span class='no'>Salty</span><span class='o'>.</span><span class='n'>hash</span><span class='p'>(</span><span class='s1'>&#39;thisismypassword&#39;</span><span class='p'>)</span>
+
+<span class='no'>Salty</span><span class='o'>.</span><span class='n'>check</span><span class='p'>(</span><span class='s1'>&#39;thisismypassword&#39;</span><span class='p'>,</span><span class='n'>password</span><span class='p'>)</span> <span class='c1'># =&gt; true</span>
+<span class='no'>Salty</span><span class='o'>.</span><span class='n'>check</span><span class='p'>(</span><span class='s1'>&#39;notmypassword&#39;</span><span class='p'>,</span><span class='n'>password</span><span class='p'>)</span> <span class='c1'># =&gt; false</span>
+</code></pre>
+</div>
+<p><code>Salty.hash</code> does an iterative salted SHA512 hash. The salt is randomly generated and emebded into the output hash, which <code>Salty.check</code> then extracts, so you don&#8217;t need to worry about it yourself.</p>
+
+<p>Do realize though that <code>Salty.hash</code> isn&#8217;t like a normal hash function. Namely, repeated calls to it will generate different outputs (because each call generates a different salt), so things like <code>Salty.hash(str) == Salty.hash(str)</code> won&#8217;t work. You always need to use <code>Salty.check</code>.</p>
+
+<p>You can check out the source on <a href='https://github.com/alecbenzer/salty'>github</a>.</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>Always pre-increment</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/always-preincrement">Always pre-increment</a>
+          <small class="date">02 Aug 2011</small>
+        </h1>
+        <p>Always pre-increment. Well, unless you <em>need</em> to post-increment, of course (ie, you&#8217;re actually capturing the value of the expression and need it to be a post-increment). But when you don&#8217;t care about the expression&#8217;s value? Pre-increment. Why? Pre-increments can be a bit faster, but even more than that is just principle: pre-incrementing is a much simpler operation.</p>
+
+<p>Consider what a pre-increment does. It takes an object (an int), modifies it (increments it), and returns the new object (the incremented int). Simple enough. Now consider a post-increment. It takes an object, modifies it, but then needs to return the state that the object was in before it was modified. Now the operation has gotten more complicated because it involves dealing with tracking past states of an object. Now, for ints, you don&#8217;t really need to explicity keep track of states, you can always just subtract 1 from the int to get back to the original. In this sense, <code>n++</code> is effectively the same as <code>(++n,n-1)</code>. But the point here is that a post-increment is a more complicated operation, just in theory (and possibly in implementation, too).</p>
+
+<p>You should also remember that in C++ you can &#8220;increment&#8221; more than just ints. Classes can overload both the pre- and post- increment operators (like the standard iterators do), and if they&#8217;ve implemented the post-increment properly, odds are they don&#8217;t have a simple trick like <code>(++n,n-1)</code> to get back to the original value. Instead, they&#8217;ll have to store a copy of it which they then return later. With that you might see a performance impact. It can also be an inconvenience if you want your overloaded increment operators to return references. The pre-increment can return a reference, but the post-increment would be returning a local variable that it stored, rather than the current object, and so it won&#8217;t be able to return a reference (the local variable will go out of scope and die once the function returns and you&#8217;ll have a dead reference).</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

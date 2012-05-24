@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>mkcd</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/mkcd">mkcd</a>
+          <small class="date">19 Mar 2012</small>
+        </h1>
+        <p>I was getting tired of constantly doing stuff like:</p>
+<div class='highlight'><pre><code class='console'><span class='gp'>$</span> mkdir -p some/new/directory
+<span class='gp'>$</span> <span class='nb'>cd </span>some/new/directory
+</code></pre>
+</div>
+<p>I was sure there&#8217;d be some command or option to just do it for me, but some googling didn&#8217;t yield anything like that. Instead, I found <a href='http://onethingwell.org/post/586977440/mkcd-improved'>a link to this helpful little shell function</a>:</p>
+<div class='highlight'><pre><code class='bash'>mkcd <span class='o'>()</span> <span class='o'>{</span>
+  mkdir -p <span class='s2'>&quot;$*&quot;</span>
+  <span class='nb'>cd</span> <span class='s2'>&quot;$*&quot;</span>
+<span class='o'>}</span>
+</code></pre>
+</div>
+<p>add it to your .bashrc and bam:</p>
+<div class='highlight'><pre><code class='console'><span class='gp'>$</span> mkcd some/new/directory
+</code></pre>
+</div>
+<p>Plus, it&#8217;s only one letter away from xkcd :)</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

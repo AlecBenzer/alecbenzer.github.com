@@ -1,0 +1,128 @@
+---
+---
+$content-width: 470px;
+$sidebar-width: 180px;
+$header-font: 'PT Serif', serif;
+$body-font: 'PT Serif', serif;
+$side-font: 'Open Sans';
+$body-font-size: 17px;
+$p-margin-bottom: 30px;
+$content-left: 80px;
+
+body {
+  font-family: $body-font;
+  font-size: $body-font-size;
+}
+
+a {
+  &:hover {
+    color: maroon;
+  }
+}
+
+h1, h2,  h3 {
+  a {
+    color: black;
+    text-decoration: none;
+    &:visited {
+      color: black;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+  }
+}
+
+#container {
+}
+
+#content {
+  width: $content-width;
+  margin-left: $content-left;
+  margin-top: 70px;
+
+  h1, h2, h3 {
+    font-family: $header-font;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+    small {
+      font-weight: normal;
+      color: #888;
+      font-size: $body-font-size*0.8;
+      display: block;
+    }
+  }
+
+  h2 {
+    font-size: 23px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: $body-font-size;
+    margin-bottom: $p-margin-bottom;
+    line-height: 150%;
+
+    code {
+      font-size: $body-font-size*0.8;
+      vertical-align: middle;
+      color: #484;
+    }
+  }
+
+  #footnotes {
+    p {
+      font-size: $body-font-size*0.8;
+    }
+  }
+
+  pre {
+    margin-bottom: $p-margin-bottom;
+    width: $content-width*1.3;
+    padding-left: 20px;
+    font-size: $body-font-size*0.67;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 150%;
+  }
+}
+
+#footer {
+  p {
+    margin-bottom: 0px;
+  }
+  margin-bottom: 30px;
+}
+
+.post-div {
+  margin-bottom: 10px;
+  font-size: $body-font-size*1.2;
+}
+
+#back_to_index {
+  position: absolute;
+  top: 20px;
+  left: $content-left;
+}
+
+#bio {
+  width: 150px;
+  position: absolute;
+  right: 40px;
+  top: 100px;
+
+  p {
+    margin-bottom: 25px;
+    font-style: italic;
+    font-size: $body-font-size*0.7;
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>Estimating Pi with Clojure</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/estimating-pi-clojure">Estimating Pi with Clojure</a>
+          <small class="date">01 Apr 2010</small>
+        </h1>
+        <p>The following is a quick clojure program to compute the value of PI using a monte carlo method. Essentially, the program pretends it has a &#8220;dart board&#8221; inscribed in a square. It then randomly &#8220;fires&#8221; darts at the square, and records how many actually hit the dart board. With good random numbers, the ratio of dart board hits to total shots should be the ratio of the areas of the circle and the square, which is equal to <code>(pi * r^2)/((2r)^2) = pi/4</code>. So if we find the ratio and multiply it by four, we will have an estimate for pi. The average of 100 runs each with 1,000,000 shots gets within 0.005% of pi pretty consistently (runs in around 10 seconds on my 3GHz machine).</p>
+<div class='highlight'><pre><code class='clj'><span class='p'>(</span><span class='k'>defn </span><span class='nv'>circle-test</span> <span class='p'>[</span><span class='nv'>x</span> <span class='nv'>y</span><span class='p'>]</span>
+ <span class='p'>(</span><span class='nb'>not </span><span class='p'>(</span> <span class='nv'>&gt;</span> <span class='p'>(</span> <span class='nv'>+</span> <span class='p'>(</span><span class='nb'>* </span><span class='p'>(</span><span class='nb'>- </span><span class='nv'>x</span> <span class='mf'>0.5</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>- </span><span class='nv'>x</span> <span class='mf'>0.5</span><span class='p'>))</span> <span class='p'>(</span><span class='nb'>* </span><span class='p'>(</span><span class='nb'>- </span><span class='nv'>y</span> <span class='mf'>0.5</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>- </span><span class='nv'>y</span> <span class='mf'>0.5</span><span class='p'>)))</span> <span class='mf'>0.25</span><span class='p'>)))</span>
+
+<span class='p'>(</span><span class='k'>defn </span><span class='nv'>error</span> <span class='p'>[</span><span class='nv'>est</span><span class='p'>]</span>
+ <span class='p'>(</span><span class='nf'>Math/abs</span> <span class='p'>(</span><span class='nb'>* </span><span class='p'>(</span><span class='nb'>/ </span><span class='p'>(</span><span class='nb'>- </span><span class='nv'>Math/PI</span> <span class='nv'>est</span><span class='p'>)</span> <span class='nv'>Math/PI</span><span class='p'>)</span> <span class='mi'>100</span><span class='p'>)))</span>
+
+<span class='p'>(</span><span class='k'>defn </span><span class='nv'>pi</span> <span class='p'>[</span><span class='nv'>n</span><span class='p'>]</span>
+ <span class='p'>(</span><span class='nb'>loop </span><span class='p'>[</span><span class='nv'>hits</span> <span class='mi'>0</span> <span class='nv'>total</span> <span class='mi'>0</span><span class='p'>]</span>
+  <span class='p'>(</span><span class='k'>let </span><span class='p'>[</span><span class='nv'>x</span> <span class='p'>(</span><span class='nf'>rand</span><span class='p'>)</span> <span class='nv'>y</span> <span class='p'>(</span><span class='nf'>rand</span><span class='p'>)]</span>
+   <span class='p'>(</span><span class='k'>if </span><span class='p'>(</span><span class='nb'>&lt; </span><span class='nv'>total</span> <span class='nv'>n</span><span class='p'>)</span>
+    <span class='p'>(</span><span class='nf'>recur</span> <span class='p'>(</span><span class='k'>if </span><span class='p'>(</span><span class='nf'>circle-test</span> <span class='nv'>x</span> <span class='nv'>y</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>inc </span><span class='nv'>hits</span><span class='p'>)</span> <span class='nv'>hits</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>inc </span><span class='nv'>total</span><span class='p'>))</span>
+    <span class='p'>(</span><span class='nb'>* </span><span class='p'>(</span><span class='nb'>/ </span><span class='nv'>hits</span> <span class='nv'>total</span><span class='p'>)</span> <span class='mf'>4.0</span><span class='p'>)))))</span>
+
+<span class='p'>(</span><span class='k'>defn </span><span class='nv'>estimate-pi</span> <span class='p'>[</span><span class='nv'>shots</span> <span class='nv'>runs</span><span class='p'>]</span>
+ <span class='p'>(</span><span class='nb'>loop </span><span class='p'>[</span><span class='nv'>r</span> <span class='mi'>0</span> <span class='nv'>vals</span> <span class='p'>()]</span>
+  <span class='p'>(</span><span class='k'>let </span><span class='p'>[</span><span class='nv'>est</span> <span class='p'>(</span><span class='nf'>pi</span> <span class='nv'>shots</span><span class='p'>)]</span>
+   <span class='p'>(</span><span class='k'>if </span><span class='p'>(</span><span class='nb'>= </span><span class='nv'>r</span> <span class='nv'>runs</span><span class='p'>)</span>
+    <span class='p'>(</span><span class='nb'>/ </span><span class='p'>(</span><span class='nb'>reduce </span><span class='nv'>+</span> <span class='nv'>vals</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>count </span><span class='nv'>vals</span><span class='p'>))</span>
+    <span class='p'>(</span><span class='nf'>recur</span> <span class='p'>(</span><span class='nb'>inc </span><span class='nv'>r</span><span class='p'>)</span> <span class='p'>(</span><span class='nb'>conj </span><span class='nv'>vals</span> <span class='nv'>est</span><span class='p'>))))))</span>
+
+<span class='p'>(</span><span class='k'>defn </span><span class='nv'>print-estimate</span> <span class='p'>[</span><span class='nv'>est</span><span class='p'>]</span>
+ <span class='p'>(</span><span class='nb'>println </span><span class='nv'>est</span><span class='p'>)</span>
+ <span class='p'>(</span><span class='nb'>println </span><span class='p'>(</span><span class='nb'>str </span><span class='p'>(</span><span class='nf'>error</span> <span class='nv'>est</span><span class='p'>)</span> <span class='s'>&quot;%&quot;</span><span class='p'>)))</span>
+</code></pre>
+</div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

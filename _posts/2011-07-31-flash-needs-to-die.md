@@ -1,0 +1,9 @@
+---
+layout: post
+title: Flash Needs to Die
+---
+In general, I'm not a huge apple fan, but I am a fan of them trying to kill off flash by not supporting it on their iOS stuff. Flash really needs to die and go away. It's annoying and a hindrance. People sometimes ask "if we get rid of flash then what's going to replace it?", and others answer "HTML5 will replace it". Well, yes, HTML5 and related technologies can replace flash, but a better answer would be that nothing will "replace" flash - browsers will simply outgrow it.
+
+People unquestioningly accept flash because it's become such an "integral" part of the web, but if you take a step back for a second and think about it, you should realize how incredibly ridiculous flash is. Flash is bringing in an external application to do something browsers should already know how to do. I mean think about it - what is a browser good for? Delivering web-based content. It can deliver html pages and images, but for some reason in order to deliver videos it requires the aid of an external application? Why? Imagine how ridiculous it would seem if you needed flash to display pictures, or needed it to even open up web pages. You would ask yourself why flash even exists, and why web browsers themselves don't just do whatever it is flash is doing for them, because that's what web browsers are supposed to be used for in the first place.
+
+And no one's saying that flash has to go away permanently. It just needs to be pushed back behind-the-scenes. If, for example, a particular browser feels that flash based video is a more efficient video rendering technology than anything else they can come up with, then that browser can use flash as for their videos. But the point is that's now become a browser-level decision. From a web developer's point of view, all that needs to be done is to tell the browser: "Hey - render this video", and then it's up to the browser to get it done, whether it be via flash or anything else.

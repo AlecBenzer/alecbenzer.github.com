@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>P vs NP: A quick introduction</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/p-vs-np">P vs NP: A quick introduction</a>
+          <small class="date">05 May 2012</small>
+        </h1>
+        <p>You may have heard a lot of buzz about this whole P vs. NP thing that people tend to get all worked up about. Some people even say <a href='http://people.cs.uchicago.edu/~fortnow/papers/pnp-cacm.pdf'>it&#8217;s the most important open problem in computer science</a>. So what the heck is it?</p>
+
+<p>P and NP are both sets of problems. Specifically, they are sets of <strong>decision problems</strong>, or problems for which the answer is always &#8220;yes&#8221; or &#8220;no&#8221;. Examples of decision problems are things like &#8220;is this number prime?&#8221; or &#8220;can you put these objects on this see-saw so that it is balanced?&#8221;. An example of something that&#8217;s not a decision problem is &#8220;how many primes are less than 1,000&#8221;, because the answer is a number, not &#8220;yes&#8221; or &#8220;no&#8221;.</p>
+
+<p>So P and NP are sets of decision problems. Alright, so what&#8217;s P? P, informally, is the set of decision problems that can be solved &#8220;quickly&#8221;. When cs people talk about something happening &#8220;quickly&#8221;, they generally mean it happens in <strong>polynomial time</strong> (that&#8217;s where the &#8220;P&#8221; comes from). What does that mean? Well, computer scientists like to rate the performance of a program based on how much longer the program takes to run when the input to the program gets bigger.</p>
+
+<h2 id='time_complexity'>Time Complexity</h2>
+
+<p>Say we&#8217;re given a list of numbers, and we&#8217;re asked to determine if any of the numbers is even. That&#8217;s a pretty easy problem to solve with a program: we just go through the list of numbers and check if any one of them is even (probably by moding the number by 2 and checking if it&#8217;s zero, or maybe just be checking that the least-significant bit is zero). If any of the numbers turn out to be zero, then we answer &#8220;yes&#8221;, and if not, we answer &#8220;no&#8221;.</p>
+
+<p>So how long does this program take to run <em>in the worst case</em>? Well, in the worst case, we&#8217;ll have to check every single number, see that none of them are even, and come back with the answer &#8220;no&#8221;. So if we had 100 numbers to check, we&#8217;d have to check all 100 of them. How long would this take? Well, I don&#8217;t know. It depends on a lot of stuff, like the computer you&#8217;re running the program on, and how exactly you&#8217;re checking if a number is even. An easier question to answer is &#8220;if you doubled the input size from 100 to 200, how would the program&#8217;s running time change?&#8221;. The answer to that is easy, it will also double. And if we quadruple the input size, the running time will also quadruple. We describe algorithms like this one by saying they run in <strong>linear time</strong>. We say this because the function correlating the input size to the running time is some linear function, like f(n) = 14n, where n is the size of your input. Or maybe it&#8217;s f(n) = 100n. I don&#8217;t know. Like I said, that would depend on exactly how you&#8217;re running the program. Instead of worrying about the constant, we just say that the program runs in O(n) time. (for our purposes, O(n) is just some special notation used to represent <em>some</em> arbitrary linear function &#8211; <a href='http://en.wikipedia.org/wiki/Big_O_notation'>see wikipedia</a> for a more complete explanation)</p>
+
+<p>We might be able to imagine other algorithms that run more slowly. What about a program that looks at a list of numbers and checks if any two of them are co-prime (ie, if any two of them have no common factors). Such a program might decide to go through all possible pairs of numbers. If you only had, say, 4 numbers, then there are only 16 pairs to check (well, a bit less than that, really, since we want to ignore duplicates). If you double the number of numbers you have to 8, though, the number of pairs goes up to 64. We&#8217;d describe this algorithm as running in <strong>quadratic time</strong>, or that it runs in O(n^2) time. <sup><a href='#ft1' id='ref1'>1</a></sup></p>
+
+<p>Okay, so we&#8217;ve got problems, and these problems take a certain amount of time to run. We&#8217;re interested in the problems that take polynomial-time to run. This means that their running times look something like O(n), or O(n^2), or O(n^6), or really O(n^p), where p is any number. All expressions of this form are polynomials, and all programs that run in O(n^p), for some p, are said to run in polynomial time.</p>
+
+<h2 id='verifying_problems'>Verifying problems</h2>
+
+<p>Ok, so that&#8217;s what polynomial time is. And like we said, P is the set of decision problems that can be solved in polynomial time (ie, solved &#8220;quickly&#8221;). So what&#8217;s NP? NP has a technical definition that you can look up if you&#8217;d like (it has to do with <a href='http://en.wikipedia.org/wiki/Non-deterministic_Turing_machine'>non-deterministic turing machines</a> <sup><a href='#ft2' id='ref2'>2</a></sup>), but for our purposes, we&#8217;ll describe NP as the set of decision problems that you can <em>verify</em> in polynomial time.</p>
+
+<p>What does it mean to verify a problem? Well, consider this (classic) problem: I have some set of numbers. I want to see if I can pick out some of those numbers such that if I add all the numbers together, I&#8217;ll get 0 (and I&#8217;m not allowed to just pick nothing &#8211; I have to use at least one number). This problem might be kind of hard to solve. It seems like you&#8217;d sort of just have to try out different combinations of numbers and see if they add up to zero. But <em>verifying</em> a solution to this problem is easy. In other words, if I gave you a set of numbers and asked you to see if it was a solution, you&#8217;d have absolutely no trouble doing that. All you need to do is add up the numbers I gave you and see if they added up to 0 or not. That&#8217;s really easy to do in polynomial time. So, because I can verify a solution to this problem in polynomial time, this problem belongs to NP.</p>
+
+<p>If I didn&#8217;t give you a solution, though, this probably seems like it might be pretty hard. In fact, it seems like one of the only things you could do to solve this problem is to try all 2^n different combinations of numbers you could take from your set (where n is the size of the original set). Is there actually a better way of solving this problem? Is there a way of solving it in polynomial time (because 2^n is not a polynomial)? Interestingly enough, nobody really knows.</p>
+
+<h2 id='p__np_'>P = NP ?</h2>
+
+<p>So this is the real question we&#8217;re concerned with. Is the set of problems in P actually the same as the set of problems in NP? We&#8217;re basically asking this: &#8220;if a problem&#8217;s solution can be verified in polynomial time (ie, quickly), does that mean we can also generate a solution to the problem in polynomial time (quickly)?&#8221; If P turns out to be equal to NP, it would imply that any problem whose solutions can be verified quickly (and there a lot of problems like this) can also be solved quickly, which is a pretty big deal. There are some &#8220;tools&#8221; people have developed to help (potentially) make this problem easier to solve.</p>
+
+<h2 id='npcomplete'>NP-complete</h2>
+
+<p>Taking a step back from the whole P = NP thing, let&#8217;s ask a different question: out of all the NP problems, which ones are the hardest? Well, we don&#8217;t really have a definition for &#8220;hardness&#8221;, but we&#8217;ll use some intuition. Let&#8217;s pretend were talking about mountain climbing. I&#8217;m not a mountain climber, but I&#8217;d imagine Mount Everest is pretty hard to climb. In fact, I would probably say something like &#8220;if you can climb Mount Everest, then you can climb any other mountain too&#8221;. This statement makes sense. If you have the skills necessary to climb Mount Everest, you also have the skills to climb any other mountain. On the other hand, if you come and tell me that you can climb this hill in your back yard, that doesn&#8217;t say much about your ability to climb a real mountain, precisely because climbing a hill in your back yard isn&#8217;t hard.</p>
+
+<p>So let&#8217;s extend this thinking to problems in NP. We might say that a problem is considered &#8220;hard&#8221; if being able to solve that problem will also let you solve <em>any</em> other NP problem you want in polynomial time. Such problems are called <strong>NP-hard</strong>. In other words, say that I had some random NP-hard problem, and I also had a magic box that could just automatically tell me the answers to that NP-hard problem (the box would have to &#8220;run&#8221; in polynomial time). Then, using this magic box, I can solve any other NP problem I want.</p>
+
+<p>Note that the definition of NP-hard doesn&#8217;t explicitly say that an NP-hard problem has to be NP itself. It&#8217;s perfectly possible to have a problem whose solutions are <em>not</em> verifiable in polynomial time, but is still NP-hard (ie, a magic box for that problem will let us solve any NP problem). If an NP-hard problem also happens to be in NP itself, then we call that problem <strong>NP-complete</strong>.</p>
+
+<p>Being NP-complete sounds like a bit of unique property. Just because I can solve this one particular NP problem, it doesn&#8217;t seem like I should magically be able to use that solution to solve all other NP problems. But it turns out that there are actually quite a lot of problems that are NP-complete. For example, the problem I mentioned above where you take a set of numbers and check if some subset of it adds up to zero? (this is commonly referred to as the <a href='http://en.wikipedia.org/wiki/Subset_sum_problem'>subset sum problem</a>) That problem is NP-complete (although proving that is a bit involved). This means that if you figured out a way to solve the subset sum problem in polynomial time, then you&#8217;ve also figured out how to solve <em>any NP problem</em> in polynomial time. And if you can solve any NP problem in polynomial time? Well, then, P = NP.</p>
+
+<p>So interestingly, no one has yet been able to figure out a way to prove that the subset sum problem or any other NP-complete problem can be solved in polynomial time. This makes a lot of people think that it&#8217;s actually the case that P != NP. Proving that seems like it shouldn&#8217;t be that hard, either. All you have to do is take any NP problem, and prove that no matter what, there&#8217;s no way to solve that particular problem in polynomial time. But no one&#8217;s been able to solve that either.</p>
+
+<p>And so, P = NP remains an open problem. If you feel up to, learn more about it (in particular, learn more about <a href='http://en.wikipedia.org/wiki/Turing_machine'>turing machines</a>, which are how computer scientists formally talk about problems and algorithms). Maybe you can prove it one way or another (and win millions of dollars!)</p>
+<div id='footnotes'>
+<p id='ft1'>[1] After thinking about it a bit I'm not 100% sure that this problem is O(n^2). The point of the example was to illustate a problem where you had to check all posible pairs of the inputs you're given, which is the case in this problem, but I had also intended to have the checking of each pair take constant time, which is not the case in this problem (ie, you can't "instantly" know whether or not two numbers are co-prime). However, given a reasonable constraint on the input (ie, all numbers are between 1 and 1,000), this problem should in fact be O(n^2).<a class='arrow' href='#ref1'>↩</a></p>
+<p id='ft2'>[2] Non-deterministic turing machines can sort of be regarded as "hyper-parallel" computers. Ie, they're computers that can spawn as many threads of computation as they want. NP is actually defined as the set of problems that can be solved in polynomial time by a non-deterministic turing machine. This definition ends up being equivalent to problems whose solutions are verifiable in polynomial time. The reason is that a non-deterministic turing machine can just spawn different threads that generate every possible solution and check them all at the same time. If each individual verification thread runs in polynomial time, and they're all being run at the same time, then the entire non-deterministic machine runs in polynomial time.<a class='arrow' href='#ref2'>↩</a></p>
+</div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>

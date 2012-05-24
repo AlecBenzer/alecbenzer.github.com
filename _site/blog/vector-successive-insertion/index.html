@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  
+  <title>Vector successive insertion much faster than list</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Crete+Round:400|Open+Sans:400,700|PT+Serif:400,700|Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <link href="/css/reset.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" media="screen" type="text/css" />
+  <link href="/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+</head>
+
+  <body>
+    <div id="container">
+      <div id="content">
+        <h1>
+          <a href="/blog/vector-successive-insertion">Vector successive insertion much faster than list</a>
+          <small class="date">02 Aug 2011</small>
+        </h1>
+        <p>I always thought that because of the reallocation vectors need to do as they grow in size, successively adding elements to one would be slower than doing the same to a list. But apparently that&#8217;s far from true. Successively adding elements to a vector takes much less time than doing the same to a list:</p>
+<div class='highlight'><pre><code class='cpp'><span class='cp'>//vec.cpp</span>
+<span class='cp'>#include &lt;vector&gt;</span>
+<span class='k'>using</span> <span class='k'>namespace</span> <span class='n'>std</span><span class='p'>;</span>
+
+<span class='kt'>int</span> <span class='n'>main</span><span class='p'>()</span>
+<span class='p'>{</span>
+  <span class='n'>vector</span><span class='o'>&lt;</span><span class='kt'>int</span><span class='o'>&gt;</span> <span class='n'>vec</span><span class='p'>;</span>
+  <span class='k'>for</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>i</span> <span class='o'>&lt;</span> <span class='mi'>100000000</span><span class='p'>;</span><span class='o'>++</span><span class='n'>i</span><span class='p'>)</span>
+    <span class='n'>vec</span><span class='p'>.</span><span class='n'>push_back</span><span class='p'>(</span><span class='n'>i</span><span class='p'>);</span>
+  <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div><div class='highlight'><pre><code class='cpp'><span class='cp'>//lst.cpp</span>
+<span class='cp'>#include &lt;list&gt;</span>
+<span class='k'>using</span> <span class='k'>namespace</span> <span class='n'>std</span><span class='p'>;</span>
+
+<span class='kt'>int</span> <span class='n'>main</span><span class='p'>()</span>
+<span class='p'>{</span>
+  <span class='n'>list</span><span class='o'>&lt;</span><span class='kt'>int</span><span class='o'>&gt;</span> <span class='n'>lst</span><span class='p'>;</span>
+  <span class='k'>for</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>i</span> <span class='o'>&lt;</span> <span class='mi'>100000000</span><span class='p'>;</span><span class='o'>++</span><span class='n'>i</span><span class='p'>)</span>
+    <span class='n'>lst</span><span class='p'>.</span><span class='n'>push_back</span><span class='p'>(</span><span class='n'>i</span><span class='p'>);</span>
+  <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
+<p>The list code runs in around 19 seconds. The vector code? Less than 3 seconds - over 6 times faster. I suppose that&#8217;s because batch allocation of ints runs much faster than allocating linked list nodes one by one by one.</p>
+
+<p>Note: of course, because we know ahead of time exactly how many elements we need, the vector code can be optimized even further to allocate the right number of elements to begin with:</p>
+<div class='highlight'><pre><code class='cpp'><span class='cp'>#include &lt;vector&gt;</span>
+<span class='k'>using</span> <span class='k'>namespace</span> <span class='n'>std</span><span class='p'>;</span>
+
+<span class='kt'>int</span> <span class='n'>main</span><span class='p'>()</span>
+<span class='p'>{</span>
+  <span class='n'>vector</span><span class='o'>&lt;</span><span class='kt'>int</span><span class='o'>&gt;</span> <span class='n'>vec</span><span class='p'>(</span><span class='mi'>100000000</span><span class='p'>);</span>
+  <span class='k'>for</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span><span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>vec</span><span class='p'>.</span><span class='n'>size</span><span class='p'>();</span><span class='o'>++</span><span class='n'>i</span><span class='p'>)</span>
+    <span class='n'>vec</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>i</span><span class='p'>;</span>
+  <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
+<span class='p'>}</span>
+</code></pre>
+</div>
+<p>&#8230;which runs in less than 1.5 seconds.</p>
+
+<p>Note: it was brought to my attention that for larger data structures (ie, things larger than ints), the vector&#8217;s advantage will begin to degrade as the reallocation and copying begin to take more time.</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone size="medium"></g:plusone>
+
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+ </script>
+ <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'alecbenzer';
+    var disqus_developer = 1;
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      <div id="footer">
+  <p id="name"><a href="/">Alec Benzer</a></p>
+  <p>Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter.</p>
+</div>
+
+      <div id="back_to_index"><a href="/blog">&larr; home</a></div>
+    </div>
+  </body>
+</html>
