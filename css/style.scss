@@ -1,6 +1,6 @@
 ---
 ---
-$content-width: 470px;
+$content-width: 700px;
 $sidebar-width: 180px;
 $header-font: 'PT Serif', serif;
 $body-font: 'PT Serif', serif;
@@ -39,7 +39,8 @@ h1, h2,  h3 {
 
 #content {
   width: $content-width;
-  margin-left: $content-left;
+  //margin-left: $content-left;
+  margin: auto;
   margin-top: 70px;
 
   h1, h2, h3 {
@@ -47,7 +48,7 @@ h1, h2,  h3 {
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 38px;
     margin-bottom: 20px;
 
     small {
@@ -85,14 +86,21 @@ h1, h2,  h3 {
 
   pre {
     margin-bottom: $p-margin-bottom;
+    margin-left: 20px;
     width: $content-width*1.3;
-    padding-left: 20px;
-    font-size: $body-font-size*0.67;
+    padding: 0px;
+    font-size: $body-font-size*0.85;
   }
 
   li {
     margin-bottom: 10px;
     line-height: 150%;
+  }
+
+  blockquote {
+    margin-left: 20px;
+    font-style: italic;
+    color: #777;
   }
 }
 
@@ -117,12 +125,14 @@ h1, h2,  h3 {
 #bio {
   width: 150px;
   position: absolute;
-  right: 40px;
+  right: 140px;
   top: 100px;
 
   p {
     margin-bottom: 25px;
-    font-style: italic;
-    font-size: $body-font-size*0.7;
   }
+}
+
+#disqus_thread {
+  margin-top: 50px;
 }

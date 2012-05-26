@@ -6,7 +6,7 @@
       <div id="content">
         <h1>
           <a href="{{page.url}}">{{ page.title }}</a>
-          <small class="date">{{ page.date | date_to_string }}</small>
+          <!--<small class="date">posted {{ page.date | date:"%A, %B %-d, %Y" }}</small>-->
         </h1>
         {{ content }}
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
@@ -24,7 +24,7 @@
  </script>
  {% include disqus.html %}
       {% include footer.html %}
-      <div id="back_to_index"><a href="/">&larr; home</a></div>
+      <!--<div id="back_to_index"><a href="/">&larr; home</a></div>-->
     </div>
   </body>
 </html>
