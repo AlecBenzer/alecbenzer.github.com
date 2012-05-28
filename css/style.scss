@@ -2,8 +2,8 @@
 ---
 $content-width: 650px;
 $sidebar-width: 180px;
-$header-font: 'PT Serif', serif;
-$body-font: 'PT Serif', serif;
+$header-font: 'Belgrano', sans-serif;
+$body-font: 'Open Sans', serif;
 $side-font: 'Open Sans';
 $body-font-size: 19px;
 $p-margin-bottom: 30px;
@@ -57,6 +57,7 @@ h1, h2,  h3 {
       color: #888;
       font-size: $body-font-size*0.8;
       display: block;
+      font-family: $body-font;
     }
   }
 
@@ -126,11 +127,16 @@ h1, h2,  h3 {
 #bio {
   width: 150px;
   position: absolute;
-  right: 140px;
+  right: 75px;
   top: 100px;
+
+  h2 {
+    font-size: 19px;
+  }
 
   p {
     margin-bottom: 25px;
+    font-size: 14px;
   }
 }
 

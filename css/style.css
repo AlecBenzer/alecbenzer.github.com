@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Serif", serif;
+  font-family: "Open Sans", serif;
   font-size: 19px; }
 
 a:hover {
@@ -21,7 +21,7 @@ h1, h2, h3 {
   margin: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "PT Serif", serif; }
+    font-family: "Belgrano", sans-serif; }
   #content h1 {
     font-size: 38px;
     margin-bottom: 20px; }
@@ -29,13 +29,14 @@ h1, h2, h3 {
       font-weight: normal;
       color: #888;
       font-size: 15.2px;
-      display: block; }
+      display: block;
+      font-family: "Open Sans", serif; }
   #content h2 {
     font-size: 33px;
     margin-top: 10px;
     margin-bottom: 5px; }
   #content p {
-    font-family: "PT Serif", serif;
+    font-family: "Open Sans", serif;
     font-size: 19px;
     margin-bottom: 30px;
     line-height: 150%; }
@@ -76,10 +77,13 @@ h1, h2, h3 {
 #bio {
   width: 150px;
   position: absolute;
-  right: 140px;
+  right: 75px;
   top: 100px; }
+  #bio h2 {
+    font-size: 19px; }
   #bio p {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    font-size: 14px; }
 
 #disqus_thread {
   margin-top: 50px; }
