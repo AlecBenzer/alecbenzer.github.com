@@ -1,6 +1,6 @@
 body {
   font-family: "Open Sans", serif;
-  font-size: 19px; }
+  font-size: 16px; }
 
 a:hover {
   color: maroon; }
@@ -17,41 +17,40 @@ h1, h2, h3 {
       color: black; }
 
 #content {
-  width: 650px;
-  margin: auto;
-  margin-top: 70px; }
+  margin-top: 70px;
+  margin-left: 230px;
+  margin-right: 230px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Belgrano", sans-serif; }
+    font-family: "Bitter", sans-serif; }
   #content h1 {
-    font-size: 38px;
+    font-size: 28px;
     margin-bottom: 20px; }
     #content h1 small {
       font-weight: normal;
       color: #888;
-      font-size: 15.2px;
+      font-size: 16px;
       display: block;
       font-family: "Open Sans", serif; }
   #content h2 {
-    font-size: 33px;
+    font-size: 23px;
     margin-top: 10px;
     margin-bottom: 5px; }
   #content p {
     font-family: "Open Sans", serif;
-    font-size: 19px;
+    font-size: 16px;
     margin-bottom: 30px;
     line-height: 150%; }
     #content p code {
-      font-size: 15.2px;
+      font-size: 12.8px;
       vertical-align: middle;
       color: #484; }
   #content #footnotes p {
-    font-size: 15.2px; }
+    font-size: 12.8px; }
   #content pre {
     margin-bottom: 30px;
     margin-left: 20px;
-    width: 845px;
     padding: 0px;
-    font-size: 16.15px; }
+    font-size: 13.6px; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -67,7 +66,7 @@ h1, h2, h3 {
 
 .post-div {
   margin-bottom: 10px;
-  font-size: 22.8px; }
+  font-size: 19.2px; }
 
 #back_to_index {
   position: absolute;
@@ -77,8 +76,8 @@ h1, h2, h3 {
 #bio {
   width: 150px;
   position: absolute;
-  right: 75px;
-  top: 100px; }
+  left: 25px;
+  top: 75px; }
   #bio h2 {
     font-size: 19px; }
   #bio p {
