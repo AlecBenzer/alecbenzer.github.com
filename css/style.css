@@ -1,6 +1,6 @@
 body {
-  font-family: "Open Sans", serif;
-  font-size: 16px; }
+  font-family: "PT Serif", serif;
+  font-size: 17px; }
 
 a:hover {
   color: maroon; }
@@ -21,36 +21,36 @@ h1, h2, h3 {
   margin-left: 230px;
   margin-right: 230px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Open Sans", sans-serif; }
+    font-family: "PT Serif", sans-serif; }
   #content h1 {
     font-size: 28px;
     margin-bottom: 20px; }
     #content h1 small {
       font-weight: normal;
       color: #888;
-      font-size: 16px;
+      font-size: 17px;
       display: block;
-      font-family: "Open Sans", serif; }
+      font-family: "PT Serif", serif; }
   #content h2 {
     font-size: 23px;
     margin-top: 10px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "Open Sans", serif;
-    font-size: 16px;
+    font-family: "PT Serif", serif;
+    font-size: 17px;
     margin-bottom: 30px;
     line-height: 150%; }
     #content p code {
-      font-size: 12.8px;
+      font-size: 13.6px;
       vertical-align: middle;
       color: #484; }
   #content #footnotes p {
-    font-size: 12.8px; }
+    font-size: 13.6px; }
   #content pre {
     margin-bottom: 30px;
     margin-left: 20px;
     padding: 0px;
-    font-size: 13.6px; }
+    font-size: 14.45px; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -66,7 +66,7 @@ h1, h2, h3 {
 
 .post-div {
   margin-bottom: 10px;
-  font-size: 19.2px; }
+  font-size: 20.4px; }
 
 #back_to_index {
   position: absolute;
