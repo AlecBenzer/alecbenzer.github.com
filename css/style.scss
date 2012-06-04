@@ -2,7 +2,7 @@
 ---
 $content-width: 650px;
 $sidebar-width: 180px;
-$header-font: 'Bitter', sans-serif;
+$header-font: 'Open Sans', sans-serif;
 $body-font: 'Open Sans', serif;
 $side-font: 'Open Sans';
 $body-font-size: 16px;
@@ -65,7 +65,7 @@ h1, h2,  h3 {
   h2 {
     font-size: 23px;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   p {
@@ -128,7 +128,7 @@ h1, h2,  h3 {
 #bio {
   width: 150px;
   position: absolute;
-  left: 25px;
+  right: 100px;
   top: 75px;
 
   h2 {

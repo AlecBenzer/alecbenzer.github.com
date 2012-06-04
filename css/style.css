@@ -21,7 +21,7 @@ h1, h2, h3 {
   margin-left: 230px;
   margin-right: 230px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Bitter", sans-serif; }
+    font-family: "Open Sans", sans-serif; }
   #content h1 {
     font-size: 28px;
     margin-bottom: 20px; }
@@ -34,7 +34,7 @@ h1, h2, h3 {
   #content h2 {
     font-size: 23px;
     margin-top: 10px;
-    margin-bottom: 5px; }
+    margin-bottom: 10px; }
   #content p {
     font-family: "Open Sans", serif;
     font-size: 16px;
@@ -76,7 +76,7 @@ h1, h2, h3 {
 #bio {
   width: 150px;
   position: absolute;
-  left: 25px;
+  right: 100px;
   top: 75px; }
   #bio h2 {
     font-size: 19px; }
