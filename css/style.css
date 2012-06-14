@@ -1,6 +1,6 @@
 body {
-  font-family: "PT Serif", serif;
-  font-size: 17px; }
+  font-family: "Droid Serif", serif;
+  font-size: 15px; }
 
 a:hover {
   color: maroon; }
@@ -17,40 +17,42 @@ h1, h2, h3 {
       color: black; }
 
 #content {
-  margin-top: 70px;
-  margin-left: 230px;
-  margin-right: 230px; }
+  width: 600px;
+  margin: auto;
+  margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "PT Serif", sans-serif; }
+    font-family: "Droid Serif", serif; }
   #content h1 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px; }
     #content h1 small {
       font-weight: normal;
       color: #888;
-      font-size: 17px;
+      font-size: 12.75px;
       display: block;
-      font-family: "PT Serif", serif; }
+      font-family: "Droid Serif", serif; }
   #content h2 {
-    font-size: 23px;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "PT Serif", serif;
-    font-size: 17px;
+    font-family: "Droid Serif", serif;
+    font-size: 15px;
     margin-bottom: 30px;
     line-height: 150%; }
     #content p code {
-      font-size: 13.6px;
+      font-family: 'Droid Sans Mono';
+      font-size: 12px;
       vertical-align: middle;
       color: #484; }
   #content #footnotes p {
-    font-size: 13.6px; }
+    font-size: 12px; }
   #content pre {
     margin-bottom: 30px;
     margin-left: 20px;
+    width: 780px;
     padding: 0px;
-    font-size: 14.45px; }
+    font-size: 12.75px; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -66,12 +68,7 @@ h1, h2, h3 {
 
 .post-div {
   margin-bottom: 10px;
-  font-size: 20.4px; }
-
-#back_to_index {
-  position: absolute;
-  top: 20px;
-  left: 80px; }
+  font-size: 18px; }
 
 #bio {
   width: 150px;
