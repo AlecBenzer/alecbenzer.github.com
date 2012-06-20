@@ -1,12 +1,12 @@
 body {
-  font-family: "Droid Serif", serif;
-  font-size: 15px; }
+  font-family: "PT Serif", serif;
+  font-size: 17px; }
 
 a:hover {
   color: maroon; }
 
 h1, h2, h3 {
-  font-weight: normal; }
+  font-weight: 400; }
   h1 a, h2 a, h3 a {
     color: black;
     text-decoration: none; }
@@ -18,41 +18,41 @@ h1, h2, h3 {
 
 #content {
   width: 600px;
-  margin: auto;
-  margin-top: 70px; }
+  margin-top: 70px;
+  margin-left: 150px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Droid Serif", serif; }
+    font-family: "Yanone Kaffeesatz", serif; }
   #content h1 {
-    font-size: 24px;
+    font-size: 38px;
     margin-bottom: 20px; }
     #content h1 small {
-      font-weight: normal;
+      font-weight: 300;
       color: #888;
-      font-size: 12.75px;
+      font-size: 14.45px;
       display: block;
-      font-family: "Droid Serif", serif; }
+      font-family: "PT Serif", serif; }
   #content h2 {
-    font-size: 20px;
+    font-size: 28px;
     margin-top: 10px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "Droid Serif", serif;
-    font-size: 15px;
+    font-family: "PT Serif", serif;
+    font-size: 17px;
     margin-bottom: 30px;
     line-height: 150%; }
     #content p code {
       font-family: 'Droid Sans Mono';
-      font-size: 12px;
+      font-size: 13.6px;
       vertical-align: middle;
       color: #484; }
   #content #footnotes p {
-    font-size: 12px; }
+    font-size: 13.6px; }
   #content pre {
     margin-bottom: 30px;
     margin-left: 20px;
     width: 780px;
     padding: 0px;
-    font-size: 12.75px; }
+    font-size: 14.45px; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -68,7 +68,7 @@ h1, h2, h3 {
 
 .post-div {
   margin-bottom: 10px;
-  font-size: 18px; }
+  font-size: 20.4px; }
 
 #bio {
   width: 150px;

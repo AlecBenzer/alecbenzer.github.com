@@ -1,10 +1,10 @@
 ---
 ---
 $sidebar-width: 180px;
-$header-font: 'Droid Serif', serif;
-$body-font: 'Droid Serif', serif;
+$header-font: 'Yanone Kaffeesatz', serif;
+$body-font: 'PT Serif', serif;
 $side-font: 'Open Sans';
-$body-font-size: 15px;
+$body-font-size: 17px;
 $p-margin-bottom: 30px;
 $content-width: 600px;
 
@@ -20,7 +20,7 @@ a {
 }
 
 h1, h2,  h3 {
-  font-weight: normal;
+  font-weight: 400;
   a {
     color: black;
     text-decoration: none;
@@ -39,8 +39,8 @@ h1, h2,  h3 {
 
 #content {
   width: $content-width;
-  margin: auto;
   margin-top: 70px;
+  margin-left: 150px;
 
   h1, h2, h3 {
     font-family: $header-font;
@@ -48,11 +48,11 @@ h1, h2,  h3 {
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 38px;
     margin-bottom: 20px;
 
     small {
-      font-weight: normal;
+      font-weight: 300;
       color: #888;
       font-size: $body-font-size*0.85;
       display: block;
@@ -61,7 +61,7 @@ h1, h2,  h3 {
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 28px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
