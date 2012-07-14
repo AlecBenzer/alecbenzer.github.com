@@ -19,27 +19,27 @@ h1, h2, h3 {
 #content {
   width: 600px;
   margin-top: 70px;
-  margin-left: 150px; }
+  margin-left: 200px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Yanone Kaffeesatz", serif; }
+    font-family: "Vollkorn", serif; }
   #content h1 {
     font-size: 38px;
     margin-bottom: 20px; }
     #content h1 small {
       font-weight: 300;
       color: #888;
-      font-size: 14.45px;
+      font-size: 20.4px;
       display: block;
-      font-family: "PT Serif", serif; }
+      font-family: "Vollkorn", serif; }
   #content h2 {
-    font-size: 28px;
-    margin-top: 10px;
+    font-size: 33px;
+    margin-top: 40px;
     margin-bottom: 10px; }
   #content p {
     font-family: "PT Serif", serif;
     font-size: 17px;
     margin-bottom: 30px;
-    line-height: 150%; }
+    line-height: 170%; }
     #content p code {
       font-family: 'Droid Sans Mono';
       font-size: 13.6px;
@@ -71,15 +71,15 @@ h1, h2, h3 {
   font-size: 20.4px; }
 
 #bio {
-  width: 150px;
+  width: 200px;
   position: absolute;
   right: 100px;
-  top: 75px; }
-  #bio h2 {
-    font-size: 19px; }
+  top: 125px; }
+  #bio h3 {
+    font-size: 26px; }
   #bio p {
     margin-bottom: 25px;
-    font-size: 14px; }
+    font-size: 13.6px; }
 
 #disqus_thread {
   margin-top: 50px; }
