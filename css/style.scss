@@ -1,7 +1,7 @@
 ---
 ---
 $sidebar-width: 180px;
-$header-font: 'Yanone Kaffeesatz', serif;
+$header-font: 'Vollkorn', serif;
 $body-font: 'PT Serif', serif;
 $side-font: 'Open Sans';
 $body-font-size: 17px;
@@ -40,7 +40,7 @@ h1, h2,  h3 {
 #content {
   width: $content-width;
   margin-top: 70px;
-  margin-left: 150px;
+  margin-left: 200px;
 
   h1, h2, h3 {
     font-family: $header-font;
@@ -54,15 +54,15 @@ h1, h2,  h3 {
     small {
       font-weight: 300;
       color: #888;
-      font-size: $body-font-size*0.85;
+      font-size: $body-font-size*1.2;
       display: block;
-      font-family: $body-font;
+      font-family: $header-font;
     }
   }
 
   h2 {
-    font-size: 28px;
-    margin-top: 10px;
+    font-size: 33px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 
@@ -70,7 +70,7 @@ h1, h2,  h3 {
     font-family: $body-font;
     font-size: $body-font-size;
     margin-bottom: $p-margin-bottom;
-    line-height: 150%;
+    line-height: 170%;
 
     code {
       font-family: 'Droid Sans Mono';
@@ -119,18 +119,18 @@ h1, h2,  h3 {
 }
 
 #bio {
-  width: 150px;
+  width: 200px;
   position: absolute;
   right: 100px;
-  top: 75px;
+  top: 125px;
 
-  h2 {
-    font-size: 19px;
+  h3 {
+    font-size: 26px;
   }
 
   p {
     margin-bottom: 25px;
-    font-size: 14px;
+    font-size: $body-font-size*0.8;
   }
 }
 
