@@ -119,4 +119,4 @@ Well, just by definition, we know the next cardinal number is going to be the fi
 
 This doesn't stop with just $\aleph_1$. In fact, for *any* finite ordinal $\alpha$, we have that $$\aleph_{\alpha} = \inf\\{\lambda \mid \lambda \mbox{ is an ordinal and } \aleph_{\alpha-1} < \lambda\\}$$
 
-If $\alpha is a limit ordinal, our definition changes to $$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
+If $\alpha$ is a limit ordinal, our definition changes to $$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
