@@ -1,0 +1,101 @@
+body {
+  font-family: "PT Serif", serif;
+  font-size: 17px; }
+
+a:hover {
+  color: maroon; }
+
+h1, h2, h3 {
+  font-weight: 400; }
+  h1 a, h2 a, h3 a {
+    color: black;
+    text-decoration: none; }
+    h1 a:visited, h2 a:visited, h3 a:visited {
+      color: black; }
+    h1 a:hover, h2 a:hover, h3 a:hover {
+      text-decoration: underline;
+      color: black; }
+
+#content {
+  width: 600px;
+  margin-top: 70px;
+  margin-left: 7%; }
+  #content h1, #content h2, #content h3 {
+    font-family: "Vollkorn", serif; }
+  #content h1 {
+    font-size: 38px;
+    margin-bottom: 20px; }
+    #content h1 small {
+      font-weight: 300;
+      color: #888;
+      font-size: 20.4px;
+      display: block;
+      font-family: "Vollkorn", serif; }
+  #content h2 {
+    font-size: 33px;
+    margin-top: 40px;
+    margin-bottom: 10px; }
+  #content p {
+    font-family: "PT Serif", serif;
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 170%; }
+    #content p code {
+      font-family: 'Source Code Pro';
+      font-size: 13.6px;
+      vertical-align: middle;
+      color: #484; }
+  #content #footnotes p {
+    font-size: 13.6px; }
+  #content pre {
+    font-size: 13.6px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    width: 780px;
+    padding: 0px; }
+    #content pre code {
+      font-family: 'Source Code Pro'; }
+  #content li {
+    margin-bottom: 10px;
+    line-height: 150%; }
+  #content blockquote {
+    margin-left: 20px;
+    font-style: italic;
+    color: #777; }
+
+#footer {
+  margin-bottom: 30px; }
+  #footer p {
+    margin-bottom: 0px; }
+
+.post-div {
+  margin-bottom: 20px;
+  font-size: 20.4px; }
+
+.date {
+  font-family: "Vollkorn", serif;
+  font-size: 13.6px; }
+
+span.date {
+  display: block;
+  text-indent: 13px; }
+
+#bio {
+  width: 200px;
+  position: absolute;
+  right: 100px;
+  top: 125px; }
+  #bio h3 {
+    font-size: 26px; }
+  #bio p {
+    margin-bottom: 25px;
+    font-size: 13.6px; }
+
+#disqus_thread {
+  margin-top: 50px; }
+
+#header {
+  margin-bottom: 75px; }
+  #header h1 {
+    text-align: center;
+    font-size: 70px; }
