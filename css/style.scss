@@ -40,7 +40,7 @@ h1, h2,  h3 {
 #content {
   width: $content-width;
   margin-top: 70px;
-  margin-left: 200px;
+  margin-left: 7%;
 
   h1, h2, h3 {
     font-family: $header-font;
@@ -114,8 +114,18 @@ h1, h2,  h3 {
 }
 
 .post-div {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: $body-font-size*1.2;
+}
+
+.date {
+  font-family: $header-font;
+  font-size: $body-font-size*0.8;
+}
+
+span.date {
+  display: block;
+  text-indent: 13px;
 }
 
 #bio {
