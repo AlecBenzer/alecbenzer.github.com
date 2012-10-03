@@ -6,7 +6,7 @@ Let's pretend the natural numbers don't exist anymore. All we have are sets. How
 
 The first number we'd want to construct is probably zero. And since all we have our sets, we'll have to choose some object to be our representation of zero. And, well, since _all_ we have are sets, we actually don't really have any kinds of objecst to put into our sets (yet). So it seems natural to start out with a set that contains nothing. Thus, the empty set is our representation for zero. This works out pretty nicely, because a set that doesn't contain anything pretty nicely encapsulates the idea of what zero is. In fact, in some sense, we could essentially think of zero as just some symbol representing the number of things in the empty set, which is just what our assignment of $0 \equiv \\{\\}$ does.
 
-So we have this new thing 0 defined to be $ \\{\\} $. Cool. Now we need a representation of one. In the same vein, we'd want some object that encapsulates the idea of one, which would just be a set that contains a single object. What should this single object be? Well, since we just defined 0, that seems like a good choice. So one will be the set containing 0. Ie, $1 \equiv \\{0\\} = \\{\\{\\}\\}$. ADD NOTE ON EQUIV VS EQUAL
+So we have this new thing 0 defined to be $ \\{\\} $. Cool. Now we need a representation of one. In the same vein, we'd want some object that encapsulates the idea of one, which would just be a set that contains a single object. What should this single object be? Well, since we just defined 0, that seems like a good choice. So one will be the set containing 0. Ie, $1 \equiv \\{0\\} = \\{\\{\\}\\}$.
 
 Similarlly, we'll define two to be the set containing both one and zero. Ie, $2 = \\{0,1\\} = \\{\\{\\},\\{0\\}\\} = \\{\\{\\}, \\{\\{\\}\\}\\}$.
 
@@ -45,19 +45,19 @@ By "disjoint union" I mean we take the union of $S$ and $T$, but treat $S$ and $
 
 Concatenating the well-orderings just means that we keep the well-orderings within the sets, but say that any element of $S$ is less than any element of $T$.
 
-So, going back to $\omega+1$, we see that if $\omega = \\{0,1,2,3,4,\ldots\\}$, and $1 = \\{0\\}$, then $\omega + 1 = \\{0,1,2,3,4,5,6,\ldots,0^'\\}$ (that $0^'$ at the end is a "different" 0 than the first 0) with the well-ordering $0 < 1 < 2 < 3 < \cdots < 0^'$. If we arbitrarily decide to re-label $0^'$ as $\omega$, we see that $\omega + 1 $$ = \\{0,1,2,3,4,\ldots,\omega\\} $$ = S(\omega)$. Ie, we've shown that our definition of addition matches up with our sort of intuitive desire to label $S(\omega)$ as $\omega + 1$.
+So, going back to $\omega+1$, we see that if $\omega = \\{0,1,2,3,4,\ldots\\}$, and $1 = \\{0\\}$, then $\omega + 1 = \\{0,1,2,3,4,5,6,\ldots,0'\\}$ (that $0'$ at the end is a "different" 0 than the first 0) with the well-ordering $0 < 1 < 2 < 3 < \cdots < 0'$. If we arbitrarily decide to re-label $0'$ as $\omega$, we see that $\omega + 1 $$ = \\{0,1,2,3,4,\ldots,\omega\\} $$ = S(\omega)$. Ie, we've shown that our definition of addition matches up with our sort of intuitive desire to label $S(\omega)$ as $\omega + 1$.
 
 There's two other interesting things to notice about our definition of addition. One is that, when we're dealing with finite ordinals, additions of ordinals corresponds with "normal" addition of numbers. This is good, because it means that ordinals so far seem to be a good extension/reconstruction of the naturals.
 
 Another important thing to note is that addition involving infinite ordinals (and so, addition with ordinals in general), is *not* commutative, specifically because the concatenation of orderings is not commutative.
 
-For example, consider $1 + \omega$. This is the set $\\{0^', 0, 1, 2, 3, 4, \ldots\\}$ with the ordering implied by the way I've written the set (ie, $0^' < 0 < 1 < 2 < \cdots$). If we decide to relabel $0^'$ as $0$, $0$ as $1$, $1$ as $2$, etc., we see that we end up with the ordering $0 < 1 < 2 < 3 < \cdots$. The ordinal that corresponds to this ordering is $\omega$. Thus, we see that $1 + \omega = \omega \neq \omega + 1$.
+For example, consider $1 + \omega$. This is the set $\\{0', 0, 1, 2, 3, 4, \ldots\\}$ with the ordering implied by the way I've written the set (ie, $0' < 0 < 1 < 2 < \cdots$). If we decide to relabel $0'$ as $0$, $0$ as $1$, $1$ as $2$, etc., we see that we end up with the ordering $0 < 1 < 2 < 3 < \cdots$. The ordinal that corresponds to this ordering is $\omega$. Thus, we see that $1 + \omega = \omega \neq \omega + 1$.
 
 Of course, there's no reason to stop with $\omega + 1$. We could apply $S$ to $\omega+1$ to get $S(\omega+1) = \\{0,1,2,\ldots,\omega\\} \cup \\{\omega+1\\} = \\{0,1,2,\ldots,\omega,\omega+1\\}$. This new ordinal is called $\omega+2$, both because this is a natural name for it, but, perhaps more appropriately, because it is actually the ordinal we get when we add $\omega$ and $2$.
 
 In the same fashion we can get $\omega + 3$ and $\omega + 4$, and, in general, $\omega + n$, for any finite ordinal $n$. Once we get all of these ordinals, we can actually do something interesting and put them all into a set together, just like we did with the natural numbers. Ie, we have the set $$\\{0, 1, 2, 3, \ldots, \omega, \omega + 1, \omega + 2, \omega + 3,\ldots\\}$$ This is a set that contains a bunch of lesser ordinals, just like $\omega$ was. Also just like $\omega$, this new set is our second limit ordinal. What do we call this new limit ordinal? It turns out that we'll end up calling it $\omega\cdot 2$.
 
-There's two ways to look at this. One way is to think of $\omega\cdot 2$ as $\omega + \omega$, the sum of two infinite ordinals. Going back to our definition of ordinal addition, we see that $\omega + \omega$ would be $\\{0, 1, 2, \ldots, 0^', 1^', 2^', \ldots\\}$, with the ordering implied by the way I've written the set. If we decide to re-label $0^'$ as $\omega$, $1^'$ as $\omega + 1$, and in general, $n^'$ as $\omega + n$, we see that $\omega + \omega$ is in fact the new ordinal that we constructed above.
+There's two ways to look at this. One way is to think of $\omega\cdot 2$ as $\omega + \omega$, the sum of two infinite ordinals. Going back to our definition of ordinal addition, we see that $\omega + \omega$ would be $\\{0, 1, 2, \ldots, 0', 1', 2', \ldots\\}$, with the ordering implied by the way I've written the set. If we decide to re-label $0'$ as $\omega$, $1'$ as $\omega + 1$, and in general, $n'$ as $\omega + n$, we see that $\omega + \omega$ is in fact the new ordinal that we constructed above.
 
 Perhaps more directly, we can also attempt to define multiplication of ordinals so that $\omega\cdot 2$ works out to be the new ordinal we defined above.
 
@@ -119,4 +119,4 @@ Well, just by definition, we know the next cardinal number is going to be the fi
 
 This doesn't stop with just $\aleph_1$. In fact, for *any* finite ordinal $\alpha$, we have that $$\aleph_{\alpha} = \inf\\{\lambda \mid \lambda \mbox{ is an ordinal and } \aleph_{\alpha-1} < \lambda\\}$$
 
-If $\lambda$ is a limit ordinal, our definition changes to $$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
+If $\alpha is a limit ordinal, our definition changes to $$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
