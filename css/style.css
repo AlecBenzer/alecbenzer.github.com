@@ -1,5 +1,5 @@
 body {
-  font-family: "PT Serif", serif;
+  font-family: "Arial", serif;
   font-size: 17px; }
 
 a:hover {
@@ -18,25 +18,31 @@ h1, h2, h3 {
 
 #content {
   width: 600px;
-  margin-top: 70px;
-  margin-left: 7%; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Vollkorn", serif; }
+    font-family: "Arial", serif; }
   #content h1 {
-    font-size: 38px;
+    font-size: 20px;
+    font-weight: bolder;
     margin-bottom: 20px; }
     #content h1 small {
       font-weight: 300;
       color: #888;
-      font-size: 20.4px;
+      font-size: 13.6px;
       display: block;
-      font-family: "Vollkorn", serif; }
+      font-family: "Arial", serif; }
+    #content h1 .name a {
+      font-weight: normal;
+      color: #800; }
   #content h2 {
-    font-size: 33px;
+    font-size: 20px;
+    font-weight: bolder;
     margin-top: 40px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "PT Serif", serif;
+    font-family: "Arial", serif;
     font-size: 17px;
     margin-bottom: 30px;
     line-height: 170%; }
@@ -70,15 +76,16 @@ h1, h2, h3 {
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 20.4px; }
+  font-size: 17px; }
 
 .date {
-  font-family: "Vollkorn", serif;
+  font-family: "Arial", serif;
   font-size: 13.6px; }
 
 span.date {
   display: block;
-  text-indent: 13px; }
+  font-size: 13.6px;
+  text-indent: 11px; }
 
 #bio {
   width: 200px;
@@ -90,6 +97,12 @@ span.date {
   #bio p {
     margin-bottom: 25px;
     font-size: 13.6px; }
+
+p#info {
+  font-size: 13.6px;
+  position: fixed;
+  right: 20px;
+  top: 5px; }
 
 #disqus_thread {
   margin-top: 50px; }

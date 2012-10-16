@@ -1,8 +1,8 @@
 ---
 ---
 $sidebar-width: 180px;
-$header-font: 'Vollkorn', serif;
-$body-font: 'PT Serif', serif;
+$header-font: 'Arial', serif;
+$body-font: 'Arial', serif;
 $side-font: 'Open Sans';
 $body-font-size: 17px;
 $p-margin-bottom: 30px;
@@ -39,8 +39,9 @@ h1, h2,  h3 {
 
 #content {
   width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 70px;
-  margin-left: 7%;
 
   h1, h2, h3 {
     font-family: $header-font;
@@ -48,20 +49,27 @@ h1, h2,  h3 {
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 20px;
+    font-weight: bolder;
     margin-bottom: 20px;
 
     small {
       font-weight: 300;
       color: #888;
-      font-size: $body-font-size*1.2;
+      font-size: $body-font-size*0.8;
       display: block;
       font-family: $header-font;
+    }
+
+    .name a {
+      font-weight: normal;
+      color: #800;
     }
   }
 
   h2 {
-    font-size: 33px;
+    font-size: 20px;
+    font-weight: bolder;
     margin-top: 40px;
     margin-bottom: 10px;
   }
@@ -118,7 +126,7 @@ h1, h2,  h3 {
 
 .post-div {
   margin-bottom: 20px;
-  font-size: $body-font-size*1.2;
+  font-size: $body-font-size;
 }
 
 .date {
@@ -128,7 +136,8 @@ h1, h2,  h3 {
 
 span.date {
   display: block;
-  text-indent: 13px;
+  font-size: $body-font-size*0.8;
+  text-indent: 11px;
 }
 
 #bio {
@@ -145,6 +154,13 @@ span.date {
     margin-bottom: 25px;
     font-size: $body-font-size*0.8;
   }
+}
+
+p#info {
+  font-size: $body-font-size*0.8;
+  position: fixed;
+  right: 20px;
+  top: 5px;
 }
 
 #disqus_thread {
