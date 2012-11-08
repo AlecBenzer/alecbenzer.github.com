@@ -84,8 +84,7 @@ h1, h2, h3 {
 
 span.date {
   display: block;
-  font-size: 13.6px;
-  text-indent: 11px; }
+  font-size: 13.6px; }
 
 #bio {
   width: 200px;
@@ -100,7 +99,7 @@ span.date {
 
 p#info {
   font-size: 13.6px;
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 5px; }
 
