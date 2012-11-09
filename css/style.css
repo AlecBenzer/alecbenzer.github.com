@@ -16,10 +16,14 @@ h1, h2, h3 {
       text-decoration: underline;
       color: black; }
 
+.post-preview {
+  color: #777;
+  font-style: italic;
+  font-size: 13.6px; }
+
 #content {
   width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 100px;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
     font-family: "Arial", serif; }
@@ -45,7 +49,7 @@ h1, h2, h3 {
     font-family: "Arial", serif;
     font-size: 17px;
     margin-bottom: 30px;
-    line-height: 170%; }
+    line-height: 130%; }
     #content p code {
       font-family: 'Source Code Pro';
       font-size: 13.6px;
@@ -83,8 +87,8 @@ h1, h2, h3 {
   font-size: 13.6px; }
 
 span.date {
-  display: block;
-  font-size: 13.6px; }
+  font-size: 13.6px;
+  font-weight: bolder; }
 
 #bio {
   width: 200px;

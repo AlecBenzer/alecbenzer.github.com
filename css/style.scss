@@ -37,10 +37,17 @@ h1, h2,  h3 {
 #container {
 }
 
+.post-preview {
+  // margin-left: 40px;
+  color: #777;
+  font-style: italic;
+  font-size: 0.8*$body-font-size;
+}
+
 #content {
   width: $content-width;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 100px;
+  // margin-right: auto;
   margin-top: 70px;
 
   h1, h2, h3 {
@@ -78,7 +85,7 @@ h1, h2,  h3 {
     font-family: $body-font;
     font-size: $body-font-size;
     margin-bottom: $p-margin-bottom;
-    line-height: 170%;
+    line-height: 130%;
 
     code {
       font-family: 'Source Code Pro';
@@ -135,8 +142,10 @@ h1, h2,  h3 {
 }
 
 span.date {
-  display: block;
+  // display: block;
+  // margin-right: 2px;
   font-size: $body-font-size*0.8;
+  font-weight: bolder;
 }
 
 #bio {
