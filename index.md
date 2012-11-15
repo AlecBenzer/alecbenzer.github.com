@@ -2,8 +2,6 @@
 layout: page
 title: "Alec Benzer"
 ---
-# Posts
-
 {% for post in site.posts %}
   <div class="post-div">
   <span class="date">{{post.date | date: "%m/%d/%y" }}</span>

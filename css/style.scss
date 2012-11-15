@@ -46,8 +46,8 @@ h1, h2,  h3 {
 
 #content {
   width: $content-width;
-  margin-left: 100px;
-  // margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 70px;
 
   h1, h2, h3 {
@@ -88,7 +88,7 @@ h1, h2,  h3 {
     line-height: 130%;
 
     code {
-      font-family: 'Source Code Pro';
+      font-family: monospace;
       font-size: $body-font-size*0.8;
       vertical-align: middle;
       color: #484;
@@ -103,7 +103,7 @@ h1, h2,  h3 {
 
   pre {
     code {
-      font-family: 'Source Code Pro';
+      font-family: monospace;
     }
     font-size: $body-font-size*0.8;
     margin-bottom: $p-margin-bottom;

@@ -23,7 +23,8 @@ h1, h2, h3 {
 
 #content {
   width: 600px;
-  margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
     font-family: "Arial", serif; }
@@ -51,7 +52,7 @@ h1, h2, h3 {
     margin-bottom: 30px;
     line-height: 130%; }
     #content p code {
-      font-family: 'Source Code Pro';
+      font-family: monospace;
       font-size: 13.6px;
       vertical-align: middle;
       color: #484; }
@@ -64,7 +65,7 @@ h1, h2, h3 {
     width: 780px;
     padding: 0px; }
     #content pre code {
-      font-family: 'Source Code Pro'; }
+      font-family: monospace; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
