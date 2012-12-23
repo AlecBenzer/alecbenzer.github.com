@@ -5,11 +5,10 @@
     <div id="container">
       <div id="content">
         <h1>
-          <div class="name"><a href="/">Alec Benzer</a></div>
-          <hr />
           <a href="{{page.url}}">{{ page.title }}</a>
-          <small class="date">{{ page.date | date:"%B %-d, %Y" }}</small>
+          <small class="date">{{ page.date | date:"%B %-d, %Y" }} | Alec Benzer</small>
         </h1>
+        <hr />
         {{ content }}
       {% include footer.html %}
       {% include bio.html %}

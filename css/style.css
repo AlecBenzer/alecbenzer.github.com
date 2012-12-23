@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", serif;
+  font-family: "Georgia", serif;
   font-size: 17px; }
 
 a:hover {
@@ -27,30 +27,31 @@ h1, h2, h3 {
   margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Arial", serif; }
+    font-family: "Georgia", serif; }
   #content h1 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bolder;
     margin-bottom: 20px; }
     #content h1 small {
+      margin-top: 8px;
       font-weight: 300;
       color: #888;
-      font-size: 13.6px;
+      font-size: 16.25px;
       display: block;
-      font-family: "Arial", serif; }
+      font-family: "Georgia", serif; }
     #content h1 .name a {
       font-weight: normal;
       color: #800; }
   #content h2 {
     font-size: 20px;
     font-weight: bolder;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "Arial", serif;
+    font-family: "Georgia", serif;
     font-size: 17px;
-    margin-bottom: 30px;
-    line-height: 130%; }
+    margin-bottom: 40px;
+    line-height: 170%; }
     #content p code {
       font-family: monospace;
       font-size: 13.6px;
@@ -60,7 +61,7 @@ h1, h2, h3 {
     font-size: 13.6px; }
   #content pre {
     font-size: 13.6px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     margin-left: 20px;
     width: 780px;
     padding: 0px; }
@@ -79,40 +80,11 @@ h1, h2, h3 {
   #footer p {
     margin-bottom: 0px; }
 
+#info {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
 .post-div {
   margin-bottom: 20px;
   font-size: 17px; }
-
-.date {
-  font-family: "Arial", serif;
-  font-size: 13.6px; }
-
-span.date {
-  font-size: 13.6px;
-  font-weight: bolder; }
-
-#bio {
-  width: 200px;
-  position: absolute;
-  right: 100px;
-  top: 125px; }
-  #bio h3 {
-    font-size: 26px; }
-  #bio p {
-    margin-bottom: 25px;
-    font-size: 13.6px; }
-
-p#info {
-  font-size: 13.6px;
-  position: absolute;
-  right: 20px;
-  top: 5px; }
-
-#disqus_thread {
-  margin-top: 50px; }
-
-#header {
-  margin-bottom: 75px; }
-  #header h1 {
-    text-align: center;
-    font-size: 70px; }

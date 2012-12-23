@@ -5,29 +5,18 @@ title: "Exponentials are really big"
 
 How long ago is 2<sup>x</sup> nanoseconds? (The fun things I think about when I should be studying).
 
-2<sup>19</sup> nanoseconds ago is a little under a millisecond ago.
-
-2<sup>30</sup> nanoseconds ago is a little over a second ago.
-
-2<sup>40</sup> nanoseconds ago is about 18 minutes ago.
-
-2<sup>47</sup> nanoseconds ago it was two days ago.
-
-2<sup>55</sup> nanoseconds ago it was last year.
-
-Kurt Cobain was still alive 2<sup>60</sup> nanoseconds ago.
-
-Leonardo da Vinci was born a little over 2<sup>64</sup> nanoseconds ago.
-
-Julius Caesar was killed about 2<sup>66</sup> nanoseconds ago.
-
-The last glacial period began about 2<sup>72</sup> nanoseconds ago.
-
-The dinosaurs went extinct around 2<sup>80</sup> nanoseconds ago.
-
-The earth was formed around 2<sup>87</sup> nanoseconds ago.
-
-And, finally, the universe began around 2<sup>89</sup> nanoseconds ago.
+* 2<sup>19</sup> nanoseconds ago is a little under a millisecond ago.
+* 2<sup>30</sup> nanoseconds ago is a little over a second ago.
+* 2<sup>40</sup> nanoseconds ago is about 18 minutes ago.
+* 2<sup>47</sup> nanoseconds ago it was two days ago.
+* 2<sup>55</sup> nanoseconds ago it was last year.
+* Kurt Cobain was still alive 2<sup>60</sup> nanoseconds ago.
+* Leonardo da Vinci was born a little over 2<sup>64</sup> nanoseconds ago.
+* Julius Caesar was killed about 2<sup>66</sup> nanoseconds ago.
+* The last glacial period began about 2<sup>72</sup> nanoseconds ago.
+* The dinosaurs went extinct around 2<sup>80</sup> nanoseconds ago.
+* The earth was formed around 2<sup>87</sup> nanoseconds ago.
+* And, finally, the universe began around 2<sup>89</sup> nanoseconds ago.
 
 
 ## That's pretty long
