@@ -15,7 +15,7 @@ One of the other rules a field has is that there must be an element $0 \in F$ wi
 
 This last condition tells us that every field must contain at least two elements, and that one of these elements will be additive identity, and that the other will be the multiplicative identity. We're not interested in a two-element field, though, we're interested in a three-element field, and so _our_ set $F$ is going to contain one additional mystery element, which we'll call $x$.
 
-So now we've settled the fact that $F = \\{0, 1, x\\}$. We now need to look at the two remainin parts of our definition of a field -- namely, the functions $+$ and $(\cdot)$.
+So now we've settled the fact that $F = \\{0, 1, x\\}$. We now need to look at the two remainig parts of our definition of a field -- namely, the functions $+$ and $(\cdot)$.
 
 Recall that $+$ was a function mapping from $F \times F$ to $F$, meaning that for every possible pair of elements $(a,b) \in F \times F$ from our field, we must assign some other element of our field as their sum (and also their product). A natural way of representing the function $+$, then, is with a three by three table, each cell of which tells us what we get when we add the elements of that cell's row and column. We use a similar table for our representation of $(\cdot)$.
 
