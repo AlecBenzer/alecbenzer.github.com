@@ -5,7 +5,7 @@ title: How to sort ratings
 
 Evan Miller has a blog posted titled ["How Not to Sort By Average Rating"](http://www.evanmiller.org/how-not-to-sort-by-average-rating.html) where he explains two ways people commonly _incorrectly_ sort things by average rating, and then lays out a correct (but rather complicated) method for sorting by average rating that uses some rather advanced statistics.
 
-I've always been a little weak at statistics and probability theory, so I wanted to try and get myself to understand the third, correct way of sorting by average rating laid out in Miller's post (which he doesn't really explain too in depth).
+I've always been a little weak at statistics and probability theory, so I wanted to try and get myself to understand the third, correct way of sorting by average rating laid out in Miller's post (the derivation of which is not really explained).
 
 First, the two incorrect ways, and why they're wrong. For now, we'll be considering a binary rating system where we only have positive and negative voting (ie, I like it, or I don't like it), as opposed to a more elaborate 5-star rating scale or something like that.
 
