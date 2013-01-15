@@ -10,9 +10,9 @@
         <hr />
         <h1>
           <a href="{{page.url}}">{{ page.title }}</a>
-          <small class="date">{{ page.date | date:"%B %-d, %Y" }}</small>
         </h1>
         {{ content }}
+        <div class="date">posted {{ page.date | date:"%B %-d, %Y" }}</div>
       {% include footer.html %}
       {% include bio.html %}
     </div>
