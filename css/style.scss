@@ -3,10 +3,11 @@
 $sidebar-width: 180px;
 $header-font: 'Georgia', serif;
 $body-font: 'Georgia', serif;
-$h1-font-size: 25px;
+$h1-font-size: 22px;
+$h2-font-size: 20px;
 $h1-color: #333;
-$body-font-size: 17px;
-$p-margin-bottom: 40px;
+$body-font-size: 16px;
+$p-margin-bottom: 20px;
 $content-width: 600px;
 
 body {
@@ -85,9 +86,10 @@ div.date {
   }
 
   h2 {
-    font-size: $h1-font-size*0.8;
+    font-size: $h2-font-size;
     font-weight: bolder;
-    margin-top: 70px;
+    // margin-top: 70px;
+    margin-top: $p-margin-bottom * 2;
     margin-bottom: 10px;
   }
 
@@ -101,7 +103,6 @@ div.date {
       font-family: monospace;
       font-size: $body-font-size*0.8;
       vertical-align: middle;
-      color: #484;
     }
   }
 

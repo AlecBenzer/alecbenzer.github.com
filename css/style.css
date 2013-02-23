@@ -1,6 +1,6 @@
 body {
   font-family: "Georgia", serif;
-  font-size: 17px; }
+  font-size: 16px; }
 
 a:hover {
   color: maroon; }
@@ -19,14 +19,14 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 13.6px; }
+  font-size: 12.8px; }
 
 div.date {
   margin-top: 8px;
   font-weight: 300;
   color: #888;
   font-family: "Georgia", serif;
-  font-size: 16.25px;
+  font-size: 14.3px;
   font-style: italic; }
 
 #content {
@@ -37,14 +37,14 @@ div.date {
   #content h1, #content h2, #content h3 {
     font-family: "Georgia", serif; }
   #content h1 {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bolder;
     margin-bottom: 20px; }
     #content h1 small {
       margin-top: 8px;
       font-weight: 300;
       color: #888;
-      font-size: 16.25px;
+      font-size: 14.3px;
       display: block;
       font-family: "Georgia", serif; }
     #content h1 .name a {
@@ -53,23 +53,22 @@ div.date {
   #content h2 {
     font-size: 20px;
     font-weight: bolder;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-bottom: 10px; }
   #content p {
     font-family: "Georgia", serif;
-    font-size: 17px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
     line-height: 170%; }
     #content p code {
       font-family: monospace;
-      font-size: 13.6px;
-      vertical-align: middle;
-      color: #484; }
+      font-size: 12.8px;
+      vertical-align: middle; }
   #content #footnotes p {
-    font-size: 13.6px; }
+    font-size: 12.8px; }
   #content pre {
-    font-size: 13.6px;
-    margin-bottom: 40px;
+    font-size: 12.8px;
+    margin-bottom: 20px;
     margin-left: 20px;
     width: 780px;
     padding: 0px; }
@@ -95,4 +94,4 @@ div.date {
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 17px; }
+  font-size: 16px; }
