@@ -13,21 +13,21 @@ Forking in C is done with the `fork()` function, declared in `unistd.h`. `fork()
 Here's a quick example:
 
 {% highlight cpp %}
-    #include <stdio.h>
-    #include <unistd.h>
+#include <stdio.h>
+#include <unistd.h>
 
-    int main()
-    {
-      pid_t pid = fork();
-      if(pid == -1)
-        fprintf(stderr,"There was an error\n");
-      else if(pid == 0)
-        printf("I am the child. I do not know my pid.\n");
-      else
-        printf("I am the parent. The child's pid is %d.\n",pid);
+int main()
+{
+  pid_t pid = fork();
+  if(pid == -1)
+    fprintf(stderr,"There was an error\n");
+  else if(pid == 0)
+    printf("I am the child. I do not know my pid.\n");
+  else
+    printf("I am the parent. The child's pid is %d.\n",pid);
 
-      return 0;
-    }
+  return 0;
+}
 {% endhighlight %}
 
 Running this program gives this output:
@@ -42,39 +42,39 @@ We use piping to allow our two process to have some basic communication. Piping 
 Here's some code that demonstrates piping:
 
 {% highlight cpp %}
-    #include <stdio.h>
-    #include <string.h>
-    #include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
-    int main()
-    {
-      int pip[2];
+int main()
+{
+  int pip[2];
 
-      if(pipe(pip) == -1)
-      {
-        fprintf(stderr,"There was an error establishing the pipe.\n");
-        return 1;
-      }
+  if(pipe(pip) == -1)
+  {
+    fprintf(stderr,"There was an error establishing the pipe.\n");
+    return 1;
+  }
 
-      pid_t pid = fork();
-      if(pid == -1)
-      {
-        fprintf(stderr,"There was an error forking.\n");
-        return 1;
-      }
+  pid_t pid = fork();
+  if(pid == -1)
+  {
+    fprintf(stderr,"There was an error forking.\n");
+    return 1;
+  }
 
-      char buffer[80];
+  char buffer[80];
 
-      if(pid == 0)
-      {
-        char* msg = "This is a message from the child: Hello!";
-        write(pip[1],msg,strlen(msg)+1);
-      }
-      else
-      {
-        read(pip[0],buffer,sizeof(buffer));
-        printf("The parent received this string from the child: \"%s\"\n",buffer);
-      }
-      return 0;
-    }
+  if(pid == 0)
+  {
+    char* msg = "This is a message from the child: Hello!";
+    write(pip[1],msg,strlen(msg)+1);
+  }
+  else
+  {
+    read(pip[0],buffer,sizeof(buffer));
+    printf("The parent received this string from the child: \"%s\"\n",buffer);
+  }
+  return 0;
+}
 {% endhighlight %}

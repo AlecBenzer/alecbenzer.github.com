@@ -2,7 +2,11 @@
 layout: post
 title: Estimating Pi with Clojure
 ---
-The following is a quick clojure program to compute the value of PI using a monte carlo method. Essentially, the program pretends it has a "dart board" inscribed in a square. It then randomly "fires" darts at the square, and records how many actually hit the dart board. With good random numbers, the ratio of dart board hits to total shots should be the ratio of the areas of the circle and the square, which is equal to `(pi * r^2)/((2r)^2) = pi/4`. So if we find the ratio and multiply it by four, we will have an estimate for pi. The average of 100 runs each with 1,000,000 shots gets within 0.005% of pi pretty consistently (runs in around 10 seconds on my 3GHz machine).
+The following is a quick clojure program to compute the value of $\pi$ using a monte carlo method. Essentially, the program pretends it has a "dart board" inscribed in a square. It then randomly "fires" darts at the square, and records how many actually hit the dart board. With good random numbers, the ratio of dart board hits to total shots should be the ratio of the areas of the circle and the square, which is equal to
+
+$$ \frac{\pi r^2}{(2r)^2} = \frac{\pi r^2}{4 r^2} = \pi / 4 $$
+
+So if we find the ratio and multiply it by four, we will have an estimate for $\pi$. The average of 100 runs each with 1,000,000 shots gets within 0.005% of $\pi$ pretty consistently (runs in around 10 seconds on my 3GHz machine).
 
 {% highlight clj %}
 (defn circle-test [x y]
