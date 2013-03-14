@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", serif;
+  font-family: "PT Serif", serif;
   font-size: 19px;
   font-weight: 400; }
 
@@ -22,11 +22,15 @@ h1, h2, h3 {
   font-style: italic;
   font-size: 15.2px; }
 
+span.date {
+  font-size: 15.2px;
+  font-style: italic; }
+
 div.date {
   margin-top: 20px;
   font-weight: 300;
   color: #666;
-  font-family: "Open Sans", serif;
+  font-family: "PT Serif", serif;
   font-size: 17.1px;
   font-style: italic; }
 
@@ -36,46 +40,46 @@ div.date {
   margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Open Sans", serif; }
+    font-family: "PT Serif", serif; }
   #content h1 {
-    font-size: 23pt;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 20px; }
     #content h1 small {
       margin-top: 8px;
       font-weight: 300;
       color: #888;
-      font-size: 14.95pt;
+      font-size: 18.2px;
       display: block;
-      font-family: "Open Sans", serif; }
+      font-family: "PT Serif", serif; }
     #content h1 .name a {
-      font-size: 20pt;
-      font-weight: 300;
+      font-size: 22px;
+      font-weight: 400;
       color: #800; }
   #content h2 {
-    font-size: 20pt;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 700;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "Open Sans", serif;
+    font-family: "PT Serif", serif;
     font-size: 19px;
     margin-bottom: 40px;
     line-height: 1.5em; }
     #content p code {
-      font-family: monospace;
-      font-size: 15.2px;
+      font-family: "Monaco", "Inconsolata", monospace;
+      font-size: 14px;
       vertical-align: middle; }
   #content #footnotes p {
     font-size: 15.2px; }
   #content pre {
-    font-size: 15.2px;
+    font-size: 14px;
     margin-bottom: 40px;
     margin-left: 20px;
     width: 780px;
     padding: 0px; }
     #content pre code {
-      font-family: monospace; }
+      font-family: "Monaco", "Inconsolata", monospace; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
