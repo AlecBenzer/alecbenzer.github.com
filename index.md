@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Blog
 ---
+# Blog
 {% for post in site.posts %}
   <div class="post-div">
   <span class="date">{{post.date | date: "%m/%d/%y" }}&nbsp;&nbsp;&nbsp;</span>
