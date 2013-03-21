@@ -1,18 +1,18 @@
 ---
 ---
-$header-font: 'PT Serif', serif;
-$body-font: 'PT Serif', serif;
-$code-font: 'Monaco', 'Inconsolata', monospace;
+$header-font: 'Source Sans Pro', serif;
+$body-font: 'Source Sans Pro', serif;
+$code-font: 'Monaco', monospace;
 
-$title-font-size: 22px;
-$h1-font-size: 28px;
-$h2-font-size: 24px;
-$body-font-size: 19px;
+$title-font-size: 30px;
+$h1-font-size: 40px;
+$h2-font-size: 35px;
+$body-font-size: 22px;
 $code-size: 14px;
 
 $h1-color: #333;
 $p-margin-bottom: 40px;
-$content-width: 600px;
+$content-width: 27em; // 600px;
 
 body {
   font-family: $body-font;
@@ -60,7 +60,7 @@ div.date {
   margin-top: 20px;
   font-weight: 300;
   color: #666;
-  font-family: $header-font;
+  font-family: $body-font;
   font-size: $body-font-size*0.9;
   font-style: italic;
 }
@@ -77,7 +77,7 @@ div.date {
 
   h1 {
     font-size: $h1-font-size;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 20px;
 
     small {
@@ -91,14 +91,14 @@ div.date {
 
     .name a {
       font-size: $title-font-size;
-      font-weight: 400;
+      font-weight: 300;
       color: #800;
     }
   }
 
   h2 {
     font-size: $h2-font-size;
-    font-weight: 700;
+    font-weight: 400;
     margin-top: 70px;
     margin-bottom: 10px;
   }
@@ -112,6 +112,10 @@ div.date {
     code {
       font-family: $code-font;
       font-size: $code-size;
+      background: #f0f0f0;
+      padding: 3px;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
       vertical-align: middle;
     }
   }
@@ -148,6 +152,7 @@ div.date {
 #footer {
   p {
     margin-bottom: 0px;
+    font-weight: 300px;
   }
   margin-bottom: 30px;
 }
@@ -155,6 +160,12 @@ div.date {
 #info {
   position: absolute;
   text-align: right;
+  a {
+    font-family: $header-font;
+    font-weight: 300;
+    font-size: $body-font-size;
+    text-decoration: none;
+  }
   top: 10px;
   right: 10px;
 }

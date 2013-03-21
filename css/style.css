@@ -1,6 +1,6 @@
 body {
-  font-family: "PT Serif", serif;
-  font-size: 19px;
+  font-family: "Source Sans Pro", serif;
+  font-size: 22px;
   font-weight: 400; }
 
 a:hover {
@@ -20,66 +20,70 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 15.2px; }
+  font-size: 17.6px; }
 
 span.date {
-  font-size: 15.2px;
+  font-size: 17.6px;
   font-style: italic; }
 
 div.date {
   margin-top: 20px;
   font-weight: 300;
   color: #666;
-  font-family: "PT Serif", serif;
-  font-size: 17.1px;
+  font-family: "Source Sans Pro", serif;
+  font-size: 19.8px;
   font-style: italic; }
 
 #content {
-  width: 600px;
+  width: 27em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "PT Serif", serif; }
+    font-family: "Source Sans Pro", serif; }
   #content h1 {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 400;
     margin-bottom: 20px; }
     #content h1 small {
       margin-top: 8px;
       font-weight: 300;
       color: #888;
-      font-size: 18.2px;
+      font-size: 26px;
       display: block;
-      font-family: "PT Serif", serif; }
+      font-family: "Source Sans Pro", serif; }
     #content h1 .name a {
-      font-size: 22px;
-      font-weight: 400;
+      font-size: 30px;
+      font-weight: 300;
       color: #800; }
   #content h2 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 35px;
+    font-weight: 400;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "PT Serif", serif;
-    font-size: 19px;
+    font-family: "Source Sans Pro", serif;
+    font-size: 22px;
     margin-bottom: 40px;
     line-height: 1.5em; }
     #content p code {
-      font-family: "Monaco", "Inconsolata", monospace;
+      font-family: "Monaco", monospace;
       font-size: 14px;
+      background: #f0f0f0;
+      padding: 3px;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 15.2px; }
+    font-size: 17.6px; }
   #content pre {
     font-size: 14px;
     margin-bottom: 40px;
     margin-left: 20px;
-    width: 780px;
+    width: 35.1em;
     padding: 0px; }
     #content pre code {
-      font-family: "Monaco", "Inconsolata", monospace; }
+      font-family: "Monaco", monospace; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -91,14 +95,20 @@ div.date {
 #footer {
   margin-bottom: 30px; }
   #footer p {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    font-weight: 300px; }
 
 #info {
   position: absolute;
   text-align: right;
   top: 10px;
   right: 10px; }
+  #info a {
+    font-family: "Source Sans Pro", serif;
+    font-weight: 300;
+    font-size: 22px;
+    text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 19px; }
+  font-size: 22px; }
