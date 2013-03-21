@@ -1,6 +1,6 @@
 body {
-  font-family: "Source Sans Pro", serif;
-  font-size: 22px;
+  font-family: "PT Serif", serif;
+  font-size: 18px;
   font-weight: 400; }
 
 a:hover {
@@ -20,54 +20,54 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 17.6px; }
+  font-size: 14.4px; }
 
 span.date {
-  font-size: 17.6px;
+  font-size: 14.4px;
   font-style: italic; }
 
 div.date {
   margin-top: 20px;
   font-weight: 300;
   color: #666;
-  font-family: "Source Sans Pro", serif;
-  font-size: 19.8px;
+  font-family: "PT Serif", serif;
+  font-size: 16.2px;
   font-style: italic; }
 
 #content {
-  width: 27em;
+  width: 33em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "Source Sans Pro", serif; }
+    font-family: "PT Serif", serif; }
   #content h1 {
-    font-size: 40px;
-    font-weight: 400;
+    font-size: 28px;
+    font-weight: 600;
     margin-bottom: 20px; }
     #content h1 small {
       margin-top: 8px;
       font-weight: 300;
       color: #888;
-      font-size: 26px;
+      font-size: 18.2px;
       display: block;
-      font-family: "Source Sans Pro", serif; }
+      font-family: "PT Serif", serif; }
     #content h1 .name a {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 300;
       color: #800; }
   #content h2 {
-    font-size: 35px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 600;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "Source Sans Pro", serif;
-    font-size: 22px;
-    margin-bottom: 40px;
+    font-family: "PT Serif", serif;
+    font-size: 18px;
+    margin-bottom: 27px;
     line-height: 1.5em; }
     #content p code {
-      font-family: "Monaco", monospace;
+      font-family: monospace;
       font-size: 14px;
       background: #f0f0f0;
       padding: 3px;
@@ -75,15 +75,15 @@ div.date {
       -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 17.6px; }
+    font-size: 14.4px; }
   #content pre {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
     margin-left: 20px;
-    width: 35.1em;
+    width: 42.9em;
     padding: 0px; }
     #content pre code {
-      font-family: "Monaco", monospace; }
+      font-family: monospace; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
@@ -104,11 +104,11 @@ div.date {
   top: 10px;
   right: 10px; }
   #info a {
-    font-family: "Source Sans Pro", serif;
+    font-family: "PT Serif", serif;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 22px; }
+  font-size: 18px; }

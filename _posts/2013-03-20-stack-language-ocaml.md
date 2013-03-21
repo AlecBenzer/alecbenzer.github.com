@@ -104,7 +104,7 @@ let f' = f 1;;
 
 ## Continuations and chaining function calls
 
-So using partial application, and this other thing called continuations, we can implement a way to change lots of functions calls together like we want.
+So using partial application, and this other thing called continuations, we can implement a way to chain lots of functions calls together like we want for our stack language syntax.
 
 A continuation is basically a function that gets called on the results of another function. For example:
 
