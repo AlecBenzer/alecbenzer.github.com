@@ -42,7 +42,15 @@ So if we perform the experiment and someone likes the item, we say $X = 1$, and 
 
 We can also talk about the **expected value** of our random variable, which is denoted $E(X)$. Basically, the expected value of a random variable is the average value that the variable would take on over multiple instances of the experiment.
 
-For example, if 50% of people would like the item, and 50% of people would not, then 50% of the time $X$ would be $0$, and the other 50% of the time $X$ would be $1$. This would mean that $E(X) = 0.5\cdot 1 + 0.5\cdot 0 = 0.5 $. On the other hand, if 70% of people would like the item and 30% would not, then $E(X) = 0.7 \cdot 1 + 0.3 \cdot 0 = 0.7$. Generally speaking, if $p$ is the proportion of people that would like the product, then
+For example, if 50% of people would like the item, and 50% of people would not, then 50% of the time $X$ would be $0$, and the other 50% of the time $X$ would be $1$. This would mean that
+
+$$E(X) = 0.5\cdot 1 + 0.5\cdot 0 = 0.5 $$
+
+On the other hand, if 70% of people would like the item and 30% would not, then
+
+$$E(X) = 0.7 \cdot 1 + 0.3 \cdot 0 = 0.7$$
+
+Generally speaking, if $p$ is the proportion of people that would like the product, then
 
 $$E(X) = p \cdot 1 + (1 - p)\cdot 0 = p$$
 
@@ -92,7 +100,15 @@ This is variance for a finite list of numbers. To compute the variance for a ran
 
 Recall that $E(X)$ is $p$, and so when $X$ is 1 (which happens with probability $p$), its squared distance to its expected value is $(1 - E(X))^2 = (1-p)^2$, and when $X$ is 0 (which happens with probability $(1-p)$), its squared distance to its expected value is $(0 - E(X))^2 = p^2$, and so
 
-$${\rm Var}(X) = p\cdot((1-p)^2) + (1-p)\cdot(p^2) = p(1 -2p + p^2) + p^2 - p^3 $$ $$= p - 2p^2 + p^3 + p^2 - p^3 = p - p^2 = p(1-p)$$
+$$
+\begin{eqnarray\*}
+{\rm Var}(X) &=& p\cdot((1-p)^2) + (1-p)\cdot(p^2) \\\\
+    &=& p(1 -2p + p^2) + p^2 - p^3 \\\\
+    &=& p - 2p^2 + p^3 + p^2 - p^3\\\\
+    &=& p - p^2\\\\
+    &=& p(1-p)
+\end{eqnarray\*}
+$$
 
 
 ## Confidence Intervals

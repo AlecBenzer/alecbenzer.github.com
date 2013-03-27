@@ -1,6 +1,7 @@
 body {
   font-family: "PT Serif", serif;
-  font-size: 18px;
+  color: #181818;
+  font-size: 17px;
   font-weight: 400; }
 
 a:hover {
@@ -9,30 +10,28 @@ a:hover {
 h1, h2, h3 {
   font-weight: 400; }
   h1 a, h2 a, h3 a {
-    color: #333333;
+    color: black;
     text-decoration: none; }
     h1 a:visited, h2 a:visited, h3 a:visited {
-      color: #333333; }
+      color: black; }
     h1 a:hover, h2 a:hover, h3 a:hover {
       text-decoration: underline;
-      color: #333333; }
+      color: black; }
 
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 14.4px; }
+  font-size: 13.6px; }
 
 span.date {
-  font-size: 14.4px;
+  font-size: 13.6px;
   font-style: italic; }
 
 div.date {
-  margin-top: 20px;
-  font-weight: 300;
+  margin-top: 40px;
   color: #666;
   font-family: "PT Serif", serif;
-  font-size: 16.2px;
-  font-style: italic; }
+  font-size: 13.6px; }
 
 #content {
   width: 33em;
@@ -42,55 +41,59 @@ div.date {
   #content h1, #content h2, #content h3 {
     font-family: "PT Serif", serif; }
   #content h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px; }
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 30px; }
     #content h1 small {
-      margin-top: 8px;
+      margin-top: 3px;
       font-weight: 300;
       color: #888;
-      font-size: 18.2px;
+      font-size: 15px;
       display: block;
       font-family: "PT Serif", serif; }
     #content h1 .name a {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 300;
       color: #800; }
   #content h2 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
     font-family: "PT Serif", serif;
-    font-size: 18px;
-    margin-bottom: 27px;
-    line-height: 1.5em; }
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.65em; }
     #content p code {
-      font-family: monospace;
+      font-family: "Droid Sans Mono", monospace;
       font-size: 14px;
-      background: #f0f0f0;
       padding: 3px;
       border-radius: 3px;
       -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 14.4px; }
+    font-size: 13.6px; }
   #content pre {
     font-size: 14px;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
+    width: 66em;
+    padding: 0px;
     margin-left: 20px;
-    width: 42.9em;
-    padding: 0px; }
+    margin-top: 40px;
+    margin-bottom: 40px; }
     #content pre code {
-      font-family: monospace; }
+      font-family: "Droid Sans Mono", monospace; }
   #content li {
     margin-bottom: 10px;
     line-height: 150%; }
   #content blockquote {
-    margin-left: 20px;
-    font-style: italic;
-    color: #777; }
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    color: #777;
+    border-left: 3px solid #aaa;
+    padding-left: .75em; }
 
 #footer {
   margin-bottom: 30px; }
@@ -106,9 +109,9 @@ div.date {
   #info a {
     font-family: "PT Serif", serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 18px; }
+  font-size: 17px; }

@@ -2,20 +2,21 @@
 ---
 $header-font: 'PT Serif', serif;
 $body-font: 'PT Serif', serif;
-$code-font: monospace;
+$code-font: 'Droid Sans Mono', monospace;
 
-$title-font-size: 24px;
-$h1-font-size: 28px;
-$h2-font-size: 24px;
-$body-font-size: 18px;
+$title-font-size: 22px;
+$h1-font-size: 26px;
+$h2-font-size: 22px;
+$body-font-size: 17px;
 $code-size: 14px;
 
-$h1-color: #333;
-$p-margin-bottom: 27px;
+$h1-color: #000;
+$p-margin-bottom: 30px;
 $content-width: 33em; // 600px;
 
 body {
   font-family: $body-font;
+  color: #181818;
   font-size: $body-font-size;
   font-weight: 400;
 }
@@ -57,12 +58,10 @@ span.date {
 }
 
 div.date {
-  margin-top: 20px;
-  font-weight: 300;
+  margin-top: 40px;
   color: #666;
   font-family: $body-font;
-  font-size: $body-font-size*0.9;
-  font-style: italic;
+  font-size: $body-font-size * 0.8;
 }
 
 #content {
@@ -77,14 +76,14 @@ div.date {
 
   h1 {
     font-size: $h1-font-size;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
 
     small {
-      margin-top: 8px;
+      margin-top: 3px;
       font-weight: 300;
       color: #888;
-      font-size: $h1-font-size*0.65;
+      font-size: 15px;
       display: block;
       font-family: $header-font;
     }
@@ -98,7 +97,7 @@ div.date {
 
   h2 {
     font-size: $h2-font-size;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 70px;
     margin-bottom: 10px;
   }
@@ -107,12 +106,11 @@ div.date {
     font-family: $body-font;
     font-size: $body-font-size;
     margin-bottom: $p-margin-bottom;
-    line-height: 1.5em;
+    line-height: 1.65em;
 
     code {
       font-family: $code-font;
       font-size: $code-size;
-      background: #f0f0f0;
       padding: 3px;
       border-radius: 3px;
       -moz-border-radius: 3px;
@@ -132,9 +130,11 @@ div.date {
     }
     font-size: $code-size;
     margin-bottom: $p-margin-bottom;
-    margin-left: 20px;
-    width: $content-width*1.3;
+    width: $content-width*2.0;
     padding: 0px;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   li {
@@ -143,9 +143,12 @@ div.date {
   }
 
   blockquote {
-    margin-left: 20px;
-    font-style: italic;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
     color: #777;
+    border-left: 3px solid #aaa;
+    padding-left: .75em;
   }
 }
 
