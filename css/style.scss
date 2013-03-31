@@ -1,18 +1,19 @@
 ---
 ---
-$header-font: 'PT Serif', serif;
-$body-font: 'PT Serif', serif;
-$code-font: 'Droid Sans Mono', monospace;
+$header-font: 'Open Sans', serif;
+$title-font: 'Open Sans';
+$body-font: 'Open Sans', serif;
+$code-font: "Monaco", "Consolas", "Andale Mono", "DejaVu Sans Mono", monospace;
 
-$title-font-size: 22px;
-$h1-font-size: 26px;
-$h2-font-size: 22px;
-$body-font-size: 17px;
+$title-font-size: 23px;
+$h1-font-size: 25px;
+$h2-font-size: 23px;
+$body-font-size: 18px;
 $code-size: 14px;
 
 $h1-color: #000;
 $p-margin-bottom: 30px;
-$content-width: 33em; // 600px;
+$content-width: 35em; // 600px;
 
 body {
   font-family: $body-font;
@@ -53,8 +54,9 @@ h1, h2,  h3 {
 }
 
 span.date {
-  font-size: $body-font-size * 0.8;
-  font-style: italic;
+  font-size: $body-font-size * 0.9;
+  color: #777;
+  font-weight: 300;
 }
 
 div.date {
@@ -76,28 +78,29 @@ div.date {
 
   h1 {
     font-size: $h1-font-size;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 30px;
 
     small {
       margin-top: 3px;
       font-weight: 300;
       color: #888;
-      font-size: 15px;
+      font-size: $h1-font-size * 0.6;
       display: block;
       font-family: $header-font;
     }
 
     .name a {
-      font-size: $title-font-size;
       font-weight: 300;
+      font-family: $title-font;
+      font-size: $title-font-size;
       color: #800;
     }
   }
 
   h2 {
     font-size: $h2-font-size;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 70px;
     margin-bottom: 10px;
   }
@@ -106,7 +109,7 @@ div.date {
     font-family: $body-font;
     font-size: $body-font-size;
     margin-bottom: $p-margin-bottom;
-    line-height: 1.65em;
+    line-height: 1.5em;
 
     code {
       font-family: $code-font;
@@ -176,4 +179,8 @@ div.date {
 .post-div {
   margin-bottom: 20px;
   font-size: $body-font-size;
+}
+
+ol, ul {
+  margin-bottom: $p-margin-bottom;
 }
