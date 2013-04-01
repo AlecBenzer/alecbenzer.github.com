@@ -6,12 +6,12 @@ $body-font: 'Open Sans', serif;
 $code-font: 'Source Code Pro', monospace;
 
 $title-font-size: 27px;
-$h1-font-size: 27px;
+$h1-font-size: 24px;
 $h2-font-size: 20px;
 $body-font-size: 16px;
 $code-size: 14px;
 
-$h1-color: #000;
+$h1-color: #222;
 $p-margin-bottom: 20px;
 $content-width: 35em; // 600px;
 
@@ -77,14 +77,14 @@ div.date {
 
   h1 {
     font-size: $h1-font-size;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 30px;
 
     small {
       margin-top: 3px;
       font-weight: 300;
       color: #444;
-      font-size: $body-font-size;
+      font-size: $body-font-size * 0.9;
       display: block;
       font-family: $body-font;
     }

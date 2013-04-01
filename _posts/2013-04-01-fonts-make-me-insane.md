@@ -13,4 +13,4 @@ Sometimes it's just brought on by seeing some fonts used nicely on another site.
 
 Now, to an extent, I guess this might just be my inner-designer seeing nice design and wanting to emulate it. But my reaction is just _way_ too intense, and it's something that I'm far too concerned with.
 
-I try to tell myself that it doesn't matter. I try to tell myself that I should worry about content instead. I try to tell myself that should just be coding or doing other productive things. But it doesn't help.
+I try to tell myself that it doesn't matter. I try to tell myself that I should worry about content instead. I try to tell myself that I should just be coding or doing other productive things. But it doesn't help.
