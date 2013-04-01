@@ -1,7 +1,7 @@
 body {
-  font-family: "PT Serif", serif;
-  color: #181818;
-  font-size: 18px;
+  font-family: "Open Sans", serif;
+  color: #222;
+  font-size: 16px;
   font-weight: 400; }
 
 a:hover {
@@ -21,52 +21,51 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 span.date {
-  font-size: 16.2px;
+  font-size: 14.4px;
   color: #777;
   font-weight: 400; }
 
 div.date {
   margin-top: 40px;
   color: #666;
-  font-family: "PT Serif", serif;
-  font-size: 14.4px; }
+  font-family: "Open Sans", serif;
+  font-size: 12.8px; }
 
 #content {
-  width: 31em;
-  margin-left: 6em;
+  width: 35em;
+  margin-left: 21em;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
-    font-family: "PT Serif", serif; }
+    font-family: "Open Sans", serif; }
   #content h1 {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 27px;
+    font-weight: 400;
     margin-bottom: 30px; }
     #content h1 small {
       margin-top: 3px;
-      font-weight: 400;
-      color: #888;
-      font-size: 15px;
+      font-weight: 300;
+      color: #444;
+      font-size: 16px;
       display: block;
-      font-family: "PT Serif", serif;
-      font-style: italic; }
+      font-family: "Open Sans", serif; }
     #content h1 .name a {
-      font-weight: 400;
-      font-family: "PT Serif", serif;
-      font-size: 23px;
+      font-weight: 300;
+      font-family: "Open Sans", serif;
+      font-size: 27px;
       color: #800; }
   #content h2 {
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 700;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
-    font-family: "PT Serif", serif;
-    font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.5em; }
+    font-family: "Open Sans", serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.7em; }
     #content p code {
       font-family: "Source Code Pro", monospace;
       font-size: 14px;
@@ -75,11 +74,11 @@ div.date {
       -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 14.4px; }
+    font-size: 12.8px; }
   #content pre {
     font-size: 14px;
-    margin-bottom: 30px;
-    width: 62em;
+    margin-bottom: 20px;
+    width: 70em;
     padding: 0px;
     margin-left: 20px;
     margin-top: 40px;
@@ -109,14 +108,14 @@ div.date {
   top: 10px;
   right: 10px; }
   #info a {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-size: 16px;
     text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 18px; }
+  font-size: 16px; }
 
 ol, ul {
-  margin-bottom: 30px; }
+  margin-bottom: 20px; }

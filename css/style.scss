@@ -1,23 +1,23 @@
 ---
 ---
-$header-font: 'PT Serif', serif;
-$title-font: 'PT Serif', serif;
-$body-font: 'PT Serif', serif;
+$header-font: 'Open Sans', serif;
+$title-font: 'Open Sans', serif;
+$body-font: 'Open Sans', serif;
 $code-font: 'Source Code Pro', monospace;
 
-$title-font-size: 23px;
-$h1-font-size: 25px;
-$h2-font-size: 23px;
-$body-font-size: 18px;
+$title-font-size: 27px;
+$h1-font-size: 27px;
+$h2-font-size: 20px;
+$body-font-size: 16px;
 $code-size: 14px;
 
 $h1-color: #000;
-$p-margin-bottom: 30px;
-$content-width: 31em; // 600px;
+$p-margin-bottom: 20px;
+$content-width: 35em; // 600px;
 
 body {
   font-family: $body-font;
-  color: #181818;
+  color: #222;
   font-size: $body-font-size;
   font-weight: 400;
 }
@@ -68,7 +68,7 @@ div.date {
 
 #content {
   width: $content-width;
-  margin-left: 6em;
+  margin-left: 21em;
   margin-top: 70px;
 
   h1, h2, h3 {
@@ -77,21 +77,20 @@ div.date {
 
   h1 {
     font-size: $h1-font-size;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 30px;
 
     small {
       margin-top: 3px;
-      font-weight: 400;
-      color: #888;
-      font-size: $h1-font-size * 0.6;
+      font-weight: 300;
+      color: #444;
+      font-size: $body-font-size;
       display: block;
-      font-family: $header-font;
-      font-style: italic;
+      font-family: $body-font;
     }
 
     .name a {
-      font-weight: 400;
+      font-weight: 300;
       font-family: $title-font;
       font-size: $title-font-size;
       color: #800;
@@ -109,7 +108,7 @@ div.date {
     font-family: $body-font;
     font-size: $body-font-size;
     margin-bottom: $p-margin-bottom;
-    line-height: 1.5em;
+    line-height: 1.7em;
 
     code {
       font-family: $code-font;
@@ -167,8 +166,8 @@ div.date {
   position: absolute;
   text-align: right;
   a {
-    font-family: $header-font;
-    font-weight: 400;
+    font-family: $body-font;
+    font-weight: 300;
     font-size: $body-font-size;
     text-decoration: none;
   }
