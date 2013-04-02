@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", serif;
   color: #222;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400; }
 
 a:hover {
@@ -21,10 +21,10 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 12.8px; }
+  font-size: 14.4px; }
 
 span.date {
-  font-size: 14.4px;
+  font-size: 16.2px;
   color: #777;
   font-weight: 400; }
 
@@ -32,23 +32,23 @@ div.date {
   margin-top: 40px;
   color: #666;
   font-family: "Open Sans", serif;
-  font-size: 12.8px; }
+  font-size: 14.4px; }
 
 #content {
   width: 35em;
-  margin-left: 21em;
+  margin-left: 10em;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
     font-family: "Open Sans", serif; }
   #content h1 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 30px; }
     #content h1 small {
       margin-top: 3px;
-      font-weight: 300;
+      font-weight: 400;
       color: #444;
-      font-size: 14.4px;
+      font-size: 16.2px;
       display: block;
       font-family: "Open Sans", serif; }
     #content h1 .name a {
@@ -57,26 +57,26 @@ div.date {
       font-size: 27px;
       color: #800; }
   #content h2 {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
     margin-top: 70px;
     margin-bottom: 10px; }
   #content p {
     font-family: "Open Sans", serif;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
     line-height: 1.7em; }
     #content p code {
       font-family: "Source Code Pro", monospace;
-      font-size: 14px;
+      font-size: 16px;
       padding: 3px;
       border-radius: 3px;
       -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 12.8px; }
+    font-size: 14.4px; }
   #content pre {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
     width: 70em;
     padding: 0px;
@@ -110,12 +110,12 @@ div.date {
   #info a {
     font-family: "Open Sans", serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 16px; }
+  font-size: 18px; }
 
 ol, ul {
   margin-bottom: 20px; }
