@@ -8,8 +8,8 @@ $code-font: 'Source Code Pro', monospace;
 $title-font-size: 27px;
 $h1-font-size: 28px;
 $h2-font-size: 26px;
-$body-font-size: 18px;
-$code-size: 16px;
+$body-font-size: 16px;
+$code-size: 14px;
 
 $h1-color: #222;
 $p-margin-bottom: 20px;
@@ -84,9 +84,10 @@ div.date {
       margin-top: 3px;
       font-weight: 400;
       color: #444;
-      font-size: $body-font-size * 0.9;
+      font-size: $body-font-size * 1.1;
       display: block;
       font-family: $body-font;
+      font-style: italic;
     }
 
     .name a {

@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", serif;
   color: #222;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400; }
 
 a:hover {
@@ -21,10 +21,10 @@ h1, h2, h3 {
 .post-preview {
   color: #777;
   font-style: italic;
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 span.date {
-  font-size: 16.2px;
+  font-size: 14.4px;
   color: #777;
   font-weight: 400; }
 
@@ -32,7 +32,7 @@ div.date {
   margin-top: 40px;
   color: #666;
   font-family: "Open Sans", serif;
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 #content {
   width: 35em;
@@ -48,9 +48,10 @@ div.date {
       margin-top: 3px;
       font-weight: 400;
       color: #444;
-      font-size: 16.2px;
+      font-size: 17.6px;
       display: block;
-      font-family: "Open Sans", serif; }
+      font-family: "Open Sans", serif;
+      font-style: italic; }
     #content h1 .name a {
       font-weight: 300;
       font-family: "Open Sans", serif;
@@ -63,20 +64,20 @@ div.date {
     margin-bottom: 10px; }
   #content p {
     font-family: "Open Sans", serif;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
     line-height: 1.7em; }
     #content p code {
       font-family: "Source Code Pro", monospace;
-      font-size: 16px;
+      font-size: 14px;
       padding: 3px;
       border-radius: 3px;
       -moz-border-radius: 3px;
       vertical-align: middle; }
   #content #footnotes p {
-    font-size: 14.4px; }
+    font-size: 12.8px; }
   #content pre {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
     width: 70em;
     padding: 0px;
@@ -110,12 +111,12 @@ div.date {
   #info a {
     font-family: "Open Sans", serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none; }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: 18px; }
+  font-size: 16px; }
 
 ol, ul {
   margin-bottom: 20px; }
