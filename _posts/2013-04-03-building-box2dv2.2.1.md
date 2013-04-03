@@ -27,9 +27,9 @@ $ cd Box2D_v2.2.1
 $ ~/bin/premake4 gmake
 {% endhighlight %}
 
-This will generate a Makefile along with a bunch of .make files in `Box2D_v2.2.1/Build/gmake/`. You need to change some stuff in some of these files though.
+This will generate a Makefile along with a bunch of .make files in `Box2D_v2.2.1/Build/gmake/`. You will need to make soem changes to these files.
 
-First, open `HelloWorld.make` (ie, `Box2D_v2.2.1/Build/gmake/HelloWorld.make`), and search for "Helloworld.cpp". There should be only one occurence. This is a typo -- it should be "Hello**W**orld.cpp" (ie, capital 'W'). Make that change, so the line looks like this:
+First, open `Box2D_v2.2.1/Build/gmake/HelloWorld.make`, and search for "Helloworld.cpp". There should be only one occurence. This is a typo -- it should be "Hello**W**orld.cpp" (ie, capital 'W'). Make that change, so the line looks like this:
 
 {% highlight text %}
 $(OBJDIR)/Helloworld.o: ../../HelloWorld/HelloWorld.cpp
@@ -51,7 +51,7 @@ sudo apt-get install freeglut3-dev
 
 Package repositories on other distros will probably have freeglut as well. Worse comes to worse, you can just [grab and install freeglut directly](http://freeglut.sourceforge.net/).
 
-After these changes, and making sure you're in `Box2D_v2.2.1/Build/gmake/`, run make.
+After these changes are made, run make from `Box2D_v2.2.1/Build/gmake/`.
 
 {% highlight text %}
 $ cd /path/to/Box2D_v2.2.1/Build/gmake/
