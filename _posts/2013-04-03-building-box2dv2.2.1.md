@@ -49,7 +49,7 @@ Obviously, you also have to have glut installed. On Ubuntu 12.10 you can install
 sudo apt-get install freeglut3-dev
 {% endhighlight %}
 
-Package repositories on other distros will probably have freeglut as well. Worse comes to worse, you can just [grab and install freeglut directly](http://freeglut.sourceforge.net/).
+Package repositories on other distros will probably have freeglut as well. Worse comes to worst, you can just [grab and install freeglut directly](http://freeglut.sourceforge.net/).
 
 After these changes are made, run make from `Box2D_v2.2.1/Build/gmake/`.
 
