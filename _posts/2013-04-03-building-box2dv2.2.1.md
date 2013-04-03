@@ -35,7 +35,7 @@ First, open `HelloWorld.make` (ie, `Box2D_v2.2.1/Build/gmake/HelloWorld.make`), 
 $(OBJDIR)/Helloworld.o: ../../HelloWorld/HelloWorld.cpp
 {% endhighlight %}
 
-The next change involves GLUT, and might be system specific. But, on my system, the name of the glut library is `liblgut.so`, and so should be linked to with `-lglut`, but Testbed.make links to it with `-lGLUT`. So you'll have to change that in `Testbed.make` -- it appears twice.
+The next change involves GLUT, and might be system specific. But, on my system, the name of the glut library is `libglut.so`, and so should be linked to with `-lglut`, but Testbed.make links to it with `-lGLUT`. So you'll have to change that in `Testbed.make` -- it appears twice.
 
 {% highlight text %}
 LIBS      += bin/Debug/libBox2D.a bin/Debug/libGLUI.a -lX11 -lGL -lGLU -lglut
