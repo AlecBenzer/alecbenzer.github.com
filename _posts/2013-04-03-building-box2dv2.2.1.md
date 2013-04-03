@@ -27,7 +27,7 @@ $ cd Box2D_v2.2.1
 $ ~/bin/premake4 gmake
 {% endhighlight %}
 
-This will generate a Makefile along with a bunch of .make files in `Box2D_v2.2.1/Build/gmake/`. You will need to make soem changes to these files.
+This will generate a Makefile along with a bunch of .make files in `Box2D_v2.2.1/Build/gmake/`. You will need to make some changes to these files.
 
 First, open `Box2D_v2.2.1/Build/gmake/HelloWorld.make`, and search for "Helloworld.cpp". There should be only one occurence. This is a typo -- it should be "Hello**W**orld.cpp" (ie, capital 'W'). Make that change, so the line looks like this:
 
