@@ -68,7 +68,8 @@ div.date {
 
 #content {
   width: $content-width;
-  margin-left: 10em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 70px;
 
   h1, h2, h3 {
@@ -133,7 +134,7 @@ div.date {
     }
     font-size: $code-size;
     margin-bottom: $p-margin-bottom;
-    width: $content-width*2.0;
+    width: $content-width*1.2;
     padding: 0px;
     margin-left: 20px;
     margin-top: 40px;

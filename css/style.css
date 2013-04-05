@@ -36,7 +36,8 @@ div.date {
 
 #content {
   width: 35em;
-  margin-left: 10em;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 70px; }
   #content h1, #content h2, #content h3 {
     font-family: "Open Sans", serif; }
@@ -79,7 +80,7 @@ div.date {
   #content pre {
     font-size: 14px;
     margin-bottom: 20px;
-    width: 70em;
+    width: 42em;
     padding: 0px;
     margin-left: 20px;
     margin-top: 40px;
