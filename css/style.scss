@@ -1,25 +1,26 @@
 ---
 ---
-$header-font: 'Open Sans', serif;
-$title-font: 'Open Sans', serif;
-$body-font: 'Open Sans', serif;
-$code-font: 'Source Code Pro', monospace;
+$header-font: 'PT Serif', sans-serif;
+$body-font: 'PT Serif', sans-serif;
+$code-font: "Monaco", monospace;
 
-$title-font-size: 23px;
-$h1-font-size: 27px;
-$h2-font-size: 23px;
+$h1-font-size: 23px;
+$h2-font-size: 21px;
 $body-font-size: 16px;
-$code-size: 14px;
+$code-size: 13px;
 
-$h1-color: #222;
-$p-margin-bottom: 20px;
-$content-width: 35em; // 600px;
+$header-color: #222;
+$p-margin-bottom: 1.4em;
+$content-width: 33em;
 
-body {
-  font-family: $body-font;
-  color: #222;
-  font-size: $body-font-size;
-  font-weight: 400;
+$bgcolor: #fff;
+
+$body-color: #000;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: $bgcolor;
 }
 
 a {
@@ -28,163 +29,97 @@ a {
   }
 }
 
-h1, h2,  h3 {
-  font-weight: 400;
-  a {
-    color: $h1-color;
-    text-decoration: none;
-    &:visited {
-      color: $h1-color;
-    }
-    &:hover {
-      text-decoration: underline;
-      color: $h1-color;
-    }
-  }
-}
-
-#container {
-}
-
-.post-preview {
-  // margin-left: 40px;
-  color: #777;
-  font-style: italic;
-  font-size: 0.8*$body-font-size;
-}
-
-span.date {
-  font-size: $body-font-size * 0.9;
-  color: #777;
-  font-weight: 400;
-}
-
-div.date {
-  margin-top: 40px;
-  color: #666;
-  font-family: $body-font;
-  font-size: $body-font-size * 0.8;
-}
-
 #content {
+  padding-top: 100px;
+  margin: auto;
   width: $content-width;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
 
-  h1, h2, h3 {
-    font-family: $header-font;
-  }
-
-  h1 {
-    font-size: $h1-font-size;
-    font-weight: 700;
-    margin-bottom: 30px;
-
-    small {
-      margin-top: 3px;
-      font-weight: 400;
-      color: #444;
-      font-size: $body-font-size * 0.9;
-      display: block;
-      font-family: $body-font;
-      font-style: italic;
-    }
-
-    .name a {
-      font-weight: 300;
-      font-family: $title-font;
-      font-size: $title-font-size;
-      color: #800;
-    }
-  }
-
-  h1#title {
-  }
-
-  h2 {
-    font-size: $h2-font-size;
-    font-weight: 700;
-    margin-top: 70px;
-    margin-bottom: 10px;
-  }
+  font-family: $body-font;
+  font-size: $body-font-size;
 
   p {
-    font-family: $body-font;
-    font-size: $body-font-size;
+    width: $content-width;
     margin-bottom: $p-margin-bottom;
-    line-height: 1.7em;
+    color: $body-color;
+    line-height: 1.6em;
 
     code {
       font-family: $code-font;
       font-size: $code-size;
-      padding: 3px;
-      border-radius: 3px;
-      -moz-border-radius: 3px;
-      vertical-align: middle;
-    }
-  }
-
-  #footnotes {
-    p {
-      font-size: $body-font-size*0.8;
+      color: $body-color;
     }
   }
 
   pre {
+    margin-bottom: $p-margin-bottom;
+
     code {
       font-family: $code-font;
+      color: $body-color;
+      font-size: $code-size;
+      padding-bottom: 4px;
     }
-    font-size: $code-size;
-    margin-bottom: $p-margin-bottom;
-    width: $content-width*1.2;
-    padding: 0px;
-    margin-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
   }
 
-  li {
-    margin-bottom: 10px;
-    line-height: 150%;
+  h1, h2 {
+    font-family: $header-font;
+    color: $header-color;
+    font-weight: 600;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: $h1-font-size;
+
+    a:link, a:visited {
+      color: $header-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $header-color;
+      text-decoration: underline;
+    }
+
+    small {
+      display: block;
+      font-weight: 400;
+      font-size: $body-font-size * 0.9;
+    }
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: $h2-font-size;
+  }
+
+  ul, ol {
+    margin-bottom: $p-margin-bottom;
+    width: $content-width;
+    color: $body-color;
+
+    li {
+      margin-bottom: 5px;
+    }
   }
 
   blockquote {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    color: #666;
-    border-left: 3px solid #aaa;
-    padding-left: .75em;
-  }
-}
+    p {
+      color: #555;
+    }
 
-#footer {
-  p {
-    margin-bottom: 0px;
-    font-weight: 400;
+    border-left: 2px #777 solid;
+    margin-left: 10px;
+    padding-left: 10px;
   }
-  margin-bottom: 30px;
-}
-
-#info {
-  position: absolute;
-  text-align: right;
-  a {
-    font-family: $body-font;
-    font-weight: 300;
-    font-size: $body-font-size;
-    text-decoration: none;
-  }
-  top: 10px;
-  right: 10px;
 }
 
 .post-div {
   margin-bottom: 20px;
-  font-size: $body-font-size;
 }
 
-ol, ul {
-  margin-bottom: $p-margin-bottom;
+#bio p {
+  text-align: center;
 }

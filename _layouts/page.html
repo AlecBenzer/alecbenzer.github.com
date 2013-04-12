@@ -2,22 +2,18 @@
 <html>
   {% include head.html %}
   <body>
-    <div id="container">
+    <div id="page">
       <div id="content">
-        <div>
-          <h1 id="title">
-            <div class="name"><a href="/">Alec Benzer</a></div>
-          </h1>
-        </div>
-        <hr />
         {% if page.title %}
         <h1 id="page-title">
           <a href="{{page.url}}">{{ page.title }}</a>
+          <small>{{ page.date | date: "%B %-d, %Y" }}</small>
+          <hr />
         </h1>
         {% endif %}
         {{ content }}
-        {% include footer.html %}
-        {% include bio.html %}
+
+        <br /><br />
       </div>
     </div>
   </body>

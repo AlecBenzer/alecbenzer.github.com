@@ -1,123 +1,70 @@
-body {
-  font-family: "Open Sans", serif;
-  color: #222;
-  font-size: 16px;
-  font-weight: 400; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: white; }
 
 a:hover {
   color: maroon; }
 
-h1, h2, h3 {
-  font-weight: 400; }
-  h1 a, h2 a, h3 a {
-    color: #222222;
-    text-decoration: none; }
-    h1 a:visited, h2 a:visited, h3 a:visited {
-      color: #222222; }
-    h1 a:hover, h2 a:hover, h3 a:hover {
-      text-decoration: underline;
-      color: #222222; }
-
-.post-preview {
-  color: #777;
-  font-style: italic;
-  font-size: 12.8px; }
-
-span.date {
-  font-size: 14.4px;
-  color: #777;
-  font-weight: 400; }
-
-div.date {
-  margin-top: 40px;
-  color: #666;
-  font-family: "Open Sans", serif;
-  font-size: 12.8px; }
-
 #content {
-  width: 35em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px; }
-  #content h1, #content h2, #content h3 {
-    font-family: "Open Sans", serif; }
-  #content h1 {
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 30px; }
-    #content h1 small {
-      margin-top: 3px;
-      font-weight: 400;
-      color: #444;
-      font-size: 14.4px;
-      display: block;
-      font-family: "Open Sans", serif;
-      font-style: italic; }
-    #content h1 .name a {
-      font-weight: 300;
-      font-family: "Open Sans", serif;
-      font-size: 23px;
-      color: #800; }
-  #content h2 {
-    font-size: 23px;
-    font-weight: 700;
-    margin-top: 70px;
-    margin-bottom: 10px; }
+  padding-top: 100px;
+  margin: auto;
+  width: 33em;
+  font-family: "PT Serif", sans-serif;
+  font-size: 16px; }
   #content p {
-    font-family: "Open Sans", serif;
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.7em; }
+    width: 33em;
+    margin-bottom: 1.4em;
+    color: black;
+    line-height: 1.6em; }
     #content p code {
-      font-family: "Source Code Pro", monospace;
-      font-size: 14px;
-      padding: 3px;
-      border-radius: 3px;
-      -moz-border-radius: 3px;
-      vertical-align: middle; }
-  #content #footnotes p {
-    font-size: 12.8px; }
+      font-family: "Monaco", monospace;
+      font-size: 13px;
+      color: black; }
   #content pre {
-    font-size: 14px;
-    margin-bottom: 20px;
-    width: 42em;
-    padding: 0px;
-    margin-left: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px; }
+    margin-bottom: 1.4em; }
     #content pre code {
-      font-family: "Source Code Pro", monospace; }
-  #content li {
-    margin-bottom: 10px;
-    line-height: 150%; }
+      font-family: "Monaco", monospace;
+      color: black;
+      font-size: 13px;
+      padding-bottom: 4px; }
+  #content h1, #content h2 {
+    font-family: "PT Serif", sans-serif;
+    color: #222222;
+    font-weight: 600; }
+  #content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 23px; }
+    #content h1 a:link, #content h1 a:visited {
+      color: #222222;
+      text-decoration: none; }
+    #content h1 a:hover {
+      color: #222222;
+      text-decoration: underline; }
+    #content h1 small {
+      display: block;
+      font-weight: 400;
+      font-size: 14.4px; }
+  #content h2 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 21px; }
+  #content ul, #content ol {
+    margin-bottom: 1.4em;
+    width: 33em;
+    color: black; }
+    #content ul li, #content ol li {
+      margin-bottom: 5px; }
   #content blockquote {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    color: #666;
-    border-left: 3px solid #aaa;
-    padding-left: .75em; }
-
-#footer {
-  margin-bottom: 30px; }
-  #footer p {
-    margin-bottom: 0px;
-    font-weight: 400; }
-
-#info {
-  position: absolute;
-  text-align: right;
-  top: 10px;
-  right: 10px; }
-  #info a {
-    font-family: "Open Sans", serif;
-    font-weight: 300;
-    font-size: 16px;
-    text-decoration: none; }
+    border-left: 2px #777 solid;
+    margin-left: 10px;
+    padding-left: 10px; }
+    #content blockquote p {
+      color: #555; }
 
 .post-div {
-  margin-bottom: 20px;
-  font-size: 16px; }
-
-ol, ul {
   margin-bottom: 20px; }
+
+#bio p {
+  text-align: center; }
