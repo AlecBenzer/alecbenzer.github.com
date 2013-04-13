@@ -4,17 +4,19 @@ title: Alec Benzer
 ---
 <div id="bio">
 <p>
-<a href="http://cs.uiuc.edu">cs</a>/<a href="http://math.uiuc.edu">math</a> student @ <a href="http://uiuc.edu">uiuc</a><br />
+<a href="http://cs.uiuc.edu">cs</a> &amp; <a href="http://math.uiuc.edu">math</a> student @ <a href="http://uiuc.edu">uiuc</a><br />
 former/future sre intern @ <a href="http://www.google.com/about">google</a>
 <br />
 <br />
 Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter
+<br /><br />
+Read a bunch of <a href="http://quotes.alecbenzer.com">quotes I like</a>
 </p>
 </div>
 
 <hr />
 
-## posts
+## blog posts
 
 {% for post in site.posts %}
   <div class="post-div">

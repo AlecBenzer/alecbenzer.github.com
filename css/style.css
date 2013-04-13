@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: white; }
+  background-color: #fcfdfe; }
 
 a:hover {
   color: maroon; }
@@ -10,50 +10,51 @@ a:hover {
   padding-top: 100px;
   margin: auto;
   width: 33em;
-  font-family: "PT Serif", sans-serif;
-  font-size: 16px; }
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px; }
   #content p {
     width: 33em;
     margin-bottom: 1.4em;
-    color: black;
+    color: #3c424b;
     line-height: 1.6em; }
     #content p code {
-      font-family: "Monaco", monospace;
+      font-family: "Source Code Pro", monospace;
       font-size: 13px;
-      color: black; }
+      color: #3c424b;
+      padding-bottom: 10px; }
   #content pre {
     margin-bottom: 1.4em; }
     #content pre code {
-      font-family: "Monaco", monospace;
-      color: black;
+      font-family: "Source Code Pro", monospace;
+      color: #3c424b;
       font-size: 13px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
-    font-family: "PT Serif", sans-serif;
-    color: #222222;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #3c424b;
     font-weight: 600; }
   #content h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 23px; }
+    font-size: 30px; }
     #content h1 a:link, #content h1 a:visited {
-      color: #222222;
+      color: #3c424b;
       text-decoration: none; }
     #content h1 a:hover {
-      color: #222222;
+      color: #3c424b;
       text-decoration: underline; }
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 14.4px; }
+      font-size: 16.2px; }
   #content h2 {
     margin-bottom: 20px;
     margin-top: 40px;
-    font-size: 21px; }
+    font-size: 25px; }
   #content ul, #content ol {
     margin-bottom: 1.4em;
     width: 33em;
-    color: black; }
+    color: #3c424b; }
     #content ul li, #content ol li {
       margin-bottom: 5px; }
   #content blockquote {
@@ -61,7 +62,7 @@ a:hover {
     margin-left: 10px;
     padding-left: 10px; }
     #content blockquote p {
-      color: #555; }
+      color: #666; }
 
 .post-div {
   margin-bottom: 20px; }
