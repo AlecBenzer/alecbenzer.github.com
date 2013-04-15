@@ -9,14 +9,12 @@ former/future sre intern @ <a href="http://www.google.com/about">google</a>
 <br />
 <br />
 Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter
-<br /><br />
-Read a bunch of <a href="http://quotes.alecbenzer.com">quotes I like</a>
 </p>
 </div>
 
 <hr />
 
-## blog posts
+## Blog posts
 
 {% for post in site.posts %}
   <div class="post-div">

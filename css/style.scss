@@ -1,13 +1,13 @@
 ---
 ---
-$header-font: 'Source Sans Pro', sans-serif;
-$body-font: 'Source Sans Pro', sans-serif;
-$code-font: 'Source Code Pro', monospace;
+$header-font: sans-serif;
+$body-font: sans-serif;
+$code-font: monospace;
 
-$h1-font-size: 36px;
-$h2-font-size: 31px;
-$body-font-size: 20px;
-$code-size: 15px;
+$h1-font-size: 25px;
+$h2-font-size: 22px;
+$body-font-size: 16px;
+$code-size: 13px;
 
 $header-color: #3c424b;
 $p-margin-bottom: 1.4em;
@@ -30,7 +30,7 @@ a {
 }
 
 #content {
-  padding-top: 100px;
+  padding-top: 80px;
   margin: auto;
   width: $content-width;
 
@@ -65,7 +65,7 @@ a {
   h1, h2 {
     font-family: $header-font;
     color: $header-color;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   h1 {
@@ -86,7 +86,7 @@ a {
     small {
       display: block;
       font-weight: 400;
-      font-size: $body-font-size * 0.9;
+      font-size: $body-font-size - 1px;
     }
   }
 
@@ -108,7 +108,7 @@ a {
 
   blockquote {
     p {
-      color: #666;
+      color: lighten($body-color, 20%);
     }
 
     border-left: 2px #777 solid;
