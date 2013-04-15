@@ -9,28 +9,27 @@ a:hover {
 #content {
   padding-top: 80px;
   margin: auto;
-  width: 33em;
-  font-family: sans-serif, "Source Sans Pro", sans-serif;
-  font-size: 16px; }
+  width: 35em;
+  font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
+  font-size: 17px; }
   #content p {
-    width: 33em;
     margin-bottom: 1.4em;
     color: #3c424b;
-    line-height: 1.6em; }
+    line-height: 1.4em; }
     #content p code {
-      font-family: monospace, "Source Code Pro", monospace;
-      font-size: 13px;
+      font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+      font-size: 14px;
       color: #3c424b;
       padding-bottom: 10px; }
   #content pre {
     margin-bottom: 1.4em; }
     #content pre code {
-      font-family: monospace, "Source Code Pro", monospace;
+      font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
       color: #3c424b;
-      font-size: 13px;
+      font-size: 14px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
-    font-family: sans-serif, "Source Sans Pro", sans-serif;
+    font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
     color: #3c424b;
     font-weight: 700; }
   #content h1 {
@@ -46,17 +45,17 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 15px; }
+      font-size: 16px; }
   #content h2 {
     margin-bottom: 20px;
     margin-top: 60px;
     font-size: 22px; }
   #content ul, #content ol {
     margin-bottom: 1.4em;
-    width: 33em;
+    width: 35em;
     color: #3c424b; }
     #content ul li, #content ol li {
-      margin-bottom: 5px; }
+      margin-bottom: 10px; }
   #content blockquote {
     border-left: 2px #777 solid;
     margin-left: 10px;
@@ -65,7 +64,10 @@ a:hover {
       color: #697484; }
 
 .post-div {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 #bio p {
   text-align: center; }
+
+#footnotes p {
+  font-size: 13.6px; }
