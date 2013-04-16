@@ -11,17 +11,18 @@ a:hover {
   margin: auto;
   width: 35em;
   font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
-  font-size: 17px; }
+  font-size: 16px; }
   #content p {
     margin-bottom: 1.4em;
     color: #3c424b;
-    line-height: 1.4em; }
+    line-height: 1.5em; }
     #content p code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
       font-size: 14px;
       color: #3c424b;
-      padding-bottom: 10px; }
+      padding: 3px; }
   #content pre {
+    background: #e0e0e0;
     margin-bottom: 1.4em; }
     #content pre code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
@@ -35,7 +36,7 @@ a:hover {
   #content h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 25px; }
+    font-size: 24px; }
     #content h1 a:link, #content h1 a:visited {
       color: #3c424b;
       text-decoration: none; }
@@ -45,7 +46,7 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 16px; }
+      font-size: 15px; }
   #content h2 {
     margin-bottom: 20px;
     margin-top: 60px;
@@ -56,6 +57,12 @@ a:hover {
     color: #3c424b; }
     #content ul li, #content ol li {
       margin-bottom: 10px; }
+  #content img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 80%; }
   #content blockquote {
     border-left: 2px #777 solid;
     margin-left: 10px;
@@ -70,4 +77,4 @@ a:hover {
   text-align: center; }
 
 #footnotes p {
-  font-size: 13.6px; }
+  font-size: 12.8px; }

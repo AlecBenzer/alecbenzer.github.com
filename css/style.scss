@@ -4,9 +4,9 @@ $header-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $body-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $code-font: 'Consolas', 'Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
 
-$h1-font-size: 25px;
+$h1-font-size: 24px;
 $h2-font-size: 22px;
-$body-font-size: 17px;
+$body-font-size: 16px;
 $code-size: 14px;
 
 $header-color: #3c424b;
@@ -40,17 +40,18 @@ a {
   p {
     margin-bottom: $p-margin-bottom;
     color: $body-color;
-    line-height: 1.4em;
+    line-height: 1.5em;
 
     code {
       font-family: $code-font;
       font-size: $code-size;
       color: $body-color;
-      padding-bottom: 10px;
+      padding: 3px;
     }
   }
 
   pre {
+    background: #e0e0e0;
     margin-bottom: $p-margin-bottom;
 
     code {
@@ -103,6 +104,14 @@ a {
     li {
       margin-bottom: 10px;
     }
+  }
+
+  img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
   }
 
   blockquote {
