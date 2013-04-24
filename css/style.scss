@@ -5,22 +5,20 @@ $body-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $code-font: 'Consolas', 'Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
 
 $h1-font-size: 24px;
-$h2-font-size: 22px;
+$h2-font-size: 20px;
 $body-font-size: 16px;
-$code-size: 16px;
+$code-size: 15px;
 
-$header-color: #3c424b;
 $p-margin-bottom: 2.2em;
 $content-width: 35em;
 
-$bgcolor: #fcfdfe;
-
-$body-color: #3c424b;
+$body-color: #222;
+$header-color: #333;
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: $bgcolor;
+  background-color: #fff;
 }
 
 a {
@@ -51,7 +49,7 @@ a {
   }
 
   pre {
-    background: #e0e0e0;
+    background: #ddd;
     margin-bottom: $p-margin-bottom;
 
     code {
@@ -117,6 +115,7 @@ a {
   blockquote {
     p {
       color: lighten($body-color, 20%);
+      font-style: italic;
     }
 
     border-left: 2px #777 solid;
