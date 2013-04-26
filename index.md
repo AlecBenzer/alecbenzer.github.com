@@ -4,11 +4,10 @@ title: Alec Benzer
 ---
 <div id="bio">
 <p>
-<a href="http://cs.uiuc.edu">cs</a> &amp; <a href="http://math.uiuc.edu">math</a> student @ <a href="http://uiuc.edu">uiuc</a><br />
-former/future sre intern @ <a href="http://www.google.com/about">google</a>
+cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
+sre intern @ <a href="http://www.google.com/about">google</a><br />
 <br />
-<br />
-Follow <a href="http://twitter.com/alecbenzer">@alecbenzer</a> on twitter
+<a href="http://twitter.com/alecbenzer">twitter</a> &middot; <a href="mailto:alecbenzer@gmail.com">email</a>
 </p>
 </div>
 

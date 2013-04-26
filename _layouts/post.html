@@ -7,13 +7,10 @@
         {% if page.title %}
         <h1 id="page-title">
           <a href="{{page.url}}">{{ page.title }}</a>
-          <small><a href="/">Alec Benzer</a> &nbsp;&middot;&nbsp; {{ page.date | date: "%B %-d, %Y" }}</small>
-          <hr class="full" />
+          <!--<small><a href="/">Alec Benzer</a></small>-->
         </h1>
         {% endif %}
         {{ content }}
-
-        <br />
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer" data-count="none">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

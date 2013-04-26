@@ -9,34 +9,34 @@ a:hover {
 #content {
   padding-top: 80px;
   margin: auto;
-  width: 35em;
+  width: 33em;
   font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 18px; }
   #content p {
-    margin-bottom: 2.2em;
+    margin-bottom: 2.3em;
     color: #222222;
     line-height: 1.5em; }
     #content p code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-      font-size: 15px;
+      font-size: 16px;
       color: #222222;
-      padding: 3px; }
+      padding: -1px; }
   #content pre {
-    background: #ddd;
-    margin-bottom: 2.2em; }
+    background-color: #d8d8d8;
+    margin-bottom: 2.3em; }
     #content pre code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
       color: #222222;
-      font-size: 15px;
+      font-size: 16px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
     color: #333333;
     font-weight: 700; }
   #content h1 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
-    font-size: 24px; }
+    font-size: 32px; }
     #content h1 a:link, #content h1 a:visited {
       color: #333333;
       text-decoration: none; }
@@ -46,14 +46,14 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 15px; }
+      font-size: 17px; }
   #content h2 {
     margin-bottom: 20px;
-    margin-top: 2.86em;
-    font-size: 20px; }
+    margin-top: 2.99em;
+    font-size: 24px; }
   #content ul, #content ol {
-    margin-bottom: 2.2em;
-    width: 35em;
+    margin-bottom: 2.3em;
+    width: 33em;
     color: #222222; }
     #content ul li, #content ol li {
       margin-bottom: 10px; }
@@ -68,14 +68,18 @@ a:hover {
     margin-left: 10px;
     padding-left: 10px; }
     #content blockquote p {
-      color: #555555;
-      font-style: italic; }
+      color: #555555; }
 
 .post-div {
-  margin-bottom: 10px; }
+  margin-bottom: 0.6em; }
 
 #bio p {
-  text-align: center; }
+  text-align: left; }
 
 #footnotes p {
-  font-size: 12.8px; }
+  font-size: 14.4px; }
+
+hr.sep {
+  width: 50%;
+  height: 10px;
+  margin: 0 auto; }
