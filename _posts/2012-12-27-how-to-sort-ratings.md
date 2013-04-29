@@ -62,15 +62,15 @@ We don't have access to this information. We only have access to a small _sample
 
 ## The central limit theorem
 
-So what information do we have available to us? Presumably, we know the number of good ratings an item has received and the number of bad ratings an item has received. Using this, we can compute the proportion of people that favored the product _of those that bothered to rate it_. We'll call this proportion $\hat{p}$. What we're interested in is what $\hat{p}$ tells us about normal $p$.
+So what information do we have available to us? Presumably, we know the number of good ratings an item has received and the number of bad ratings an item has received. Using this, we can compute the proportion of people that favored the product _of those that bothered to rate it_. We'll call this proportion $\widehat{p}$. What we're interested in is what $\widehat{p}$ tells us about normal $p$.
 
-To do this, we rely first and foremost on the [central limit theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), which is a very important theorem in statistics. For our particular problem, the central limit theorem theorem says that $\hat{p}$ is **normally distributed** with a mean equal to $p$ and **variance** inversely proportional to $n$, the number of people we have ratings from, all for sufficiently large $n$.
+To do this, we rely first and foremost on the [central limit theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), which is a very important theorem in statistics. For our particular problem, the central limit theorem theorem says that $\widehat{p}$ is **normally distributed** with a mean equal to $p$ and **variance** inversely proportional to $n$, the number of people we have ratings from, all for sufficiently large $n$.
 
-Okay, what? That's a bit to digest. So first of all, instead of thinking of $\hat{p}$ as a specific value, think of it in terms of a random variable. In fact, let's call this random variable $\hat{X_n}$ (and again, $n$ is the number of people we have ratings from). The "experiment" that we perform to get values for $\hat{X_n}$ is "take a random sample of $n$ people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, $\hat{p}$ is an instance of this random variable $\hat{X_n}$.
+Okay, what? That's a bit to digest. So first of all, instead of thinking of $\widehat{p}$ as a specific value, think of it in terms of a random variable. In fact, let's call this random variable $\widehat{X}_n$ (and again, $n$ is the number of people we have ratings from). The "experiment" that we perform to get values for $\widehat{X}_n$ is "take a random sample of $n$ people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, $\widehat{p}$ is an instance of this random variable $\widehat{X}_n$.
 
-The central limit theorem says firstly that $E(\hat{X_n}) = E(X)$. That is, on average, $\hat{p}$, the proportion of people that like the product from our sample of $n$, will be "close to" $p$, the true proportion of people that like the product. To see how close $\hat{p}$ will be to $p$, we need the rest of the central limit theorem.
+The central limit theorem says firstly that $E(\widehat{X}_n) = E(X)$. That is, on average, $\widehat{p}$, the proportion of people that like the product from our sample of $n$, will be "close to" $p$, the true proportion of people that like the product. To see how close $\widehat{p}$ will be to $p$, we need the rest of the central limit theorem.
 
-So the second thing that the central limit theorem tells us is $\hat{X_n}$ is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger $n$ is). It also tells us that ${\rm Var}(\hat{X_n})$, the **variance** of $\hat{X_n}$, is equal to ${\rm Var}(X)/n$.
+So the second thing that the central limit theorem tells us is $\widehat{X}_n$ is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger $n$ is). It also tells us that ${\rm Var}(\widehat{X}_n)$, the **variance** of $\widehat{X}_n$, is equal to ${\rm Var}(X)/n$.
 
 ## Wait, what's variance?
 
@@ -113,90 +113,90 @@ $$
 
 ## Confidence Intervals
 
-So going back to the central limit theorem, we have that the random variable $\hat{X_n}$ is normally distributed with mean $E(X) = p$ and variance ${\rm Var}(X)/n$. Because of things we know about normal distributions, this can tell us a lot about how $\hat{p}$ (which is essentially an instance of the random variable $\hat{X_n}$) relates to $p$.
+So going back to the central limit theorem, we have that the random variable $\widehat{X}_n$ is normally distributed with mean $E(X) = p$ and variance ${\rm Var}(X)/n$. Because of things we know about normal distributions, this can tell us a lot about how $\widehat{p}$ (which is essentially an instance of the random variable $\widehat{X}_n$) relates to $p$.
 
-In particular, something well known about normal distributions is how likely something is to be within $z$ standard deviations of the mean. That is, for our normal distribution, our variance is ${\rm Var}(X)/n = p(1-p)/n$ (as we showed above). This means that the standard deviation of $\hat{X_n}$ is $\sigma = \sqrt{ \mbox{Var}(X)/n} = \sqrt{p(1-p)/n}$. Remember that our mean was $p$, and so we know what the odds are for $p$ and our specific value $\hat{p}$ to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
+In particular, something well known about normal distributions is how likely something is to be within $z$ standard deviations of the mean. That is, for our normal distribution, our variance is ${\rm Var}(X)/n = p(1-p)/n$ (as we showed above). This means that the standard deviation of $\widehat{X}_n$ is $\sigma = \sqrt{ \mbox{Var}(X)/n} = \sqrt{p(1-p)/n}$. Remember that our mean was $p$, and so we know what the odds are for $p$ and our specific value $\widehat{p}$ to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
 
-$$ \Pr(|p - \hat{p}| < \hat{\sigma}) \approx 0.68 $$
+$$ \Pr(\left|p - \widehat{p}\right| < \widehat{\sigma}) \approx 0.68 $$
 
-where $\hat{\sigma} = \sqrt{ {\rm Var}(\hat{X_n})}$ is the standard deviation of $\hat{X_n}$.
+where $\widehat{\sigma} = \sqrt{ {\rm Var}(\widehat{X}_n)}$ is the standard deviation of $\widehat{X}_n$.
 
-Well, sort of. The central limit theorem tells us that $\hat{X_n}$ is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
+Well, sort of. The central limit theorem tells us that $\widehat{X}_n$ is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
 
-We also know (are confident) that the probability of $\hat{p}$ being with _two_ standard deviations of $p$ is approximately 95%...
+We also know (are confident) that the probability of $\widehat{p}$ being with _two_ standard deviations of $p$ is approximately 95%...
 
-$$ \Pr(|p - \hat{p}| < 2\cdot\hat{\sigma}) \approx 0.95 $$
+$$ \Pr(\left|p - \widehat{p}\right| < 2\cdot\widehat{\sigma}) \approx 0.95 $$
 
 ...and that the probability of being with _three_ standard deviations is approximately 99.7%
 
-$$ \Pr(|p - \hat{p}| < 3\cdot\hat{\sigma}) \approx 0.997 $$
+$$ \Pr(\left|p - \widehat{p}\right| < 3\cdot\widehat{\sigma}) \approx 0.997 $$
 
-So in general, for any particular probability $\alpha$, it's possible to find a corresponding value $z$ (often written $z_{\alpha/2}$) such that the odds of $p$ and $\hat{p}$ being with $z$ standard deviations of each other is $\alpha$:
+So in general, for any particular probability $\alpha$, it's possible to find a corresponding value $z$ (often written $z_{\alpha/2}$) such that the odds of $p$ and $\widehat{p}$ being with $z$ standard deviations of each other is $\alpha$:
 
-$$ \Pr(|p - \hat{p}| < z\cdot\hat{\sigma}) \approx \alpha $$
+$$ \Pr(\left|p - \widehat{p}\right| < z\cdot\widehat{\sigma}) \approx \alpha $$
 
 This leads to an _interval_ of values that we are $\alpha$ sure that $p$ is between. Ie, we know with probability $\alpha$ that
 
-$$ \hat{p} - z\cdot\hat{\sigma} < p < \hat{p} + z\cdot\hat{\sigma} $$
+$$ \widehat{p} - z\cdot\widehat{\sigma} < p < \widehat{p} + z\cdot\widehat{\sigma} $$
 
 The $z$ value corresponding to an $\alpha$ of 95%, for example, is 1.96. So this means that we can be 95% sure that
 
-$$ \hat{p} - 1.96\hat{\sigma} < p < \hat{p} + 1.96\hat{\sigma} $$
+$$ \widehat{p} - 1.96\widehat{\sigma} < p < \widehat{p} + 1.96\widehat{\sigma} $$
 
-So what's really going on here? We'd _like_ to know what $p$ is. But we don't. Instead, we know what $\hat{p}$ is. And we know that $\hat{p}$ should be roughly $p$, but we're not all that sure. Especially when we only have a few ratings to go on.
+So what's really going on here? We'd _like_ to know what $p$ is. But we don't. Instead, we know what $\widehat{p}$ is. And we know that $\widehat{p}$ should be roughly $p$, but we're not all that sure. Especially when we only have a few ratings to go on.
 
-What we _can_ say, though, is that we are 95% sure that $p$ is no less than $\hat{p} - 1.96\hat{\sigma}$. And so this, this $\hat{p} - 1.96\hat{\sigma}$ value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
+What we _can_ say, though, is that we are 95% sure that $p$ is no less than $\widehat{p} - 1.96\widehat{\sigma}$. And so this, this $\widehat{p} - 1.96\widehat{\sigma}$ value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
 
-Except there's a bit of a problem with that. Do you recall the formula for $\hat{\sigma}$, the standard deviation of $\hat{X_n}$? It was $\hat{\sigma} = \sqrt{p(1-p)/n}$. And the whole reason we're in this mess to begin with is because we don't know $p$, so we can't very well know $\hat{\sigma}$ either.
+Except there's a bit of a problem with that. Do you recall the formula for $\widehat{\sigma}$, the standard deviation of $\widehat{X}_n$? It was $\widehat{\sigma} = \sqrt{p(1-p)/n}$. And the whole reason we're in this mess to begin with is because we don't know $p$, so we can't very well know $\widehat{\sigma}$ either.
 
-One way to cope with this is to do the simplest thing we can, and just replace $p$ with $\hat{p}$ for our calculation of $\hat{\sigma}$. That is, we let $\hat{\sigma} = \sqrt{\hat{p}(1-\hat{p})/n}$, and so the lower bound of our confidence interval becomes
+One way to cope with this is to do the simplest thing we can, and just replace $p$ with $\widehat{p}$ for our calculation of $\widehat{\sigma}$. That is, we let $\widehat{\sigma} = \sqrt{\widehat{p}(1-\widehat{p})/n}$, and so the lower bound of our confidence interval becomes
 
-$$\hat{p} - z\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
+$$\widehat{p} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$$
 
 This is sometimes called the lower bound of the "normal approximation interval".
 
 ## Wilson score confidence interval
 
-Our approximation of $\hat{\sigma} \approx \sqrt{\hat{p}(1-\hat{p})/n}$ is alright, but still not really good enough to use for sorting ratings. In particular, notice what happens at "extreme" values of $\hat{p}$ (ie, if $\hat{p}$ is 1 or 0). In these cases, $\hat{p}(1-\hat{p})$ will be 0, causing the lower bound of our interval to be just plain old $\hat{p}$.
+Our approximation of $\widehat{\sigma} \approx \sqrt{\widehat{p}(1-\widehat{p})/n}$ is alright, but still not really good enough to use for sorting ratings. In particular, notice what happens at "extreme" values of $\widehat{p}$ (ie, if $\widehat{p}$ is 1 or 0). In these cases, $\widehat{p}(1-\widehat{p})$ will be 0, causing the lower bound of our interval to be just plain old $\widehat{p}$.
 
-And in fact, for items with only a few ratings, it's quite common to have extreme values for $\hat{p}$. Consider an item with just one positive rating and no negative ratings, for example. It will have a $\hat{p}$ of 1, meaning it would go to the top of our listing. This means that if we implemented this kind of sorting, we'd get a bunch of items with just one positive rating floating all the way to the top, above items with many more positive ratings but also a few negative ratings, which is exactly the kind of behavior we wanted to avoid.
+And in fact, for items with only a few ratings, it's quite common to have extreme values for $\widehat{p}$. Consider an item with just one positive rating and no negative ratings, for example. It will have a $\widehat{p}$ of 1, meaning it would go to the top of our listing. This means that if we implemented this kind of sorting, we'd get a bunch of items with just one positive rating floating all the way to the top, above items with many more positive ratings but also a few negative ratings, which is exactly the kind of behavior we wanted to avoid.
 
-Instead, we're going to have to do something else to deal with the fact that we don't know $\hat{\sigma}$. To this end, we use the "Wilson score confidence interval", which uses some clever algebra to get around having to compute $\hat{\sigma}$ directly. Recall the formula we had for our confidence intervals:
+Instead, we're going to have to do something else to deal with the fact that we don't know $\widehat{\sigma}$. To this end, we use the "Wilson score confidence interval", which uses some clever algebra to get around having to compute $\widehat{\sigma}$ directly. Recall the formula we had for our confidence intervals:
 
-$$ |\hat{p} - p| < z\cdot \hat{\sigma} $$
+$$ \left|\widehat{p} - p\right| < z\cdot \widehat{\sigma} $$
 
 We can square both sides of this inequality to get
 
-$$(\hat{p} - p)^2 < z^2\cdot\hat{\sigma}^2$$
-$$(\hat{p} - p)^2 < z^2\left(\frac{p(1-p)}{n}\right)$$
+$$(\widehat{p} - p)^2 < z^2\cdot\widehat{\sigma}^2$$
+$$(\widehat{p} - p)^2 < z^2\left(\frac{p(1-p)}{n}\right)$$
 
 If we let $t = \frac{z^2}{n}$ (just to make things easier to write), we get
 
-$$\hat{p}^2 - 2p\hat{p} + p^2 < t(p-p^2)$$
-$$\hat{p}^2 - 2p\hat{p} + p^2 < tp-tp^2$$
-$$\hat{p}^2 - (2\hat{p}+t)p + (1+t)p^2 < 0$$
+$$\widehat{p}^2 - 2p\widehat{p} + p^2 < t(p-p^2)$$
+$$\widehat{p}^2 - 2p\widehat{p} + p^2 < tp-tp^2$$
+$$\widehat{p}^2 - (2\widehat{p}+t)p + (1+t)p^2 < 0$$
 
 This inequality is quadratic in $p$, which means we can use the quadratic formula to find the end-points (ie, the places where we are equal to 0, not less than it). The quadratic formula for solving $c + bp + ap^2 = 0$ is
 
 $$ p = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
-and so if we have $a = 1 + t$, $b = -(2\hat{p} + t)$, and $c = \hat{p}^2$, we get endpoints of
+and so if we have $a = 1 + t$, $b = -(2\widehat{p} + t)$, and $c = \widehat{p}^2$, we get endpoints of
 
-$$ \frac{(2\hat{p} + t) \pm \sqrt{(2\hat{p} + t)^2 - 4(1+t)\hat{p}^2}}{2(1+t)} = \frac{2\hat{p} + t \pm \sqrt{4\hat{p}^2 + 4\hat{p}t + t^2 - 4\hat{p}^2 - 4t\hat{p}^2}}{2(1+t)}$$
-$$ = \frac{2(\hat{p} + \frac{t}{2}) \pm \sqrt{4(\hat{p}^2 + \hat{p}t + \frac{t^2}{4} - \hat{p}^2 - t\hat{p}^2)}}{2(1+t)} = \frac{\hat{p} + \frac{t}{2} \pm \sqrt{\hat{p}t + \frac{t^2}{4} - t\hat{p}^2}}{1+t}$$
-$$ = \frac{\hat{p} + \frac{t}{2} \pm \sqrt{t(\hat{p}-\hat{p}^2) + \frac{t^2}{4}}}{1+t} = \frac{\hat{p} + \frac{t}{2} \pm \sqrt{t\hat{p}(1-\hat{p}) + \frac{t^2}{4}}}{1+t}$$
+$$ \frac{(2\widehat{p} + t) \pm \sqrt{(2\widehat{p} + t)^2 - 4(1+t)\widehat{p}^2}}{2(1+t)} = \frac{2\widehat{p} + t \pm \sqrt{4\widehat{p}^2 + 4\widehat{p}t + t^2 - 4\widehat{p}^2 - 4t\widehat{p}^2}}{2(1+t)}$$
+$$ = \frac{2(\widehat{p} + \frac{t}{2}) \pm \sqrt{4(\widehat{p}^2 + \widehat{p}t + \frac{t^2}{4} - \widehat{p}^2 - t\widehat{p}^2)}}{2(1+t)} = \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{\widehat{p}t + \frac{t^2}{4} - t\widehat{p}^2}}{1+t}$$
+$$ = \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t(\widehat{p}-\widehat{p}^2) + \frac{t^2}{4}}}{1+t} = \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t\widehat{p}(1-\widehat{p}) + \frac{t^2}{4}}}{1+t}$$
 
 Now we just replace $t$ with $\frac{z^2}{n}$, and we're left with that scary looking equation at the bottom of Miller's post:
 
-$$\frac{\hat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\hat{p}(1-\hat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}$$
+$$\frac{\widehat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\widehat{p}(1-\widehat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\widehat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}$$
 
-What that expression solves for is the values of $p$ for which $|\hat{p}-p|$ is exactly $z\cdot\hat{\sigma}$. If we want $|\hat{p} - p| < z\cdot\hat{\sigma}$, then we want $p$ to be in between those two values. Ie, we want
+What that expression solves for is the values of $p$ for which $\left|\widehat{p}-p\right|$ is exactly $z\cdot\widehat{\sigma}$. If we want $\left|\widehat{p} - p\right| < z\cdot\widehat{\sigma}$, then we want $p$ to be in between those two values. Ie, we want
 
 
-$$ \frac{\hat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\hat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
+$$ \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\widehat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
 
 So this tells us that (if $z = 1.96$) we are 95% sure that $p$ is at least
 
-$$ \frac{\hat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
+$$ \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
 
 This then is the lower bound of the Wilson score confidence interval, and what we want to sort by.

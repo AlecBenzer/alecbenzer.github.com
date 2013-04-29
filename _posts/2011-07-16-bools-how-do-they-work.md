@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bools - How do they work?
+title: Bools &ndash; How do they work?
 ---
 What is it with people doing really stupid things with bools? (and if-statements) For example, the entire purpose of an if-statement is to decide whether or not an expression is true. Effectively, an if-statement is an `== true` test. Why then, do people do things like:
 
