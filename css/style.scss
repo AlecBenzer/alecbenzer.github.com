@@ -2,16 +2,18 @@ $header-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $body-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $code-font: 'Consolas', 'Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
 
-$h1-font-size: 32px;
-$h2-font-size: 26px;
-$body-font-size: 20px;
-$code-size: 17px;
+$h1-font-size: 24px;
+$h2-font-size: 22px;
+$body-font-size: 18px;
+$code-size: 15px;
 
 $p-margin-bottom: 2.3em;
 $content-width: 30em;
 
 $body-color: #222;
-$header-color: #333;
+$header-color: #222;
+$p-link-color: default;
+$link-hover-color: maroon;
 
 html, body {
   margin: 0;
@@ -20,8 +22,12 @@ html, body {
 }
 
 a {
+  &:link, &:visited {
+    text-decoration: underline;
+  }
   &:hover {
-    color: maroon;
+    color: $link-hover-color;
+    text-decoration: underline;
   }
 }
 
@@ -42,7 +48,16 @@ a {
       font-family: $code-font;
       font-size: $code-size;
       color: $body-color;
-      padding: -1px;
+    }
+    a {
+      &:link, &:visited {
+        color: $p-link-color;
+        text-decoration: underline;
+      }
+      &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+      }
     }
   }
 

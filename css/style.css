@@ -3,54 +3,62 @@ html, body {
   padding: 0;
   background-color: #fff; }
 
+a:link, a:visited {
+  text-decoration: underline; }
 a:hover {
-  color: maroon; }
+  color: maroon;
+  text-decoration: underline; }
 
 #content {
   padding-top: 80px;
   margin: auto;
   width: 30em;
   font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
-  font-size: 20px; }
+  font-size: 18px; }
   #content p {
     margin-bottom: 2.3em;
     color: #222222;
     line-height: 1.5em; }
     #content p code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-      font-size: 17px;
-      color: #222222;
-      padding: -1px; }
+      font-size: 15px;
+      color: #222222; }
+    #content p a:link, #content p a:visited {
+      color: default;
+      text-decoration: underline; }
+    #content p a:hover {
+      color: maroon;
+      text-decoration: underline; }
   #content pre {
     background-color: #d8d8d8;
     margin-bottom: 2.3em; }
     #content pre code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
       color: #222222;
-      font-size: 17px;
+      font-size: 15px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
-    color: #333333;
+    color: #222222;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 30px;
-    font-size: 32px; }
+    font-size: 24px; }
     #content h1 a:link, #content h1 a:visited {
-      color: #333333;
+      color: #222222;
       text-decoration: none; }
     #content h1 a:hover {
-      color: #333333;
+      color: #222222;
       text-decoration: underline; }
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 19px; }
+      font-size: 17px; }
   #content h2 {
     margin-bottom: 20px;
     margin-top: 2.99em;
-    font-size: 26px; }
+    font-size: 22px; }
   #content ul, #content ol {
     margin-bottom: 2.3em;
     width: 30em;
@@ -77,7 +85,7 @@ a:hover {
   text-align: left; }
 
 #footnotes p {
-  font-size: 16px; }
+  font-size: 14.4px; }
 
 hr.sep {
   width: 50%;
