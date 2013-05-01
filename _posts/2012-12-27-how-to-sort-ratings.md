@@ -70,7 +70,7 @@ Okay, what? That's a bit to digest. So first of all, instead of thinking of $\wi
 
 The central limit theorem says firstly that $E(\widehat{X}_n) = E(X)$. That is, on average, $\widehat{p}$, the proportion of people that like the product from our sample of $n$, will be "close to" $p$, the true proportion of people that like the product. To see how close $\widehat{p}$ will be to $p$, we need the rest of the central limit theorem.
 
-So the second thing that the central limit theorem tells us is $\widehat{X}_n$ is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger $n$ is). It also tells us that ${\rm Var}(\widehat{X}_n)$, the **variance** of $\widehat{X}_n$, is equal to ${\rm Var}(X)/n$.
+So the second thing that the central limit theorem tells us is $\widehat{X}_n$ is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger $n$ is). It also tells us that ${\rm Var}(\widehat{X}_n)$, the **variance** of $\widehat{X}_n$, is equal to ${\rm Var}(X)\mathbin{/}n$.
 
 ## Wait, what's variance?
 
