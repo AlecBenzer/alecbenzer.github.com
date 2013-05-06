@@ -30,7 +30,7 @@ a:hover {
       color: maroon;
       text-decoration: underline; }
   #content pre {
-    background-color: #d8d8d8;
+    background-color: #ccc;
     margin-bottom: 1.8em; }
     #content pre code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
