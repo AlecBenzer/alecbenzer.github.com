@@ -1,11 +1,11 @@
-$header-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
 $body-font: 'Arial', 'Liberation Sans', 'DejaVu Sans', sans-serif;
+$header-font: $body-font;
 $code-font: 'Consolas', 'Menlo', 'Monaco', 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
 
 $h1-font-size: 26px;
-$h2-font-size: 24px;
+$h2-font-size: 23px;
 $body-font-size: 18px;
-$code-size: 15px;
+$code-size: 16px;
 
 $p-margin-bottom: 1.8em;
 $content-width: 33em;
@@ -18,7 +18,6 @@ $link-hover-color: maroon;
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
 }
 
 a {
@@ -41,13 +40,11 @@ a {
 
   p {
     margin-bottom: $p-margin-bottom;
-    color: $body-color;
     line-height: 1.5;
 
     code {
       font-family: $code-font;
       font-size: $code-size;
-      color: $body-color;
     }
     a {
       &:link, &:visited {
@@ -62,12 +59,12 @@ a {
   }
 
   pre {
-    background-color: #ccc;
     margin-bottom: $p-margin-bottom;
+    border-left: 1px #bbb solid;
+    padding-left: 30px;
 
     code {
       font-family: $code-font;
-      color: $body-color;
       font-size: $code-size;
       padding-bottom: 4px;
     }
@@ -97,7 +94,8 @@ a {
     small {
       display: block;
       font-weight: 400;
-      font-size: $body-font-size - 1px;
+      font-style: italic;
+      font-size: $body-font-size - 2px;
     }
   }
 
@@ -110,7 +108,6 @@ a {
   ul, ol {
     margin-bottom: $p-margin-bottom;
     width: $content-width;
-    color: $body-color;
 
     li {
       margin-bottom: 10px;
@@ -127,12 +124,13 @@ a {
 
   blockquote {
     p {
-      color: lighten($body-color, 20%);
+      color: #999;
+      font-style: italic;
     }
 
-    border-left: 2px #777 solid;
-    margin-left: 10px;
-    padding-left: 10px;
+    border-left: 1px #777 solid;
+    margin-left: 5px;
+    padding-left: 15px;
   }
 }
 
@@ -146,10 +144,4 @@ a {
 
 #footnotes p {
   font-size: $body-font-size * 0.8;
-}
-
-hr.sep {
-  width: 50%;
-  height: 10px;
-  margin: 0 auto;
 }

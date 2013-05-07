@@ -1,7 +1,6 @@
 html, body {
   margin: 0;
-  padding: 0;
-  background-color: #fff; }
+  padding: 0; }
 
 a:link, a:visited {
   text-decoration: underline; }
@@ -17,12 +16,10 @@ a:hover {
   font-size: 18px; }
   #content p {
     margin-bottom: 1.8em;
-    color: #333333;
     line-height: 1.5; }
     #content p code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-      font-size: 15px;
-      color: #333333; }
+      font-size: 16px; }
     #content p a:link, #content p a:visited {
       color: default;
       text-decoration: underline; }
@@ -30,12 +27,12 @@ a:hover {
       color: maroon;
       text-decoration: underline; }
   #content pre {
-    background-color: #ccc;
-    margin-bottom: 1.8em; }
+    margin-bottom: 1.8em;
+    border-left: 1px #bbb solid;
+    padding-left: 30px; }
     #content pre code {
       font-family: "Consolas", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
-      color: #333333;
-      font-size: 15px;
+      font-size: 16px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: "Arial", "Liberation Sans", "DejaVu Sans", sans-serif;
@@ -54,15 +51,15 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 17px; }
+      font-style: italic;
+      font-size: 16px; }
   #content h2 {
     margin-bottom: 15px;
     margin-top: 2.52em;
-    font-size: 24px; }
+    font-size: 23px; }
   #content ul, #content ol {
     margin-bottom: 1.8em;
-    width: 33em;
-    color: #333333; }
+    width: 33em; }
     #content ul li, #content ol li {
       margin-bottom: 10px; }
   #content img {
@@ -72,11 +69,12 @@ a:hover {
     margin: 0 auto;
     width: 80%; }
   #content blockquote {
-    border-left: 2px #777 solid;
-    margin-left: 10px;
-    padding-left: 10px; }
+    border-left: 1px #777 solid;
+    margin-left: 5px;
+    padding-left: 15px; }
     #content blockquote p {
-      color: #666666; }
+      color: #999;
+      font-style: italic; }
 
 .post-div {
   margin-bottom: 0.6em; }
@@ -86,8 +84,3 @@ a:hover {
 
 #footnotes p {
   font-size: 14.4px; }
-
-hr.sep {
-  width: 50%;
-  height: 10px;
-  margin: 0 auto; }

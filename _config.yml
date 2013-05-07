@@ -1,5 +1,2 @@
-server: true
-server_port: 4567
-auto: true
 permalink: /blog/:title
 pygments: false

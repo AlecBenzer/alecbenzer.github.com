@@ -7,10 +7,10 @@
         {% if page.title %}
         <h1 id="page-title">
           <a href="{{page.url}}">{{ page.title }}</a>
-          <!--<small><a href="/">Alec Benzer</a></small>-->
+          <small>{{ page.date | date: "%B %-d, %Y"}}</small>
         </h1>
-        {% endif %}
         <hr />
+        {% endif %}
         {{ content }}
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer" data-count="none">Tweet</a>
