@@ -91,7 +91,7 @@ for i := 0; i < N; i++ {
 }
 {% endhighlight %}
 
-`Dir` is set fo `SelectRecv` for each case because we're receiving from a channel in each case of our select. `Chan` is just the channel we intend to receive from, but because we're dealing with the reflect package (and because the channels can potentially have different types, even though ours don't), we need to pass a `reflect.Value` representing the channel (as opposed to the channel itself), which is achieved via `reflect.ValueOf`.
+`Dir` is set to `SelectRecv` for each case because we're receiving from a channel in each case of our select. `Chan` is just the channel we intend to receive from, but because we're dealing with the reflect package (and because the channels can potentially have different types, even though ours don't), we need to pass a `reflect.Value` representing the channel (as opposed to the channel itself), which is achieved via `reflect.ValueOf`.
 
 Now, we can enter our loop and actually execute the select:
 
