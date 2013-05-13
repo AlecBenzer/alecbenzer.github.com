@@ -3,7 +3,7 @@ layout: post
 title: "Matt Taibbi on <em>Zero Dark Thirty</em>"
 ---
 
-A few weeks ago I saw a link to [Matt Taibbi's article on _Zero Dark Thiry_](http://www.rollingstone.com/politics/blogs/taibblog/zero-dark-thirty-is-osama-bin-ladens-last-victory-over-america-20130116) called "'Zero Dark Thirty' Is Osama bin Laden's Last Victory Over America". I hadn't seen the movie so I didn't read the article at that time. I recently just watched it though, and went back to read the article, and I thought a lot of it was kind of silly.
+A few weeks ago I saw a link to Matt Taibbi's article ["'Zero Dark Thirty' Is Osama bin Laden's Last Victory Over America"](http://www.rollingstone.com/politics/blogs/taibblog/zero-dark-thirty-is-osama-bin-ladens-last-victory-over-america-20130116). I hadn't seen the movie so I didn't read the article at that time. I recently just watched it though, and went back to read the article, and I thought a lot of it was kind of silly.
 
 If you haven't seen _Zero Dark Thirty_, go see it, it's good movie. One of the things that I thought was most striking about it was the character development that the protagonist, Maya, goes through.
 
