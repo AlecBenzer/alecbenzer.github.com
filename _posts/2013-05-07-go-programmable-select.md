@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Go 1.1's \"programmable selects\""
+title: Go 1.1's "programmable selects"
 ---
 
-In a [post from a few days ago](/blog/two-goroutines-one-channel) we used go's `sync.WaitGroup` structure to facilitate reading from multiple goroutines until they were done producing data. Here, we'll look at how we can also acheive this with go 1.1's new "programmable" select statements.
+In a [post from a few days ago](/blog/two-goroutines-one-channel) we used go's `sync.WaitGroup` structure to facilitate reading from multiple goroutines until they were done producing data. Here, we'll look at how we can also achieve this with go 1.1's new "programmable" select statements.
 
 Go has a cool built-in `select` statement that lets you try and read from multiple channels, potentially blocking until at least one of them is available. So, if you have a worker function:
 
@@ -64,7 +64,7 @@ From 2: 16
 From 3: 243
 {% endhighlight %}
 
-As an aside, the reason we would do this with multiple channels (as opposed to just one) is because now our workers are free to `close` their channels when they're done with them, whereas otherwise, we'd need some other mechanism for figuring out when we're done reading (as explained in [that last post](/blog/two-goroutines-one-channel))
+As an aside, the reason we would do this with multiple channels (as opposed to just one) is because now our workers are free to `close()` their channels when they're done with them, whereas otherwise, we'd need some other mechanism for figuring out when we're done reading (as explained in [that last post](/blog/two-goroutines-one-channel))
 
 ## N worker goroutines
 
@@ -110,4 +110,4 @@ for numDone < N {
 
 This is pretty straight-forward. `chosen` is the index in our `selectCases` array of the case that was triggered, `recv` is the value we read from the channel (though its type is once again `reflect.Value`, and we need to use the `.Int()` method to actually extract the int data), and `recvOk` is a bool telling us if the channel is closed.
 
-And that's it! Here's all the code: [https://gist.github.com/alecbenzer/5535402](https://gist.github.com/alecbenzer/5535402) (would've used a play.golang.org link but it's not using 1.1 yet it seems)
+And that's it! Here's the code: [http://play.golang.org/p/ByUVTPAGBJ](http://play.golang.org/p/ByUVTPAGBJ)
