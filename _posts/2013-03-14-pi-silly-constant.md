@@ -46,14 +46,14 @@ $$
 \end{eqnarray\*}
 $$
 
-So tau-day would be June, 28.
+So tau-day would be June 28.
 
 The formulas for area and circumfrence of a circle become
 
-$$ A = \frac{\tau\cdot r^2}{2} $$
-$$ C = \tau\cdot r $$
+$$ A = \frac12\tau r^2 $$
+$$ C = \tau r $$
 
-Perhaps more importantly, things like radians and trigonometry become a lot simpler with $\tau$. In terms of $\pi$ what's the angle that's 3/4 of the way around a circle? It's $\frac{3\pi}{2}$. In terms of $\tau$, though, 3/4 of the way around a circle is just $\frac{3 \tau}{4}$. Half-way around a circle is $\frac{\tau}{2}$, and a full turn around a circle is just $\tau$.
+Perhaps more importantly, things like radians and trigonometry become a lot simpler with $\tau$. In terms of $\pi$, what's the angle that's 3/4 of the way around a circle? It's $\frac{3\pi}{2}$. In terms of $\tau$, though, 3/4 of the way around a circle is just $\frac{3 \tau}{4}$. Half-way around a circle is $\frac{\tau}{2}$, and a full turn around a circle is just $\tau$.
 
 A lot of stuff makes a lot more sense with $\tau$ instead of $\pi$. Some people are quite serious about this. Read Michael Hartl's [Tao Manifesto](http://tauday.com/) for a much more thorough case for $\tau$ over $\pi$.
 
