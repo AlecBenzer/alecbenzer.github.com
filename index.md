@@ -13,8 +13,6 @@ sre intern @ <a href="http://www.google.com/about">google</a><br />
 
 <hr />
 
-## Blog posts
-
 {% for post in site.posts %}
   <div class="post-div">
   <!--<span class="date">{{post.date | date: "%m/%d/%y" }}&nbsp;&nbsp;&nbsp;</span>-->
