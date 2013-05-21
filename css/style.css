@@ -10,7 +10,7 @@ a:hover {
   text-decoration: underline; }
 
 #content {
-  padding-top: 30px;
+  padding-top: 45px;
   margin: auto;
   width: 28em;
   font-family: helvetica, arial, sans-serif;
@@ -19,7 +19,7 @@ a:hover {
     margin-bottom: 1.85em;
     line-height: 1.45; }
     #content p code {
-      font-family: "Liberation Mono", "Consolas", "Menlo", "Monaco", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+      font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
       font-size: 18px; }
     #content p a:link, #content p a:visited {
       color: default;
@@ -32,32 +32,32 @@ a:hover {
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
-      font-family: "Liberation Mono", "Consolas", "Menlo", "Monaco", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+      font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
       font-size: 18px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: helvetica, arial, sans-serif;
-    color: #333333;
+    color: #111111;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 26px; }
+    font-size: 28px; }
     #content h1 a:link, #content h1 a:visited {
-      color: #333333;
+      color: #111111;
       text-decoration: none; }
     #content h1 a:hover {
-      color: #333333;
+      color: #111111;
       text-decoration: underline; }
     #content h1 small {
       display: block;
       font-weight: 400;
       font-style: italic;
-      font-size: 20.7px; }
+      font-size: 18.4px; }
   #content h2 {
     margin-bottom: 15px;
     margin-top: 2.59em;
-    font-size: 24px; }
+    font-size: 25px; }
   #content ul, #content ol {
     margin-bottom: 1.85em;
     width: 28em; }
@@ -86,3 +86,6 @@ a:hover {
 
 #footnotes p {
   font-size: 18.4px; }
+
+#footer {
+  font-size: 20.7px; }

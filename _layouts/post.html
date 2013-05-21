@@ -6,18 +6,20 @@
       <div id="content">
         {% if page.title %}
         <h1 id="page-title">
+          <small>{{page.date | date: "%B %_d, %Y"}}</small>
+          <hr />
           <a href="{{page.url}}">{{ page.title }}</a>
         </h1>
-        <hr />
         {% endif %}
         {{ content }}
-
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="alecbenzer" data-count="none" data-size="large">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <hr />
-        <a href="/">Alec Benzer</a><br />
-        powered by <a href="http://jekyllrb.com/">jekyll</a>, hosted by <a href="http://pages.github.com/">github</a>
-        <br /><br />
+        <div id="footer">
+          <a href="/">Alec Benzer</a><br />
+          powered by <a href="http://jekyllrb.com/">jekyll</a>, hosted by <a href="http://pages.github.com/">github</a>
+          <br /><br />
+        </div>
       </div>
     </div>
   </body>

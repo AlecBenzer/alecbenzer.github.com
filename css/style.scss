@@ -1,9 +1,9 @@
 $body-font: helvetica, arial, sans-serif;
 $header-font: $body-font;
-$code-font: 'Liberation Mono', 'Consolas', 'Menlo', 'Monaco', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+$code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 26px;
-$h2-font-size: 24px;
+$h1-font-size: 28px;
+$h2-font-size: 25px;
 $body-font-size: 23px;
 $code-size: 18px;
 
@@ -11,7 +11,7 @@ $p-margin-bottom: 1.85em;
 $content-width: 28em;
 
 $body-color: #111;
-$header-color: #333;
+$header-color: $body-color;
 $p-link-color: default;
 $link-hover-color: maroon;
 $line-height: 1.45;
@@ -33,7 +33,7 @@ a {
 }
 
 #content {
-  padding-top: 30px;
+  padding-top: 45px;
   margin: auto;
   width: $content-width;
 
@@ -97,7 +97,7 @@ a {
       display: block;
       font-weight: 400;
       font-style: italic;
-      font-size: $body-font-size * 0.9;
+      font-size: $body-font-size * 0.8;
     }
   }
 
@@ -147,4 +147,8 @@ a {
 
 #footnotes p {
   font-size: $body-font-size * 0.8;
+}
+
+#footer {
+  font-size: $body-font-size * 0.9;
 }
