@@ -2,13 +2,13 @@ $body-font: helvetica, arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 28px;
-$h2-font-size: 25px;
-$body-font-size: 23px;
-$code-size: 18px;
+$h1-font-size: 23px;
+$h2-font-size: 21px;
+$body-font-size: 18px;
+$code-size: 15px;
 
 $p-margin-bottom: 1.85em;
-$content-width: 28em;
+$content-width: 30em;
 
 $body-color: #111;
 $header-color: $body-color;
@@ -97,7 +97,7 @@ a {
       display: block;
       font-weight: 400;
       font-style: italic;
-      font-size: $body-font-size * 0.8;
+      font-size: $body-font-size;
     }
   }
 
@@ -127,7 +127,7 @@ a {
 
   blockquote {
     p {
-      color: #888;
+      color: #666;
       font-style: italic;
     }
 
@@ -150,5 +150,5 @@ a {
 }
 
 #footer {
-  font-size: $body-font-size * 0.9;
+  font-size: $body-font-size;
 }

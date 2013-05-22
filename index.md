@@ -4,8 +4,8 @@ title: Alec Benzer
 ---
 <div id="bio">
 <p>
-cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 sre intern @ <a href="http://www.google.com/about">google</a><br />
+cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 <br />
 <a href="http://twitter.com/alecbenzer">twitter</a> &middot; <a href="mailto:alecbenzer@gmail.com">email</a> &middot; <a href="/feed.xml">rss</a>
 </p>
