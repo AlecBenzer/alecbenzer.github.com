@@ -12,7 +12,7 @@ a:hover {
 #content {
   padding-top: 45px;
   margin: auto;
-  width: 30em;
+  width: 33em;
   font-family: helvetica, arial, sans-serif;
   font-size: 18px; }
   #content p {
@@ -42,7 +42,7 @@ a:hover {
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 23px; }
+    font-size: 25px; }
     #content h1 a:link, #content h1 a:visited {
       color: #111111;
       text-decoration: none; }
@@ -60,7 +60,7 @@ a:hover {
     font-size: 21px; }
   #content ul, #content ol {
     margin-bottom: 1.85em;
-    width: 30em; }
+    width: 33em; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
       line-height: 1.45; }
