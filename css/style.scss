@@ -2,10 +2,10 @@ $body-font: helvetica, arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 25px;
-$h2-font-size: 21px;
-$body-font-size: 18px;
-$code-size: 15px;
+$h1-font-size: 18px;
+$h2-font-size: 17px;
+$body-font-size: 16px;
+$code-size: 14px;
 
 $p-margin-bottom: 1.85em;
 $content-width: 33em;
@@ -43,6 +43,7 @@ a {
   p {
     margin-bottom: $p-margin-bottom;
     line-height: $line-height;
+    text-align: justify;
 
     code {
       font-family: $code-font;
@@ -96,8 +97,9 @@ a {
     small {
       display: block;
       font-weight: 400;
+      font-size: $body-font-size * 0.9;
+      color: lighten($body-color, 40%);
       font-style: italic;
-      font-size: $body-font-size;
     }
   }
 

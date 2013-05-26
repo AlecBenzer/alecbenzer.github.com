@@ -14,13 +14,14 @@ a:hover {
   margin: auto;
   width: 33em;
   font-family: helvetica, arial, sans-serif;
-  font-size: 18px; }
+  font-size: 16px; }
   #content p {
     margin-bottom: 1.85em;
-    line-height: 1.45; }
+    line-height: 1.45;
+    text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 15px; }
+      font-size: 14px; }
     #content p a:link, #content p a:visited {
       color: default;
       text-decoration: underline; }
@@ -33,7 +34,7 @@ a:hover {
     padding-left: 30px; }
     #content pre code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 15px;
+      font-size: 14px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: helvetica, arial, sans-serif;
@@ -42,7 +43,7 @@ a:hover {
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 25px; }
+    font-size: 18px; }
     #content h1 a:link, #content h1 a:visited {
       color: #111111;
       text-decoration: none; }
@@ -52,12 +53,13 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-style: italic;
-      font-size: 18px; }
+      font-size: 14.4px;
+      color: #777777;
+      font-style: italic; }
   #content h2 {
     margin-bottom: 15px;
     margin-top: 2.59em;
-    font-size: 21px; }
+    font-size: 17px; }
   #content ul, #content ol {
     margin-bottom: 1.85em;
     width: 33em; }
@@ -85,7 +87,7 @@ a:hover {
   text-align: left; }
 
 #footnotes p {
-  font-size: 14.4px; }
+  font-size: 12.8px; }
 
 #footer {
-  font-size: 18px; }
+  font-size: 16px; }
