@@ -4,9 +4,10 @@ html, body {
   color: #111111; }
 
 a:link, a:visited {
-  text-decoration: underline; }
+  color: #336084;
+  text-decoration: none; }
 a:hover {
-  color: maroon;
+  color: #336084;
   text-decoration: underline; }
 
 #content {
@@ -22,12 +23,6 @@ a:hover {
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
       font-size: 14px; }
-    #content p a:link, #content p a:visited {
-      color: default;
-      text-decoration: underline; }
-    #content p a:hover {
-      color: maroon;
-      text-decoration: underline; }
   #content pre {
     margin-bottom: 1.85em;
     border-left: 1px #bbb solid;

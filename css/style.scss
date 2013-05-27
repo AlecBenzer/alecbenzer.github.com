@@ -13,7 +13,8 @@ $content-width: 33em;
 $body-color: #111;
 $header-color: $body-color;
 $p-link-color: default;
-$link-hover-color: maroon;
+$link-color: darken(#4682b4, 13%);
+$link-hover-color: $link-color;
 $line-height: 1.45;
 
 html, body {
@@ -24,7 +25,8 @@ html, body {
 
 a {
   &:link, &:visited {
-    text-decoration: underline;
+    color: $link-color;
+    text-decoration: none;
   }
   &:hover {
     color: $link-hover-color;
@@ -48,16 +50,6 @@ a {
     code {
       font-family: $code-font;
       font-size: $code-size;
-    }
-    a {
-      &:link, &:visited {
-        color: $p-link-color;
-        text-decoration: underline;
-      }
-      &:hover {
-        color: $link-hover-color;
-        text-decoration: underline;
-      }
     }
   }
 
