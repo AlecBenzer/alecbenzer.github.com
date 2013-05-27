@@ -82,6 +82,12 @@ a:hover {
 
 .post-div {
   margin-bottom: 0.6em; }
+  .post-div strong a:link, .post-div strong a:visited {
+    color: #111111;
+    text-decoration: underline; }
+  .post-div .date {
+    font-size: 14.4px;
+    color: #444444; }
 
 #bio p {
   text-align: left; }

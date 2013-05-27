@@ -141,6 +141,18 @@ a {
 
 .post-div {
   margin-bottom: 0.6em;
+
+  strong {
+    a:link, a:visited {
+      color: $body-color;
+      text-decoration: underline;
+    }
+  }
+
+  .date {
+    font-size: $body-font-size * 0.9;
+    color: lighten($body-color, 20%);
+  }
 }
 
 #bio p {
