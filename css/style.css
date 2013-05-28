@@ -79,6 +79,9 @@ a:hover {
   margin-bottom: 0.6em; }
   .post-div strong a:link, .post-div strong a:visited {
     color: #111111;
+    text-decoration: none; }
+  .post-div strong a:hover {
+    color: #111111;
     text-decoration: underline; }
   .post-div .date {
     font-size: 14.4px;

@@ -137,6 +137,11 @@ a {
   strong {
     a:link, a:visited {
       color: $body-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $body-color;
       text-decoration: underline;
     }
   }
