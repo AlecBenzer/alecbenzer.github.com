@@ -65,3 +65,9 @@ $ ./bin/Debug/Testbed
 {% endhighlight %}
 
 If something doesn't work, or you had to take some additional steps to get things working, feel free to [let me know](mailto:alecbenzer@gmail.com), and I'll update the post accordingly.
+
+_Update (5/28/13)_: Since a few people have asked, to link a binary with Box2D with gcc/clang/similar, use
+
+{% highlight text %}
+-L/path/to/Box2D_v2.2.1/Build/gmake/bin/Debug/ -lBox2D
+{% endhighlight %}
