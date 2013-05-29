@@ -4,10 +4,10 @@ html, body {
   color: #111111; }
 
 a:link, a:visited {
-  color: #336084;
+  color: #0000aa;
   text-decoration: none; }
 a:hover {
-  color: #336084;
+  color: #0000aa;
   text-decoration: underline; }
 
 #content {
