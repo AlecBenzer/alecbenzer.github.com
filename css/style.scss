@@ -1,21 +1,20 @@
-$body-font: helvetica, arial, sans-serif;
+$body-font: Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 21px;
-$h2-font-size: 20px;
-$body-font-size: 16px;
-$code-size: 14px;
+$h1-font-size: 34px;
+$h2-font-size: 27px;
+$body-font-size: 22px;
+$code-size: 18px;
 
-$p-margin-bottom: 1.85em;
-$content-width: 33em;
+$p-margin-bottom: 30px;
+$content-width: 65%;
 
-$body-color: #111;
+$body-color: #000;
 $header-color: $body-color;
-$p-link-color: default;
-$link-color: #00a;
+$link-color: #33a;
 $link-hover-color: $link-color;
-$line-height: 1.45;
+$line-height: 31px;
 
 html, body {
   margin: 0;

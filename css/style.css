@@ -1,66 +1,66 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: #111111; }
+  color: black; }
 
 a:link, a:visited {
-  color: #0000aa;
+  color: #3333aa;
   text-decoration: none; }
 a:hover {
-  color: #0000aa;
+  color: #3333aa;
   text-decoration: underline; }
 
 #content {
   padding-top: 45px;
   margin: auto;
-  width: 33em;
-  font-family: helvetica, arial, sans-serif;
-  font-size: 16px; }
+  width: 65%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px; }
   #content p {
-    margin-bottom: 1.85em;
-    line-height: 1.45;
+    margin-bottom: 30px;
+    line-height: 31px;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 14px; }
+      font-size: 18px; }
   #content pre {
-    margin-bottom: 1.85em;
+    margin-bottom: 30px;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 14px;
+      font-size: 18px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
-    font-family: helvetica, arial, sans-serif;
-    color: #111111;
+    font-family: Helvetica, Arial, sans-serif;
+    color: black;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 21px; }
+    font-size: 34px; }
     #content h1 a:link, #content h1 a:visited {
-      color: #111111;
+      color: black;
       text-decoration: none; }
     #content h1 a:hover {
-      color: #111111;
+      color: black;
       text-decoration: underline; }
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 14.4px;
-      color: #777777;
+      font-size: 19.8px;
+      color: #666666;
       font-style: italic; }
   #content h2 {
     margin-bottom: 15px;
-    margin-top: 2.59em;
-    font-size: 20px; }
+    margin-top: 42px;
+    font-size: 27px; }
   #content ul, #content ol {
-    margin-bottom: 1.85em;
-    width: 33em; }
+    margin-bottom: 30px;
+    width: 65%; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
-      line-height: 1.45; }
+      line-height: 31px; }
   #content img {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -78,20 +78,20 @@ a:hover {
 .post-div {
   margin-bottom: 0.6em; }
   .post-div strong a:link, .post-div strong a:visited {
-    color: #111111;
+    color: black;
     text-decoration: none; }
   .post-div strong a:hover {
-    color: #111111;
+    color: black;
     text-decoration: underline; }
   .post-div .date {
-    font-size: 14.4px;
-    color: #444444; }
+    font-size: 19.8px;
+    color: #333333; }
 
 #bio p {
   text-align: left; }
 
 #footnotes p {
-  font-size: 12.8px; }
+  font-size: 17.6px; }
 
 #footer {
-  font-size: 16px; }
+  font-size: 22px; }
