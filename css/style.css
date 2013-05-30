@@ -38,7 +38,7 @@ a:hover {
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 18px; }
+    font-size: 21px; }
     #content h1 a:link, #content h1 a:visited {
       color: #111111;
       text-decoration: none; }
@@ -54,7 +54,7 @@ a:hover {
   #content h2 {
     margin-bottom: 15px;
     margin-top: 2.59em;
-    font-size: 17px; }
+    font-size: 20px; }
   #content ul, #content ol {
     margin-bottom: 1.85em;
     width: 33em; }
