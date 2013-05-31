@@ -13,7 +13,7 @@ a:hover {
 #content {
   padding-top: 45px;
   margin: auto;
-  width: 50%;
+  width: 45em;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 21px; }
   #content p {
@@ -75,7 +75,7 @@ a:hover {
       font-style: italic; }
 
 .post-div {
-  margin-bottom: 0.6em; }
+  margin-bottom: 45px; }
   .post-div strong a:link, .post-div strong a:visited {
     color: black;
     text-decoration: none; }
@@ -93,4 +93,5 @@ a:hover {
   font-size: 16.8px; }
 
 #footer {
+  font-style: italic;
   font-size: 18.9px; }

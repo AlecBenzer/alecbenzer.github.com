@@ -8,7 +8,7 @@ $body-font-size: 21px;
 $code-size: 18px;
 
 $p-margin-bottom: 20px;
-$content-width: 50%;
+$content-width: 45em;
 
 $body-color: #000;
 $header-color: $body-color;
@@ -131,7 +131,7 @@ a {
 }
 
 .post-div {
-  margin-bottom: 0.6em;
+  margin-bottom: 45px;
 
   strong {
     a:link, a:visited {
@@ -160,5 +160,6 @@ a {
 }
 
 #footer {
+  font-style: italic;
   font-size: $body-font-size * 0.9;
 }
