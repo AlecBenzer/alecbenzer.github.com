@@ -84,11 +84,29 @@ $$ \frac{6 + 8 + 5 + 6 + 6 + 7}{6} = \frac{38}{6} = 6{\frac{1}{3}} $$
 
 Let's call the average $\mu = 6{\frac{1}{3}}$. We can, for each number in the list, compute the distance from the number to the average:
 
-$$ (6-\mu) = -\frac{1}{3}, (8-\mu) = 1{\frac{2}{3}}, (5-\mu) = -1{\frac{1}{3}}, (6-\mu) = -\frac{1}{3}, (6-\mu) = -\frac{1}{3}, (7-\mu) = \frac{2}{3} $$
+$$
+\begin{eqnarray\*}
+(6-\mu) &=& -\frac{1}{3}\\\\
+(8-\mu) &=& 1{\frac{2}{3}}\\\\
+(5-\mu) &=& -1{\frac{1}{3}}\\\\
+(6-\mu) &=& -\frac{1}{3}\\\\
+(6-\mu) &=& -\frac{1}{3}\\\\
+(7-\mu) &=& \frac{2}{3}
+\end{eqnarray\*}
+$$
 
 And, to make everything nice and positive, we can square all those distances:
 
-$$ \left(-\frac{1}{3}\right)^2 = \frac{1}{9}, \left(1{\frac23}\right)^2 = \frac{25}{9}, \left(-1{\frac13}\right)^2 = \frac{16}{9}, \left(-\frac{1}{3}\right)^2 = \frac{1}{9}, \left(-\frac{1}{3}\right)^2 = \frac{1}{9}, \left(\frac23\right)^2 = \frac49$$
+$$
+\begin{eqnarray\*}
+\left(-\frac{1}{3}\right)^2 &=& \frac{1}{9}\\\\
+\left(1{\frac23}\right)^2 &=& \frac{25}{9}\\\\
+\left(-1{\frac13}\right)^2 &=& \frac{16}{9}\\\\
+\left(-\frac{1}{3}\right)^2 &=& \frac{1}{9}\\\\
+\left(-\frac{1}{3}\right)^2 &=& \frac{1}{9}\\\\
+\left(\frac23\right)^2 &=& \frac49
+\end{eqnarray\*}
+$$
 
 And, finally, we can take the average of all those squared distances:
 

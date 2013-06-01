@@ -10,11 +10,12 @@
           <hr />-->
           <a href="{{page.url}}">{{ page.title }}</a>
         </h1>
+        <hr />
         {% endif %}
         {{ content }}
         <hr />
         <div id="footer">
-          &mdash; <a href="/">Alec Benzer</a>, posted {{page.date | date: "%B %_d, %Y"}}<br />
+          &mdash; <a href="/">Alec Benzer</a>, posted {{page.date | date: "%-m/%-d/%y"}}<br />
           <br /><br />
         </div>
       </div>

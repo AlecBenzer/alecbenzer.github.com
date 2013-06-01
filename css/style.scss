@@ -3,18 +3,18 @@ $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
 $h1-font-size: 34px;
-$h2-font-size: 26px;
-$body-font-size: 21px;
+$h2-font-size: 28px;
+$body-font-size: 24px;
 $code-size: 18px;
 
-$p-margin-bottom: 20px;
-$content-width: 45em;
+$p-margin-bottom: 40px;
+$content-width: 33em;
 
 $body-color: #000;
 $header-color: $body-color;
 $link-color: #33a;
 $link-hover-color: $link-color;
-$line-height: 31px;
+$line-height: 1.6em;
 
 html, body {
   margin: 0;

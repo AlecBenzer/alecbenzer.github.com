@@ -13,18 +13,18 @@ a:hover {
 #content {
   padding-top: 45px;
   margin: auto;
-  width: 45em;
+  width: 33em;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 21px; }
+  font-size: 24px; }
   #content p {
-    margin-bottom: 20px;
-    line-height: 31px;
+    margin-bottom: 40px;
+    line-height: 1.6em;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
       font-size: 18px; }
   #content pre {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
@@ -48,18 +48,18 @@ a:hover {
     #content h1 small {
       display: block;
       font-weight: 400;
-      font-size: 18.9px;
+      font-size: 21.6px;
       color: #666666;
       font-style: italic; }
   #content h2 {
     margin-bottom: 15px;
-    margin-top: 28px;
-    font-size: 26px; }
+    margin-top: 56px;
+    font-size: 28px; }
   #content ul, #content ol {
-    margin-bottom: 20px; }
+    margin-bottom: 40px; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
-      line-height: 31px; }
+      line-height: 1.6em; }
   #content img {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -83,15 +83,15 @@ a:hover {
     color: black;
     text-decoration: underline; }
   .post-div .date {
-    font-size: 18.9px;
+    font-size: 21.6px;
     color: #333333; }
 
 #bio p {
   text-align: left; }
 
 #footnotes p {
-  font-size: 16.8px; }
+  font-size: 19.2px; }
 
 #footer {
   font-style: italic;
-  font-size: 18.9px; }
+  font-size: 21.6px; }
