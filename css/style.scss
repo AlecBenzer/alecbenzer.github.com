@@ -2,19 +2,19 @@ $body-font: Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 34px;
-$h2-font-size: 28px;
-$body-font-size: 24px;
-$code-size: 18px;
+$h1-font-size: 20px;
+$h2-font-size: 18px;
+$body-font-size: 16px;
+$code-size: 14px;
 
-$p-margin-bottom: 40px;
-$content-width: 33em;
+$p-margin-bottom: 1.4em;
+$content-width: 35em;
 
-$body-color: #000;
+$body-color: #111;
 $header-color: $body-color;
 $link-color: #33a;
-$link-hover-color: $link-color;
-$line-height: 1.6em;
+$link-hover-color: darken($link-color, 30%);
+$line-height: 1.3em;
 
 html, body {
   margin: 0;
@@ -25,7 +25,7 @@ html, body {
 a {
   &:link, &:visited {
     color: $link-color;
-    text-decoration: none;
+    text-decoration: underline;
   }
   &:hover {
     color: $link-hover-color;
@@ -157,9 +157,4 @@ a {
 
 #footnotes p {
   font-size: $body-font-size * 0.8;
-}
-
-#footer {
-  font-style: italic;
-  font-size: $body-font-size * 0.9;
 }
