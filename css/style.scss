@@ -10,7 +10,7 @@ $code-size: 14px;
 $p-margin-bottom: 1.4em;
 $content-width: 40em;
 
-$body-color: #000;
+$body-color: #444;
 $header-color: $body-color;
 $link-color: #33a;
 $link-hover-color: darken($link-color, 30%);
@@ -84,14 +84,6 @@ a {
       color: $header-color;
       text-decoration: underline;
     }
-
-    small {
-      display: block;
-      font-weight: 400;
-      font-size: $body-font-size * 0.9;
-      color: lighten($body-color, 40%);
-      font-style: italic;
-    }
   }
 
   h2 {
@@ -120,7 +112,7 @@ a {
 
   blockquote {
     p {
-      color: #666;
+      color: lighten($body-color, 20%);
       font-style: italic;
     }
 
