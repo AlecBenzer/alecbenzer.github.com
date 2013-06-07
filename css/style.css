@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  color: #444444; }
+  color: #222222; }
 
 a:link, a:visited {
   color: #3333aa;
@@ -33,17 +33,17 @@ a:hover {
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: Helvetica, Arial, sans-serif;
-    color: #444444;
+    color: #222222;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
     font-size: 20px; }
     #content h1 a:link, #content h1 a:visited {
-      color: #444444;
+      color: #222222;
       text-decoration: none; }
     #content h1 a:hover {
-      color: #444444;
+      color: #222222;
       text-decoration: underline; }
   #content h2 {
     margin-bottom: 15px;
@@ -65,20 +65,20 @@ a:hover {
     margin-left: 5px;
     padding-left: 15px; }
     #content blockquote p {
-      color: #777777;
+      color: #555555;
       font-style: italic; }
 
 .post-div {
   margin-bottom: 45px; }
   .post-div strong a:link, .post-div strong a:visited {
-    color: #444444;
+    color: #222222;
     text-decoration: none; }
   .post-div strong a:hover {
-    color: #444444;
+    color: #222222;
     text-decoration: underline; }
   .post-div .date {
     font-size: 14.4px;
-    color: #777777; }
+    color: #555555; }
 
 #bio p {
   text-align: left; }
