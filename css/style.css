@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic);
 html, body {
   margin: 0;
   padding: 0;
@@ -13,32 +14,32 @@ a:hover {
 #content {
   padding-top: 45px;
   margin: auto;
-  width: 40em;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px; }
+  width: 35em;
+  font-family: "Droid Serif", Helvetica, Arial, sans-serif;
+  font-size: 20px; }
   #content p {
     margin-bottom: 1.4em;
     line-height: 1.5em;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 14px; }
+      font-size: 16px; }
   #content pre {
     margin-bottom: 1.4em;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 14px;
+      font-size: 16px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Droid Serif", Helvetica, Arial, sans-serif;
     color: #222222;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 20px; }
+    font-size: 26px; }
     #content h1 a:link, #content h1 a:visited {
       color: #222222;
       text-decoration: none; }
@@ -48,7 +49,7 @@ a:hover {
   #content h2 {
     margin-bottom: 15px;
     margin-top: 1.96em;
-    font-size: 18px; }
+    font-size: 24px; }
   #content ul, #content ol {
     margin-bottom: 1.4em; }
     #content ul li, #content ol li {
@@ -77,11 +78,11 @@ a:hover {
     color: #222222;
     text-decoration: underline; }
   .post-div .date {
-    font-size: 14.4px;
+    font-size: 18px;
     color: #555555; }
 
 #bio p {
   text-align: left; }
 
 #footnotes p {
-  font-size: 12.8px; }
+  font-size: 16px; }

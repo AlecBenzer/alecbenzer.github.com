@@ -1,14 +1,16 @@
-$body-font: Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic);
+
+$body-font: 'Droid Serif', Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 20px;
-$h2-font-size: 18px;
-$body-font-size: 16px;
-$code-size: 14px;
+$h1-font-size: 26px;
+$h2-font-size: 24px;
+$body-font-size: 20px;
+$code-size: 16px;
 
 $p-margin-bottom: 1.4em;
-$content-width: 40em;
+$content-width: 35em;
 
 $body-color: #222;
 $header-color: $body-color;
