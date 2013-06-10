@@ -59,7 +59,7 @@ a:hover {
     padding-bottom: 10px;
     display: block;
     margin: 0 auto;
-    width: 80%; }
+    max-width: 80%; }
   #content blockquote {
     border-left: 1px #777 solid;
     margin-left: 5px;
