@@ -14,31 +14,31 @@ a:hover {
   padding-top: 45px;
   margin: auto;
   width: 35em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 21px; }
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px; }
   #content p {
     margin-bottom: 1.4em;
     line-height: 1.5em;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 18px; }
+      font-size: 15px; }
   #content pre {
     margin-bottom: 1.4em;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 18px;
+      font-size: 15px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: #222222;
     font-weight: 700; }
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 34px; }
+    font-size: 24px; }
     #content h1 a:link, #content h1 a:visited {
       color: #222222;
       text-decoration: none; }
@@ -48,7 +48,7 @@ a:hover {
   #content h2 {
     margin-bottom: 15px;
     margin-top: 1.96em;
-    font-size: 28px; }
+    font-size: 22px; }
   #content ul, #content ol {
     margin-bottom: 1.4em; }
     #content ul li, #content ol li {
@@ -77,11 +77,11 @@ a:hover {
     color: #222222;
     text-decoration: underline; }
   .post-div .date {
-    font-size: 18.9px;
+    font-size: 15.3px;
     color: #555555; }
 
 #bio p {
   text-align: left; }
 
 #footnotes p {
-  font-size: 16.8px; }
+  font-size: 13.6px; }
