@@ -3,15 +3,15 @@ $body-font: 'Droid Serif', Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 20px;
-$h2-font-size: 18px;
-$body-font-size: 16px;
-$code-size: 14px;
+$h1-font-size: 24px;
+$h2-font-size: 22px;
+$body-font-size: 17px;
+$code-size: 15px;
 
 $p-margin-bottom: 1.4em;
-$content-width: 40em;
+$content-width: 35em;
 
-$body-color: #444;
+$body-color: #222;
 $header-color: $body-color;
 $link-color: #33a;
 $link-hover-color: darken($link-color, 30%);
@@ -108,7 +108,7 @@ a {
     padding-bottom: 10px;
     display: block;
     margin: 0 auto;
-    width: 80%;
+    max-width: 80%;
   }
 
   blockquote {
@@ -124,7 +124,7 @@ a {
 }
 
 .post-div {
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 
   strong {
     a:link, a:visited {
