@@ -1,4 +1,5 @@
-$body-font: Helvetica, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic);
+$body-font: 'Droid Serif', Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
