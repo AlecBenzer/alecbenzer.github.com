@@ -17,14 +17,14 @@ a:hover {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 24px; }
   #content p {
-    margin-bottom: 1.4em;
-    line-height: 1.3em;
+    margin-bottom: 1.3em;
+    line-height: 1.4em;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
       font-size: 20px; }
   #content pre {
-    margin-bottom: 1.4em;
+    margin-bottom: 1.3em;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
@@ -47,13 +47,13 @@ a:hover {
       text-decoration: underline; }
   #content h2 {
     margin-bottom: 15px;
-    margin-top: 1.96em;
+    margin-top: 1.82em;
     font-size: 26px; }
   #content ul, #content ol {
-    margin-bottom: 1.4em; }
+    margin-bottom: 1.3em; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
-      line-height: 1.3em; }
+      line-height: 1.4em; }
   #content img {
     padding-top: 10px;
     padding-bottom: 10px;

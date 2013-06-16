@@ -7,14 +7,14 @@ $h2-font-size: 26px;
 $body-font-size: 24px;
 $code-size: 20px;
 
-$p-margin-bottom: 1.4em;
+$p-margin-bottom: 1.3em;
+$line-height: 1.4em;
 $content-width: 28em;
 
 $body-color: #222;
 $header-color: $body-color;
 $link-color: #33a;
 $link-hover-color: darken($link-color, 30%);
-$line-height: 1.3em;
 
 html, body {
   margin: 0;
