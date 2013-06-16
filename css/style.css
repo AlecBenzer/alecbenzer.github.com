@@ -18,7 +18,7 @@ a:hover {
   font-size: 24px; }
   #content p {
     margin-bottom: 1.4em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     text-align: justify; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
@@ -53,7 +53,7 @@ a:hover {
     margin-bottom: 1.4em; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
-      line-height: 1.5em; }
+      line-height: 1.3em; }
   #content img {
     padding-top: 10px;
     padding-bottom: 10px;
