@@ -11,25 +11,25 @@ a:hover {
   text-decoration: underline; }
 
 #content {
-  padding-top: 45px;
+  padding-top: 20px;
   margin: auto;
-  width: 25em;
+  width: 550px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 24px; }
   #content p {
-    margin-bottom: 1.5em;
-    line-height: 1.45em;
+    margin-bottom: 24px;
+    line-height: 33px;
     text-align: left; }
     #content p code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 20px; }
+      font-size: 18px; }
   #content pre {
-    margin-bottom: 1.5em;
+    margin-bottom: 24px;
     border-left: 1px #bbb solid;
     padding-left: 30px; }
     #content pre code {
       font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-      font-size: 20px;
+      font-size: 18px;
       padding-bottom: 4px; }
   #content h1, #content h2 {
     font-family: Helvetica, Arial, sans-serif;
@@ -38,7 +38,7 @@ a:hover {
   #content h1 {
     text-align: left;
     margin-bottom: 20px;
-    font-size: 28px; }
+    font-size: 26px; }
     #content h1 a:link, #content h1 a:visited {
       color: #222222;
       text-decoration: none; }
@@ -47,13 +47,13 @@ a:hover {
       text-decoration: underline; }
   #content h2 {
     margin-bottom: 15px;
-    margin-top: 2.1em;
-    font-size: 26px; }
+    margin-top: 33.6px;
+    font-size: 24px; }
   #content ul, #content ol {
-    margin-bottom: 1.5em; }
+    margin-bottom: 24px; }
     #content ul li, #content ol li {
       margin-bottom: 10px;
-      line-height: 1.45em; }
+      line-height: 33px; }
   #content img {
     padding-top: 10px;
     padding-bottom: 10px;

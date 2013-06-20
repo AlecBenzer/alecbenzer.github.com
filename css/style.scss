@@ -2,14 +2,14 @@ $body-font: Helvetica, Arial, sans-serif;
 $header-font: $body-font;
 $code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
-$h1-font-size: 28px;
-$h2-font-size: 26px;
+$h1-font-size: 26px;
+$h2-font-size: 24px;
 $body-font-size: 24px;
-$code-size: 20px;
+$code-size: 18px;
 
-$p-margin-bottom: 1.5em;
-$line-height: 1.45em;
-$content-width: 25em;
+$p-margin-bottom: 24px;
+$line-height: 33px;
+$content-width: 550px;
 
 $body-color: #222;
 $header-color: $body-color;
@@ -34,7 +34,7 @@ a {
 }
 
 #content {
-  padding-top: 45px;
+  padding-top: 20px;
   margin: auto;
   width: $content-width;
 
