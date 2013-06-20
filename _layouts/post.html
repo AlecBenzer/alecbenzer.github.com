@@ -8,11 +8,12 @@
         <h1 id="post-title">
           <a href="{{page.url}}">{{ page.title }}</a>
         </h1>
+        <hr class="full" />
         {% endif %}
         {{ content }}
-        <hr />
+        <hr class="full" />
         <div id="footer">
-          &mdash; <a href="/">Alec Benzer</a>, posted {{page.date | date: "%B %_d, %Y"}}<br />
+          &mdash; <a href="/">Alec Benzer</a>, {{page.date | date: "%0m/%0d/%y"}}<br />
           <br /><br />
         </div>
       </div>
