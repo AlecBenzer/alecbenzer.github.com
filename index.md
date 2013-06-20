@@ -11,7 +11,7 @@ cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 </p>
 </div>
 
-<hr />
+<hr class="full"/>
 
 ## blog posts
 
