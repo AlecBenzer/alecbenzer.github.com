@@ -1,0 +1,171 @@
+$body-font: Helvetica, Arial, sans-serif;
+$header-font: $body-font;
+$code-font: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+
+$h1-font-size: 26px;
+$h2-font-size: 24px;
+$body-font-size: 24px;
+$code-size: 18px;
+
+$p-margin-bottom: 24px;
+$line-height: 33px;
+$content-width: 550px;
+
+$body-color: #222;
+$header-color: $body-color;
+$link-color: #33a;
+$link-hover-color: darken($link-color, 30%);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: $body-color;
+}
+
+a {
+  &:link, &:visited {
+    color: $link-color;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+#content {
+  padding-top: 20px;
+  margin: auto;
+  width: $content-width;
+
+  font-family: $body-font;
+  font-size: $body-font-size;
+
+  p {
+    margin-bottom: $p-margin-bottom;
+    line-height: $line-height;
+    text-align: left;
+
+    code {
+      font-family: $code-font;
+      font-size: $code-size;
+    }
+  }
+
+  pre {
+    margin-bottom: $p-margin-bottom;
+    border-left: 1px #bbb solid;
+    padding-left: 30px;
+
+    code {
+      font-family: $code-font;
+      font-size: $code-size;
+      padding-bottom: 4px;
+    }
+  }
+
+  h1, h2 {
+    font-family: $header-font;
+    color: $header-color;
+    font-weight: 700;
+  }
+
+  h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: $h1-font-size;
+
+    a:link, a:visited {
+      color: $header-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $header-color;
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    margin-top: 1.4*$p-margin-bottom;
+    font-size: $h2-font-size;
+  }
+
+  ul, ol {
+    margin-bottom: $p-margin-bottom;
+    // width: $content-width;
+
+    li {
+      margin-bottom: 10px;
+      line-height: $line-height;
+    }
+  }
+
+  img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  blockquote {
+    p {
+      color: lighten($body-color, 20%);
+      font-style: italic;
+    }
+
+    border-left: 1px #777 solid;
+    padding-left: 15px;
+  }
+}
+
+.post-div {
+  margin-bottom: 15px;
+
+  strong {
+    a:link, a:visited {
+      color: $body-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $body-color;
+      text-decoration: underline;
+    }
+  }
+
+  .date {
+    font-size: $body-font-size * 0.9;
+    color: lighten($body-color, 20%);
+  }
+}
+
+#bio p {
+  text-align: left;
+}
+
+#footnotes p {
+  font-size: $body-font-size * 0.8;
+}
+
+#footer {
+  font-size: $body-font-size * 0.9;
+  font-style: italic;
+}
+
+hr {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+hr.full {
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+

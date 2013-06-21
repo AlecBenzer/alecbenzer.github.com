@@ -1,0 +1,103 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #222222; }
+
+a:link, a:visited {
+  color: #3333aa;
+  text-decoration: underline; }
+a:hover {
+  color: #101034;
+  text-decoration: underline; }
+
+#content {
+  padding-top: 20px;
+  margin: auto;
+  width: 550px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px; }
+  #content p {
+    margin-bottom: 24px;
+    line-height: 33px;
+    text-align: left; }
+    #content p code {
+      font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
+      font-size: 18px; }
+  #content pre {
+    margin-bottom: 24px;
+    border-left: 1px #bbb solid;
+    padding-left: 30px; }
+    #content pre code {
+      font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
+      font-size: 18px;
+      padding-bottom: 4px; }
+  #content h1, #content h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #222222;
+    font-weight: 700; }
+  #content h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 26px; }
+    #content h1 a:link, #content h1 a:visited {
+      color: #222222;
+      text-decoration: none; }
+    #content h1 a:hover {
+      color: #222222;
+      text-decoration: underline; }
+  #content h2 {
+    margin-bottom: 15px;
+    margin-top: 33.6px;
+    font-size: 24px; }
+  #content ul, #content ol {
+    margin-bottom: 24px; }
+    #content ul li, #content ol li {
+      margin-bottom: 10px;
+      line-height: 33px; }
+  #content img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; }
+  #content blockquote {
+    border-left: 1px #777 solid;
+    margin-left: 5px;
+    padding-left: 15px; }
+    #content blockquote p {
+      color: #555555;
+      font-style: italic; }
+
+.post-div {
+  margin-bottom: 15px; }
+  .post-div strong a:link, .post-div strong a:visited {
+    color: #222222;
+    text-decoration: none; }
+  .post-div strong a:hover {
+    color: #222222;
+    text-decoration: underline; }
+  .post-div .date {
+    font-size: 21.6px;
+    color: #555555; }
+
+#bio p {
+  text-align: left; }
+
+#footnotes p {
+  font-size: 19.2px; }
+
+#footer {
+  font-size: 21.6px;
+  font-style: italic; }
+
+hr {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
+hr.full {
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 10px;
+  margin-bottom: 20px; }

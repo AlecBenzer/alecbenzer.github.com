@@ -2,18 +2,8 @@
 <html>
   {% include head.html %}
   <body>
-    <div id="page">
-      <div id="content">
-        {% if page.title %}
-        <h1 id="page-title">
-          <a href="{{page.url}}">{{ page.title }}</a>
-          <small>{{ page.date | date: "%B %-d, %Y" }}</small>
-        </h1>
-        {% endif %}
-        {{ content }}
-
-        <br /><br />
-      </div>
+    <div id="content">
+      {{ content }}
     </div>
   </body>
 </html>
