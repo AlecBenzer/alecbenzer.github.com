@@ -33,12 +33,12 @@ You might have noticed that we neglected to specify a base for our logarithm. Be
 Bits, in a more general sense, are often just though of zeros or ones. So how does this relate to the information theory definition of bit we've just introduced?
 
 Let's say you're listening on some network channel expecting either a 0 or 1 to come, with equal probability. We'd then have that $\Pr(0) = 0.5$ and $\Pr(1) = 0.5$. So let's say you get a 0. How much information has this event conveyed? Well,
-  $$ I(0) = -\log_2(\Pr(0)) = -\log_2(0.5) = -\left(-1\right) = 1.$$
-  The same would be the case for getting a 1. So, receiving one "bit" on the channel corresponds to getting one information theory "bit" of information.
+  $$ I(0) = -\log_2(\Pr(0)) = -\log_2(0.5) = \log_2(1/.5) = \log_2(2) = 1.$$
+  The same would be the case for getting a 1 instead of a 0. So, receiving one "bit" on the channel corresponds to getting one information theory "bit" of information.
   
   We could also compute this in nats or bans:
-  $$-\ln(1\mathbin{/}2) \approx 0.69$$
-  $$-\log_{10}(1\mathbin{/}2) \approx 0.30$$
+  $$-\ln(0.5) = \ln(2)\approx 0.69$$
+  $$-\log_{10}(0.5) =\log_{10}(2) \approx 0.30$$
 
   So we get that 1 bit is approximately 0.69 nats is approximately 0.30 bans.
 
@@ -98,7 +98,7 @@ To quote [wikipedia](https://en.wikipedia.org/wiki/Password_strength#Entropy_as_
 
 I thought I'd mention this, but to be honest I'm still not totally clear on what exactly is gained by expressing password strength in terms of entropy. For one thing I suppose, it makes strength easier to express. Saying a password gotten from a random sequence of 10 letters has around 47 bits of entropy is perhaps easier than saying that there are 141,167,095,653,376 possibilities for the password.
 
-I guess it's also easier to see how modifications to the password generation change entropy. If decide between making the letters either all capital or all lowercase, I've added one binary decision, which increases the entropy by 1 bit (to around 48). This is easier than computing whatever two times 141,167,095,653,376 is.
+I guess it's also easier to see how modifications to the password generation change entropy. If I decide between making the letters either all capital or all lowercase, I've added one binary decision, which increases the entropy by 1 bit (to around 48). This is easier than computing whatever two times 141,167,095,653,376 is.
 
 Entropy might also be useful in examining actual probabilities involving how people choose passwords. As the xkcd kind of indicates, just because you use a string of however many letters and numbers doesn't mean each possible sequence is equally likely. 'Tr0ub4dor&3' is a more likely password than '12@tDfuLsq'. Certain passwords being more likely would then make the entropy less than the log of the number of raw possibilities (which as we mentioned before is the maximum for any discrete random variable), and thus make the password easier to guess.
 

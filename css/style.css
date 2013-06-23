@@ -2,10 +2,6 @@ body {
   font-family: sans-serif;
   font-size: 21px; }
 
-p {
-  line-height: 27.3px;
-  margin-bottom: 20px; }
-
 code {
   font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
   font-size: 17.85px; }
