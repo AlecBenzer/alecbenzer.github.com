@@ -1,14 +1,10 @@
-$body-font-size: 24px;
-$body-font-family: arial, sans-serif;
+$body-font-size: 18px;
+$body-font-family: helvetica, arial, sans-serif;
 $code-font-family: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
 
 body {
   font-family: $body-font-family;
   font-size: $body-font-size;
-}
-
-p {
-  line-height: 33px;
 }
 
 h1 {

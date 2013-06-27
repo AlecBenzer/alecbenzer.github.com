@@ -1,9 +1,6 @@
 body {
-  font-family: arial, sans-serif;
-  font-size: 24px; }
-
-p {
-  line-height: 33px; }
+  font-family: helvetica, arial, sans-serif;
+  font-size: 18px; }
 
 h1 {
   font-size: 29px; }
@@ -13,7 +10,7 @@ h2 {
 
 code {
   font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-  font-size: 20.4px; }
+  font-size: 15.3px; }
 
 #content {
   max-width: 550px;
@@ -42,4 +39,4 @@ blockquote {
   font-style: italic; }
 
 #footnotes {
-  font-size: 19.2px; }
+  font-size: 14.4px; }
