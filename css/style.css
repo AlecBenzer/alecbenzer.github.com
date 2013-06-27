@@ -1,39 +1,67 @@
 body {
-  font-family: helvetica, arial, sans-serif;
-  font-size: 18px; }
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  line-height: 2.3ex;
+  color: #222;
+}
+
+p {
+  margin-bottom: 3ex;
+}
+
+h1, h2, h3 {
+  font-family: Helvetica, Arial, serif;
+}
+
+h1 {
+  line-height: 1em;
+}
 
 code {
-  font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
-  font-size: 15.3px; }
+  font-family: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-size: 0.85em;
+}
 
 #content {
-  max-width: 700px;
-  margin: 0 auto; }
+  max-width: 27em;
+  margin: 0 auto;
+}
 
 pre {
-  margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-top: 5ex;
+  margin-bottom: 5ex;
+  margin-left: 1em;
+  line-height: 1em;
+}
 
 hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2em;
+  margin-bottom: 2em;
   display: block;
   height: 1px;
   border: 0;
   border-top: 1px solid #888;
   width: 50%;
-  margin-left: 25%; }
+  margin-left: 25%;
+}
 
 img {
   display: block;
   margin: 0 auto;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 blockquote {
-  font-style: italic; }
+  border-left: 1px solid #888;
+  padding-left: 1em;
+  margin-left: 1em;
+  font-style: italic;
+}
 
 #footnotes {
-  font-size: 14.4px; }
+  font-size: 0.8em;
+}
 
 .post-div {
-  margin-bottom: 10px; }
+  margin-bottom: 1.5ex;
+}

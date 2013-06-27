@@ -30,7 +30,7 @@ You might have noticed that we neglected to specify a base for our logarithm. Be
 
 ## Bits? I've heard of those
 
-Bits, in a more general sense, are often just though of zeros or ones. So how does this relate to the information theory definition of bit we've just introduced?
+Bits, in a more general sense, are often just thought of zeros or ones. So how does this relate to the information theory definition of bit we've just introduced?
 
 Let's say you're listening on some network channel expecting either a 0 or 1 to come, with equal probability. We'd then have that $\Pr(0) = 0.5$ and $\Pr(1) = 0.5$. So let's say you get a 0. How much information has this event conveyed? Well,
   $$ I(0) = -\log_2(\Pr(0)) = -\log_2(0.5) = \log_2(1/.5) = \log_2(2) = 1.$$

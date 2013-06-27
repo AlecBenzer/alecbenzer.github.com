@@ -1,30 +1,41 @@
-$body-font-size: 18px;
-$body-font-family: helvetica, arial, sans-serif;
-$code-font-family: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
-
 body {
-  font-family: $body-font-family;
-  font-size: $body-font-size;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 2ex;
+}
+
+p {
+  margin-bottom: 2ex;
+}
+
+h1, h2, h3 {
+  font-family: Helvetica, Arial, serif;
+}
+
+h1 {
+  line-height: 1em;
 }
 
 code {
-  font-family: $code-font-family;
-  font-size: $body-font-size * 0.85;
+  font-family: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-size: 0.85em;
 }
 
 #content {
-  max-width: 700px;
+  max-width: 35em;
   margin: 0 auto;
 }
 
 pre {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 5ex;
+  margin-bottom: 5ex;
+  margin-left: 1em;
+  line-height: 1em;
 }
 
 hr {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2em;
+  margin-bottom: 2em;
   display: block;
   height: 1px;
   border: 0;
@@ -44,9 +55,9 @@ blockquote {
 }
 
 #footnotes {
-  font-size: $body-font-size * 0.8;
+  font-size: 0.8em;
 }
 
 .post-div {
-  margin-bottom: 10px;
+  margin-bottom: 1ex;
 }
