@@ -2,18 +2,12 @@ body {
   font-family: helvetica, arial, sans-serif;
   font-size: 18px; }
 
-h1 {
-  font-size: 29px; }
-
-h2 {
-  font-size: 27px; }
-
 code {
   font-family: "Dejavu Sans Mono", "Consolas", "Menlo", "Monaco", monospace;
   font-size: 15.3px; }
 
 #content {
-  max-width: 550px;
+  max-width: 700px;
   margin: 0 auto; }
 
 pre {
@@ -26,17 +20,20 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #888;
   width: 50%;
   margin-left: 25%; }
 
 img {
   display: block;
   margin: 0 auto;
-  max-width: 80%; }
+  max-width: 100%; }
 
 blockquote {
   font-style: italic; }
 
 #footnotes {
   font-size: 14.4px; }
+
+.post-div {
+  margin-bottom: 10px; }

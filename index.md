@@ -15,5 +15,5 @@ cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 ## posts
 
 {% for post in site.posts %}
-  <div style="margin-bottom: 15px;"><a href="{{post.url}}">{{post.title}}</a></div>
+  <div class="post-div"><a href="{{post.url}}">{{post.title}}</a></div>
 {% endfor %}

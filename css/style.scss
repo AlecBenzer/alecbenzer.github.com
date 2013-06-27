@@ -7,21 +7,13 @@ body {
   font-size: $body-font-size;
 }
 
-h1 {
-  font-size: 29px;
-}
-
-h2 {
-  font-size: 27px;
-}
-
 code {
   font-family: $code-font-family;
   font-size: $body-font-size * 0.85;
 }
 
 #content {
-  max-width: 550px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -36,7 +28,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #888;
   width: 50%;
   margin-left: 25%;
 }
@@ -44,7 +36,7 @@ hr {
 img {
   display: block;
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 blockquote {
@@ -53,4 +45,8 @@ blockquote {
 
 #footnotes {
   font-size: $body-font-size * 0.8;
+}
+
+.post-div {
+  margin-bottom: 10px;
 }
