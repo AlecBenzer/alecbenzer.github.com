@@ -1,16 +1,13 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 24px;
-  line-height: 2.3ex;
+  line-height: 1.7em
   color: #222;
+  background: #fdfdfd;
 }
 
 p {
-  margin-bottom: 3ex;
-}
-
-h1, h2, h3 {
-  font-family: Helvetica, Arial, serif;
+  margin-bottom: 2em;
 }
 
 h1 {
@@ -28,8 +25,8 @@ code {
 }
 
 pre {
-  margin-top: 5ex;
-  margin-bottom: 5ex;
+  margin-top: 3em;
+  margin-bottom: 3em;
   margin-left: 1em;
   line-height: 1em;
 }
@@ -63,5 +60,5 @@ blockquote {
 }
 
 .post-div {
-  margin-bottom: 1.5ex;
+  margin-bottom: 1em;
 }
