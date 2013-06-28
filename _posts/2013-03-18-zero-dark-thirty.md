@@ -5,7 +5,7 @@ title: "Matt Taibbi on <em>Zero Dark Thirty</em>"
 
 A few weeks ago I saw a link to Matt Taibbi's article ["'Zero Dark Thirty' Is Osama bin Laden's Last Victory Over America"](http://www.rollingstone.com/politics/blogs/taibblog/zero-dark-thirty-is-osama-bin-ladens-last-victory-over-america-20130116). I hadn't seen the movie so I didn't read the article at that time. I recently just watched it though, and went back to read the article, and I thought a lot of it was kind of silly.
 
-If you haven't seen _Zero Dark Thirty_, go see it, it's good movie. One of the things that I thought was most striking about it was the character development that the protagonist, Maya, goes through.
+If you haven't seen _Zero Dark Thirty_, go see it, it's a good movie. One of the things that I thought was most striking about it was the character development that the protagonist, Maya, goes through.
 
 In the very first scene of the movie, Maya's shown as being kind of taken aback as another character conducts a pretty brutal interrogation. As the movie goes on and Maya goes through more and more shit as she tries to find bin Laden, you see her slowly getting more and more obsessed with finding him, and even begins to see him as a personal adversary, especially after a friend of hers is killed by a suicide bomber. She survives suicide bombings and attempts on her life, and at the end of the movie she's transformed from this sort of reserved new-comer to much more of a badass CIA agent.
 
