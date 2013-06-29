@@ -2,7 +2,7 @@
 layout: page
 title: Alec Benzer
 ---
-# Alec Benzer
+## Alec Benzer
 <div id="bio">
 <p>
 sre intern @ <a href="http://www.google.com/about">google</a><br />
@@ -12,7 +12,7 @@ cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 </p>
 </div>
 
-## posts
+## blog posts
 
 {% for post in site.posts %}
   <div class="post-div"><a href="{{post.url}}">{{post.title}}</a></div>
