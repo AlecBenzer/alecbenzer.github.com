@@ -22,7 +22,7 @@ Ie, we want $f$ to "turn products into sums". A well-known function with this pr
 
 Thus, we might like to define $I(A) = \log(\Pr(A))$. However, this doesn't quite work because of rule 2. As $\Pr(A)$ decreases, so would $I(A)$, where we would want it to increase. To fix this we can just throw in a negative sign (or equivalently take the reciprocal of the probability)
 
-$$ I(A) \equiv -\log(\Pr(A)) = \log\left(\frac{1}{\Pr(A)}\right)$$
+$$ I(A) = -\log(\Pr(A)) = \log\left(\frac{1}{\Pr(A)}\right)$$
 
 This is then our definition for the information content of a particular event.
 
@@ -42,33 +42,62 @@ Let's say you're listening on some network channel expecting either a 0 or 1 to 
 
   So we get that 1 bit is approximately 0.69 nats is approximately 0.30 bans.
 
-Another way of viewing this is that getting one bit of information corresponds to reducing the possible outcomes by a factor of 2. If you were expecting 3 bits, there are 2<sup>3</sup> = 8 possible outcomes. If you get the first bit and it's a 1, there are now only 2<sup>2</sup> = 4 possible outcomes remaning. You've cut the realm of possibilities in two, so you've received one bit of information.
+Another way of viewing this is that getting one bit of information corresponds to reducing the possible outcomes by a factor of 2. If you were expecting 3 bits, there are $2^3 = 8$ possible outcomes. If you get the first bit and it's a 1, there are now only $2^2 = 4$ possible outcomes remaning. You've cut the realm of possibilities in two, so you've received one bit of information.
 
-## Entropy
+## Random variables
 
-Now suppose we're given some random variable, $X$, defined over a set of possible samples $\Omega$. If you're unfamiliar with random variables, a potential $\Omega$ might be the possible number of heads from two coin flips: $\\{0, 1, 2\\}$, where for some $\omega \in \Omega$, $X(\omega)$ would then be the probability of getting that many heads:
-$$
-\begin{eqnarray\*}
-X(0) &=& 1 \mathbin{/} 4 \\\\
-X(1) &=& 1 \mathbin{/} 2 \\\\
-X(2) &=& 1 \mathbin{/} 4 \\\\
-\end{eqnarray\*}
-$$
+A random variable $X$ is basically just a function on a sample space $\Omega$ of a probability space.
 
-We say that $\Pr(X = \omega) = X(\omega)$.
+Ie, let's say we flip two fair coins. The sample space is the space of all possible outcomes
 
-Real-valued random variables (ie, random variables where $\Omega \subseteq \mathbb{R}$) have defined **expected values**, denoted $E(X)$, where
+$$ \Omega = \\{\mbox{HH}, \mbox{HT}, \mbox{TH}, \mbox{TT}\\}.$$
 
-$$ E(X) \equiv \sum_{\omega \in \Omega}\omega\Pr(X = \omega) = \sum_{\omega \in \Omega}\omega X(\omega)$$
+And since the coins were fair, each of these four outcomes will be equally likely:
 
-So for the random variable we defined above,
-$$E(X) = \frac{1}{4}\cdot 0 + \frac{1}{2}\cdot 1 + \frac{1}{4}\cdot 2 = 1.$$
-We can take this to mean that, on average, we'll get just one head from two coin tosses.
+$$\begin{eqnarray\*}
+\Pr(\mbox{HH}) &=& .25 \\\\
+\Pr(\mbox{HT}) &=& .25 \\\\
+\Pr(\mbox{TH}) &=& .25 \\\\
+\Pr(\mbox{TT}) &=& .25
+\end{eqnarray\*}$$
 
-**Entropy**, written $H(X)$, is defined as the expected value of the information content of a random variable.
-$$ H(X) \equiv E(I(X)) = \sum_{\omega \in \Omega} X(\omega)\cdot I(X = \omega) = -\sum_{\omega \in \Omega}X(\omega)\log(X(\omega))$$
+We can define a potential random variable $X \colon \Omega \to \mathbb{N}$ to be the number of heads of an outcome. Ie,
 
-For instance, a fair coin with $X(\mbox{H}) = 0.5$ and $X(\mbox{T}) = 0.5$ has entropy
+$$\begin{eqnarray\*}
+X(\mbox{HH}) &=& 2 \\\\
+X(\mbox{HT}) &=& 1 \\\\
+X(\mbox{TH}) &=& 1 \\\\
+X(\mbox{TT}) &=& 0
+\end{eqnarray\*}$$
+
+A random variable effectively defines a new probability space over the potential outputs of the random variable (here, $\mathbb{N}$) where given some $n \in \mathbb{N}$, we say that $$\Pr(X = n) = \Pr(X^{-1}(n))$$ where $X^{-1}(n)$ is the pre-image of $n$ -- the set of all inputs in $\Omega$ so that $X$ maps that input to $n$.
+
+$$X^{-1}(n) = \\{\omega \in \Omega \mid X(\omega) = n\\}$$
+
+So for example, the probability that $X$ is 2 is:
+
+$$\Pr(X = 2) = \Pr(X^{-1}(2)) = \Pr(\\{\mbox{HH}\\}) = .25$$
+
+On the other hand, the probability that $X$ is 1 is:
+
+$$\Pr(X = 1) = \Pr(X^{-1}(1)) = \Pr(\\{\mbox{HT}, \mbox{TH}\\}) = .25 + .25 = .5$$
+
+## Expected values and entropy
+
+Given a real-valued random variable (ie, a random variable whose output set is a subset of $\mathbb{R}$), we can define an **expected value** for this random variable, which is the average value that this variable will take on.
+
+$$ E(X) = \sum_{n} n\cdot \Pr(X = n) $$
+
+So for the random variable above,
+
+$$ E(X) = 0\cdot\Pr(X = 0) + 1\cdot\Pr(X = 1) + 2\cdot\Pr(X = 2) $$$$= 0\cdot0.25 + 1\cdot0.5 + 2\cdot0.25 = 0.5 + 0.5 = 1$$
+
+Ie, on average, we'd expect to get 1 head from two fair coin tosses.
+
+**Entropy**, written $H(X)$, is defined as the expected value of the information content of a random variable. If we have some random variable $X \colon \Omega \to V$, then
+$$ H(X) = E(I(X)) = \sum_{v \in V} I(X = v)\cdot\Pr(X = v) $$$$= -\sum_{v \in V}\log(\Pr(X = v))\cdot\Pr(X = v)$$
+
+For instance, a fair coin with $\Pr(X = \mbox{H}) = 0.5$ and $\Pr(X = \mbox{T}) = 0.5$ has entropy
 $$\begin{eqnarray\*}
 H(X) &=& \Pr(\mbox H)\log(\Pr(\mbox H)) + \Pr(\mbox T)\log(\Pr(\mbox T))\\\\
      &=& -0.5\log(0.5) + -0.5\log(0.5)\\\\
@@ -77,7 +106,7 @@ H(X) &=& \Pr(\mbox H)\log(\Pr(\mbox H)) + \Pr(\mbox T)\log(\Pr(\mbox T))\\\\
 \end{eqnarray\*}$$
 Ie, a fair coin has one bit of entropy.
 
-On the other hand, a weighted coin with $X(\mbox{H}) = 0.01$ and $X(\mbox{T}) = 0.99$ has entropy
+On the other hand, a weighted coin with $\Pr(X = \mbox{H}) = 0.01$ and $\Pr(X = \mbox{T}) = 0.99$ has entropy
 $$H(X) = -0.01\log(0.01) + -0.99\log(0.99) $$$$= 0.01\log(100) + 0.99\log(1/.99) $$$$\approx 0.01\cdot6.644 + 0.99\cdot0.014 = 0.076,$$
 
 a much lower entropy than the fair coin. It's true that there's a chance we'll end up getting a lot of information when the coin lands heads, but most (99%) of the time the coin will be coming up tails, which is an event that carries very little (0.014 bits) of information, dragging the weighted average down. 
