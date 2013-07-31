@@ -15,5 +15,5 @@ cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
 ## blog posts
 
 {% for post in site.posts %}
-  <div class="post-div"><a href="{{post.url}}">{{post.title}}</a></div>
+  <div class="post-div"><span class="post-date">{{post.date | date:"%m/%d/%y"}}</span>&nbsp;&nbsp;<a href="{{post.url}}">{{post.title}}</a></div>
 {% endfor %}
