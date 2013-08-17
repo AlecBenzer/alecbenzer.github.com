@@ -4,15 +4,13 @@ title: "Monads in C++"
 ---
 
 There's probably already a million and three posts about explaining monads and
-implementing monad-like stuff in C++, but fuck it, now there's a million and
+implementing monad-like stuff in C++, but screw it, now there's a million and
 four.
 
 ## Maybes
 
 Maybes are a common kind of monad. But forget about that. Maybes represent stuff
 that can fail.
-
-Ie:
 
 {% highlight cpp %}
 double Inverse(double x) {
@@ -21,12 +19,12 @@ double Inverse(double x) {
 
 ...
 
-Squareroot(0.0);
+Inverse(0.0);
 {% endhighlight %}
 
 C++ doesn't like dividing by 0. Now, running that
 we'd probably get `inf`, but it wouldn't be unsurprising for
-something like that to be a runtime-crash. So we input-sanitize.
+something like that to be a runtime-crash. So we sanitize out input.
 
 {% highlight cpp %}
 double Inverse(double x) {
@@ -48,7 +46,7 @@ to have a more concrete way of signaling failure.
 
 So that's what a Maybe is:
 
-{% highlight %}
+{% highlight cpp %}
 template<class T>
 class Maybe {
  public:
@@ -97,7 +95,7 @@ Maybe<double> Squareroot(double x) {
 }
 {% endhighlight %}
 
-And, just for the sake of consistency, we write functions that won't every fail
+And, just for the sake of consistency, we can write functions that won't every fail
 to return Maybes as well:
 
 {% highlight cpp %}
@@ -153,7 +151,7 @@ Maybe<double> Inverse(Maybe<double> x) {
 // similarly for Squareroot, Square
 {% endhighlight %}
 
-So now we can write
+So we could then write
 
 {% highlight cpp %}
 bool Test(double x) {
@@ -244,7 +242,7 @@ well into a functional form needed for haskell. We could try fixing it up a bit,
      but we won't bother right now, because the _real_ way to fix `test` up is
      to take advantage of the fact that `Maybe` is a monad in haskell.
 
-## The >>= operator
+## The &gt;&gt;= operator
 
 Looking at this from a kind of high-level, here's our problem: we have a bunch
 of functions that look like this:
@@ -280,7 +278,7 @@ connect (Just x) f = f x
 {% endhighlight %}
 
 Instead of handling the case of a `Nothing` input in `inverse` directly, we
-write a connect function to do it for us. If our input is `Nothing`, we just
+use `connect` to do it for us. If our input is `Nothing`, we just
 return `Nothing`. Otherwise, we extract the `x` out of the input and pass it on
 to `f`, as function.
 
@@ -328,7 +326,7 @@ C++ `Maybe`. Just throw this into the `Maybe` class definition:
 
 {% highlight cpp %}
 template<class U>
-Maybe<U> operator>>(Maybe<U>(*f)(T)) {
+Maybe<U> >>(Maybe<U>(*f)(T)) {
   if (ok_) {
     return f(t_);
   } else {
@@ -349,14 +347,18 @@ So our `Maybe::operator>>` function take as input a function called `f` with typ
     T -> Maybe<U>
 
 and returns a `Maybe<U>`. Just like with the `connect` function we wrote in
-haskell, `operator>>` is simply check if we're okay, and then passing ourselves
-onto `f`, or returning a non-ok `Maybe<U>` if we ourselves are not okay.
+haskell, `operator>>` simply checks if we're okay, and then passes ourselves
+onto `f`, or returning a non-ok `Maybe<U>` if we aren't okay.
 
 So in C++, we can rewrite `Test` like so:
 
 {% highlight cpp %}
 bool Test(double x) {
-  Maybe<double> result = Maybe<double>(x) >> Squareroot >> Inverse >> Square >> Inverse;
+  Maybe<double> result = Maybe<double>(x)
+    >> Squareroot
+    >> Inverse
+    >> Square
+    >> Inverse;
   return result.ok() && x == result.get();
 }
 {% endhighlight %}
