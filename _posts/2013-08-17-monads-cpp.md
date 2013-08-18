@@ -9,7 +9,7 @@ four.
 
 ## Maybes
 
-Maybes are a common kind of monad. But forget about that. Maybes represent stuff
+Maybes are a common kind of monad. But don't worry about that right now. Maybes represent stuff
 that can fail.
 
 {% highlight cpp %}
@@ -23,12 +23,14 @@ Inverse(0.0);
 {% endhighlight %}
 
 C++ doesn't like dividing by 0. Now, running that
-we'd probably get `inf`, but it wouldn't be unsurprising for
-something like that to be a runtime-crash. So we sanitize out input.
+we'd probably get `inf`, but it wouldn't be surprising for
+something like that to be a runtime-crash (or you can at least imagine a function where certain inputs can cause runtime crashes).
+
+So we sanitize the input:
 
 {% highlight cpp %}
 double Inverse(double x) {
-  if (x < 0) {
+  if (x == 0) {
     return 0.0;
   }
   return 1.0 / x;
@@ -44,7 +46,48 @@ if (Inverse(0.0) == 0.0) {
 But this is kind of hacky. What if 0 was a valid potential output? It'd be better
 to have a more concrete way of signaling failure.
 
-So that's what a Maybe is:
+A common C-style idiom is to have functions return integer status codes (with 0 indicating success), and store the real results in output parameters:
+
+{% highlight cpp %}
+int Inverse(double x, double* answer) {
+  if (x == 0) {
+    return 1;  // failure
+  }
+  *answer = 1.0 / x;
+  return 0;  // success
+}
+
+...
+
+double inv;
+if (Inverse(0.0, &inv) != 0) {
+  printf("There was an error\n");
+} else {
+  printf("The answer is %lf\n", inv);
+}
+{% endhighlight %}
+
+In C++ we can use exceptions:
+
+{% highlight cpp %}
+double Inverse(double x) throw(string) {
+  if (x == 0) {
+    throw "Can't divide by zero";
+  }
+  return 1.0 / x;
+}
+
+...
+
+try {
+  printf("The answer is %lf\n", Inverse(0.0));
+} catch (string err) {
+  printf("That was an error.");
+}
+{% endhighlight %}
+
+
+But another thing we can do is to use a Maybe:
 
 {% highlight cpp %}
 template<class T>
@@ -61,6 +104,8 @@ class Maybe {
   bool ok_;
 };
 {% endhighlight %}
+
+`Maybe<T>` is a type that _might_ be a `T`, but might also be nothing.
 
 `Maybe`'s default constructor constructs a "bad" value, and its single
 parameter constructor (which we did _not_ mark as `explicit`, so we can do stuff
@@ -95,8 +140,8 @@ Maybe<double> Squareroot(double x) {
 }
 {% endhighlight %}
 
-And, just for the sake of consistency, we can write functions that won't every fail
-to return Maybes as well:
+And, just for the sake of consistency, we can have functions that won't ever fail
+return Maybes as well:
 
 {% highlight cpp %}
 Maybe<double> Square(double x) {
@@ -104,7 +149,7 @@ Maybe<double> Square(double x) {
 }
 {% endhighlight %}
 
-And maybe to test that everything works together, we write a test like this:
+And maybe (no pun intended) to test that everything works together, we write a test like this:
 
 {% highlight cpp %}
 bool Test(double x) {
@@ -171,9 +216,10 @@ Defining a Maybe type in Haskell would look something like this:
 data Maybe a = Just a | Nothing
 {% endhighlight %}
 
-though conveniently this is already defined for us in haskell.
-`Maybe<double>(5.0)` becomes `Just 5.0`, and `Maybe<double>()` becomes
+which reads something like "there's a new data type called `Mayb` of `a`, for some type `a`, which is either `Just` an `a`, or `Nothing`". `Maybe<double>(5.0)` becomes `Just 5.0`, and `Maybe<double>()` becomes
 `Nothing`.
+
+Conveniently, [this is already defined for us in haskell](http://hackage.haskell.org/packages/archive/base/4.2.0.1/doc/html/Data-Maybe.html).
 
 Here's a translation of `Inverse` to haskell:
 
@@ -200,7 +246,7 @@ squareroot x =
   else Just (sqrt x)
 {% endhighlight %}
 
-but haskell has this other neat thing called guards that lets us write:
+but haskell has this other neat thing called guards that let us write:
 
 {% highlight haskell %}
 squareroot x
@@ -238,7 +284,9 @@ Here, we're using haskell's `isNothing` in place of our `!Maybe::ok()` and `from
 
 `Test` ends up looking the most cumbersome when translated literally like this
 into haskell, because `Test` is rather imperative and doesn't translate all that
-well into a functional form needed for haskell. We could try fixing it up a bit,
+well into a functional form needed for haskell.
+
+We could try fixing it up a bit,
      but we won't bother right now, because the _real_ way to fix `test` up is
      to take advantage of the fact that `Maybe` is a monad in haskell.
 
@@ -270,7 +318,7 @@ inverse (Just x) = Just (1.0 / x)
 
 but we'd like to be able fix this without messing with our original functions.
 
-What we can do is write a `connect` function, that looks like this:
+What we can do instead is write a `connect` function, that looks like this:
 
 {% highlight haskell %}
 connect Nothing f = Nothing
@@ -321,12 +369,12 @@ test x = let result = Just x >>= sqaureroot >>= inverse >>= square >>= inverse i
 
 ## Let's port bind to C++
 
-It's actually pretty easy to implement something like the bind operator to our
+It's actually pretty easy to implement something like the bind operator for our
 C++ `Maybe`. Just throw this into the `Maybe` class definition:
 
 {% highlight cpp %}
 template<class U>
-Maybe<U> >>(Maybe<U>(*f)(T)) {
+Maybe<U> operator>>(Maybe<U>(*f)(T)) {
   if (ok_) {
     return f(t_);
   } else {
@@ -348,7 +396,7 @@ So our `Maybe::operator>>` function take as input a function called `f` with typ
 
 and returns a `Maybe<U>`. Just like with the `connect` function we wrote in
 haskell, `operator>>` simply checks if we're okay, and then passes ourselves
-onto `f`, or returning a non-ok `Maybe<U>` if we aren't okay.
+onto `f`, or returns a non-ok `Maybe<U>` if we aren't okay.
 
 So in C++, we can rewrite `Test` like so:
 
