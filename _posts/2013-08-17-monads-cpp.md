@@ -48,7 +48,7 @@ to have a more concrete way of signaling failure.
 
 So that's what a Maybe is:
 
-{% highlight %}
+{% highlight cpp %}
 template<class T>
 class Maybe {
  public:
