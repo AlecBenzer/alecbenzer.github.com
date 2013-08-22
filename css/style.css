@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 24px;
   color: #333;
   line-height: 1.6em;
 }
@@ -46,7 +46,7 @@ img {
 }
 
 blockquote {
-  color: #444;
+  color: #666;
   padding-left: 1em;
   margin-left: 0;
   border-left: 2px solid #888;
