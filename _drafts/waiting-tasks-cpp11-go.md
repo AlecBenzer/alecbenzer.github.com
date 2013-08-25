@@ -7,7 +7,7 @@ We have a slow operation:
 
 {% highlight cpp %}
 int slowOp(int n) {
-  this_thread::sleep_for(chrono::seconds(1));
+  std::this_thread::sleep_for(std::chrono::seconds(1));
   return n * n;
 }
 {% endhighlight %}
@@ -26,9 +26,9 @@ of the operations at once and then get their results.
 C++11 has `std::async` which we can use for that:
 
 {% highlight cpp %}
-vector<future<int>> futures;
+vector<std::future<int>> futures;
 for (int i = 0; i < N; ++i) {
-  futures.push_back(async(slowOp, i, launch::async));
+  futures.push_back(std::async(slowOp, i, std::launch::async));
 }
 
 for (auto& future : futures) {
@@ -66,6 +66,6 @@ them. Maybe we're actually running this code multiple times with the same input,
 {% highlight cpp %}
 for (int i = 0; i < N; ++i) {
   // *one* of these should finish relatively quickly
-  futures.push_back(async(slowOp, 5, launch::async);
+  futures.push_back(std::async(slowOp, 5, std::launch::async);
 }
 {% endhighlight %}
