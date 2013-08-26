@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  color: #222;
+  font-size: 18px;
+  color: #333;
   line-height: 1.6em;
 }
 
@@ -14,8 +14,12 @@ code {
   font-size: 0.85em;
 }
 
+h1 {
+  line-height: 1.6em;
+}
+
 #content {
-  max-width: 28em;
+  max-width: 33em;
   margin: 0 auto;
 }
 
