@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On \"creating money\" and what banks do"
+title: On “creating money” and what banks do
 ---
 
 Putting on my novice economist hat.

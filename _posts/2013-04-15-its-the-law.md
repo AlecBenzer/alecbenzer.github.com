@@ -1,8 +1,7 @@
 ---
 layout: "post"
-title: "\"It's the law\""
+title: "“It’s the law”"
 ---
-
 If someone tells you to do something because "it's the law", they're telling you that if you don't do it, people with guns will punish you. If the person talking to you is from the government, then they're threatening you.
 
 There was an [r/Libertarian thread](http://www.reddit.com/r/Libertarian/comments/1celpl/poster_at_my_high_school_proves_that_public/) about a poster at someone's school from the [US Selective Service System](http://www.sss.gov/default.htm) listing reasons people (well, men) should register for the selective service when they turn 18.

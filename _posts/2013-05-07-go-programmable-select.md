@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Go 1.1's "programmable selects"
+title: Go 1.1's “programmable selects”
 ---
 
 In a [post from a few days ago](/blog/two-goroutines-one-channel) we used go's `sync.WaitGroup` structure to facilitate reading from multiple goroutines until they were done producing data. Here, we'll look at how we can also achieve this with go 1.1's new "programmable" select statements.
