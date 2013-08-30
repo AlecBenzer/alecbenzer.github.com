@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 24px;
   line-height: 1.6em;
   color: #333;
@@ -10,7 +10,7 @@ p {
 }
 
 code {
-  font-family: 'Dejavu Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  font-family: 'Dejavu Sans Mono', 'Liberation Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
   font-size: 0.85em;
 }
 
@@ -20,16 +20,15 @@ h1 {
 
 #content {
   max-width: 28em;
-  margin: 0 auto;
+  margin-left: 8em;
 }
 
 pre {
   margin-top: 2em;
   margin-bottom: 2em;
   line-height: 1em;
-  background: #ddd;
-  padding: 20px;
-  overflow: auto;
+  border-left: 10px solid #ddd;
+  padding: 1em;
 }
 
 hr {
