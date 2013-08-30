@@ -1,6 +1,6 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6em;
   color: #333;
 }
@@ -19,7 +19,7 @@ h1 {
 }
 
 #content {
-  max-width: 33em;
+  max-width: 28em;
   margin: 0 auto;
 }
 
