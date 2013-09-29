@@ -1,44 +1,40 @@
-body {
-  font-family: Helvetica, Arial, serif;
+#content {
+  max-width: 28em;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 24px;
-  line-height: 1.5em;
-  color: #222;
+  color: #333;
 }
 
-p {
+#content p, #content ul {
+  line-height: 1.5em;
+}
+
+#content p, #content ul, #content hr, #content pre {
   margin-bottom: 2em;
 }
 
-code {
-  font-family: 'Dejavu Sans Mono', 'Liberation Sans Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
-  font-size: 0.85em;
-}
-
-#content {
-  max-width: 25em;
-  margin: 0 auto;
-}
-
 h1 {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 h2 {
   font-size: 1.2em;
 }
 
+blockquote {
+  font-style: italic;
+}
+
 pre {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  line-height: 1em;
-  padding: 1em;
+  padding-left: 1.5em;
+}
+
+code {
+  font-size: 0.85em;
 }
 
 hr {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  display: block;
-  height: 1px;
   border: 0;
   border-top: 1px solid #888;
   width: 50%;
@@ -49,21 +45,4 @@ img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-}
-
-blockquote {
-  color: #666;
-  font-style: italic;
-}
-
-#footnotes {
-  font-size: 0.8em;
-}
-
-.post-div {
-  margin-bottom: 0.5em;
-}
-
-.post-date {
-  font-size: 0.8em;
 }

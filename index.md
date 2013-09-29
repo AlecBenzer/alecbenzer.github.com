@@ -15,5 +15,5 @@ sre intern @ <a href="http://www.google.com/about">google</a><br />
 ## blog posts
 
 {% for post in site.posts %}
-  <div class="post-div"><span class="post-date">{{post.date | date:"%m/%d/%y"}}</span>&nbsp;&nbsp;<a href="{{post.url}}">{{post.title}}</a></div>
+  <div style="margin-bottom: 0.8em;"><a href="{{post.url}}">{{post.title}}</a></div>
 {% endfor %}
