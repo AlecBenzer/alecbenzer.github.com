@@ -1,12 +1,12 @@
 #content {
-  max-width: 28em;
+  max-width: 25em;
   margin: 0 auto;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 24px;
-  color: #333;
+  color: #222;
 }
 
-#content p, #content ul {
+#content p, #content ul, #content ol {
   line-height: 1.5em;
 }
 
@@ -15,7 +15,7 @@
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 h2 {
