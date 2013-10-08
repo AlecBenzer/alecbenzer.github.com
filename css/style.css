@@ -10,7 +10,7 @@
   line-height: 1.5em;
 }
 
-#content p, #content ul, #content hr, #content pre {
+#content p, #content ul, #content pre {
   margin-bottom: 2em;
 }
 
@@ -35,6 +35,8 @@ code {
 }
 
 hr {
+  margin-bottom: 3em;
+  margin-top: 3em;
   border: 0;
   border-top: 1px solid #888;
   width: 50%;

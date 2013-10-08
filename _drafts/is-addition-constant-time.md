@@ -10,8 +10,8 @@ Practically speaking addition is certainly a constant time operation, and it "re
 Detour time: the traditional, iterative Fibonacci algorithm is something like this:
 
 {% highlight go %}
-a, b := 0, 1
-for i := 0; i < N-1; i++ {
+a, b = 0, 1
+for i = 0..(N-1) {
   a, b = b, a + b
 }
 // b is the Nth Fibonacci number
@@ -48,7 +48,7 @@ $$
 
 Ie, it's a matrix-version of the multiple-assignment:
 
-    a, b := b, a + b
+    a, b = b, a + b
 
 To iterate this assignment N-1 times, starting with `a = 0` and `b = 1`, we just apply the matrix N-1 times to the pair $(0,1)$, which is equivalent to raising the matrix to the (N-1)th power:
 
@@ -63,8 +63,8 @@ So we've established that computing the Nth Fibonacci number is equivalent to ra
 A simple $O(N)$ implementation would be:
 
 {% highlight go %}
-result := a
-for i := 0; i < N-1; i++ {
+result = a
+for i = 0..(N-1) {
   result *= a
 }
 {% endhighlight %}
