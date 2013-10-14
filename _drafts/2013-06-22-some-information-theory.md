@@ -44,47 +44,9 @@ Let's say you're listening on some network channel expecting either a 0 or 1 to 
 
 Another way of viewing this is that getting one bit of information corresponds to reducing the possible outcomes by a factor of 2. If you were expecting 3 bits, there are $2^3 = 8$ possible outcomes. If you get the first bit and it's a 1, there are now only $2^2 = 4$ possible outcomes remaning. You've cut the realm of possibilities in two, so you've received one bit of information.
 
-## Random variables
-
-A random variable $X$ is basically just a function on a sample space $\Omega$ of a probability space.
-
-Ie, let's say we flip two fair coins. The sample space is the space of all possible outcomes
-
-$$ \Omega = \\{\mbox{HH}, \mbox{HT}, \mbox{TH}, \mbox{TT}\\}.$$
-
-And since the coins were fair, each of these four outcomes will be equally likely:
-
-$$\begin{eqnarray\*}
-\Pr(\mbox{HH}) &=& .25 \\\\
-\Pr(\mbox{HT}) &=& .25 \\\\
-\Pr(\mbox{TH}) &=& .25 \\\\
-\Pr(\mbox{TT}) &=& .25
-\end{eqnarray\*}$$
-
-We can define a potential random variable $X \colon \Omega \to \mathbb{N}$ to be the number of heads of an outcome. Ie,
-
-$$\begin{eqnarray\*}
-X(\mbox{HH}) &=& 2 \\\\
-X(\mbox{HT}) &=& 1 \\\\
-X(\mbox{TH}) &=& 1 \\\\
-X(\mbox{TT}) &=& 0
-\end{eqnarray\*}$$
-
-A random variable effectively defines a new probability space over the potential outputs of the random variable (here, $\mathbb{N}$) where given some $n \in \mathbb{N}$, we say that $$\Pr(X = n) = \Pr(X^{-1}(n))$$ where $X^{-1}(n)$ is the pre-image of $n$ -- the set of all inputs in $\Omega$ so that $X$ maps that input to $n$.
-
-$$X^{-1}(n) = \\{\omega \in \Omega \mid X(\omega) = n\\}$$
-
-So for example, the probability that $X$ is 2 is:
-
-$$\Pr(X = 2) = \Pr(X^{-1}(2)) = \Pr(\\{\mbox{HH}\\}) = .25$$
-
-On the other hand, the probability that $X$ is 1 is:
-
-$$\Pr(X = 1) = \Pr(X^{-1}(1)) = \Pr(\\{\mbox{HT}, \mbox{TH}\\}) = .25 + .25 = .5$$
-
 ## Expected values and entropy
 
-Given a real-valued random variable (ie, a random variable whose output set is a subset of $\mathbb{R}$), we can define an **expected value** for this random variable, which is the average value that this variable will take on.
+Given a real-valued random variable (ie, a random variable that takes values in $\mathbb{R}$), we can define an **expected value** for this random variable, which is the average value that this variable will take on.
 
 $$ E(X) = \sum_{n} n\cdot \Pr(X = n) $$
 
