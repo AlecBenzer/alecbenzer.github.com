@@ -28,4 +28,4 @@ Consider integer-factoring: given an $n$-bit integer, compute its prime factoriz
 There are only so many combinations, right?
 $$ \frac{z}{2}, \frac{z}{3}, \ldots, \frac{z}{z-2}, \frac{z}{z-1}.$$
 
-How long could it really take to check them all? Well, if I went back in time to the beginning of the universe, built a computer that could check if z divides a particular number in one nanosecond, and started it off, I'd have 2<sup>100</sup> numbers to check. 2<sup>89</sup> nanoseconds is already the age of the universe, which means that after running for the few billion years between the beginning of the universe and now, my program would only be 2<sup>89</sup>/2<sup>100</sup> = 0.04% done.
+How long could it really take to check them all? Well, if I went back in time to the beginning of the universe, built a computer that could check if $z$ divides a particular number in one nanosecond, and started it off, I'd have $2^{100}$ numbers to check. $2^{89}$ nanoseconds is already the age of the universe, which means that after running for the few billion years between the beginning of the universe and now, my program would only be $2^{89}\mathbin/2^{100} = 0.04\%$ done.

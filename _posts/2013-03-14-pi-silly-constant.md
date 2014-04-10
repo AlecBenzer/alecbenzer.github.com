@@ -35,7 +35,7 @@ For a circle with circumference $C$, radius $r$, and diameter $D = 2r$, we see t
 
 $$ \pi = \frac{C}{D} = \frac{C}{2r} = \frac{1}{2}\cdot\frac{C}{r} = \frac{1}{2} \tau $$
 
-So in terms of $\pi$, we see that $\tau = 2\pi$ and $\pi = \tau / 2$.
+So in terms of $\pi$, we see that $\tau = 2\pi$ and $\pi = \tau \mathbin/ 2$.
 
 In decimal form,
 

@@ -2,17 +2,23 @@
 <html>
   {% include head.html %}
   <body>
-    <div id="content">
-      {% if page.title %}
-      <h1 id="post-title">
-        {{ page.title }}
-      </h1>
-      {% endif %}
-      {{ content }}
-      <br />
-      <div id="footer">
-        <em>posted by <a href="/">Alec Benzer</a> on {{page.date | date: "%B %-d, %Y"}}</em><br /><br />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>
+      <div id="content">
+        {% if page.title %}
+        <h1 id="post-title">
+          {{ page.title }}
+        </h1>
+        {% endif %}
+        {{ content }}
+        <br />
+        <div id="footer">
+          <em>posted by <a href="/">Alec Benzer</a> on {{page.date | date: "%B %-d, %Y"}}</em><br /><br />
+        </div>
       </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>

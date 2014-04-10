@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Half-drunken ramblings on \"The Red Wedding\" and the ending of <em>Game of Thrones</em>' third season"
+title: "Half-drunken ramblings on “The Red Wedding” and the ending of <em>Game of Thrones</em>’ third season"
 ---
 
 This post is primarily directed at any _Game of Thrones_ watchers who haven't also read the books, and are somewhat upset at how season 3 of the show ended. Though it likely goes without saying, spoiler alerts through season 3. I also talk _about_ some things that happen later, without really mentioning what they are, but if you feel like you might consider that a spoiler then you should probably leave. Also, warning: I'm slightly drunk, a little upset, and putting on my srs bsns hat.
