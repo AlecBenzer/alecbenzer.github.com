@@ -93,27 +93,27 @@ $$ \frac{6 + 8 + 5 + 6 + 6 + 7}{6} = \frac{38}{6} = 6{\frac{1}{3}} $$
 Let's call the average $\mu = 6{\frac{1}{3}}$. We can, for each number in the list, compute its distance from the average:
 
 $$
-\begin{align\*}
-(6-\mu) &= -\frac{1}{3}\\\\
-(8-\mu) &= 1{\frac{2}{3}}\\\\
-(5-\mu) &= -1{\frac{1}{3}}\\\\
-(6-\mu) &= -\frac{1}{3}\\\\
-(6-\mu) &= -\frac{1}{3}\\\\
+\begin{align*}
+(6-\mu) &= -\frac{1}{3}\\
+(8-\mu) &= 1{\frac{2}{3}}\\
+(5-\mu) &= -1{\frac{1}{3}}\\
+(6-\mu) &= -\frac{1}{3}\\
+(6-\mu) &= -\frac{1}{3}\\
 (7-\mu) &= \frac{2}{3}
-\end{align\*}
+\end{align*}
 $$
 
 And, to make everything nice and positive, we can square all those distances:
 
 $$
-\begin{align\*}
-\left(-\frac{1}{3}\right)^2 &= \frac{1}{9}\\\\
-\left(1{\frac23}\right)^2 &= \frac{25}{9}\\\\
-\left(-1{\frac13}\right)^2 &= \frac{16}{9}\\\\
-\left(-\frac{1}{3}\right)^2 &= \frac{1}{9}\\\\
-\left(-\frac{1}{3}\right)^2 &= \frac{1}{9}\\\\
+\begin{align*}
+\left(-\frac{1}{3}\right)^2 &= \frac{1}{9} \\
+\left(1{\frac23}\right)^2 &= \frac{25}{9} \\
+\left(-1{\frac13}\right)^2 &= \frac{16}{9} \\
+\left(-\frac{1}{3}\right)^2 &= \frac{1}{9} \\
+\left(-\frac{1}{3}\right)^2 &= \frac{1}{9} \\
 \left(\frac23\right)^2 &= \frac49
-\end{align\*}
+\end{align*}
 $$
 
 And, finally, we can take the average of all those squared distances:
@@ -127,53 +127,77 @@ This is variance for a finite list of numbers. To compute the variance for a ran
 Recall that $E(X)$ is $p$, and so when $X$ is 1 (which happens with probability $p$), its squared distance to its expected value is $(1 - E(X))^2 = (1-p)^2$, and when $X$ is 0 (which happens with probability $(1-p)$), its squared distance to its expected value is $(0 - E(X))^2 = p^2$, and so
 
 $$
-\begin{eqnarray\*}
-\operatorname{Var}(X) &=& p\cdot((1-p)^2) + (1-p)\cdot(p^2) \\\\
-    &=& p(1 -2p + p^2) + p^2 - p^3 \\\\
-    &=& p - 2p^2 + p^3 + p^2 - p^3\\\\
-    &=& p - p^2\\\\
-    &=& p(1-p)
-\end{eqnarray\*}
+\begin{align*}
+\operatorname{Var}(X) &= p\cdot((1-p)^2) + (1-p)\cdot(p^2) \\
+    &= p(1 -2p + p^2) + p^2 - p^3 \\
+    &= p - 2p^2 + p^3 + p^2 - p^3 \\
+    &= p - p^2 \\
+    &= p(1-p)
+\end{align*}
 $$
 
 
 ## Confidence Intervals
 
-So going back to the central limit theorem, we have that the random variable $X_n$ is normally distributed with mean $E(X) = p$ and variance $\operatorname{Var}(X)\mathbin/n$. Because of things we know about normal distributions, this can tell us a lot about how $\widehat{p}$ (which is essentially an instance of the random variable $X_n$) relates to $p$.
+So going back to the central limit theorem, we have that the random variable $X_n$ is normally distributed with mean $E(X) = p$ and variance $\operatorname{Var}(X)/n$. Because of things we know about normal distributions, this can tell us a lot about how $\widehat{p}$ (which is essentially an instance of the random variable $X_n$) relates to $p$.
 
-In particular, something well known about normal distributions is how likely something is to be within $z$ standard deviations of the mean. That is, for our normal distribution, our variance is $\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}$ (as we showed above). This means that the standard deviation of $X_n$ is $$\sigma_{n} = \sqrt{ \frac{\operatorname{Var}(X)}{n}} = \sqrt{\frac{p(1-p)}{n}}$$ Remember that our mean was $p$, and so we know what the odds are for $p$ and our specific value $\widehat{p}$ to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
+In particular, something well known about normal distributions is how likely something is to be within $z$ standard deviations of the mean. That is, for our normal distribution, our variance is $\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}$ (as we showed above). This means that the standard deviation of $X_n$ is 
 
-$$ \Pr(\left|p - \widehat{p}\right| < \sigma_n) \approx 0.68 $$
+$$\sigma_{n} = \sqrt{ \frac{\operatorname{Var}(X)}{n}} = \sqrt{\frac{p(1-p)}{n}}$$
+
+Remember that our mean was $p$, and so we know what the odds are for $p$ and our specific value $\widehat{p}$ to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
+
+$$
+\Pr(\left|p - \widehat{p}\right| < \sigma_n) \approx 0.68
+$$
 
 Well, sort of. The central limit theorem tells us that $X_n$ is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
 
 We also know (are confident) that the probability of $\widehat{p}$ being with _two_ standard deviations of $p$ is approximately 95%...
 
-$$ \Pr(\left|p - \widehat{p}\right| < 2\cdot\sigma_n) \approx 0.95 $$
+$$
+\Pr(\left|p - \widehat{p}\right| < 2\cdot\sigma_n) \approx 0.95
+$$
 
 ...and that the probability of being with _three_ standard deviations is approximately 99.7%
 
-$$ \Pr(\left|p - \widehat{p}\right| < 3\cdot\sigma_n) \approx 0.997 $$
+$$
+\Pr(\left|p - \widehat{p}\right| < 3\cdot\sigma_n) \approx 0.997
+$$
 
 So in general, for any particular probability $\alpha$, it's possible to find a corresponding value $z$ (often written $z_{\alpha/2}$) such that the odds of $p$ and $\widehat{p}$ being with $z$ standard deviations of each other is $\alpha$:
 
-$$ \Pr(\left|p - \widehat{p}\right| < z\cdot\sigma_n) \approx \alpha $$
+$$
+\Pr(\left|p - \widehat{p}\right| < z\cdot\sigma_n) \approx \alpha
+$$
 
 This leads to an _interval_ of values that we are $\alpha$ sure that $p$ is between. Ie, we know with probability $\alpha$ that
 
-$$ \widehat{p} - z\cdot\sigma_n < p < \widehat{p} + z\cdot\sigma_n $$
+$$
+\widehat{p} - z\cdot\sigma_n < p < \widehat{p} + z\cdot\sigma_n
+$$
 
 The $z$ value corresponding to an $\alpha$ of 95%, for example, is 1.96. So this means that we can be 95% sure that
 
-$$ \widehat{p} - 1.96\widehat{\sigma} < p < \widehat{p} + 1.96\widehat{\sigma} $$
+$$
+\widehat{p} - 1.96\sigma_n < p < \widehat{p} + 1.96\sigma_n
+$$
 
 So what's really going on here? We'd _like_ to know what $p$ is. But we don't. Instead, we know what $\widehat{p}$ is. And we know that $\widehat{p}$ should be roughly $p$, but we're not all that sure. Especially when we only have a few ratings to go on.
 
-What we _can_ say, though, is that we are 95% sure that $p$ is no less than $\widehat{p} - 1.96\widehat{\sigma}$. And so this, this $\widehat{p} - 1.96\widehat{\sigma}$ value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
+What we _can_ say, though, is that we are 95% sure that $p$ is no less than $\widehat{p} - 1.96\sigma_n$. And so this, this $\widehat{p} - 1.96\sigma_n$ value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
 
-Except there's a bit of a problem with that. Do you recall the formula for $\sigma_n$, the standard deviation of $X_n$? It was $$\sigma_n = \sqrt{\frac{p(1-p)}{n}}$$ And the whole reason we're in this mess to begin with is because we don't know $p$, so we can't very well know $\sigma_n$ either.
+Except there's a bit of a problem with that. Do you recall the formula for $\sigma_n$, the standard deviation of $X_n$? It was
 
-One way to cope with this is to do the simplest thing we can, and just replace $p$ with $\widehat{p}$ for our calculation of $\sigma_n$. That is, we let $$\widehat{\sigma} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$$ hoping that $\widehat{\sigma} \approx \sigma_n$. And so the lower bound of our confidence interval becomes
+$$\sigma_n = \sqrt{\frac{p(1-p)}{n}}$$
+
+And the whole reason we're in this mess to begin with is because we don't know $p$, so we can't very well know $\sigma_n$ either.
+
+One way to cope with this is to do the simplest thing we can, and just replace $p$ with $\widehat{p}$ for our calculation of $\sigma_n$. That is, we let 
+
+$$\widehat{\sigma} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$$
+
+hoping that $\widehat{\sigma} \approx \sigma_n$. And so the lower bound of our confidence interval becomes
 
 $$\widehat{p} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}$$
 
@@ -187,18 +211,28 @@ And in fact, for items with only a few ratings, it's quite common to have extrem
 
 Instead, we're going to have to do something else to deal with the fact that we don't know $\sigma_n$. To this end, we use the "Wilson score confidence interval", which uses some clever algebra to get around having to compute $\sigma_n$ directly. Recall the formula we had for our confidence intervals:
 
-$$ \left|\widehat{p} - p\right| < z\cdot \sigma_n $$
+$$
+\left|\widehat{p} - p\right| < z\cdot \sigma_n
+$$
 
 We can square both sides of this inequality to get
 
-$$(\widehat{p} - p)^2 < z^2\cdot\sigma_n^2$$
-$$(\widehat{p} - p)^2 < z^2\left(\frac{p(1-p)}{n}\right)$$
+$$
+\begin{align*}
+(\widehat{p} - p)^2 &< z^2\cdot\sigma_n^2 \\
+(\widehat{p} - p)^2 &< z^2\left(\frac{p(1-p)}{n}\right)
+\end{align*}
+$$
 
 If we let $t = \frac{z^2}{n}$ (just to make things easier to write), we get
 
-$$\widehat{p}^2 - 2p\widehat{p} + p^2 < t(p-p^2)$$
-$$\widehat{p}^2 - 2p\widehat{p} + p^2 < tp-tp^2$$
-$$\widehat{p}^2 - (2\widehat{p}+t)p + (1+t)p^2 < 0$$
+$$
+\begin{align*}
+\widehat{p}^2 - 2p\widehat{p} + p^2 &< t(p-p^2) \\
+\widehat{p}^2 - 2p\widehat{p} + p^2 &< tp-tp^2 \\
+\widehat{p}^2 - (2\widehat{p}+t)p + (1+t)p^2 &< 0
+\end{align*}
+$$
 
 This inequality is quadratic in $p$, which means we can use the quadratic formula to find the end-points (ie, the places where we are equal to 0, not less than it). The quadratic formula for solving $c + bp + ap^2 = 0$ is
 
@@ -207,27 +241,33 @@ $$ p = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 and so if we have $a = 1 + t$, $b = -(2\widehat{p} + t)$, and $c = \widehat{p}^2$, we get endpoints of
 
 $$
-\begin{align\*}
+\begin{align*}
 & \frac{(2\widehat{p} + t) \pm \sqrt{(2\widehat{p} + t)^2 - 4(1+t)\widehat{p}^2}}{2(1+t)} \\\\
 &= \frac{2\widehat{p} + t \pm \sqrt{4\widehat{p}^2 + 4\widehat{p}t + t^2 - 4\widehat{p}^2 - 4t\widehat{p}^2}}{2(1+t)} \\\\
 &= \frac{2(\widehat{p} + \frac{t}{2}) \pm \sqrt{4(\widehat{p}^2 + \widehat{p}t + \frac{t^2}{4} - \widehat{p}^2 - t\widehat{p}^2)}}{2(1+t)} \\\\
   &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{\widehat{p}t + \frac{t^2}{4} - t\widehat{p}^2}}{1+t} \\\\
   &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t(\widehat{p}-\widehat{p}^2) + \frac{t^2}{4}}}{1+t} \\\\
   &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t\widehat{p}(1-\widehat{p}) + \frac{t^2}{4}}}{1+t}
-\end{align\*}
+\end{align*}
 $$
 
 Now we just replace $t$ with $\frac{z^2}{n}$, and we're left with that scary looking equation at the bottom of Miller's post:
 
-$$\frac{\widehat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\widehat{p}(1-\widehat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\widehat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}$$
+$$
+\frac{\widehat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\widehat{p}(1-\widehat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\widehat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
+$$
 
-What that expression solves for is the values of $p$ for which $\left|\widehat{p}-p\right|$ is exactly $z\cdot\sigma_n$. If we want $\left|\widehat{p} - p\right| < z\cdot\sigma_n$, then we want $p$ to be in between those two values. Ie, we want
+What that expression solves for is the values of $p$ for which $\left\|\widehat{p}-p\right\|$ is exactly $z\cdot\sigma_n$. If we want $\left\|\widehat{p} - p\right\| < z\cdot\sigma_n$, then we want $p$ to be in between those two values. Ie, we want
 
 
-$$ \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\widehat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
+$$
+\frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\widehat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
+$$
 
 So this tells us that (if $z = 1.96$) we are 95% sure that $p$ is at least
 
-$$ \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} $$
+$$
+\frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
+$$
 
 This then is the lower bound of the Wilson score confidence interval, and what we want to sort by.

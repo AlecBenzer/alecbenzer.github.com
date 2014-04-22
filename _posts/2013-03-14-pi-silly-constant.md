@@ -9,15 +9,15 @@ But if we're going to be formal about defining the set of points that make up a 
 
 Formally, a circle (centered at zero) of radius $r$ is just the set
 
-$$ \left\\{(x,y) \in \mathbb{R}^2 : \sqrt{x^2 + y^2} = r\right\\}. $$
+$$ \left\{(x,y) \in \mathbb{R}^2 : \sqrt{x^2 + y^2} = r\right\} $$
 
-Or, if we want to use the euclidean norm $\\|\cdot\\|$ and some vector notation, we can write
+Or, if we want to use the euclidean norm $\|\cdot\\$ and some vector notation, we can write
 
-$$ \left\\{\mathbf{x} \in \mathbb{R}^2 : \\|\mathbf{x}\\| = r \right\\}.$$
+$$ \left\{\mathbf{x} \in \mathbb{R}^2 : \|\mathbf{x}\| = r \right\}$$
 
 If we want to have the circle be centered at some $\mathbf{p} \in \mathbb{R}^2$, we have
 
-$$ \left\\{\mathbf{x} \in \mathbb{R}^2 : \\|\mathbf{x}-\mathbf{p}\\| = r \right\\}.$$
+$$ \left\{\mathbf{x} \in \mathbb{R}^2 : \|\mathbf{x}-\mathbf{p}\| = r \right\}$$
 
 This is a nice, compact, natural way of defining a circle. It also exposes a good way of describing what a circle is in words: a circle is the set of all points that are $r$ away from the circle's center.
 
@@ -40,18 +40,23 @@ So in terms of $\pi$, we see that $\tau = 2\pi$ and $\pi = \tau \mathbin/ 2$.
 In decimal form,
 
 $$
-\begin{eqnarray\*}
-\tau &=& 2 \cdot \left(3.1415926535897932384626433832795\ldots\right) \\\\
-&=& \mathbf{6.28}3185307179586476925286766559\ldots
-\end{eqnarray\*}
+\begin{align*}
+\tau &= 2 \cdot \left(3.1415926535897932384626433832795\ldots\right) \\
+&=\mathbf{6.28}3185307179586476925286766559\ldots
+\end{align*}
 $$
 
 So tau-day would be June 28.
 
 The formulas for area and circumfrence of a circle become
 
-$$ A = \frac12\tau r^2 $$
-$$ C = \tau r $$
+$$
+A = \frac12\tau r^2
+$$
+
+$$
+C = \tau r
+$$
 
 Perhaps more importantly, things like radians and trigonometry become a lot simpler with $\tau$. In terms of $\pi$, what's the angle that's 3/4 of the way around a circle? It's $\frac{3\pi}{2}$. In terms of $\tau$, though, 3/4 of the way around a circle is just $\frac{3 \tau}{4}$. Half-way around a circle is $\frac{\tau}{2}$, and a full turn around a circle is just $\tau$.
 

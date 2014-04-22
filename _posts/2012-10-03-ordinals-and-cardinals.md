@@ -18,8 +18,27 @@ The set $\\{0,1\\}$, then, is yet another ordinal that's greater than both 0 and
 
 We can continue defining ordinals in this fashion indefinitely. $\\{0,1,2\\}$ is an ordinal we'll call 3, and it defines the ordering $0 < 1 < 2$. $\\{0,1,2,3\\}$ is an ordinal we'll call 4, and it defines the ordering $0 < 1 < 2 < 3$.
 
-We can formally describe this processing of creating new ordinals by defining a successor function that operatres on ordinals. We'll call this function $S$, and define it as $$S(a) = a \cup \\{a\\}$$ where $a$ is some ordinal.
-We can see that $$S(0) = 0 \cup \\{0\\} = \\{\\} \cup \\{0\\} = \\{0\\} = 1$$ We also have $$S(1) = 1 \cup \\{1\\} = \\{0\\} \cup \\{1\\} = \\{0,1\\} = 2$$ and so on.
+We can formally describe this processing of creating new ordinals by defining a successor function that operatres on ordinals. We'll call this function $S$, and define it as
+
+$$
+S(a) = a \cup \{a\}
+$$
+
+where $a$ is some ordinal.
+
+We can see that
+
+$$
+S(0) = 0 \cup \{0\} = \{\} \cup \{0\} = \{0\} = 1
+$$
+
+We also have
+
+$$
+S(1) = 1 \cup \{1\} = \{0\} \cup \{1\} = \{0,1\} = 2
+$$
+
+and so on.
 
 ## Infinite Ordinals
 
