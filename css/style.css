@@ -1,9 +1,13 @@
+body {
+  background: #f6f5ed;
+}
+
 #content {
   max-width: 25em;
   margin: 0 auto;
-  font-size: 24px;
-  color: #444;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color: #484848;
+  font-family: "Times New Roman", serif; /* Helvetica, Arial, sans-serif;*/
 }
 
 #content p, #content ul, #content ol {
@@ -12,10 +16,6 @@
 
 #content p, #content ul, #content ol, #content pre {
   margin-bottom: 1.3em;
-}
-
-h1, h2 {
-  font-weight: normal;
 }
 
 h1 {

@@ -11,7 +11,7 @@ Formally, a circle (centered at zero) of radius $r$ is just the set
 
 $$ \left\{(x,y) \in \mathbb{R}^2 : \sqrt{x^2 + y^2} = r\right\} $$
 
-Or, if we want to use the euclidean norm $\|\cdot\\$ and some vector notation, we can write
+Or, if we want to use the euclidean norm $\|\cdot\|$ and some vector notation, we can write
 
 $$ \left\{\mathbf{x} \in \mathbb{R}^2 : \|\mathbf{x}\| = r \right\}$$
 
