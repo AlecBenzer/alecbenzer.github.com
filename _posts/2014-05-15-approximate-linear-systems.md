@@ -3,7 +3,7 @@ layout: 'post'
 title: 'Approximating solutions to linear systems'
 ---
 
-Given an $n\times n$ matrix $A \in \mathbb{R}^{n\times n}$ and a vector $b \in \mathbb{R}^n$, we can find a solution to the linear system $Ax = b$ via [Guassian elimination][gaussian]. But for a general matrix $A$, Guassian elimination can take $O(n^3)$ time. Can we do better?
+Given an $n\times n$ matrix $A \in \mathbb{R}^{n\times n}$ and a vector $b \in \mathbb{R}^n$, we can find a solution to the linear system $Ax = b$ via [Gaussian elimination][gaussian]. But for a general matrix $A$, Gaussian elimination can take $O(n^3)$ time. Can we do better?
 
 There are various iterative methods for approximating solutions to $Ax = b$. Typically such methods work by choosing some guess $x_0 \approx x$, and then using some formula to obtain $x\_{k+1} = f(x_k)$, where $x_{k+1}$ serves as a better guess for the true solution $x$. The method then hinges on finding a suitable $f$.
 
@@ -82,11 +82,11 @@ $$ = (x_k - x) - Q^{-1}\left(Ax_k - Ax\right) = (x_k - x) - Q^{-1}A(x_k - x)$$
 
 $$ = (I - Q^{-1}A)(x_k - x) = (I-Q^{-1}A)e_k$$
 
-So essentially we have that
+So we have that
 
 $$e_{k+1} = \left(I - Q^{-1}A\right)e_k$$
 
-which is equivelant to saying
+which is equivalent to saying
 
 $$e_k = \left(I - Q^{-1}A\right)^k e_0$$
 
@@ -94,15 +94,15 @@ The error after $k$ iterations of Jacobi is the matrix $(I - Q^{-1}A)^k$ applied
 
 Remember, $x$ and $x_k$ are vectors, so our errors $e_k = x_k - x$ are also vectors. A more illustrative quantity to look at might be the norm of the error:
 
-$$\|e_k\| = \left\|(I - Q^{-1}A)^ke_0\right\| = \left\|(I - Q^{-1}A)^k\right\|\|e_0\|$$
+$$\|e_k\| = \left\|(I - Q^{-1}A)^ke_0\right\| \le \left\|(I - Q^{-1}A)^k\right\|\|e_0\|$$
 
 where $\\|\cdot\\|$ applied to a matrix denotes a [matrix norm][matrixnorm].
 
 Now we employ the [spectral radius theorem][specradthm], which tells us that for a matrix $M$, $\\|M^k\\| \sim \rho(M)^k$ as $k \to \infty$, where $\rho(M)$ is $M$'s spectral radius: the absolute value of $M$'s largest eigenvalue.
 
-This tells us that $\\|e_k\\| \sim \rho\left(I - Q^{-1}A\right)^k \\|e_0\\|$ as $k\to\infty$. This means that if $\rho\left(I - Q^{-1}A\right)^k < 1$, that $\\|e_k\\| \sim 0$ as $k \to \infty$, which tells us that $x_k \sim x$ as $k \to \infty$.
+This tells us that $\\|e_k\\| \sim \rho\left(I - Q^{-1}A\right)^k \\|e_0\\|$ as $k\to\infty$. This means that if $\rho\left(I - Q^{-1}A\right)^k < 1$, that $\\|e_k\\| \sim 0$ as $k \to \infty$, which then tells us that $x_k \sim x$ as $k \to \infty$.
 
-In other words, for matricies $A$ such that $\rho\left(I - Q^{-1}A\right)$ is less than one, the Jacobi method will converge to the true solution $x$. If $\rho\left(I - Q^{-1}A\right) \ge 1$, then we have no guarentees.
+In other words, for matrices $A$ such that $\rho\left(I - Q^{-1}A\right)$ is less than one, the Jacobi method will converge to the true solution $x$. If $\rho\left(I - Q^{-1}A\right) \ge 1$, then we have no guarantees.
 
 It turns out (for reasons I won't go into here) that a matrix $M$ will satisfy $\rho\left(M\right) < 1$ if the sum of the elements in each row of $M$ is less than one. This will occur for $M = I - Q^{-1}A$ when $A$ is [diagonally dominant][diagdom] (you should be able to work out why based on the definition of $Q$).
 
@@ -126,7 +126,7 @@ We can implement a version of the Jacobi method that takes a tolerance parameter
                 return x
             x -= err
 
-To ensure that Jacobi will eventually concern, we can test it only on matricies that are constructed to be diagonally dominant:
+To ensure that Jacobi will eventually converge, we can test it only on matrices that are constructed to be diagonally dominant:
 
     def random_diagonally_dominant(n):
         'Returns a random (n, n) np.array guaranteed to be diagonally dominant'
@@ -164,7 +164,7 @@ Let's compare `jacobi`'s performance to `np.linalg.solve`'s:
 
 We see that starting at around $n = 300$ Jacobi starts to gain an advantage over `np.linalg.solve` and continues to become much faster as $n$ grows larger, getting to about 8 times faster at $n = 1000$.
 
-Of course, this test isn't completely fair, as we are purposefully only generating matricies we know Jacobi can solve. In general, `np.linalg.solve` will guarentee a solution, whereas Jacobi can simply diverge. But, in cases where we know that $A$ is diagonally dominant, Jacobi offers an efficient way to solve $Ax = b$.
+Of course, this test isn't completely fair, as we are purposefully only generating matrices we know Jacobi can solve. In general, `np.linalg.solve` will guarentee a solution, whereas Jacobi can simply diverge. But, in cases where we know that $A$ is diagonally dominant, Jacobi offers an efficient way to solve $Ax = b$.
 
 
 [gaussian]: http://en.wikipedia.org/wiki/Gaussian_elimination
