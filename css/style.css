@@ -3,9 +3,9 @@ body {
 }
 
 #content {
-  max-width: 26em;
+  max-width: 28em;
   margin: 0 auto;
-  font-size: 24px;
+  font-size: 21px;
   color: #484848;
   font-family: 'Georgia', 'Times New Roman', serif;
 }
