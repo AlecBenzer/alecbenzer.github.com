@@ -1,15 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600);
 
 body {
-  background: #f6f5ed;
+  background: white;
 }
 
 #content {
-  max-width: 28em;
+  max-width: 25em;
   margin: 0 auto;
-  font-size: 20px;
-  color: #484848;
-  /* font-family: 'Georgia', 'Times New Roman', serif; */
+  font-size: 24px;
+  color: #333;
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
@@ -26,7 +25,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 2em;
+  margin-top: 2.5em;
   font-size: 1.2em;
 }
 
