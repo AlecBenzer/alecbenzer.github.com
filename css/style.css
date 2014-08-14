@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
 body {
   background: #f6f5ed;
 }
@@ -5,9 +7,10 @@ body {
 #content {
   max-width: 28em;
   margin: 0 auto;
-  font-size: 21px;
+  font-size: 20px;
   color: #484848;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  /* font-family: 'Georgia', 'Times New Roman', serif; */
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
 #content p, #content ul, #content ol {
