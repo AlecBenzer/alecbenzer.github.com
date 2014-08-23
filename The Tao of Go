@@ -52,3 +52,22 @@ And deleting looks like:
 Some of this is a little clunky. `insert(set, "foo")` would be nice, and it might also be useful to have an explicit set type instead of having readers realize/know that a `map[string]bool` is a set.
 
 But clunkiness asside, here we have a nice way of expressing the idea of set without having any additional language features or even libraries. All it takes to understand and reason about code involving "sets" is an understanding of maps.
+
+## Broadcast events
+
+Say you want to broadcast that an event has occurred to multiple interested parties. We can acheive this with a `chan struct{}`.
+
+    event := make(chan struct{})
+    
+    for i := 0; i < 10; i++ {
+    	go func() {
+        	<-event
+            fmt.Println("Got it")
+        }
+    }
+    
+    close(event)
+    
+By `close`ing the channel, we cause all readers to immediately read a zero value. They discard this value and continue on, knowing that the event has occurred.
+
+`close` is perhaps an odd way of spelling "notify" and `<-event` an odd way of spelling "wait", but if we're willing to put up with that, we have a nice way of expressing level-triggered events using only channels.
