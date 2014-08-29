@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: 'post'
 title: "Implementing a stack language in OCaml with continuations"
 ---
 I'm subscribed to my school's SigPLAN chapter's mailing list, and we just got mailed out a challenge to implement a stack language in OCaml.

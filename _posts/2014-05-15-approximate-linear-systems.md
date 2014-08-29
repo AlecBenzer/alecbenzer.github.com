@@ -65,10 +65,10 @@ Here it is implemented as a python generator:
         # a random initial guess
         x = np.random.rand(n)
 
-        Qinv = np.diag(1 / np.diag(A))
+        Qinv = 1 / np.diag(A)
         while True:
             r = A.dot(x) - b
-            err = Qinv.dot(r)
+            err = Qinv * r
             x -= err
             yield x
 
