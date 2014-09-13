@@ -1,11 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400italic,700italic,400,700);
 
 #content {
-  max-width: 28em;
+  max-width: 26em;
   margin: 0 auto;
-  font-size: 25px;
   color: #444;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 24px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 #content p, #content ul, #content ol {
@@ -50,8 +50,10 @@ img {
 }
 
 blockquote {
-  font-style: italic;
   color: #666;
+  padding-left: 40px;
+  margin-left: 0px;
+  border-left: 6px #ddd solid;
 }
 
 a:link, a:visited {
