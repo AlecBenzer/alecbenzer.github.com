@@ -37,7 +37,7 @@ That's it; that's all there is to actually performing RSA once we have our keys.
 
 ---
 
-From the above explanation you should be able to infer the property that we want our keys to have: we want modular exponentiation by $d$ to undo modular exponentiation by $e$. Essentially we want to solve the problemø
+From the above explanation you should be able to infer the property that we want our keys to have: we want modular exponentiation by $d$ to undo modular exponentiation by $e$.
 
 It turns out that, given the [prime factorization] of our modulus, $n$, it's easy to find an $e$ and a $d$ so that $\left(M^e\right)^d \equiv M \bmod{n}$ for all messages $M$. I'll explain why later, but for now, just take this as fact. It's also believed that there's no way to find $e$ and $d$ without first finding $n$'s prime factorization.
 
@@ -168,17 +168,17 @@ The proof of Euler's theorem is also very similar to the proof we gave of Fermat
 
 Let $x_1, x_2, \dots, x\_{\varphi(n)}$ be the $\varphi(n)$ numbers less than $n$ that are coprime to it, and thus have multiplicative inverses mod $n$. Then consider the sequence $ax_1, ax_2, \dots, ax\_{\varphi(n)}$.
 
-Suppose two elements of this sequence are equivelant mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is coprime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi{n}}$ are unique.
+Suppose two elements of this sequence are equivelant mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is coprime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi(n)}$ are unique.
 
-Just like in Fermat's little theorem, if we take each of the elements of this sequence and reduce mod $n$, we know we'll end up with values between $1$ and $n-1$, and we also know these values are distinct from above, so this sequence is just a permutation of $x_1, x_2, \dots, x\_{\varphi(n)}$.
+Just like in Fermat's little theorem, if we take each of the elements of this sequence and reduce mod $n$, we know we'll end up with values between $1$ and $n-1$, and we also know these values are distinct from above, so this sequence is just a permutation of $x_1, x_2, \dots, x_{\varphi(n)}$.
 
 So, just like for Fermat's little theorem, if we multiply the elements of each of the sequences, we should get the same result:
 
-$$ ax_1\cdot ax_2 \cdot\dots\cdot ax\_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x\_{\varphi(n)} \mod{n}$$
+$$ ax_1\cdot ax_2 \cdot\dots\cdot ax_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x_{\varphi(n)} \mod{n}$$
 
 Grouping together the $a$s on the left-hand side gets us:
 
-$$ a^{\varphi(n)}x_1\cdot x_2 \cdot\dots\cdot x\_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x\_{\varphi(n)} \mod{n}$$
+$$ a^{\varphi(n)}x_1\cdot x_2 \cdot\dots\cdot x_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x_{\varphi(n)} \mod{n}$$
 
 And now we cancel out all the $x_i$s, which we can do because they're all coprime to $n$. Which leaves us with:
 
