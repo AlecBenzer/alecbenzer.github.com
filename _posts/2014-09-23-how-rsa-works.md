@@ -59,7 +59,7 @@ When dealing with rational numbers, we know that we can divide by any number tha
 
 When dealing with modular arithmetic, the situation is a little more interesting. First of all, we have multiplicative inverses without needing to deal with fractions. For example: $5 \cdot 2 \equiv 1 \mod{9}$. This means that $5$ and $2$ are multiplicative inverses: $2^{-1} = 5$ and $5^{-1} = 2$.
 
-The second interesting thing to note is that not all non-zero numbers have inverses. For example: does $6$ have an inverse mod $9$? Suppose there _were_ some number $x$ so that $6x \equiv 1 \mod{9}$. Then we'd have $6x = 9k + 1$ for some integer $k$. Rearanging, we get $6x - 9k = 1$. We can factor out a $3$ from $6$ and $9$ to get $3(2x - 3k) = 1$, and then finally we get $2x - 3k = \frac13$. But $2x - 3k$ is an integer, while $\frac13$ is not. So this equality can't hold, and such an $x$ can't possibly exist.
+The second interesting thing to note is that not all non-zero numbers have inverses. For example: does $6$ have an inverse mod $9$? Suppose there _were_ some number $x$ so that $6x \equiv 1 \mod{9}$. Then we'd have $6x = 9k + 1$ for some integer $k$. Rearranging, we get $6x - 9k = 1$. We can factor out a $3$ from $6$ and $9$ to get $3(2x - 3k) = 1$, and then finally we get $2x - 3k = \frac13$. But $2x - 3k$ is an integer, while $\frac13$ is not. So this equality can't hold, and such an $x$ can't possibly exist.
 
 In fact, for any number $a$ and modulo $n$ such that $a$ and $n$ are co-prime, $ax \equiv 1 \bmod{n}$ has no solutions. We can repeat steps similar to above to get to $ax - nk = 1$. If $a$ and $n$ aren't co-prime, they have some common factor $d > 1$, so $\frac{a}{d} x - \frac{n}{d} k = \frac1d$. The left-hand side is an integer, but the right-hand side is not. So this equality can't hold.
 
@@ -87,7 +87,7 @@ Suppose $ka \equiv k'a \pmod{p}$. Because $p$ is prime, we know $a^{-1}$ exists 
 
 $$kaa^{-1} \equiv k'aa^{-1} \implies k \equiv k' \pmod{p}$$
 
-Since $k,k' < p$, this means that $k = k'$. Ie, if two elements of this sequence are equivelant mod $p$, then they're actually the same element. Another way of saying this is that every element of this sequence is distinct when taken mod $p$.
+Since $k,k' < p$, this means that $k = k'$. Ie, if two elements of this sequence are equivalent mod $p$, then they're actually the same element. Another way of saying this is that every element of this sequence is distinct when taken mod $p$.
 
 In addition to be distinct, each of the elements are also clearly between $1$ and $p-1$. This means that $a, 2a, \dots, (p-1)a$, taken modulo $p$, is just a re-ordering of the sequence $1, 2, \dots, p-1$. This then means that if we multiply the elements of each sequence, we should get the same product, since we're multiplying all the same numbers, just in a different order:
 
@@ -127,15 +127,15 @@ If we reduce this modulo $p$, then we can use Fermat's little theorem to replace
 
 $$\left(M^{p-1}\right)^{k(q-1)}M \equiv 1^{k(q-1)}M \equiv M \pmod{p}$$
 
-Ie, we've shown that $M^{ed} \equiv M \bmod{p}$. A symetric argument will show that $M^{ed} \equiv M \bmod{q}$.
+Ie, we've shown that $M^{ed} \equiv M \bmod{p}$. A symmetric argument will show that $M^{ed} \equiv M \bmod{q}$.
 
-We're _almost_ there! The last thing we need is to show that $M^{ed}$ and $M$ being equivelant mod $p$ and mod $q$ means they're equivelant mod $p\cdot q = n$.
+We're _almost_ there! The last thing we need is to show that $M^{ed}$ and $M$ being equivalent mod $p$ and mod $q$ means they're equivalent mod $p\cdot q = n$.
 
-We know that $M^{ed} - M = k_1p = k_2q$ for some integers $k_1, k_2$. This means $p$ and $q$ are both prime factors of $M^{ed} - M$, meaning $M^{ed} - M$ has a prime factorization that looks like $p\cdot q\cdot\left(\text{other stuff}\right)$. Thus, $M^{ed} - M$ is a multiple of $pq$, so it is equivelant to $0$ mod $pq$, which means $M^{ed} \equiv M \bmod{pq}$.
+We know that $M^{ed} - M = k_1p = k_2q$ for some integers $k_1, k_2$. This means $p$ and $q$ are both prime factors of $M^{ed} - M$, meaning $M^{ed} - M$ has a prime factorization that looks like $p\cdot q\cdot\left(\text{other stuff}\right)$. Thus, $M^{ed} - M$ is a multiple of $pq$, so it is equivalent to $0$ mod $pq$, which means $M^{ed} \equiv M \bmod{pq}$.
 
-We're done! $pq = n$, so we have that $M^{ed} \equiv M \bmod{n}$. We've shown how to use $n$'s prime factorization $n = p\cdot q$ to come up with an integer $d$ (namely, $d \equiv e^{-1}\bmod{(p-1)(q-1)}$) so that expontentiation by $d$ undoes exponentiation by $e$.
+We're done! $pq = n$, so we have that $M^{ed} \equiv M \bmod{n}$. We've shown how to use $n$'s prime factorization $n = p\cdot q$ to come up with an integer $d$ (namely, $d \equiv e^{-1}\bmod{(p-1)(q-1)}$) so that exponentiation by $d$ undoes exponentiation by $e$.
 
-Note that what we've proved is just that RSA works, in the sense that when you encrypt something with RSA, you get the same thing back after you decrypt. We've mentioned, but not proved, why RSA does a good job at keeping our data hidden. In fact, there's no real proof that RSA is sufficiently hard to break. It's _possible_ that there is an as-yet undiscovered efficient algorithm for factoring integers, which would allow attackers to break RSA. It's beleived/hoped that this is not the case, however.
+Note that what we've proved is just that RSA works, in the sense that when you encrypt something with RSA, you get the same thing back after you decrypt. We've mentioned, but not proved, why RSA does a good job at keeping our data hidden. In fact, there's no real proof that RSA is sufficiently hard to break. It's _possible_ that there is an as-yet undiscovered efficient algorithm for factoring integers, which would allow attackers to break RSA. It's believed/hoped that this is not the case, however.
 
 ## Euler's theorem
 
@@ -145,30 +145,30 @@ There's another way of proving RSA's correctness that involves [Euler's theorem]
 
 The quantity $(p-1)(q-1)$ (where, once again, $p\cdot q$ is $n$'s prime factorization) came up quite a lot in the first proof we gave of RSA, and in particular was needed for actually computing $d$. This number is the [totient] of $n$, often written $\varphi(n)$.
 
-Generally speaking, $\varphi(n)$ is defined as the number of numbers less than $n$ that are relatively prime to it. Or, to help explain $\varphi$'s relevance, $\varphi(n)$ is the number of numbers that have multiplicative inverses mod $n$.
+Generally speaking, $\varphi(n)$ is defined as the number of numbers less than $n$ that are co-prime to it. Or, to help explain $\varphi$'s relevance, $\varphi(n)$ is the number of numbers that have multiplicative inverses mod $n$.
 
-For a prime number $p$, $\varphi(p)$ is just $p - 1$, since all of the numbers less than a prime ($1, 2, \dots, p - 1$) are  coprime to it.
+For a prime number $p$, $\varphi(p)$ is just $p - 1$, since all of the numbers less than a prime ($1, 2, \dots, p - 1$) are  co-prime to it.
 
 Another interesting case is when $n$ is the product of two distinct primes, $p$ and $q$. In this case, $\varphi(n) = \varphi(pq) = \varphi(p)\varphi(q) = (p-1)(q-1)$, as we mentioned above.
 
-Seeing why this is the case isn't too hard. There are $pq - 1$ numbers less than $pq$. _Most_ of these numbers are coprime to $pq$. The only exceptions are $p, 2p, 3p, \dots, (q-1)p$, which obviously have $p$ as a common factor with $pq$, and also $q, 2q, 3q, \dots, (p-1)q$, which have $q$ as a common factor. There are $q-1$ numbers in the first list and $p-1$ numbers in the second list that we have to subtract out from our total $pq - 1$. So we get:
+Seeing why this is the case isn't too hard. There are $pq - 1$ numbers less than $pq$. _Most_ of these numbers are co-prime to $pq$. The only exceptions are $p, 2p, 3p, \dots, (q-1)p$, which obviously have $p$ as a common factor with $pq$, and also $q, 2q, 3q, \dots, (p-1)q$, which have $q$ as a common factor. There are $q-1$ numbers in the first list and $p-1$ numbers in the second list that we have to subtract out from our total $pq - 1$. So we get:
 
 $$ (pq - 1) - (p - 1) - (q - 1) = pq - 1 - p + 1 - q + 1 $$
 $$= pq - p - q + 1 = (p-1)(q-1)$$
 
 ### Euler's theorem
 
-Now to Euler's theorem itself. Euler's theorem says that if $a$ and $n$ are coprime integers, then
+Now to Euler's theorem itself. Euler's theorem says that if $a$ and $n$ are co-prime integers, then
 
 $$ a^{\varphi(n)} \equiv 1 \mod{n}$$
 
-Note that Euler's theorem is actually a generalization of Fermat's little theorem from before. If $n = p$ is a prime number, then $\varphi(p) = p - 1$ as we just explained, and every integer $a$ is coprime to $p$, so Euler's theorem becomes $a^{p-1} \equiv 1 \bmod{p}$, which is basically exactly Fermat's little theorem (we just need to multiply both sides by $a$).
+Note that Euler's theorem is actually a generalization of Fermat's little theorem from before. If $n = p$ is a prime number, then $\varphi(p) = p - 1$ as we just explained, and every integer $a$ is co-prime to $p$, so Euler's theorem becomes $a^{p-1} \equiv 1 \bmod{p}$, which is basically exactly Fermat's little theorem (we just need to multiply both sides by $a$).
 
 The proof of Euler's theorem is also very similar to the proof we gave of Fermat's little theorem:
 
-Let $x_1, x_2, \dots, x\_{\varphi(n)}$ be the $\varphi(n)$ numbers less than $n$ that are coprime to it, and thus have multiplicative inverses mod $n$. Then consider the sequence $ax_1, ax_2, \dots, ax\_{\varphi(n)}$.
+Let $x_1, x_2, \dots, x\_{\varphi(n)}$ be the $\varphi(n)$ numbers less than $n$ that are co-prime to it, and thus have multiplicative inverses mod $n$. Then consider the sequence $ax_1, ax_2, \dots, ax\_{\varphi(n)}$.
 
-Suppose two elements of this sequence are equivelant mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is coprime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi(n)}$ are unique.
+Suppose two elements of this sequence are equivalent mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is coprime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi(n)}$ are unique.
 
 Just like in Fermat's little theorem, if we take each of the elements of this sequence and reduce mod $n$, we know we'll end up with values between $1$ and $n-1$, and we also know these values are distinct from above, so this sequence is just a permutation of $x_1, x_2, \dots, x_{\varphi(n)}$.
 
@@ -202,7 +202,7 @@ $$\left(M^{\varphi(n)}\right)^kM \equiv 1^kM \equiv M \mod{n}$$
 
 Which is exactly what we need.
 
-Note that by using Euler's theorem we proved that $M^{ed} \equiv M \bmod{n}$ directly, as opposed to first proving that $M^{ed} \equiv M$ mod both $p$ and $q$, and arguing that this meant they were equivelant mod $pq = n$.
+Note that by using Euler's theorem we proved that $M^{ed} \equiv M \bmod{n}$ directly, as opposed to first proving that $M^{ed} \equiv M$ mod both $p$ and $q$, and arguing that this meant they were equivalent mod $pq = n$.
 
 [modular exponentiation]: http://en.wikipedia.org/wiki/Modular_exponentiation
 [prime factorization]: http://en.wikipedia.org/wiki/Prime_factor
