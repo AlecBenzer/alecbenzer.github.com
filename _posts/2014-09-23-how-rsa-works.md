@@ -139,7 +139,7 @@ Note that what we've proved is just that RSA works, in the sense that when you e
 
 ## Euler's theorem
 
-There's another way of proving RSA's correctness that involves [Euler's theorem]. I'd be remiss if I didn't discuss this as well.
+There's another way of proving RSA's correctness that involves [Euler's theorem] that I want to discuss as well.
 
 ### Euler's totient function
 
@@ -168,11 +168,11 @@ The proof of Euler's theorem is also very similar to the proof we gave of Fermat
 
 Let $x_1, x_2, \dots, x\_{\varphi(n)}$ be the $\varphi(n)$ numbers less than $n$ that are co-prime to it, and thus have multiplicative inverses mod $n$. Then consider the sequence $ax_1, ax_2, \dots, ax\_{\varphi(n)}$.
 
-Suppose two elements of this sequence are equivalent mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is coprime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi(n)}$ are unique.
+Suppose two elements of this sequence are equivalent mod $n$: $ax_i \equiv ax_j \bmod{n}$. Because $a$ is co-prime to $n$, it has an inverse $a^{-1}$ that we can use to cancel out the $a$s and get $x_i \equiv x_j \bmod{n}$. Since all of the $x_i$s were unique and less than $n$, this means that $x_i = x_j$ and thus that $i = j$. In other words, the only way two elements of the sequence can be the same is if they're actually the same element. Another way of saying this is that each of $ax_1, ax_2, \dots, ax\_{\varphi(n)}$ are unique.
 
-Just like in Fermat's little theorem, if we take each of the elements of this sequence and reduce mod $n$, we know we'll end up with values between $1$ and $n-1$, and we also know these values are distinct from above, so this sequence is just a permutation of $x_1, x_2, \dots, x_{\varphi(n)}$.
+Just like in Fermat's little theorem, if we take each of the elements of this sequence and reduce mod $n$, we know we'll end up with values in $x_1,x_2,\dots,x\_{\varphi(n)}$. Seeing why is a little trickier this time. However, note that since both $a$ and $x_i$ (for any $i$) have inverses mod $n$, that $ax_i$ itself has an inverse as $a^{-1}x_i^{-1}$. And since $ax_i$ is invertible mod $n$, it must be one of $x_1,\dots,x\_{\varphi(n)}$, which were _all_ numbers invertible mod $n$.
 
-So, just like for Fermat's little theorem, if we multiply the elements of each of the sequences, we should get the same result:
+So this sequence is just a permutation of $x_1, x_2, \dots, x_{\varphi(n)}$.Thus, just like for Fermat's little theorem, if we multiply the elements of each of the sequences, we should get the same result:
 
 $$ ax_1\cdot ax_2 \cdot\dots\cdot ax_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x_{\varphi(n)} \mod{n}$$
 
@@ -180,7 +180,7 @@ Grouping together the $a$s on the left-hand side gets us:
 
 $$ a^{\varphi(n)}x_1\cdot x_2 \cdot\dots\cdot x_{\varphi(n)} \equiv x_1\cdot x_2\cdot\dots\cdot x_{\varphi(n)} \mod{n}$$
 
-And now we cancel out all the $x_i$s, which we can do because they're all coprime to $n$. Which leaves us with:
+And now we cancel out all the $x_i$s, which we can do because they're all co-prime to $n$. Which leaves us with:
 
 $$ a^{\varphi(n)} \equiv 1 \mod{n}$$
 
@@ -203,6 +203,8 @@ $$\left(M^{\varphi(n)}\right)^kM \equiv 1^kM \equiv M \mod{n}$$
 Which is exactly what we need.
 
 Note that by using Euler's theorem we proved that $M^{ed} \equiv M \bmod{n}$ directly, as opposed to first proving that $M^{ed} \equiv M$ mod both $p$ and $q$, and arguing that this meant they were equivalent mod $pq = n$.
+
+There's a caveat here that Euler's theorem only applies if $M$ is co-prime to $n$. $n$ is the product of two primes, so most $M$ will be co-prime to it, but in the case that it isn't, we can still rely on the argument we used in the first proof to conclude that RSA will work.
 
 [modular exponentiation]: http://en.wikipedia.org/wiki/Modular_exponentiation
 [prime factorization]: http://en.wikipedia.org/wiki/Prime_factor
