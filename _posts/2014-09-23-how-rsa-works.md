@@ -111,11 +111,11 @@ Now we'll say how to actually compute $d$. Given $e$ and $n = p\cdot q$, we want
 
 $$ d \equiv e^{-1} \mod{(p-1)(q-1)} $$
 
-Note that this isn't possible for all choices of $e$: as we've seen, $e$ must be co-prime to $(p-1)(q-1)$ for $d$ to exist. But this is fine, we can just choose an $e$ so that this works. (In fact it's often common to choose a relatively small prime number for $e$, like $2^{16} + 1$. $e$ is the public key so it doesn't matter that this practice is well-known.)
+Note that this isn't possible for all choices of $e$: as we've seen, $e$ must be co-prime to $(p-1)(q-1)$ for $d$ to exist. But this is fine, we can just choose $e$ so that it's co-prime to $(p-1)(q-1)$.
 
 This sort of comes out of nowhere. Let's see why it works.
 
-The thing that we want to show is that $\left(M^e\right)^d \equiv M \bmod{n}$. Let's try something simpler first: showing that $M^{ed} \equiv M \bmod{p}$ (where $n = p\cdot q$).
+The thing that we want to show is that $\left(M^e\right)^d \equiv M \bmod{n}$. Let's try something simpler first: showing that $M^{ed} \equiv M \bmod{p}$ (again, where $n = p\cdot q$).
 
 Because $d \equiv e^{-1} \bmod{(p-1)(q-1)}$, we know $ed \equiv 1 \bmod{(p-1)(q-1)}$, which in turn means that $ed = k(p-1)(q-1) + 1$ for some integer $k$.
 
@@ -139,15 +139,15 @@ Note that what we've proved is just that RSA works, in the sense that when you e
 
 ## Euler's theorem
 
-There's another way of proving RSA's correctness that involves [Euler's theorem] that I want to discuss as well.
+There's another way of proving RSA's correctness which involves [Euler's theorem] that I want to discuss as well.
 
 ### Euler's totient function
 
 The quantity $(p-1)(q-1)$ (where, once again, $p\cdot q$ is $n$'s prime factorization) came up quite a lot in the first proof we gave of RSA, and in particular was needed for actually computing $d$. This number is the [totient] of $n$, often written $\varphi(n)$.
 
-Generally speaking, $\varphi(n)$ is defined as the number of numbers less than $n$ that are co-prime to it. Or, to help explain $\varphi$'s relevance, $\varphi(n)$ is the number of numbers that have multiplicative inverses mod $n$.
+For an arbitrary $n$, $\varphi(n)$ is defined as the number of numbers less than $n$ that are co-prime to it. Or, to help explain $\varphi$'s relevance, $\varphi(n)$ is the number of numbers that have multiplicative inverses mod $n$.
 
-For a prime number $p$, $\varphi(p)$ is just $p - 1$, since all of the numbers less than a prime ($1, 2, \dots, p - 1$) are  co-prime to it.
+For a prime number $p$, $\varphi(p)$ is just $p - 1$, since all of the positive numbers less than a prime ($1, 2, \dots, p - 1$) are  co-prime to it.
 
 Another interesting case is when $n$ is the product of two distinct primes, $p$ and $q$. In this case, $\varphi(n) = \varphi(pq) = \varphi(p)\varphi(q) = (p-1)(q-1)$, as we mentioned above.
 
