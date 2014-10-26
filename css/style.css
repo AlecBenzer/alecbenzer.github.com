@@ -1,7 +1,11 @@
+body {
+  background-color: #f8f8f8;
+}
+
 #content {
-  max-width: 26em;
+  max-width: 29em;
   margin: 0 auto;
-  color: #444;
+  color: #333;
   font-size: 24px;
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
