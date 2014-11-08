@@ -178,5 +178,7 @@ effectively increasing their own wealth. But, if they were to just devote their
 CPU power to honestly mining transactions, they would be increasing their
 wealth anyway, without decreasing people's trust in Bitcoin.
 
+[RSA]: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+[Leader election]: https://en.wikipedia.org/wiki/Leader_election
 [consensus]: https://en.wikipedia.org/wiki/Consensus_(computer_science)
 [SHA]: https://en.wikipedia.org/wiki/Secure_Hash_Algorithm
