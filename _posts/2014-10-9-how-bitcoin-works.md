@@ -137,7 +137,9 @@ power).
 Now, as more transactions come in, they are again broadcast to the network to
 be mined. Only now, the mining nodes include the header of the first block in
 their hashes: that is, they're trying to find a nonce so that SHA(first block +
-second block + none) starts with sufficiently many zeros. This has the effect of "chaining" the blocks together: this new block that's being mined comes right after the first one.
+second block + nonce) starts with sufficiently many zeros. This has the effect
+of "chaining" the blocks together: this new block that's being mined comes
+right after the first one.
 
 ## Trust the longest chain
 
@@ -164,19 +166,20 @@ and convince other nodes of this.
 ## Incentives
 
 We said the nodes *can* mine blocks if they want, but why would they want to?
-One reason might be to have the system work, but we can run into free-rider
-problems with that. If a node is going to devote processing power to the
-network, and they don't have a guarentee that other nodes are going to do this
-as well, it'd be nice to reward them. This is the approach Bitcoin takes. After
-succesfully mining a transaction block, a node is allowed to reward itself with
-a Bitcoin.
+One reason might be just to have the system work, but we can run into
+free-rider problems with that. If a node is going to devote processing power to
+the network, and they don't have a guarantee that other nodes are going to do
+this as well, it'd be nice to reward them. This is the approach Bitcoin takes.
+After successfully mining a transaction block, a node is allowed to reward
+itself with a Bitcoin.
 
 This incentives people to actually devote processing power to the system, and
 also to do so honestly. Ie, someone might want to instead devote CPU power to
 making transactions disappear, so that they're able to double-spend coins,
 effectively increasing their own wealth. But, if they were to just devote their
 CPU power to honestly mining transactions, they would be increasing their
-wealth anyway, without decreasing people's trust in Bitcoin.
+wealth anyway, without decreasing people's trust in Bitcoin and the value of
+their own Bitcoins.
 
 [RSA]: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 [Leader election]: https://en.wikipedia.org/wiki/Leader_election
