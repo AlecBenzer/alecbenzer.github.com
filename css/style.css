@@ -1,12 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
-
 #content {
-  max-width: 32em;
+  max-width: 29em;
   margin: 0 auto;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 1.375em;
-  font-family: 'Lora', 'Georgia', serif;
+  color: #444;
+  font-size: 1.5em;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 #content p, #content ul, #content ol {
@@ -17,12 +14,8 @@
   margin-bottom: 1.36365625em;
 }
 
-h1, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
-}
-
 h1 {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 h2 {
