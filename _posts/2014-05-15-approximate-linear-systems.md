@@ -21,7 +21,7 @@ And then an update rule of $x\_{k+1} = x_k + A^{-1}r_k$ would give us an exact s
 
 So the idea behind approximate iterative methods is to approximate the error $e_k$ by approximating $A \approx Q$ in a way such that $Q^{-1}$ is easy to compute, and then getting $e_k \approx Q^{-1}r_k$.
 
-# Jacobi method
+## Jacobi method
 
 For what kind of matricies $Q$ is $Q^{-1}$ easy to compute? One example is a diagonal matrix: for a diagonal matrix
 

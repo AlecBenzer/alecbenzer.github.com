@@ -173,7 +173,7 @@ this as well, it'd be nice to reward them. This is the approach Bitcoin takes.
 After successfully mining a transaction block, a node is allowed to reward
 itself with a Bitcoin.
 
-This incentives people to actually devote processing power to the system, and
+This incentivizes people to actually devote processing power to the system, and
 also to do so honestly. Ie, someone might want to instead devote CPU power to
 making transactions disappear, so that they're able to double-spend coins,
 effectively increasing their own wealth. But, if they were to just devote their

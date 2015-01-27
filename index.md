@@ -3,17 +3,20 @@ layout: page
 title: Alec Benzer
 ---
 # Alec Benzer
-<div id="bio">
-<p>
-cs student @ <a href="http://cs.uiuc.edu">uiuc</a><br />
-sre intern @ <a href="http://www.google.com/about">google</a><br />
-<br />
-<a href="/about">about</a>&nbsp;&middot;&nbsp;<a href="http://twitter.com/alecbenzer">twitter</a>&nbsp;&middot;&nbsp;<a href="mailto:alecbenzer@gmail.com">email</a>&nbsp;&middot;&nbsp;<a href="/feed.xml">rss</a>
-</p>
-</div>
+
+(soon-to-be) site reliability engineer at [google]  
+former [cs] and [math] student at [uiuc]
+
+[alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)  
+[rss feed](/feed.xml)
 
 ## blog posts
 
 {% for post in site.posts %}
   <div style="margin-bottom: 0.8em;"><a href="{{post.url}}">{{post.title}}</a></div>
 {% endfor %}
+
+[google]: http://google.com/about/company
+[cs]: http://cs.uiuc.edu
+[math]: http://math.uiuc.edu
+[uiuc]: http://uiuc.edu

@@ -50,11 +50,19 @@ But what do we call this new ordinal? We don't have any names of natural numbers
 
 $\omega$ is a special kind of ordinal called a **limit ordinal**, specifically because we didn't get it from an application of our successor function. Ie, there is no ordinal $a$ such that $S(a) = \omega$. Any ordinal that satisifies this rule, except 0, is called a limit ordinal.
 
-Of course, the fun doesn't stop here. We can keep using our handy dandy successor function to get even more ordinals. Consider $S(\omega)$, for example. Going back to our definition, $$S(\omega) = \omega \cup \\{\omega\\} = \\{0,1,2,3,\ldots\\} \cup \\{\omega\\} = \\{0, 1, 2, 3,\ldots, \omega\\}$$ This new ordinal is commonly referred to as $\omega+1$, partly becuase this is just a natural name for the succesor to omega, but also because we can define addition of ordinals in a way that makes this the case. But before we do that, let's look more closely at $\omega+1$.
+Of course, the fun doesn't stop here. We can keep using our handy dandy successor function to get even more ordinals. Consider $S(\omega)$, for example. Going back to our definition,
+
+$$S(\omega) = \omega \cup \{\omega\} = \{0,1,2,3,\ldots\} \cup \{\omega\} = \{0, 1, 2, 3,\ldots, \omega\}$$
+
+This new ordinal is commonly referred to as $\omega+1$, partly becuase this is just a natural name for the succesor to omega, but also because we can define addition of ordinals in a way that makes this the case. But before we do that, let's look more closely at $\omega+1$.
 
 The first thing to notice about $\omega+1$ is that it is the same size as $\omega$. I point this out to try and motivate why we're calling these things ordinals. $\omega$ and $\omega + 1$ both have the same size, but they're still different ordinals because they describe different well-orderings. $\omega$ describes the ordering $$0 < 1 < 2 < 3 < 4 < \cdots$$ while $\omega+1$ describes the ordering $$0 < 1 < 2 < 3 < 4 < \cdots < \omega$$ Just like we can think about the 4th element of an ordering, we can also think about the "$\omega$-th" element of an ordering as some kind of weird "super element" that's bigger than an infite number of elements.
 
-To try and clarify even further, consider this special ordering of the natural numbers. Imagine that my favorite number is 7, for whatever reason, and I think that 7 is greater than all the other numbers. I could choose to order the natural numbers like this: $$0 < 1 < 2 < 3 < 4 < 5 < 6 < 8 < 9 < \cdots < 7$$ Ie, 7 is the "$\omega$-th" element of the natural numbers, given my weird ordering of them. This should further drive the point home that ordinals correspond to specific orderings, because even though this ordering has all the same elements as $\omega$, the ordinal that corresponds to this ordering is not $\omega$, but $\omega + 1$.
+To try and clarify even further, consider this special ordering of the natural numbers. Imagine that my favorite number is 7, for whatever reason, and I think that 7 is greater than all the other numbers. I could choose to order the natural numbers like this:
+
+$$0 < 1 < 2 < 3 < 4 < 5 < 6 < 8 < 9 < \cdots < 7$$
+
+Ie, 7 is the "$\omega$-th" element of the natural numbers, given my weird ordering of them. This should further drive the point home that ordinals correspond to specific orderings, because even though this ordering has all the same elements as $\omega$, the ordinal that corresponds to this ordering is not $\omega$, but $\omega + 1$.
 
 ## Operators on Ordinals
 
@@ -66,7 +74,7 @@ By "disjoint union" I mean we take the union of $S$ and $T$, but treat $S$ and $
 
 Concatenating the well-orderings just means that we keep the well-orderings within the sets, but say that any element $s$ of $S$ is less than any element $t$ of $T$.
 
-So, going back to $\omega+1$, we see that if $\omega = \\{0,1,2,3,4,\ldots\\}$, and $1 = \\{0\\}$, then $\omega + 1 = \\{0,1,2,3,4,5,6,\ldots,0'\\}$ (that $0'$ at the end is a "different" 0 than the first 0) with the well-ordering $0 < 1 < 2 < 3 < \cdots < 0'$. If we arbitrarily decide to re-label $0'$ as $\omega$, we see that $\omega + 1 $$ = \\{0,1,2,3,4,\ldots,\omega\\} $$ = S(\omega)$. Ie, we've shown that our definition of addition matches up with our sort of intuitive desire to label $S(\omega)$ as $\omega + 1$.
+So, going back to $\omega+1$, we see that if $\omega = \\{0,1,2,3,4,\ldots\\}$, and $1 = \\{0\\}$, then $\omega + 1 = \\{0,1,2,3,4,5,6,\ldots,0'\\}$ (that $0'$ at the end is a "different" 0 than the first 0) with the well-ordering $0 < 1 < 2 < 3 < \cdots < 0'$. If we arbitrarily decide to re-label $0'$ as $\omega$, we see that $\omega + 1 $ $ = \\{0,1,2,3,4,\ldots,\omega\\} $$ = S(\omega)$. Ie, we've shown that our definition of addition matches up with our sort of intuitive desire to label $S(\omega)$ as $\omega + 1$.
 
 There's two other interesting things to notice about our definition of addition. One is that, when we're dealing with finite ordinals, additions of ordinals corresponds with "normal" addition of numbers. This is good, because it means that ordinals so far seem to be a good extension/reconstruction of the naturals.
 
@@ -74,7 +82,11 @@ Another important thing to note is that addition involving infinite ordinals (an
 
 For example, consider $1 + \omega$. This is the set $\\{0', 0, 1, 2, 3, 4, \ldots\\}$ with the ordering implied by the way I've written the set (ie, $0' < 0 < 1 < 2 < \cdots$). If we decide to relabel $0'$ as $0$, $0$ as $1$, $1$ as $2$, etc., we see that we end up with the ordering $0 < 1 < 2 < 3 < \cdots$. The ordinal that corresponds to this ordering is $\omega$. Thus, we see that $1 + \omega = \omega \neq \omega + 1$.
 
-Of course, there's no reason to stop with $\omega + 1$. We could apply $S$ to $\omega+1$ to get $S(\omega+1) = \\{0,1,2,\ldots,\omega\\} \cup \\{\omega+1\\} = \\{0,1,2,\ldots,\omega,\omega+1\\}$. This new ordinal is called $\omega+2$, both because this is a natural name for it, but, perhaps more appropriately, because it is actually the ordinal we get when we add $\omega$ and $2$.
+Of course, there's no reason to stop with $\omega + 1$. We could apply $S$ to $\omega+1$ to get
+
+$$S(\omega+1) = \{0,1,2,\ldots,\omega\} \cup \{\omega+1\} = \{0,1,2,\ldots,\omega,\omega+1\}$$
+
+This new ordinal is called $\omega+2$, both because this is a natural name for it, but, perhaps more appropriately, because it is actually the ordinal we get when we add $\omega$ and $2$.
 
 In the same fashion we can get $\omega + 3$ and $\omega + 4$, and, in general, $\omega + n$, for any finite ordinal $n$. Once we get all of these ordinals, we can actually do something interesting and put them all into a set together, just like we did with the natural numbers. Ie, we have the set $$\\{0, 1, 2, 3, \ldots, \omega, \omega + 1, \omega + 2, \omega + 3,\ldots\\}$$ This is a set that contains a bunch of lesser ordinals, just like $\omega$ was. Also just like $\omega$, this new set is our second limit ordinal. What do we call this new limit ordinal? It turns out that we'll end up calling it $\omega\cdot 2$.
 
@@ -84,15 +96,33 @@ Perhaps more directly, we can also attempt to define multiplication of ordinals 
 
 Given two ordinals $S$ and $T$, define $S \cdot T$ to the be the set $S \times T$ with a lexicographic ordering of the pairs in $S \times T$. Ie, if we have $(s_1, t_1)$ and $(s_2, t_2)$, we first compare $t_1$ to $t_2$ using $T$'s ordering. If $t_1 = t_2$, then we fall-back to comparing $s_1$ and $s_2$.
 
-So, going back to $\omega\cdot 2$, we recall that $\omega = \\{0,1,2,3\ldots\\}$ and $2 = \\{0,1\\}$. $\omega\cdot 2$ is then the set $$\omega \times 2 = \\{(0,0), (1,0), (2,0), \ldots, (0,1), (1,1), (2,1), \ldots\\}$$ with the implied ordering $$(0,0) < (1,0) < (2,0) < \cdots < (0,1) < (1,1) < (2,1) < \cdots$$
+So, going back to $\omega\cdot 2$, we recall that $\omega = \\{0,1,2,3\ldots\\}$ and $2 = \\{0,1\\}$. $\omega\cdot 2$ is then the set
+
+$$\omega \times 2 = \{(0,0), (1,0), (2,0), \ldots, (0,1), (1,1), (2,1), \ldots\}$$
+
+with the implied ordering
+
+$$(0,0) < (1,0) < (2,0) < \cdots < (0,1) < (1,1) < (2,1) < \cdots$$
 
 If we relabel $(n,0)$ as $n$ and $(n,1)$ as $\omega + n$, we see that $\omega \cdot 2 = \omega + \omega$.
 
-Once again, notice that multiplication of ordinals is *not* commutative, because of our lexicographic ordering that favors comparing elements from the second ordinal, and then falling back to the first ordinal. Consider $2 \cdot \omega$. This is the set $\\{(0,0), (1,0), (0, 1), (1, 1), (0,2), (1,2), (0,3), (1,3), \ldots\\}$. We see that this ordering is actually the ordering for the ordinal $\omega$, and not $\omega\cdot 2$. So, we have that $2\cdot\omega = \omega \neq \omega\cdot 2$.
+Once again, notice that multiplication of ordinals is *not* commutative, because of our lexicographic ordering that favors comparing elements from the second ordinal, and then falling back to the first ordinal. Consider $2 \cdot \omega$. This is the set
 
-We should also take note of the fact that even though we have gone to yet another limit ordinal, $\omega \cdot 2$ is actually the same size as $\omega$. To see how, we can try to order the natural numbers according to $\omega \cdot 2$. Consider the following ordering of the naturals: $$0 < 2 < 4 < 6 < 8 < \cdots < 1 < 3 < 5 < 7 < \cdots$$ Ie, we've decided that we prefer odd numbers to even numbers, and want to consider any odd number "greater than" any even number. This ordering of the natural numbers corresponds to order type $\omega\cdot 2$, since we can change all the even numbers $0, 2, 4, 6, \ldots$ to $0, 1, 2, 3, 4, \ldots$, and change all the odd numbers $1, 3, 4, 7, \ldots$ to $\omega, \omega + 1, \omega + 2, \omega + 3, \ldots$.
+$$\{(0,0), (1,0), (0, 1), (1, 1), (0,2), (1,2), (0,3), (1,3), \ldots\}$$
 
-Now that we have $\omega \cdot 2$, we can look at $S(\omega \cdot 2) = \omega \cdot 2 + 1$ (make sure you see why this is the case -- ie, why the sum of $\omega \cdot 2$ with $1$ is the same as the successor to $\omega \cdot 2$.) We also have $\omega\cdot 2 + 2$, $\omega\cdot 2 + 3$, and so on. Then, we can collect all of those ordinal to get yet *another* limit ordinal that looks like: $$\\{0, 1, 2, \ldots, \omega, \omega + 1, \omega + 2, \ldots, \omega\cdot 2, \omega\cdot 2 + 1, \omega\cdot 2 + 2, \ldots\\}$$ Can you guess what this ordinal is called? If you guessed $\omega\cdot 3$, you'd be right! Again -- make sure you see why it's the case that the product of $\omega$ and $3$ yields the ordinal above.
+We see that this ordering is actually the ordering for the ordinal $\omega$, and not $\omega\cdot 2$. So, we have that $2\cdot\omega = \omega \neq \omega\cdot 2$.
+
+We should also take note of the fact that even though we have gone to yet another limit ordinal, $\omega \cdot 2$ is actually the same size as $\omega$. To see how, we can try to order the natural numbers according to $\omega \cdot 2$. Consider the following ordering of the naturals:
+
+$$0 < 2 < 4 < 6 < 8 < \cdots < 1 < 3 < 5 < 7 < \cdots$$
+
+Ie, we've decided that we prefer odd numbers to even numbers, and want to consider any odd number "greater than" any even number. This ordering of the natural numbers corresponds to order type $\omega\cdot 2$, since we can change all the even numbers $0, 2, 4, 6, \ldots$ to $0, 1, 2, 3, 4, \ldots$, and change all the odd numbers $1, 3, 4, 7, \ldots$ to $\omega, \omega + 1, \omega + 2, \omega + 3, \ldots$.
+
+Now that we have $\omega \cdot 2$, we can look at $S(\omega \cdot 2) = \omega \cdot 2 + 1$ (make sure you see why this is the case -- ie, why the sum of $\omega \cdot 2$ with $1$ is the same as the successor to $\omega \cdot 2$.) We also have $\omega\cdot 2 + 2$, $\omega\cdot 2 + 3$, and so on. Then, we can collect all of those ordinal to get yet *another* limit ordinal that looks like:
+
+$$\{0, 1, 2, \ldots, \omega, \omega + 1, \omega + 2, \ldots, \omega\cdot 2, \omega\cdot 2 + 1, \omega\cdot 2 + 2, \ldots\}$$
+
+Can you guess what this ordinal is called? If you guessed $\omega\cdot 3$, you'd be right! Again -- make sure you see why it's the case that the product of $\omega$ and $3$ yields the ordinal above.
 
 We can continue in this fashion to get $\omega\cdot 4$, $\omega\cdot 5$, and $\omega\cdot n$, for any finite ordinal $n$.
 
@@ -102,7 +132,11 @@ $$\\{0, 1, 2, \ldots, \omega, \omega + 1, \omega + 2, \ldots, \omega\cdot 2, \om
 
 This is the ordinal $\omega^2$. To see why, let's see what happens when we multiply $\omega$ with itself.
 
-Going back to our definition of multiplication, $\omega\cdot\omega$ is the set $$\omega\times\omega = \\{(0,0), (0,1), (0,2), (0,3), \ldots, (1,0), (1,1), (1,2), (1,3), \ldots, (2,0), (2,1), (2,2), (2,3), \ldots \\}$$ If we replace each $(a,b)$ in $\omega\times\omega$ with $(\omega\cdot a + b)$, we'll end up with the set we had above.
+Going back to our definition of multiplication, $\omega\cdot\omega$ is the set
+
+$$\omega\times\omega = \{(0,0), (0,1), (0,2), (0,3), \ldots, (1,0), (1,1), (1,2), (1,3), \ldots, (2,0), (2,1), (2,2), (2,3), \ldots \}$$
+
+If we replace each $(a,b)$ in $\omega\times\omega$ with $(\omega\cdot a + b)$, we'll end up with the set we had above.
 
 However, just like with multiplication, instead of defining $\omega^2$ to be $\omega\cdot\omega$, we could also actually define the operation of exponentiation in a way such that this is so. This is, however, a bit beyond the scope of this post. If you're interested though, you can [see wikipedia's article on ordinal arithmetic](http://en.wikipedia.org/wiki/Ordinal_arithmetic#Exponentiation).
 
@@ -136,11 +170,19 @@ Things get interesting when we get to the infinite case, though. $\omega$ is the
 
 Once we get to $\omega+1$, however, we find that $\omega+1$ is actually the same size as $\omega$, and thus we do not get a new cardinal number from $\omega+1$. In fact, as we've already said, all of the ordinals that we've mentioned so far are in fact all the same size. So how do we get the next cardinal number?
 
-Well, just by definition, we know the next cardinal number is going to be the first ordinal that is not countable. And so this is how the next cardinal, $\aleph_1$, is defined. If we want to be formal, let $$S = \\{\alpha \mid \alpha \mbox{ is an ordinal and } \aleph_0 < \alpha\\}$$ and then $\aleph_1$ is just the infimum of $S$.
+Well, just by definition, we know the next cardinal number is going to be the first ordinal that is not countable. And so this is how the next cardinal, $\aleph_1$, is defined. If we want to be formal, let
 
-This doesn't stop with just $\aleph_1$. In fact, for *any* finite ordinal $\alpha$, we have that $$\aleph_{\alpha} = \inf\\{\lambda \mid \lambda \mbox{ is an ordinal and } \aleph_{\alpha-1} < \lambda\\}$$
+$$S = \{\alpha \mid \alpha \mbox{ is an ordinal and } \aleph_0 < \alpha\}$$
 
-If $\alpha$ is a limit ordinal, our definition changes to $$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
+and then $\aleph_1$ is just the infimum of $S$.
+
+This doesn't stop with just $\aleph_1$. In fact, for *any* finite ordinal $\alpha$, we have that
+
+$$\aleph_{\alpha} = \inf\{\lambda \mid \lambda \mbox{ is an ordinal and } \aleph_{\alpha-1} < \lambda\}$$
+
+If $\alpha$ is a limit ordinal, our definition changes to
+
+$$\aleph_{\alpha} = \bigcup_{\lambda < \alpha} \aleph_{\lambda}$$
 
 ## The Continuum Hypothesis
 
@@ -160,7 +202,9 @@ Based on table theory, we can form certain theorems. For example, the theorem "T
 
 And so, in the same vein, it turns out that in the standard model of set theory ([Zermelo-Fraenkel set theory with the axiom of choice](http://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory), often referred to as ZFC), the continuum hypothesis is neither true nor fale, just like our "There exists a table with seven legs" theorem.
 
-Well, that's all I've got. If you're interested, here are some wiki pages about this stuff:
+---
+
+That's all I've got. If you're interested, here are some wiki pages about this stuff:
 
 * [Ordinal numbers](http://en.wikipedia.org/wiki/Ordinal_number)
 * [Cardinal numbers](http://en.wikipedia.org/wiki/Cardinal_numbers)

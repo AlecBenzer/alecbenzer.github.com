@@ -6,13 +6,11 @@ title: About
 
 Hi, I'm [Alec](/). This is a site where I occasionally write stuff.
 
-I study [computer science][cs] and [math][math] at the [University of Illinois at Urbana-Champaign][uiuc]. I'm also a former site reliability engineering intern at [Google][google]. 
+I'm a (soon-to-be) site reliability engineer at [Google]. Before that I studied [computer science][cs] and [math] at the [University of Illinois at Urbana-Champaign][uiuc].
 
-[@alecbenzer](http://twitter.com/alecbenzer)  
 [alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)  
-[stackoverflow](http://stackoverflow.com/users/598940/alecbenzer)  
 
-[google]: http://google.com/about/company
+[Google]: http://google.com/about/company
 [cs]: http://cs.uiuc.edu
 [math]: http://math.uiuc.edu
 [uiuc]: http://uiuc.edu

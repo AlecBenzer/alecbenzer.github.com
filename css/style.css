@@ -1,27 +1,28 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
-
-body {
-  background-color: #f8f8f8;
-}
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 
 #content {
-  max-width: 29em;
+  max-width: 32em;
   margin: 0 auto;
-  color: #333;
-  font-size: 24px;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.375em;
+  font-family: 'Lora', 'Georgia', serif;
 }
 
 #content p, #content ul, #content ol {
-  line-height: 1.6;
+  line-height: 1.5em;
 }
 
 #content p, #content ul, #content ol, #content pre {
-  margin-bottom: 1.3em;
+  margin-bottom: 1.36365625em;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 h2 {
@@ -31,7 +32,7 @@ h2 {
 
 h3 {
   margin-top: 2em;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 pre {
@@ -61,8 +62,8 @@ img {
 blockquote {
   color: #666;
   padding-left: 40px;
-  margin-left: 0px;
-  border-left: 6px #ddd solid;
+  padding-right: 40px;
+  font-style: italic;
 }
 
 a:link, a:visited {
