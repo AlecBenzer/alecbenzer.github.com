@@ -4,7 +4,7 @@ title: Alec Benzer
 ---
 # Alec Benzer
 
-(soon-to-be) site reliability engineer at [google]  
+site reliability engineer at [google]  
 former [cs] and [math] student at [uiuc]
 
 [alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)  
