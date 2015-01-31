@@ -1,9 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700italic,700);
+
 #content {
   max-width: 31em;
   margin: 0 auto;
   color: #444;
   font-size: 1.3em;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Lora', 'Georgia', serif;
 }
 
 #content p, #content ul, #content ol {
@@ -14,8 +16,12 @@
   margin-bottom: 1.36365625em;
 }
 
+h1, h2, h3 {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
 h1 {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 h2 {
