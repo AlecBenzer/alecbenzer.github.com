@@ -1,3 +1,2 @@
 permalink: /blog/:title
-highlighter: null
 markdown: kramdown
