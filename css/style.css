@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700italic,700);
 
 #content {
-  max-width: 31em;
+  width: 700px;
   margin: 0 auto;
-  color: #444;
+  color: rgba(0, 0, 0, 0.7);
   font-size: 1.3em;
   font-family: 'Lora', 'Georgia', serif;
 }
