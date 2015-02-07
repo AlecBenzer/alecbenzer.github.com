@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Entropy of Android's unlock patterns"
+title: "Entropy of Android’s unlock patterns"
 ---
 
 Having just got an Android phone for the first time, I was curious about how
 secure it was to try using a pattern unlock instead of a password or pin.
 
-It should be clear right away that a pattern of length n is strictly less
-secure than a pin of length n. This is because you can assign each of the 9
+It should be clear right away that a pattern of length $n$ is strictly less
+secure than a pin of length $n$. This is because you can assign each of the 9
 dots in the pattern a number from 1 to 9:
 
     1 2 3
@@ -33,7 +33,7 @@ you must move to the _first unvisited_ position on such a straight line.
     * However, if 2 has already been visited in the pattern, it is now possible to go from 1 to 3 directly. So 2413 is a valid pattern, but 1324 is not.
 
 We can almost think of this as a graph: the nodes are the 9 positions, and
-there are edeges between any two nodes that you can move between. It's easy
+there are edges between any two nodes that you can move between. It's easy
 enough to BFS through such a graph, but there's the caveat that new edges  can
 become available (ie, between 1 and 3) as you traverse the graph. This isn't
 too much of an issue though: we can dynamically modify our edge set as we
@@ -102,10 +102,10 @@ We get the following:
 
 So, for instance, there are 26,016 possible patterns of length 6. If you choose
 among those patterns randomly, the pattern you get has about 14.7 bits of
-entropy. Simillarly, for a length 9 pattern, we have 140,704 possibilities and
+entropy. Similarly, for a length 9 pattern, we have 140,704 possibilities and
 about 17 bits of entropy.
 
-This is actually rather low, entropy-wise. For instance, a n digit PIN has
+This is actually rather low, entropy-wise. For instance, a $n$ digit PIN has
 $10^n$ possibilities:
 
     for i in range(1, 10):
@@ -126,6 +126,45 @@ So we see that a randomly chosen 9 position pattern has entropy somewhere
 between a 5 or 6 character PIN. So if you're willing to remember 6 random
 digits, you've already got more security than a pattern can provide.
 
-I'll still probably go with a pattern though. It's easier to input, secure
-enough to thwart a casual attacker, and I'm sure a determined attacker wouldn't
-be too deterred by a pin with slightly more entropy.
+_Note:_ [A stackoverflow answer](http://stackoverflow.com/a/2120815/598940)
+with code for this and some combinatorial reasoning.
+
+## Choosing randomly
+
+Note that while when choosing a random pin it suffices to choose $n$ random
+digits in sequence, you can't choose a random pattern as easily. This is
+because each position in the pattern is dependent on the previous entries in
+the pattern, and further, because the dependencies aren't symmetric.
+
+Ie, it may be that more patterns are possible when starting from an "edge"
+position than from a "corner" position. So if we're randomly choosing patterns,
+we need to weigh against corner positions and towards edge positions. A simpler
+way of choosing a random pattern would be to just generate a list of all
+patterns and select one final pattern randomly, without worrying about the
+weights at each individual step.
+
+## Other factors
+
+Another element of this beyond the math is psychological acceptability: how
+easily can people remember pins vs patterns? I would guess patterns are easier
+to remember, but it's not clear a) how much easier, and b) whether pins could
+be easier to remember as well if the device "drew out" the path between the
+numbers.
+
+Patterns are also easier to enter and let you unlock your phone faster. This
+may be an important usability consideration, because if a determined attacker
+gets your phone, they're probably not going to have much more trouble breaking
+into it if you'd used a pin instead of a pattern, and a pattern still provides
+decent protection against a casual attacker. Maybe it's worth it to just be
+able to unlock my phone quicker.
+
+And of course, there's the fact that the average user is not generating pins or
+patterns uniformly randomly. I'm not sure which method gets the advantage
+here.  On the one hand, users might tend to pick pins corresponding to things
+about them like their birthday, which makes the pins potentially less secure.
+
+On the other hand, it might be that people tend to choose common patterns. Eg,
+maybe the "house-shaped" pattern 74269 or other simple shapes are common. But
+it seems plausible to me that the average user could at least try to come up
+with a decent random pattern, and the interface might encourage this a bit,
+whereas picking random numbers for a pin seems much less likely.
