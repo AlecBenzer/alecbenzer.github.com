@@ -1,41 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,400italic,700italic,700);
 
-#content {
-  width: 700px;
+body {
+  max-width: 700px;
   margin: 0 auto;
   color: rgba(0, 0, 0, 0.8);
   font-size: 1.3em;
   font-family: 'Lora', 'Georgia', serif;
-}
-
-#content p, #content ul, #content ol {
-  line-height: 1.5em;
-}
-
-#content p, #content ul, #content ol, #content pre {
-  margin-bottom: 1.36365625em;
+  line-height: 1.6em;
 }
 
 h1, h2, h3 {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-}
-
-h1 {
-  font-size: 1.5em;
-}
-
-h2 {
-  margin-top: 2.5em;
-  font-size: 1.3em;
-}
-
-h3 {
-  margin-top: 2em;
-  font-size: 1.2em;
-}
-
-pre {
-  padding-left: 1.5em;
+  line-height: 1.2;
 }
 
 code {
