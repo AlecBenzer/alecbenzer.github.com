@@ -2,17 +2,15 @@
 <html>
   {% include head.html %}
   <body>
-      <div>
-        {% if page.title %}
-          <h1 id="post-title">
-            {{ page.title }}
-          </h1>
-        {% endif %}
-        {{ content }}
-        <br />
-        <div id="footer">
-          <em>posted by <a href="/">Alec Benzer</a> on {{page.date | date: "%B %-d, %Y"}}</em><br /><br />
+    {% if page.title %}
+      <header>
+        <h1>{{ page.title }}</h1>
+        <div id="subheading">
+          <a href="/">Alec Benzer</a>&nbsp;&nbsp;•&nbsp;&nbsp;{{page.date | date: "%B %-d, %Y"}}
         </div>
-      </div>
-    </body>
-  </html>
+      </header>
+    {% endif %}
+    {{ content }}
+    <br />
+  </body>
+</html>
