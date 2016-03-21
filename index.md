@@ -7,7 +7,7 @@ title: Alec Benzer
 site reliability engineer at [google]  
 former [cs] and [math] student at [uiuc]
 
-[alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)
+[about me](/about)
 
 ## blog posts
 
@@ -16,6 +16,6 @@ former [cs] and [math] student at [uiuc]
 {% endfor %}
 
 [google]: http://google.com/about/company
-[cs]: http://cs.uiuc.edu
+[cs]: http://cs.illinois.edu
 [math]: http://math.uiuc.edu
 [uiuc]: http://uiuc.edu
