@@ -1,21 +1,9 @@
 ---
 layout: page
-title: Alec Benzer
+title: alecb
 ---
-# Alec Benzer
-
-site reliability engineer at [google]  
-former [cs] and [math] student at [uiuc]
-
-[about me](/about)
-
-## blog posts
+# [alecb](/about)
 
 {% for post in site.posts %}
 {{post.date | date: "%b, %-d %Y"}}&nbsp;&nbsp;•&nbsp;&nbsp;[{{post.title}}]({{post.url}})
 {% endfor %}
-
-[google]: http://google.com/about/company
-[cs]: http://cs.illinois.edu
-[math]: http://math.uiuc.edu
-[uiuc]: http://uiuc.edu

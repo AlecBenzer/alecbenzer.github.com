@@ -2,20 +2,20 @@
 title: "About"
 layout: page
 ---
-# About me
+# whois alecb
 
-I'm a site reliability engineer at [Google][google] [NY]. Before that I majored in [computer science][cs] with a minor in [math] at [UIUC].
+I'm an [SRE] at [Google][google] [NY].
 
-Other places I go on the internet:
+Before that I studied [CS] and [math] at [UIUC].
 
-* [@alecbenzer](https://twitter.com/alecbenzer)
-* [reddit](https://reddit.com/u/alecbenzer)
-* [stackoverflow](https://stackoverflow.com/users/598940/alecb)
+[@alecbenzer](https://twitter.com/alecbenzer)  
+[/u/alecbenzer](https://reddit.com/u/alecbenzer)  
+[alecb@stackoverflow](https://stackoverflow.com/users/598940/alecb)  
+[alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)
 
-Email me: [alecbenzer@gmail.com](mailto:alecbenzer@gmail.com)
-
+[SRE]: https://landing.google.com/sre/
 [google]: http://google.com/about/company
-[cs]: http://cs.illinois.edu
+[NY]: https://google.com/about/locations/new-york/
+[CS]: http://cs.uiuc.edu
 [math]: http://math.uiuc.edu
 [UIUC]: http://uiuc.edu
-[NY]: http://www.google.com/about/careers/locations/new-york/
