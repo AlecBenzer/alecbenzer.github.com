@@ -15,7 +15,7 @@ img, iframe {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 40px auto;
   max-width: 640px;
   line-height: 1.6;
@@ -25,6 +25,7 @@ body {
 
 header {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 h1, h2, h3 { line-height:1.2; }
