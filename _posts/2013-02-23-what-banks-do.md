@@ -3,11 +3,11 @@ layout: post
 title: “Creating money” and what banks do
 ---
 
-Putting on my novice economist hat.
+*\me puts on novice economist hat*
 
-In the two econ classes I've taken so far I've heard the whole "banks create money by giving out loans" thing, but the more I think about it, the more that doesn't really make sense to me, and the more I don't really like this explanation of what loans are doing.
+People often say that "banks create money by giving out loans". The more I think about it, the more I don't really like this explanation of what loans do.
 
-If I have <span>$100,000</span> saved up, I could give a friend of mine a <span>$50,000</span> loan for him to buy some stuff with. In doing so, have I created any money? Well, not really. At least that's not how I'd describe it. All I've done is take <span>$50,000</span> that I was saving and invested it (assuming I'm expecting interest on the loan) by lending it to a friend, which he can now go and spend on things.
+If I have <span>$100,000</span> saved up, I could give a friend of mine a <span>$50,000</span> loan for. In doing so, I woudln't really say I've "created money"; all I've done is take <span>$50,000</span> that I was saving and invested it (assuming I'm expecting interest on the loan) by lending it to a friend, which he can now go and spend on things.
 
 Of course, if I were to do this at all, it would mean I'm okay with only having <span>$50,000</span> in savings. But what if I wasn't? If I only felt safe having at least <span>$100,000</span> in savings, I wouldn't have lent my friend the <span>$50,000</span>.
 
@@ -19,12 +19,12 @@ In fact, in another sense, I've actually lent _most_ of my money (except the min
 
 ## Why am I fine with any of this?
 
-Basically, it's because I trust the bank in ways I don't trust my friend.
+Because I trust the bank in ways I don't trust my friend.
 
 When I lend money to a friend, it's pretty definitively no longer in my posession. While my friend does owe me the money back, I can't reasonably ask for it back whenever I want.
 
-With a bank, though, it's different. A bank has enough customers and therefore enough cash on hand that it's able to pay back any amount of money I've lent it whenever I want ([hopefully](http://en.wikipedia.org/wiki/Great_Depression)).
+It's different with a bank. A bank has enough customers and therefore enough cash on hand that it's able to pay back any amount of money I've lent it whenever I want ([probably](http://en.wikipedia.org/wiki/Great_Depression)).
 
 So even though I'm technically lending more money to a bank than I would have to a friend, because of the terms of my loan with the bank (and my confidence that the bank can honor those terms), I feel safer considering the lent money as "saved".
 
-So basically, banks don't create new money; they enable the spending of money that would otherwise be sitting as savings.
+Banks enable the spending of money that would otherwise be sitting as savings.
