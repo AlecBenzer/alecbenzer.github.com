@@ -18,7 +18,7 @@ I waste time arguing with strangers [on reddit](https://reddit.com/u/alecbenzer)
 
 [SRE]: https://landing.google.com/sre/
 [google]: http://google.com/about/company
-[NY]: https://google.com/about/locations/new-york/
+[NY]: https://careers.google.com/locations/new-york/
 [CS]: http://cs.uiuc.edu
 [math]: http://math.uiuc.edu
 [UIUC]: http://uiuc.edu
