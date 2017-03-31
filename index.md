@@ -4,20 +4,24 @@ layout: page
 ---
 # whois alecb
 
-I'm an [SRE] at [Google][google] [NY].
+I'm an [SRE] at [Google] [NY].
 
 Before that I studied [CS] and [math] at [UIUC].
 
 # whereis alecb
 
-I tweet on twitter [@alecbenzer](https://twitter.com/alecbenzer)
+[@AlecBenzer](https://twitter.com/@AlecBenzer)
 
-I [blog on medium](https://medium.com/@AlecBenzer)
+[medium.com/@AlecBenzer](https://medium.com/@AlecBenzer)
 
-I waste time arguing with strangers [on reddit](https://reddit.com/u/alecbenzer)
+[/u/AlecBenzer](https://reddit.com/u/alecbenzer)
+
+[youtube.com/AlecBenzer](https://youtube.com/AlecBenzer)
+
+[alecb at Stack Exchange](https://stackexchange.com/users/294841/alecb)
 
 [SRE]: https://landing.google.com/sre/
-[google]: http://google.com/about/company
+[Google]: http://google.com/about/company
 [NY]: https://careers.google.com/locations/new-york/
 [CS]: http://cs.uiuc.edu
 [math]: http://math.uiuc.edu
