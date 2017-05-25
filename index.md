@@ -10,11 +10,11 @@ Before that I studied [CS] at [UIUC].
 
 ## me elsewhere
 
-twitter: [@AlecBenzer](https://twitter.com/@AlecBenzer)
+[@AlecBenzer](https://twitter.com/@AlecBenzer)
 
-medium: [medium.com/@AlecBenzer](https://medium.com/@AlecBenzer)
+[medium.com/@AlecBenzer](https://medium.com/@AlecBenzer)
 
-reddit: [/u/AlecBenzer](https://reddit.com/u/alecbenzer)
+[reddit.com/u/AlecBenzer](https://reddit.com/u/alecbenzer)
 
 [stack exchange](https://stackexchange.com/users/294841/alecb)
 
