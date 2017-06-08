@@ -4,20 +4,17 @@ layout: page
 ---
 # alecb
 
-I'm an [SRE] at [Google][Google] [NY].
+I'm an [SRE] at [Google] [NY].
 
 Before that I studied [CS] at [UIUC].
 
-## me elsewhere
+---
 
-[@AlecBenzer](https://twitter.com/@AlecBenzer)
+[@AlecBenzer] · [blog.alecb.me] · [/u/AlecBenzer]
 
-[medium.com/@AlecBenzer](https://medium.com/@AlecBenzer)
-
-[reddit.com/u/AlecBenzer](https://reddit.com/u/alecbenzer)
-
-[stack exchange](https://stackexchange.com/users/294841/alecb)
-
+[@AlecBenzer]: https://twitter.com/@AlecBenzer
+[blog.alecb.me]: https://blog.alecb.me
+[/u/AlecBenzer]: https://reddit.com/u/AlecBenzer
 [SRE]: https://landing.google.com/sre/
 [Google]: http://google.com/about/company
 [NY]: https://careers.google.com/locations/new-york/
