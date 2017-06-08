@@ -8,9 +8,10 @@ I'm an [SRE] at [Google] [NY].
 
 Before that I studied [CS] at [UIUC].
 
----
 
-[@AlecBenzer] · [blog.alecb.me] · [/u/AlecBenzer]
+[@AlecBenzer]  
+[blog.alecb.me]  
+[/u/AlecBenzer]  
 
 [@AlecBenzer]: https://twitter.com/@AlecBenzer
 [blog.alecb.me]: https://blog.alecb.me
