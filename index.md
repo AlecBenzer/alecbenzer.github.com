@@ -6,7 +6,9 @@ layout: page
 
 Software engineer at [Imagen].
 
-Formerly: [SRE][SRE]@[Google][Google], [CS][CS]@[UIUC][UIUC].
+Formerly: [Google][Google] [SRE][SRE], [CS][CS] at [UIUC][UIUC].
+
+⌂ NYC
 
 
 [@AlecBenzer][twitter]  
