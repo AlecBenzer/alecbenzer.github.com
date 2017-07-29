@@ -4,16 +4,13 @@ layout: page
 ---
 # alecb
 
-Software engineer at [Imagen].
+Software engineer at [Imagen]. Formerly [Google][Google] [SRE][SRE], [CS][CS] at [UIUC][UIUC].
 
-Formerly: [Google][Google] [SRE][SRE], [CS][CS] at [UIUC][UIUC].
-
-⌂ NYC
-
-
-[@AlecBenzer][twitter]  
-[blog.alecb.me][blog]  
-[/u/AlecBenzer][reddit]
+<i class="fa fa-twitter" aria-hidden="true"></i> [@AlecBenzer][twitter]  
+<i class="fa fa-medium" aria-hidden="true"></i>
+ [blog.alecb.me][blog]  
+<i class="fa fa-reddit-alien" aria-hidden="true"></i>
+ [/u/AlecBenzer][reddit]
 
 [Imagen]: https://imagen.ai
 
