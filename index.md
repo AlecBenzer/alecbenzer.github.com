@@ -4,21 +4,23 @@ layout: page
 ---
 # alecb
 
-I'm an [SRE] at [Google][Google] [NY].
+Software engineer at [Imagen].
 
-Before that I studied [CS] at [UIUC].
+Formerly: [SRE][SRE]@[Google][Google], [CS][CS]@[UIUC][UIUC].
 
 
 [@AlecBenzer][twitter]  
 [blog.alecb.me][blog]  
 [/u/AlecBenzer][reddit]
 
-[Google]: http://google.com/about/company
-[NY]: https://careers.google.com/locations/new-york/
-[CS]: http://cs.uiuc.edu
-[UIUC]: http://uiuc.edu
+[Imagen]: https://imagen.ai
+
+[Google]: https://google.com/about/company
+[SRE]: https://landing.google.com/sre/
+
+[CS]: https://cs.uiuc.edu
+[UIUC]: https://uiuc.edu
 
 [twitter]: https://twitter.com/@AlecBenzer
 [blog]: https://blog.alecb.me
 [reddit]: https://reddit.com/u/AlecBenzer
-[SRE]: https://landing.google.com/sre/
