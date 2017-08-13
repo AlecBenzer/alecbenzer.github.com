@@ -2,24 +2,15 @@
 title: "alecb"
 layout: page
 ---
-# alecb
+# Alec Benzer
 
-Software engineer at [Imagen]. Formerly [Google][Google] [SRE][SRE], [CS][CS] at [UIUC][UIUC].
+Software engineer at [Imagen](https://imagen.ai). Formerly [Google SRE](https://google.com/sre), [UIUC CS](https://cs.illinois.edu).
 
-<i class="fa fa-twitter" aria-hidden="true"></i> [@AlecBenzer][twitter]  
+<i class="fa fa-twitter" aria-hidden="true"></i>
+[@AlecBenzer](https://twitter.com/AlecBenzer)  
 <i class="fa fa-medium" aria-hidden="true"></i>
- [blog.alecb.me][blog]  
+[blog.alecb.me](https://blog.alecb.me)  
 <i class="fa fa-reddit-alien" aria-hidden="true"></i>
- [/u/AlecBenzer][reddit]
+[/u/AlecBenzer](https://reddit.com/u/AlecBenzer)  
+<i class="fa fa-reddit-alien" aria-hidden="true"></i>
 
-[Imagen]: https://imagen.ai
-
-[Google]: https://google.com/about/company
-[SRE]: https://landing.google.com/sre/
-
-[CS]: https://cs.uiuc.edu
-[UIUC]: https://uiuc.edu
-
-[twitter]: https://twitter.com/@AlecBenzer
-[blog]: https://blog.alecb.me
-[reddit]: https://reddit.com/u/AlecBenzer
