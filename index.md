@@ -8,9 +8,8 @@ Software engineer at [Imagen](https://imagen.ai). Formerly [Google SRE](https://
 
 <i class="fa fa-twitter" aria-hidden="true"></i>
 [@AlecBenzer](https://twitter.com/AlecBenzer)  
-<i class="fa fa-medium" aria-hidden="true"></i>
+<i class="fa fa-commenting-o" aria-hidden="true"></i>
 [blog.alecb.me](https://blog.alecb.me)  
-<i class="fa fa-reddit-alien" aria-hidden="true"></i>
-[/u/AlecBenzer](https://reddit.com/u/AlecBenzer)  
-<i class="fa fa-reddit-alien" aria-hidden="true"></i>
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+[alec@alecb.me](mailto:alec@alecb.me)  
 
