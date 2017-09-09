@@ -12,6 +12,5 @@ Formerly [Google SRE](https://google.com/sre), [UIUC CS](https://cs.illinois.edu
 [blog](https://blog.alecb.me)  
 <i class="fa fa-twitter" aria-hidden="true"></i>
 [@AlecBenzer](https://twitter.com/AlecBenzer)  
-<i class="fa fa-envelope-o" aria-hidden="true"></i>
-[alec@alecb.me](mailto:alec@alecb.me)  
+<i class="fa fa-envelope-o" aria-hidden="true"></i> <alec@alecb.me>
 
