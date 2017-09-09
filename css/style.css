@@ -40,3 +40,8 @@ blockquote {
   font-style: italic;
   color: #777;
 }
+
+#icons a {
+  color: black;
+  padding-right: 0.5em;
+}
