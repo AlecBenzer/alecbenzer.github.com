@@ -15,8 +15,9 @@ img, iframe {
 }
 
 body {
+  height: 100%;
   font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
-  margin: 40px auto;
+  margin: 40px auto auto auto;
   max-width: 640px;
   line-height: 1.6;
   font-size: 24px;
@@ -44,4 +45,11 @@ blockquote {
 #icons a {
   color: black;
   padding-right: 0.5em;
+}
+
+img#me {
+  width: 20%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
 }
