@@ -4,7 +4,7 @@ layout: page
 ---
 # alecb
 
-Software engineer at [Imagen](https://imagen.ai).
+Software engineer at [Imagen](https://imagen.ai). [Come work with me](https://imagen.ai/careers)!
 
 Formerly [Google SRE](https://google.com/sre), [UIUC CS](https://cs.illinois.edu).
 
