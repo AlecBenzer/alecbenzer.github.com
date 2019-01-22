@@ -4,9 +4,9 @@ layout: page
 ---
 # alecb
 
-Software engineer at [Imagen](https://imagen.ai). [Come work with me](https://imagen.ai/careers)!
+I'm a software engineer at [Imagen](https://imagen.ai). ([Come work with me](https://imagen.ai/careers)!)
 
-Formerly [Google SRE](https://google.com/sre), [UIUC CS](https://cs.illinois.edu).
+Before that, I was an [SRE](https://google.com/sre) at  [Google](https://google.com/about).
 
 <i class="fa fa-envelope" aria-hidden="true"></i> <alec@alecb.me>  
 
