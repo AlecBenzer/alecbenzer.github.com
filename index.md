@@ -9,3 +9,9 @@ Software engineer at [Imagen](https://imagen.ai). [Come work with me](https://im
 Formerly [Google SRE](https://google.com/sre), [UIUC CS](https://cs.illinois.edu).
 
 <i class="fa fa-envelope" aria-hidden="true"></i> <alec@alecb.me>  
+
+---
+
+{% for post in site.posts %}
+  [{{ post.title }}]({{ post.url }}) - <i>{{ post.date | date: "%Y-%m-%d"}}</i>
+{% endfor %}

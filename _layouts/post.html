@@ -5,7 +5,8 @@
     {% if page.title %}
       <h1>{{ page.title }}</h1>
     {% endif %}
+    <p><em>{{page.date | date: "%B %-d, %Y"}}</em></p>
+    <br>
     {{ content }}
-    <p><em>- <a href="/">alecb</a>, {{page.date | date: "%B %-d, %Y"}}</em></p>
   </body>
 </html>
