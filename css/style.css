@@ -26,12 +26,20 @@ body {
 
 h1, h2, h3 {
   color: #334;
-  text-transform: uppercase;
+  font-weight: 300;
 }
 
 code {
-  font-family: 'Consolas', 'Menlo', 'Dejavu Sans Mono', monospace;
-  font-size: 17px;
+  color: #37774f;
+}
+
+code.highlighter-rouge {
+  margin: 0 2px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 3px 8px;
 }
 
 blockquote {

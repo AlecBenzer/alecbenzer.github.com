@@ -8,10 +8,12 @@ I'm a software engineer at [Imagen](https://imagen.ai). ([Come work with me](htt
 
 Before that, I was an [SRE](https://google.com/sre) at  [Google](https://google.com/about).
 
-<i class="fa fa-envelope" aria-hidden="true"></i> <alec@alecb.me>  
+<alec@alecb.me>  
 
 ---
 
+### _posts_
+
 {% for post in site.posts %}
-  [{{ post.title }}]({{ post.url }}) - <i>{{ post.date | date: "%Y-%m-%d"}}</i>
+   [{{ post.title }}]({{ post.url }})
 {% endfor %}
