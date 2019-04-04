@@ -30,6 +30,8 @@ h1, h2, h3 {
 }
 
 code {
+  font-family: SF Mono, Consolas, monospace;
+  font-size: 16px;
   color: #37774f;
 }
 
