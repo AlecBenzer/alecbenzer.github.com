@@ -4,9 +4,7 @@ layout: page
 ---
 # alecb
 
-Just a simple man trying to make his way through the universe.
-
-Writes software @ [Imagen](https://imagen.ai). (You should [come work with me!](https://imagen.ai/careers))  
+Writes software @ [Imagen](https://imagen.ai). (You should [come work with me](https://imagen.ai/careers)!)  
 
 Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about).
 
