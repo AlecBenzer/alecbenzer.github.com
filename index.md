@@ -11,7 +11,7 @@ me](https://imagen.ai/careers)!)
 Previously [SRE](https://google.com/sre)'d @
 [Google](https://google.com/about).
 
-<alec@alecb.me>  
+[@AlecBenzer](https://twitter.com/AlecBenzer) · <alec@alecb.me>  
 
 ---
 
