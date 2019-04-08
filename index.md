@@ -9,9 +9,3 @@ Writes software @ [Imagen](https://imagen.ai). (You should [come work with me](h
 Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about).
 
 [@AlecBenzer](https://twitter.com/AlecBenzer) · <alec@alecb.me>  
-
----
-
-{% for post in site.posts %}
-   [{{ post.title }}]({{ post.url }})
-{% endfor %}
