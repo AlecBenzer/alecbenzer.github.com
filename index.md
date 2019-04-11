@@ -4,7 +4,7 @@ layout: page
 ---
 # alecb
 
-Writes software @ [Imagen](https://imagen.ai). (You should [come work with me](https://imagen.ai/careers)!)  
+Writes software @ [Imagen](https://imagen.ai). (You should [come work with us](https://imagen.ai/careers)!)  
 
 Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about).
 
