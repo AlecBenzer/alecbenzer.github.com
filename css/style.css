@@ -25,14 +25,11 @@ body {
 }
 
 h1, h2, h3 {
-  color: #334;
   font-weight: 300;
 }
 
 code {
-  font-family: SF Mono, Consolas, monospace;
-  font-size: 16px;
-  color: #37774f;
+  font-family: monospace;
 }
 
 code.highlighter-rouge {
@@ -40,16 +37,11 @@ code.highlighter-rouge {
 }
 
 pre {
-  background-color: #eee;
+  background-color: #ddd;
   padding: 3px 8px;
 }
 
 blockquote {
   font-style: italic;
   color: #777;
-}
-
-#icons a {
-  color: black;
-  padding-right: 0.5em;
 }
