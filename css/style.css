@@ -28,6 +28,10 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
+h3 {
+  margin-top: 60px;
+}
+
 code {
   font-family: monospace;
 }
@@ -37,8 +41,9 @@ code.highlighter-rouge {
 }
 
 pre {
-  background-color: #ddd;
-  padding: 3px 8px;
+  margin-left: 20px;
+  padding-left: 25px;
+  border-left: 2px solid #bbb;
 }
 
 blockquote {
