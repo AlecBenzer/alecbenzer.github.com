@@ -1,14 +1,15 @@
 ---
 title: "alecb"
 layout: page
----
+...
+
 # alecb
 
-Writes software @ [Imagen](https://imagen.ai). (You should [come work with us](https://imagen.ai/careers)!)  
+Teaching computers how to read x-rays @ [Imagen](https://imagen.ai)
 
-Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about).
+Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about)
 
-[@AlecBenzer](https://twitter.com/AlecBenzer) · <alec@alecb.me>  
+[@AlecBenzer](https://twitter.com/AlecBenzer) · <alec@alecb.me>
 
 ---
 
