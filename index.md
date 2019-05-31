@@ -5,7 +5,7 @@ layout: page
 
 # alecb
 
-Teaching computers how to read x-rays @ [Imagen](https://imagen.ai)
+Getting computers to read x-rays @ [Imagen](https://imagen.ai)
 
 Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about)
 
