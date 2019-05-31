@@ -98,3 +98,32 @@ Copy/paste:
 ```bash
 git config --global alias.save '!f(){ if git merge-base --is-ancestor HEAD origin/master; then git commit -va; else git commit -va --amend --no-edit; fi;};f'
 ```
+
+### `branch-cleanup`
+
+(Technically a bash script and not an alias)
+
+Deletes any branches that have already been merged onto master, where "merged"
+means either that the branch has no delta from master, or that a commit
+equivalent to the branch's latest is already on master:
+
+```bash
+#!/bin/bash
+set -u
+
+git fetch --all --quiet
+for b in $(git for-each-ref refs/heads --format="%(refname:short)"); do
+  if [[ ! $(git cherry -v origin/master $b | grep "^+") ]]; then
+    git branch -D $b
+  elif git diff --exit-code --quiet "origin/master...${b}"; then
+    git branch -D $b
+  fi
+done
+```
+
+Copy/paste:
+
+```bash
+# Assuming ~/bin is on your $PATH:
+curl {{ site.url }}/git-branch-cleanup > ~/bin/git-branch-cleanup && chmod +x ~/bin/git-branch-cleanup
+```

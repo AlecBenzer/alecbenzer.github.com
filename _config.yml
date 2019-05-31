@@ -1,3 +1,4 @@
 permalink: /:title
+url: https://alecb.me
 markdown: kramdown
 highlighter: null

@@ -1,0 +1,11 @@
+#!/bin/bash
+set -u
+
+git fetch --all --quiet
+for b in $(git for-each-ref refs/heads --format="%(refname:short)"); do
+  if [[ ! $(git cherry -v origin/master $b | grep "^+") ]]; then
+    git branch -D $b
+  elif git diff --exit-code --quiet "origin/master...${b}"; then
+    git branch -D $b
+  fi
+done
