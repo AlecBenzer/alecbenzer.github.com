@@ -99,6 +99,8 @@ Copy/paste:
 git config --global alias.save '!f(){ if git merge-base --is-ancestor HEAD origin/master; then git commit -va; else git commit -va --amend --no-edit; fi;};f'
 ```
 
+_TODO: Make this work better with branch pipeling._
+
 ### `branch-cleanup`
 
 (Technically a bash script and not an alias)
