@@ -14,5 +14,9 @@ Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about)
 ---
 
 {% for post in site.posts %}
-   [{{ post.title }}]({{ post.url }})
+
+{% if post.listed %}
+[{{ post.title }}]({{ post.url }})
+{% endif %}
+
 {% endfor %}
