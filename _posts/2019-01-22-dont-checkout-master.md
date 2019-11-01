@@ -1,6 +1,7 @@
 ---
 title: Don't checkout master locally
 layout: post
+listed: false
 ---
 
 _tl;dr_: Don’t `git checkout master`; use topic branches and detached heads.

@@ -81,8 +81,8 @@ had two steps: first design, then implement. So we tried to map both these
 steps to software development, despite the fact that it's really only the
 "design" part.
 
-I think **this is the real, core failure of waterfall**. It's not neccarily a
-bad system in the abstract: it's applied to software _incorrectly_.
+I think this is the real, core failure of waterfall. It's not neccarily a bad
+system in the abstract: it's applied to software _incorrectly_.
 
 Going in to step #2, we only have a vague plan of what to do. It hasn't been
 battle-tested down to the details (if it really had been, you'd already have

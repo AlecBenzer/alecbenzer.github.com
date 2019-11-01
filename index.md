@@ -5,13 +5,11 @@ layout: page
 
 # alecb
 
-Getting computers to read x-rays @ [Imagen](https://imagen.ai)
+Software engineer @ [Level](https://level.com)
 
-Previously [SRE](https://google.com/sre)'d @ [Google](https://google.com/about)
+Previously [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
-[@AlecBenzer](https://twitter.com/AlecBenzer) · <alec@alecb.me>
-
----
+[@AlecBenzer](https://twitter.com/AlecBenzer) · [LinkedIn](https://www.linkedin.com/in/alecbenzer/) · <alec@alecb.me>
 
 {% for post in site.posts %}
 
