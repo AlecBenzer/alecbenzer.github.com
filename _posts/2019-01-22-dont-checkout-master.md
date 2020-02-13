@@ -3,14 +3,11 @@ title: Don't checkout master locally
 layout: post
 ...
 
-_tl;dr_: Don’t `git checkout master`; use topic branches and detached heads.
+## Feature branches
 
-## Topic branches
-
-It’s good to use so-called “topic” or “feature” branches to organize your work
-into individual features, instead of committing onto what I’ll call “mainline”
-or “persistent” branches directly. This is a fairly common practice, and I won’t
-go into full detail on why I think it’s important, but a few good reasons:
+It’s common to use short-lived branches to organize your work into individual
+features, instead of committing directly onto persistent "mainline" branches
+like `master`. This is good because it:
 
 * Ensures you have an easy way of getting back to a known good state that’s not in the middle of some new feature.
 * Logically groups individual features/bug fixes.
@@ -18,8 +15,8 @@ go into full detail on why I think it’s important, but a few good reasons:
 
 ## Referring to master
 
-Even if we don’t commit directly onto a local master branch, we still often need
-to refer to the _remote_ master branch to do things like:
+But even if we don’t commit directly onto a local master branch, we still often
+need to refer to the _remote_ master branch to do things like:
 
 * Start new feature branches off of master.
 * Take changes that have been made to master and pull them into a feature branch.
