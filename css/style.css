@@ -19,9 +19,15 @@ body {
   margin: 40px auto;
   max-width: 30em;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 25px;
   padding: 0 10px;
   color: #37474f;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 5.2vw;
+  }
 }
 
 h1 {

@@ -1,7 +1,7 @@
 ---
 title: Don't checkout master locally
 layout: post
----
+...
 
 _tl;dr_: Don’t `git checkout master`; use topic branches and detached heads.
 
@@ -50,18 +50,18 @@ origin/master`.
 
 ## Why not just checkout master?
 
-Because it’s simpler not to:
+Because it’s simpler not to: If you checkout master locally, you now need to
+mentally deal with your local view of the remote master (`origin/master`) and
+your local copy of master (`master`), which can diverge.
 
-* If you checkout master locally, you now need to mentally deal with your local
-  view of the remote master (`origin/master`) and your local copy of master
-  (`master`), which can diverge.
-* Merging with master is easier: you can just `git pull origin master`. If you
-  have a local copy of master (and you don’t want it to become stale), you’d
-  instead need to:
+E.g., without a local master branch, bringing in changes from master is `git
+pull origin master`. If you have a local copy of master (and you don’t want
+it to become stale), you’d instead need to:
 
-  ```bash
-  git checkout master
-  git pull origin master
-  git checkout my-branch
-  git merge master
-  ```
+```bash
+# starting with a feature branch checked out
+git checkout master
+git pull origin master
+git checkout -
+git merge master
+```

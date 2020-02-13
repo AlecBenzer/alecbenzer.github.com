@@ -1,7 +1,6 @@
 ---
 title: Waterfall
 layout: post
-listed: false
 ...
 
 Here's some guesses as to why waterfall is a thing and why it doesn't work
@@ -76,16 +75,19 @@ execute the code, devops is definitely a thing, etc., but it's:
 
 ## Shoehorning
 
-Nonetheless, we had this waterfall process that worked for hardware, and it
+Nonetheless, we had this "waterfall-y" process that worked for hardware, and it
 had two steps: first design, then implement. So we tried to map both these
 steps to software development, despite the fact that it's really only the
 "design" part.
 
-I think **this is the real, core failure of waterfall**. It's not neccarily a
-bad system in the abstract: it's applied to software _incorrectly_.
+I think this is the real, core failure of waterfall. It's not neccarily a bad
+system in the abstract: it's applied to software _incorrectly_.
 
 Going in to step #2, we only have a vague plan of what to do. It hasn't been
 battle-tested down to the details (if it really had been, you'd already have
-the source code -- because that's how you'd battle-test it.). So of course,
-there's going to be issues that come up. But the system is not at all
+the source code -- because that's how you'd battle-test it). So of course,
+there's going to be issues that come up. But the waterfall is not at all
 engineered around these conflicts and/or how to resolve them.
+
+It also results in a lot of duplication: the details of your software system
+now encoded in both source code and one (or several) documents.
