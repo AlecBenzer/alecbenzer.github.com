@@ -11,6 +11,10 @@ Previously [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
 [@AlecBenzer](https://twitter.com/AlecBenzer) · [LinkedIn](https://www.linkedin.com/in/alecbenzer/) · <alec@alecb.me>
 
+---
+
+thoughts from my brain:
+
 {% for post in site.posts %}
 
 {% if post.listed %}

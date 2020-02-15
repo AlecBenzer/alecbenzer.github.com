@@ -1,7 +1,6 @@
 ---
 title: My git aliases
 layout: post
-listed: false
 ...
 
 ### `new` & `master`
