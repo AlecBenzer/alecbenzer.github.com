@@ -11,8 +11,8 @@ like `master`. This is good because it:
 * Logically groups individual features/bug fixes.
 * Easy to manage multiple concurrent changes.
 
-But even if we don’t commit directly onto a local master branch, we still often
-need to refer to the _remote_ master branch to do things like:
+But even if you don’t commit directly onto a local master branch, you still
+often need to refer to the _remote_ master branch to do things like:
 
 * Start new feature branches off of master.
 * Take changes that have been made to master and pull them into a feature branch.
@@ -27,11 +27,11 @@ tracking branches](https://git-scm.com/book/en/v2/Git-Branching-Remote-Branches)
 * Need to pull in changes from master? `git merge origin/master` (usually after a `git fetch origin`; or just do `git pull origin master` in one step)
 * Need to start a new branch based on master? `git branch my-new-branch origin/master`
 
-Sometimes we need more direct access to the content at master. E.g., maybe we
-want to just do a build at master, without necessarily starting a new topic
-branch.
+Sometimes you need more direct access to the content at master. E.g., maybe
+you want to just do a build at master, without necessarily starting a new
+topic branch.
 
-We can do this using [detached
+You can do this using [detached
 heads](https://git-scm.com/docs/git-checkout#_detached_head). In addition to
 checking out branches, git lets you check out arbitrary commits. So you can
 just checkout a remote tracking branch directly, with `git checkout
