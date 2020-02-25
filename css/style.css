@@ -17,12 +17,17 @@ iframe {
 
 body {
   font-family: system-ui, sans-serif;
+  font-weight: 300;
   margin: 40px auto;
   max-width: 30em;
   line-height: 1.5;
   font-size: 25px;
   padding: 0 10px;
   color: #37474f;
+}
+
+strong {
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {
@@ -39,7 +44,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 300;
+  font-weight: 250;
 }
 
 h2 {
