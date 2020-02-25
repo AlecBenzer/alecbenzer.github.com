@@ -3,8 +3,17 @@ hr {
   margin-top: 3em;
   border: 0;
   border-top: 1px solid #888;
+
   width: 50%;
-  margin-left: 25%;
+  margin-left: 25%; /* (100% - 50%) / 2 */
+}
+
+hr.short {
+  margin-bottom: 2em;
+  margin-top: 2em;
+
+  width: 20%;
+  margin-left: 40%; /* (100% - 20%) / 2 */
 }
 
 img,
