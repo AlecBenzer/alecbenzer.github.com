@@ -7,7 +7,8 @@ hr {
   margin-left: 25%;
 }
 
-img, iframe {
+img,
+iframe {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -34,7 +35,10 @@ h1 {
   text-align: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 300;
 }
 
@@ -44,6 +48,13 @@ h2 {
 
 h3 {
   margin-top: 60px;
+}
+
+h4 {
+  margin-top: 60px;
+  margin-bottom: 0px;
+  font-style: italic;
+  text-decoration: underline;
 }
 
 code {
