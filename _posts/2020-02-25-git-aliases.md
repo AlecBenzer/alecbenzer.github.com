@@ -1,9 +1,9 @@
 ---
-title: My git aliases
+title: Git aliases
 layout: post
 ...
 
-Things I use to use git. A combination of actual git alias and shell
+Things I use to use git. A combination of actual git aliases and shell
 functions.
 
 #### `new`
