@@ -14,7 +14,7 @@ Previously [Imagen](https://imagen.ai), [Google](https://google.com/about)
 ---
 {: .short}
 
-thoughts from my brain:
+words from my brain:
 
 {% for post in site.posts %}
 
