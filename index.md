@@ -5,7 +5,7 @@ layout: page
 
 # alecb
 
-Software engineer at [Level](https://level.com)  
+Software engineer @ [Level](https://level.com)  
 Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
 [@AlecBenzer](https://twitter.com/AlecBenzer) · [LinkedIn](https://www.linkedin.com/in/alecbenzer/) · <alec@alecb.me>
