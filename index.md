@@ -5,16 +5,15 @@ layout: page
 
 # alecb
 
-Software engineer @ [Level](https://level.com)
-
-Previously [Imagen](https://imagen.ai), [Google](https://google.com/about)
+Software engineer at [Level](https://level.com)  
+Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
 [@AlecBenzer](https://twitter.com/AlecBenzer) · [LinkedIn](https://www.linkedin.com/in/alecbenzer/) · <alec@alecb.me>
 
 ---
 {: .short}
 
-thoughts from my brain:
+I like to write things sometimes:
 
 {% for post in site.posts %}
 
