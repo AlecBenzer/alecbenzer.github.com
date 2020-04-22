@@ -3,3 +3,4 @@ _site/
 .python-version
 .jekyll-metadata
 .jekyll-cache
+.idea
