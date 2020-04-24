@@ -8,17 +8,21 @@ layout: page
 Software engineer @ [Level](https://level.com)  
 Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
-[@AlecBenzer](https://twitter.com/AlecBenzer) · [LinkedIn](https://www.linkedin.com/in/alecbenzer/) · <alec@alecb.me>
+<a href="https://twitter.com/AlecBenzer"><i class="fab fa-twitter-square"></i></a>
+<a href="https://www.linkedin.com/in/alecbenzer"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:alec@alecb.me"><i class="fas fa-envelope-open-text"></i></a>
+<a href="https://instagram.com/martinkittynyc"><i class="fas fa-cat"></i></a>
+{: .contact}
 
 ---
-{: .short}
+{: .hidden}
 
 I like to write things sometimes:
 
 {% for post in site.posts %}
 
-{% if post.listed %}
+    {% if post.listed %}
 [{{ post.title }}]({{ post.url }})
-{% endif %}
+    {% endif %}
 
 {% endfor %}

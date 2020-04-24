@@ -16,6 +16,12 @@ hr.short {
   margin-left: 40%; /* (100% - 20%) / 2 */
 }
 
+hr.hidden {
+  width: 0%;
+  height: 20px;
+  margin: 0 0 0 0;
+}
+
 img,
 iframe {
   max-width: 100%;
@@ -88,4 +94,15 @@ pre {
 blockquote {
   font-style: italic;
   color: #777;
+}
+
+.contact a i {
+  color: #37474f;
+  font-size: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact a i:hover {
+  color:#999;
 }
