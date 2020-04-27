@@ -61,3 +61,5 @@ And that's all we need! If we can build up a permutation with N swaps, adding
 an (N+1)st swap will change the number of cycles by 1, resulting in a
 different permutation. We need at least an (N+2)nd swap to get us back to the
 original permutation with the right number of cycles.
+
+_(inspired by [Numberphile](https://youtu.be/YI1WqYKHi78), drawings by [Excalidraw](https://excalidraw.com/))_
