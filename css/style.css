@@ -4,22 +4,17 @@ hr {
   border: 0;
   border-top: 1px solid #888;
 
-  width: 50%;
-  margin-left: 25%; /* (100% - 50%) / 2 */
+  width: 25%;
+  margin-left: 37.5%; /* (100% - 25%) / 2 */
 }
 
 hr.short {
   margin-bottom: 2em;
   margin-top: 2em;
 
-  width: 20%;
-  margin-left: 40%; /* (100% - 20%) / 2 */
-}
-
-hr.hidden {
-  width: 0%;
-  height: 20px;
-  margin: 0 0 0 0;
+  width: 5%;
+  margin-left: 47.5%; /* (100% - 10%) / 2 */
+  border-top: 1px solid #888;
 }
 
 img,
@@ -32,11 +27,11 @@ iframe {
 
 body {
   font-family: 'Manrope', system-ui, sans-serif;
-  font-weight: 350;
+  font-weight: 400;
   margin: 40px auto;
-  max-width: 30em;
+  max-width: 28em;
   line-height: 1.6;
-  font-size: 25px;
+  font-size: 20px;
   padding: 0 10px;
   color: #37474f;
 }
@@ -98,7 +93,7 @@ blockquote {
 
 .contact a i {
   color: #37474f;
-  font-size: 30px;
+  font-size: 25px;
   padding-left: 10px;
   padding-right: 10px;
 }

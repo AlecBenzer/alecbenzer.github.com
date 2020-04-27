@@ -16,7 +16,7 @@ Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 {: .contact}
 
 ---
-{: .hidden}
+{: .short}
 
 I like to write things sometimes:
 
