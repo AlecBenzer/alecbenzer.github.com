@@ -5,11 +5,11 @@ layout: post
 
 It’s common to use short-lived branches to organize your work into individual
 features, instead of committing directly onto persistent "mainline" branches
-like `master`. This is good because it:
+like `master`. This:
 
-* Ensures you have an easy way of getting back to a known good state that’s not in the middle of some new feature.
-* Logically groups individual features/bug fixes.
-* Easy to manage multiple concurrent changes.
+* Ensures you have an easy way of getting back to a known good state that’s not in the middle of some new feature
+* Logically groups individual features/bug fixes
+* Makes it easy to manage multiple concurrent changes
 
 But even if you don’t commit directly onto a local master branch, you still
 often need to refer to the _remote_ master branch to do things like:
