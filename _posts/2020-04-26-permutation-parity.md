@@ -60,6 +60,14 @@ Importantly, the number of cycles always changes (up or down) by exactly one.
 And that's all we need! If we can build up a permutation with N swaps, adding
 an (N+1)st swap will change the number of cycles by 1, resulting in a
 different permutation. We need at least an (N+2)nd swap to get us back to the
-original permutation with the right number of cycles.
+original permutation.
+
+An (N+2)nd swap will either get us back to the correct cycle count, _or_, put
+us 2 away from the correct cycle count, which means we need at least an
+(N+3)rd and an (N+4)th swap to get back to the correct count.
+
+No matter what happens, you always need to add an even number of swaps to get
+back to the right count, which means the total number of swaps will remain at
+whatever pairity it was to begin with.
 
 _(inspired by [Numberphile](https://youtu.be/YI1WqYKHi78), drawings by [Excalidraw](https://excalidraw.com/))_
