@@ -1,3 +1,6 @@
+---
+---
+
 body {
   font-family: "Manrope", system-ui, sans-serif;
   font-weight: 250;
@@ -23,10 +26,12 @@ h4 {
   }
 }
 
+$body-color: #37474f;
+
 body {
   margin: 40px auto;
   padding: 0 10px;
-  color: #37474f;
+  color: $body-color;
 }
 
 hr {
@@ -35,16 +40,18 @@ hr {
   border: 0;
   border-top: 1px solid #888;
 
-  width: 25%;
-  margin-left: 37.5%; /* (100% - 25%) / 2 */
+  $width: 25%;
+  width: $width;
+  margin-left: (100% - $width) / 2;
 }
 
 hr.short {
   margin-bottom: 2em;
   margin-top: 2em;
 
-  width: 5%;
-  margin-left: 47.5%; /* (100% - 10%) / 2 */
+  $width: 5%;
+  width: $width;
+  margin-left: (100% - $width) / 2;
   border-top: 1px solid #888;
 }
 
@@ -95,7 +102,7 @@ blockquote {
 }
 
 a {
-  color: #37474f;
+  color: $body-color;
 }
 
 a:hover {
