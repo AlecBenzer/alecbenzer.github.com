@@ -4,8 +4,10 @@ markdown: kramdown
 highlighter: null
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       listed: true
+
+sass:
+  sass_dir: _sass
