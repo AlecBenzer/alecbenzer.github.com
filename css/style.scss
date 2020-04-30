@@ -58,11 +58,12 @@ hr {
 
 hr.short {
   margin-bottom: 2em;
-  margin-top: 2em;
+  margin-top: 1em;
 
-  $width: 5%;
+  $width: 7%;
   width: $width;
   margin-left: (100% - $width) / 2;
+  border-top: 2px solid lighten($color: $body-color, $amount: 20%);
 }
 
 img,
@@ -116,17 +117,8 @@ a {
 }
 
 a:hover {
-  color: #999;
-}
-
-.home-icons {
-  i.fas,
-  i.fab,
-  i.far {
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  color: lighten($color: $body-color, $amount: 40%);
+  // color: #999;
 }
 
 .info {
