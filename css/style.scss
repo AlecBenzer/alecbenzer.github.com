@@ -8,12 +8,16 @@ $fa-font-path: "../fontawesome/webfonts";
 @import "./fontawesome/scss/brands.scss";
 @import "./fontawesome/scss/icons.scss";
 
+html {
+  background-color: rgb(252, 252, 252);
+}
+
 body {
   font-family: "Manrope", system-ui, sans-serif;
-  font-weight: 250;
+  font-weight: 300;
   max-width: 28em;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 strong {
@@ -27,13 +31,13 @@ h4 {
   font-weight: 200;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   body {
-    font-size: 5.2vw;
+    font-size: 1.7em;
   }
 }
 
-$body-color: #37474f;
+$body-color: #373d3f;
 
 body {
   margin: 40px auto;
@@ -128,12 +132,13 @@ a:hover {
 .info {
   background-color: rgb(239, 244, 255);
   padding: 25px;
+  font-size: 85%;
 
   &:before {
     @extend %fa-icon;
     @extend .fas;
 
     content: fa-content($fa-var-info-circle);
-    padding-right: 10px;
+    padding-right: 15px;
   }
 }
