@@ -123,14 +123,24 @@ a:hover {
 
 .info {
   background-color: rgb(239, 244, 255);
-  padding: 25px;
+
   font-size: 85%;
+  $base-icon-width: 10px; // changes with font-size
+  $icon-right-padding: 20px;
+  $icon-width: $base-icon-width + $icon-right-padding / 2; // no idea why divide 2, only approx right
+
+  $padding: 25px;
+  text-indent: -($icon-width);
+  padding-left: 2 * $icon-width + $padding;
+  padding-right: $padding;
+  padding-top: $padding;
+  padding-bottom: $padding;
 
   &:before {
     @extend %fa-icon;
     @extend .fas;
 
+    padding-right: $icon-right-padding;
     content: fa-content($fa-var-info-circle);
-    padding-right: 15px;
   }
 }
