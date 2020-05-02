@@ -12,12 +12,14 @@ html {
   background-color: rgb(252, 252, 252);
 }
 
+$text-width: 800px;
+
 body {
   font-family: "Manrope", system-ui, sans-serif;
   font-weight: 300;
-  max-width: 28em;
+  max-width: $text-width;
   line-height: 1.6;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 strong {
@@ -31,9 +33,9 @@ h4 {
   font-weight: 200;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: $text-width * 1.1) {
   body {
-    font-size: 1.7em;
+    font-size: 4.3vw;
   }
 }
 
@@ -124,7 +126,7 @@ a:hover {
   background-color: rgb(239, 244, 255);
 
   font-size: 85%;
-  $base-icon-width: 10px; // changes with font-size
+  $base-icon-width: 13px; // changes with font-size
   $icon-right-padding: 20px;
   $icon-width: $base-icon-width + $icon-right-padding / 2; // no idea why divide 2, only approx right
 
