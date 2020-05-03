@@ -12,14 +12,14 @@ html {
   background-color: rgb(252, 252, 252);
 }
 
-$text-width: 800px;
+$text-width: 100vh;
 
 body {
   font-family: "Manrope", system-ui, sans-serif;
   font-weight: 300;
   max-width: $text-width;
   line-height: 1.6;
-  font-size: 2em;
+  font-size: 4vh;
 }
 
 strong {
