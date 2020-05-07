@@ -1,6 +1,7 @@
 ---
 title: "How to value startup equity"
 layout: post
+listed: false
 ...
 
 The standard answer is "value it at $0".
@@ -9,9 +10,13 @@ This is dumb and obviously wrong. *No one* values their startup equity at $0. He
 
 Maybe ask them if they'll give it up for $1? They still won't, so they must value it at more than $1. $1,000? For most people, still no. $1,000,000? For a lot of people, yes.
 
-I'm being cranky; I get that the ethos behind "value startup equity at $0" is something like "don't *expect* that your equity will be worth anything" or "there's a high, probably >50% chance that your equity will be worth $0". This is true, but "value your equity at $0" is a bad general way of phrasing this. When you're trying to see if you can afford to buy a house this year, yes, startup equity is worth $0. If you're trying to decide if you're being shafted by accepting 0.001% equity in a startup you're set on joining, startup equity is not worth $0.
+I'm being cranky; I get that the ethos behind "value startup equity at $0" is something like "don't *expect* that your equity will be worth anything" or "there's a high, probably >50% chance that your equity will be worth $0".
 
----
+This is true, but "value your equity at $0" is a bad general way of phrasing this. When you're trying to see if you can afford to buy a house this year, yes, startup equity is worth $0. If you're trying to decide if you're being shafted by accepting 0.001% equity in a startup you're set on joining, startup equity is not worth $0.
+
+## Break-even valuations
+
+(The rest of this post is mostly about VC-backed startups.)
 
 In general, you value equity based on how successful you think the company will be. I try to look specifically at opportunity costs and break-even points:
 
@@ -46,11 +51,39 @@ Similarly, if they kept the equity at .01% but raised the salary to:
 - $175,000, $200 million
 
 At $180,000, you've already broke even, because at that point you have "no risk". Of course that's not quite true, a startup is always going to carry more risk than a stable company (i.e., that you'll lose your job suddenly).
-
-This model isn't perfect, but I like it, mostly because it boils down to a single number (the break-even valuation) that you can look at before having to bring any probabilistic reasoning into the mix.
-
-As an aside, the break-even valuation is what people are calculating when they infer valuations based on venture capital investment. If a VC invests $X for Y% of a company, their "valuation" of the company is $X / Y%. A startup employee's "valuation" in this way is almost always going to be way higher than the VC valuation (the VC is getting a better deal than employees).
 {: .info}
 
-One thing I skipped is that usually, startups aren't giving you shares directly but are giving you options: the option to buy a share at some set price/share $X, the "strike price". You should in theory factor this into your math, but the opportunity costs are usually so much more than the strike that it doesn't change things too much.
+This model isn't perfect, but I like it, mostly because it boils down to a
+single number (the break-even valuation) before having to introduce any
+probabilistic reasoning. It doesn't tell you anything about how to decide if
+a company is actually going to be worth $X, but at least quantifies the
+situation in a way that I think makes things more accessible and easier to
+reason about.
+
+The break-even valuation is what people are calculating when they infer valuations based on venture capital investment. If a VC invests $X for Y% of a company, their "valuation" of the company is $X / Y%. A startup employee's "valuation" in this way is almost always going to be way higher than the VC valuation (the VC is getting a better deal than employees).
 {: .info}
+
+One thing I skipped: usually, startups aren't giving you shares directly but are giving you [options](https://www.investopedia.com/terms/s/stockoption.asp): the option to buy a share at some set price/share $X, the "strike price". You should in theory factor this into your math, but the opportunity costs are usually so much higher than the strike that it doesn't change things too much.
+{: .info}
+
+## Dilution
+
+Unfortunately, another probabilistic factor you need to account for is [dilution](https://www.investopedia.com/terms/d/dilution.asp).
+
+When a company says they're giving you X%, what they mean is that they're
+giving you an amount of shares that, *as of right now*, represents X% of the
+company. But the total number of shares can increase over time, which means
+the % that your shares represent goes down.
+
+The main way new shares get created is during fundraising: the company wants
+money from investors, investors want shares in the company, so the company
+creates new shares to give to the investors.
+
+How much you get diluted, then, has to do with:
+
+1. How much money the company needs/wants.
+2. How highly investors value the company.
+
+Which in turn has to do with how well the company is doing and how old it is.
+
+Keeping with the "staying away from telling you how to value a company" thing, my rule of thumb is just to assume 
