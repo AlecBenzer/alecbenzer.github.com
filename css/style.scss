@@ -19,7 +19,7 @@ body {
   font-weight: 300;
   max-width: $text-width;
   line-height: 1.6;
-  font-size: 2em;
+  font-size: 160%;
 }
 
 strong {
@@ -33,10 +33,10 @@ h4 {
   font-weight: 200;
 }
 
-// not sure why *2
-@media (max-width: $text-width * 2) {
+// not sure why *1.7
+@media (max-width: $text-width * 1.7) {
   body {
-    font-size: 1.1em;
+    font-size: 4vw;
   }
 }
 
