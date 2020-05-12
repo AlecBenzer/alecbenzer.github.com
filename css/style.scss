@@ -116,11 +116,15 @@ blockquote {
 }
 
 a {
-  color: $body-color;
+  color: rgb(76, 76, 240);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:hover {
-  color: lighten($color: $body-color, $amount: 40%);
+.fa-ul a {
+  color: $body-color;
 }
 
 .info {

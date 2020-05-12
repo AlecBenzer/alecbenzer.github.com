@@ -21,12 +21,13 @@ Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 ---
 {: .short}
 
-*I like to write things sometimes:*
-
-{% for post in site.posts %}
-
-    {% if post.listed %}
-[{{ post.title }}]({{ post.url }})
-    {% endif %}
-
-{% endfor %}
+<div style="text-align: center">
+    <em>I like to write things sometimes:</em>
+    <ul class="fa-ul" style="display: inline-block; text-align: left">
+        {% for post in site.posts %}
+            {% if post.listed %}
+                <li><a href="{{ post.url }}"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>{{ post.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
