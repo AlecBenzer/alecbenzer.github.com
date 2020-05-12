@@ -49,11 +49,11 @@ X =
 }
 $$
 
-So if we ask someone if they like the item and they say yes, we say \\(X = 1\\), and if they say no, we say \\(X = 0\\).
+So if we ask someone if they like the item and they say yes, we say X = 1, and if they say no, we say X = 0.
 
-We can talk about the **expected value** of our random variable, \\(E(X)\\). The expected value of a random variable is roughly the average value that the variable would take on over multiple instances of the experiment.
+We can talk about the **expected value** of our random variable, E(X). The expected value of a random variable is roughly the average value that the variable would take on over multiple instances of the experiment.
 
-For example, if 50% of people would like the item, and 50% of people would not, then 50% of the time \\(X\\) would be \\(0\\), and the other 50% of the time \\(X\\) would be \\(1\\). This would mean that
+For example, if 50% of people would like the item, and 50% of people would not, then 50% of the time X would be 0, and the other 50% of the time X would be 1. This would mean that
 
 \\[E(X) = 0.5\cdot 1 + 0.5\cdot 0 = 0.5 \\]
 
@@ -61,37 +61,39 @@ On the other hand, if 70% of people would like the item and 30% would not, then
 
 \\[E(X) = 0.7 \cdot 1 + 0.3 \cdot 0 = 0.7\\]
 
-Generally speaking, if \\(p\\) is the proportion of people that would like the product, then
+Generally speaking, if p is the proportion of people that would like the product, then
 
 \\[E(X) = p \cdot 1 + (1 - p)\cdot 0 = p\\]
 
-So, pretty conveniently, the expected value of \\(X\\) is exactly the proportion of people that would like the product.
+So, pretty conveniently, the expected value of X is exactly the proportion of people that would like the product.
 
-This is a result of the fact that we picked 1 and 0 as the values that \\(X\\)
-could take on. We could have, for example, defined \\(X\\) to be 24 if someone
+This is a result of the fact that we picked 1 and 0 as the values that X
+could take on. We could have, for example, defined X to be 24 if someone
 likes the item and -9 otherwise, but picking the values 1 and 0 makes the
 math much easier.
 {: .info}
 
-So \\(p = E(X)\\) is the value that we would like to sort by. Unfortunately, we don't know what the true vale of \\(E(X)\\) is: you'd have to know how _everyone_ would rate an item to know the actual value of \\(E(X)\\).
+So p = E(X) is the value that we would like to sort by. Unfortunately, we
+don't know what the true vale of E(X) is: you'd have to know how _everyone_
+would rate an item to know the actual value of E(X).
 
 We don't know what everyone in the world would say about our item. We only
 have access to a small _sample_ of ratings, based on who actually bothered to
 tell us what they think. The size of our sample might range anywhere from 1
 rating to 5,000,000 ratings. So our job is to do our best at estimating the
-true value of \\(E(X)\\), based only on the information we have from our sample.
+true value of E(X), based only on the information we have from our sample.
 
 ## The central limit theorem
 
-So what information do we have available to us? Presumably, we know the number of good ratings an item has received and the number of bad ratings an item has received. Using this, we can compute the proportion of people that favored the product _of those that bothered to rate it_. We'll call this proportion \\(\widehat{p}\\). What we're interested in is what \\(\widehat{p}\\) tells us about normal \\(p\\).
+So what information do we have available to us? Presumably, we know the number of good ratings an item has received and the number of bad ratings an item has received. Using this, we can compute the proportion of people that favored the product _of those that bothered to rate it_. We'll call this proportion \\(\widehat{p}\\). What we're interested in is what \\(\widehat{p}\\) tells us about normal p.
 
-To do this, we rely first and foremost on the [central limit theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), which is a very important theorem in statistics. For our particular problem, the central limit theorem theorem says that \\(\widehat{p}\\) is **normally distributed** with a mean equal to \\(p\\) and **variance** inversely proportional to \\(n\\), the number of people we have ratings from, all for sufficiently large \\(n\\).
+To do this, we rely first and foremost on the [central limit theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), which is a very important theorem in statistics. For our particular problem, the central limit theorem theorem says that \\(\widehat{p}\\) is **normally distributed** with a mean equal to p and **variance** inversely proportional to n, the number of people we have ratings from, all for sufficiently large n.
 
-Okay, what? That's a bit to digest. So first of all, instead of thinking of \\(\widehat{p}\\) as a specific value, think of it in terms of a random variable. In fact, let's call this random variable \\(X_n\\) (and again, \\(n\\) is the number of people we have ratings from). The "experiment" that we perform to get values for \\(X_n\\) is "take a random sample of \\(n\\) people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, \\(\widehat{p}\\) is an instance of this random variable \\(X_n\\).
+Okay, what? That's a bit to digest. So first of all, instead of thinking of \\(\widehat{p}\\) as a specific value, think of it in terms of a random variable. In fact, let's call this random variable X<sub>n</sub> (and again, n is the number of people we have ratings from). The "experiment" that we perform to get values for X<sub>n</sub> is "take a random sample of n people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, \\(\widehat{p}\\) is an instance of this random variable X<sub>n</sub>.
 
-The central limit theorem says firstly that \\(E(X_n) = E(X)\\). That is, on average, \\(\widehat{p}\\), the proportion of people that like the product from our sample of \\(n\\), will be "close to" \\(p = E(X)\\), the "true" proportion of people that like the product. To see how close \\(\widehat{p}\\) will be to \\(p\\), we need the rest of the central limit theorem.
+The central limit theorem says firstly that \\(E(X_n) = E(X)\\). That is, on average, \\(\widehat{p}\\), the proportion of people that like the product from our sample of n, will be "close to" \\(p = E(X)\\), the "true" proportion of people that like the product. To see how close \\(\widehat{p}\\) will be to p, we need the rest of the central limit theorem.
 
-So the second thing that the central limit theorem tells us is that \\(X_n\\) is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger \\(n\\) is). It also tells us that \\(\operatorname{Var}(X_n)\\), the **variance** of \\(X_n\\), is equal to \\(\frac{\operatorname{Var}(X)}{n}\\).
+So the second thing that the central limit theorem tells us is that X<sub>n</sub> is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger n is). It also tells us that Var(X<sub>n</sub>), the **variance** of X<sub>n</sub>, is equal to \\(\frac{\operatorname{Var}(X)}{n}\\).
 
 ## Wait, what's variance?
 
@@ -103,7 +105,7 @@ This list of numbers has an average, which I'm sure you know how to compute:
 
 \\[ \frac{6 + 8 + 5 + 6 + 6 + 7}{6} = \frac{38}{6} = 6{\frac{1}{3}} \\]
 
-Let's call the average \\(\mu = 6{\frac{1}{3}}\\). We can, for each number in the list, compute its distance from the average:
+Let's call the average μ = 6⅓. We can, for each number in the list, compute its distance from the average:
 
 $$
 \begin{align*}
@@ -133,11 +135,11 @@ And, finally, we can take the average of all those squared distances:
 
 \\[ \frac{\frac19 + \frac{25}{9} + \frac{16}{9} + \frac19 + \frac19 + \frac49}{6} = \frac{\frac{48}{9}}{6} = \frac{48}{54} = \frac{8}{9}\\]
 
-This is what variance is: the average of the squared distances to the average. Variance is often denoted as \\(\sigma^2\\), which makes sense once you realize that **standard deviation**, the square root of variance, is denoted as \\(\sigma\\). So for the above list of numbers, \\(\sigma^2 = \frac{8}{9}\\) and \\(\sigma = \sqrt{\frac{8}{9}} = \frac{2\sqrt{2}}{3}\\).
+This is what variance is: the average of the squared distances to the average. Variance is often denoted as σ<sup>2</sup>, which makes sense once you realize that **standard deviation**, the square root of variance, is denoted as σ. So for the above list of numbers, \\(\sigma^2 = \frac{8}{9}\\) and \\(\sigma = \sqrt{\frac{8}{9}} = \frac{2\sqrt{2}}{3}\\).
 
-This is variance for a finite list of numbers. To compute the variance for a random variable (denoted \\(\operatorname{Var}(X)\\), as we've already seen), we do something similar. Obviously we can't do a straight average of our numbers since we don't actually have a particular set of numbers to work with. So instead of a normal average, we use \\(E(X)\\), and we then say that \\(\operatorname{Var}(X) = E((X - E(X))^2)\\) (ie, the variance is the expected value of the squared distance between \\(X\\) and its own expected value). 
+This is variance for a finite list of numbers. To compute the variance for a random variable (denoted \\(\operatorname{Var}(X)\\), as we've already seen), we do something similar. Obviously we can't do a straight average of our numbers since we don't actually have a particular set of numbers to work with. So instead of a normal average, we use E(X), and we then say that \\(\operatorname{Var}(X) = E((X - E(X))^2)\\) (ie, the variance is the expected value of the squared distance between X and its own expected value). 
 
-Recall that \\(E(X)\\) is \\(p\\), and so when \\(X\\) is 1 (which happens with probability \\(p\\)), its squared distance to its expected value is \\((1 - E(X))^2 = (1-p)^2\\), and when \\(X\\) is 0 (which happens with probability \\((1-p)\\)), its squared distance to its expected value is \\((0 - E(X))^2 = p^2\\), and so
+Recall that E(X) is p, and so when X is 1 (which happens with probability p), its squared distance to its expected value is \\((1 - E(X))^2 = (1-p)^2\\), and when X is 0 (which happens with probability \\((1-p)\\)), its squared distance to its expected value is \\((0 - E(X))^2 = p^2\\), and so
 
 $$
 \begin{align*}
@@ -152,21 +154,21 @@ $$
 
 ## Confidence Intervals
 
-So going back to the central limit theorem, we have that the random variable \\(X_n\\) is normally distributed with mean \\(E(X) = p\\) and variance \\(\operatorname{Var}(X)/n\\). Because of things we know about normal distributions, this can tell us a lot about how \\(\widehat{p}\\) (which is essentially an instance of the random variable \\(X_n\\)) relates to \\(p\\).
+So going back to the central limit theorem, we have that the random variable X<sub>n</sub> is normally distributed with mean \\(E(X) = p\\) and variance \\(\operatorname{Var}(X)/n\\). Because of things we know about normal distributions, this can tell us a lot about how \\(\widehat{p}\\) (which is essentially an instance of the random variable X<sub>n</sub>) relates to p.
 
-In particular, something well known about normal distributions is how likely something is to be within \\(z\\) standard deviations of the mean. That is, for our normal distribution, our variance is \\(\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}\\) (as we showed above). This means that the standard deviation of \\(X_n\\) is 
+In particular, something well known about normal distributions is how likely something is to be within \\(z\\) standard deviations of the mean. That is, for our normal distribution, our variance is \\(\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}\\) (as we showed above). This means that the standard deviation of X<sub>n</sub> is 
 
 \\[\sigma_{n} = \sqrt{ \frac{\operatorname{Var}(X)}{n}} = \sqrt{\frac{p(1-p)}{n}}\\]
 
-Remember that our mean was \\(p\\), and so we know what the odds are for \\(p\\) and our specific value \\(\widehat{p}\\) to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
+Remember that our mean was p, and so we know what the odds are for p and our specific value \\(\widehat{p}\\) to be within, say, one standard deviation of each other (the odds for one standard deviation happen to be around 68%). Ie, we know that: 
 
 $$
 \Pr(\left|p - \widehat{p}\right| < \sigma_n) \approx 0.68
 $$
 
-Well, sort of. The central limit theorem tells us that \\(X_n\\) is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
+Well, sort of. The central limit theorem tells us that X<sub>n</sub> is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
 
-We also know (are confident) that the probability of \\(\widehat{p}\\) being with _two_ standard deviations of \\(p\\) is approximately 95%...
+We also know (are confident) that the probability of \\(\widehat{p}\\) being with _two_ standard deviations of p is approximately 95%...
 
 $$
 \Pr(\left|p - \widehat{p}\right| < 2\cdot\sigma_n) \approx 0.95
@@ -178,13 +180,13 @@ $$
 \Pr(\left|p - \widehat{p}\right| < 3\cdot\sigma_n) \approx 0.997
 $$
 
-So in general, for any particular probability \\(\alpha\\), it's possible to find a corresponding value \\(z\\) (often written \\(z_{\alpha/2}\\)) such that the odds of \\(p\\) and \\(\widehat{p}\\) being with \\(z\\) standard deviations of each other is \\(\alpha\\):
+So in general, for any particular probability \\(\alpha\\), it's possible to find a corresponding value \\(z\\) such that the odds of p and \\(\widehat{p}\\) being within \\(z\\) standard deviations of each other is \\(\alpha\\):
 
 $$
 \Pr(\left|p - \widehat{p}\right| < z\cdot\sigma_n) \approx \alpha
 $$
 
-This leads to an _interval_ of values that we are \\(\alpha\\) sure that \\(p\\) is between. Ie, we know with probability \\(\alpha\\) that
+I.e., we know with probability ~α that
 
 $$
 \widehat{p} - z\cdot\sigma_n < p < \widehat{p} + z\cdot\sigma_n
@@ -196,17 +198,17 @@ $$
 \widehat{p} - 1.96\sigma_n < p < \widehat{p} + 1.96\sigma_n
 $$
 
-So what's really going on here? We'd _like_ to know what \\(p\\) is. But we don't. Instead, we know what \\(\widehat{p}\\) is. And we know that \\(\widehat{p}\\) should be roughly \\(p\\), but we're not all that sure. Especially when we only have a few ratings to go on.
+So what's really going on here? We'd _like_ to know what p is. But we don't. Instead, we know what \\(\widehat{p}\\) is. And we know that \\(\widehat{p}\\) should be roughly p, but we're not all that sure. Especially when we only have a few ratings to go on.
 
-What we _can_ say, though, is that we are 95% sure that \\(p\\) is no less than \\(\widehat{p} - 1.96\sigma_n\\). And so this, this \\(\widehat{p} - 1.96\sigma_n\\) value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
+What we _can_ say, though, is that we are 95% sure that p is no less than \\(\widehat{p} - 1.96\sigma_n\\). And so this, this \\(\widehat{p} - 1.96\sigma_n\\) value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
 
-Except there's a bit of a problem with that. Do you recall the formula for \\(\sigma_n\\), the standard deviation of \\(X_n\\)? It was
+Except there's a bit of a problem with that. Do you recall the formula for \\(\sigma_n\\), the standard deviation of X<sub>n</sub>? It was
 
 \\[\sigma_n = \sqrt{\frac{p(1-p)}{n}}\\]
 
-And the whole reason we're in this mess to begin with is because we don't know \\(p\\), so we can't very well know \\(\sigma_n\\) either.
+And the whole reason we're in this mess to begin with is because we don't know p, so we can't very well know \\(\sigma_n\\) either.
 
-One way to cope with this is to do the simplest thing we can, and just replace \\(p\\) with \\(\widehat{p}\\) for our calculation of \\(\sigma_n\\). That is, we let 
+One way to cope with this is to do the simplest thing we can, and just replace p with \\(\widehat{p}\\) for our calculation of \\(\sigma_n\\). That is, we let 
 
 \\[\widehat{\sigma} = \sqrt{\frac{\widehat{p}(1-\widehat{p})}{n}}\\]
 
@@ -247,7 +249,7 @@ $$
 \end{align*}
 $$
 
-This inequality is quadratic in \\(p\\), which means we can use the quadratic formula to find the end-points (ie, the places where we are equal to 0, not less than it). The quadratic formula for solving \\(c + bp + ap^2 = 0\\) is
+This inequality is quadratic in p, which means we can use the quadratic formula to find the end-points (ie, the places where we are equal to 0, not less than it). The quadratic formula for solving \\(c + bp + ap^2 = 0\\) is
 
 \\[ p = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\]
 
@@ -270,14 +272,14 @@ $$
 \frac{\widehat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\widehat{p}(1-\widehat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\widehat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
 $$
 
-What that expression solves for is the values of \\(p\\) for which \\(\left\|\widehat{p}-p\right\|\\) is exactly \\(z\cdot\sigma_n\\). If we want \\(\left\|\widehat{p} - p\right\| < z\cdot\sigma_n\\), then we want \\(p\\) to be in between those two values. Ie, we want
+What that expression solves for is the values of p for which \\(\left\|\widehat{p}-p\right\|\\) is exactly \\(z\cdot\sigma_n\\). If we want \\(\left\|\widehat{p} - p\right\| < z\cdot\sigma_n\\), then we want p to be in between those two values. Ie, we want
 
 
 $$
 \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\widehat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
 $$
 
-So this tells us that (if \\(z = 1.96\\)) we are 95% sure that \\(p\\) is at least
+So this tells us that (if \\(z = 1.96\\)) we are 95% sure that p is at least
 
 $$
 \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
