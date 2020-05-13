@@ -41,15 +41,15 @@ A random variable is basically just a function whose value depends on the result
 
 Given that, we define our random variable like so:
 
-$$
+\\[
 X =
 \cases{
   1 & \text{ if the item is liked}\cr
   0 & \text{ otherwise}
 }
-$$
+\\]
 
-So if we ask someone if they like the item and they say yes, we say X = 1, and if they say no, we say X = 0.
+So if we ask someone if they like the item and they say yes, we say \\(X = 1\\), and if they say no, we say \\(X = 0\\).
 
 We can talk about the **expected value** of our random variable, E(X). The expected value of a random variable is roughly the average value that the variable would take on over multiple instances of the experiment.
 
@@ -89,11 +89,11 @@ So what information do we have available to us? Presumably, we know the number o
 
 To do this, we rely first and foremost on the [central limit theorem](http://en.wikipedia.org/wiki/Central_limit_theorem), which is a very important theorem in statistics. For our particular problem, the central limit theorem theorem says that \\(\widehat{p}\\) is **normally distributed** with a mean equal to p and **variance** inversely proportional to n, the number of people we have ratings from, all for sufficiently large n.
 
-Okay, what? That's a bit to digest. So first of all, instead of thinking of \\(\widehat{p}\\) as a specific value, think of it in terms of a random variable. In fact, let's call this random variable X<sub>n</sub> (and again, n is the number of people we have ratings from). The "experiment" that we perform to get values for X<sub>n</sub> is "take a random sample of n people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, \\(\widehat{p}\\) is an instance of this random variable X<sub>n</sub>.
+Okay, what? That's a bit to digest. So first of all, instead of thinking of \\(\widehat{p}\\) as a specific value, think of it in terms of a random variable. In fact, let's call this random variable \\(X_n\\) (and again, n is the number of people we have ratings from). The "experiment" that we perform to get values for \\(X_n\\) is "take a random sample of n people from the world, ask them what they think of our item, and see what proportion of them liked it". Clearly, \\(\widehat{p}\\) is an instance of this random variable \\(X_n\\).
 
 The central limit theorem says firstly that \\(E(X_n) = E(X)\\). That is, on average, \\(\widehat{p}\\), the proportion of people that like the product from our sample of n, will be "close to" \\(p = E(X)\\), the "true" proportion of people that like the product. To see how close \\(\widehat{p}\\) will be to p, we need the rest of the central limit theorem.
 
-So the second thing that the central limit theorem tells us is that X<sub>n</sub> is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger n is). It also tells us that Var(X<sub>n</sub>), the **variance** of X<sub>n</sub>, is equal to \\(\frac{\operatorname{Var}(X)}{n}\\).
+So the second thing that the central limit theorem tells us is that \\(X_n\\) is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger n is). It also tells us that Var(\\(X_n\\)), the **variance** of \\(X_n\\), is equal to \\(\frac{\operatorname{Var}(X)}{n}\\).
 
 ## Wait, what's variance?
 
@@ -105,7 +105,7 @@ This list of numbers has an average, which I'm sure you know how to compute:
 
 \\[ \frac{6 + 8 + 5 + 6 + 6 + 7}{6} = \frac{38}{6} = 6{\frac{1}{3}} \\]
 
-Let's call the average μ = 6⅓. We can, for each number in the list, compute its distance from the average:
+Let's call the average \\(\mu = 6⅓\\). We can, for each number in the list, compute its distance from the average:
 
 $$
 \begin{align*}
@@ -154,9 +154,9 @@ $$
 
 ## Confidence Intervals
 
-So going back to the central limit theorem, we have that the random variable X<sub>n</sub> is normally distributed with mean \\(E(X) = p\\) and variance \\(\operatorname{Var}(X)/n\\). Because of things we know about normal distributions, this can tell us a lot about how \\(\widehat{p}\\) (which is essentially an instance of the random variable X<sub>n</sub>) relates to p.
+So going back to the central limit theorem, we have that the random variable \\(X_n\\) is normally distributed with mean \\(E(X) = p\\) and variance \\(\operatorname{Var}(X)/n\\). Because of things we know about normal distributions, this can tell us a lot about how \\(\widehat{p}\\) (which is essentially an instance of the random variable \\(X_n\\)) relates to p.
 
-In particular, something well known about normal distributions is how likely something is to be within \\(z\\) standard deviations of the mean. That is, for our normal distribution, our variance is \\(\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}\\) (as we showed above). This means that the standard deviation of X<sub>n</sub> is 
+In particular, something well known about normal distributions is how likely something is to be within \\(z\\) standard deviations of the mean. That is, for our normal distribution, our variance is \\(\frac{\operatorname{Var}(X)}{n} = \frac{p(1-p)}{n}\\) (as we showed above). This means that the standard deviation of \\(X_n\\) is 
 
 \\[\sigma_{n} = \sqrt{ \frac{\operatorname{Var}(X)}{n}} = \sqrt{\frac{p(1-p)}{n}}\\]
 
@@ -166,7 +166,7 @@ $$
 \Pr(\left|p - \widehat{p}\right| < \sigma_n) \approx 0.68
 $$
 
-Well, sort of. The central limit theorem tells us that X<sub>n</sub> is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
+Well, sort of. The central limit theorem tells us that \\(X_n\\) is _roughly_ normal, so we don't know the probability is _exactly_ 68%, but we're _confident_ that it's around 68%.
 
 We also know (are confident) that the probability of \\(\widehat{p}\\) being with _two_ standard deviations of p is approximately 95%...
 
@@ -202,7 +202,7 @@ So what's really going on here? We'd _like_ to know what p is. But we don't. Ins
 
 What we _can_ say, though, is that we are 95% sure that p is no less than \\(\widehat{p} - 1.96\sigma_n\\). And so this, this \\(\widehat{p} - 1.96\sigma_n\\) value, _this_ is what we want to sort by. The lower bound of a 95% confidence interval.
 
-Except there's a bit of a problem with that. Do you recall the formula for \\(\sigma_n\\), the standard deviation of X<sub>n</sub>? It was
+Except there's a bit of a problem with that. Do you recall the formula for \\(\sigma_n\\), the standard deviation of \\(X_n\\)? It was
 
 \\[\sigma_n = \sqrt{\frac{p(1-p)}{n}}\\]
 
@@ -241,13 +241,13 @@ $$
 
 If we let \\(t = \frac{z^2}{n}\\) (just to make things easier to write), we get
 
-$$
-\begin{align*}
-\widehat{p}^2 - 2p\widehat{p} + p^2 &< t(p-p^2) \\
-\widehat{p}^2 - 2p\widehat{p} + p^2 &< tp-tp^2 \\
+\\[
+\begin{align\*}
+\widehat{p}^2 - 2p\widehat{p} + p^2 &< t(p-p^2) \\\\\\
+\widehat{p}^2 - 2p\widehat{p} + p^2 &< tp-tp^2 \\\\\\
 \widehat{p}^2 - (2\widehat{p}+t)p + (1+t)p^2 &< 0
 \end{align*}
-$$
+\\]
 
 This inequality is quadratic in p, which means we can use the quadratic formula to find the end-points (ie, the places where we are equal to 0, not less than it). The quadratic formula for solving \\(c + bp + ap^2 = 0\\) is
 
@@ -255,34 +255,32 @@ This inequality is quadratic in p, which means we can use the quadratic formula 
 
 and so if we have \\(a = 1 + t\\), \\(b = -(2\widehat{p} + t)\\), and \\(c = \widehat{p}^2\\), we get endpoints of
 
-$$
-\begin{align*}
-& \frac{(2\widehat{p} + t) \pm \sqrt{(2\widehat{p} + t)^2 - 4(1+t)\widehat{p}^2}}{2(1+t)} \\\\
-&= \frac{2\widehat{p} + t \pm \sqrt{4\widehat{p}^2 + 4\widehat{p}t + t^2 - 4\widehat{p}^2 - 4t\widehat{p}^2}}{2(1+t)} \\\\
-&= \frac{2(\widehat{p} + \frac{t}{2}) \pm \sqrt{4(\widehat{p}^2 + \widehat{p}t + \frac{t^2}{4} - \widehat{p}^2 - t\widehat{p}^2)}}{2(1+t)} \\\\
-  &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{\widehat{p}t + \frac{t^2}{4} - t\widehat{p}^2}}{1+t} \\\\
-  &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t(\widehat{p}-\widehat{p}^2) + \frac{t^2}{4}}}{1+t} \\\\
-  &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t\widehat{p}(1-\widehat{p}) + \frac{t^2}{4}}}{1+t}
-\end{align*}
-$$
+\\[
+  \begin{align\*}
+  & \frac{(2\widehat{p} + t) \pm \sqrt{(2\widehat{p} + t)^2 - 4(1+t)\widehat{p}^2}}{2(1+t)} \\\\\\
+  &= \frac{2\widehat{p} + t \pm \sqrt{4\widehat{p}^2 + 4\widehat{p}t + t^2 - 4\widehat{p}^2 - 4t\widehat{p}^2}}{2(1+t)} \\\\\\
+  &= \frac{2(\widehat{p} + \frac{t}{2}) \pm \sqrt{4(\widehat{p}^2 + \widehat{p}t + \frac{t^2}{4} - \widehat{p}^2 - t\widehat{p}^2)}}{2(1+t)} \\\\\\
+    &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{\widehat{p}t + \frac{t^2}{4} - t\widehat{p}^2}}{1+t} \\\\\\
+    &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t(\widehat{p}-\widehat{p}^2) + \frac{t^2}{4}}}{1+t} \\\\\\
+    &= \frac{\widehat{p} + \frac{t}{2} \pm \sqrt{t\widehat{p}(1-\widehat{p}) + \frac{t^2}{4}}}{1+t}
+  \end{align\*}
+\\]
 
 Now we just replace \\(t\\) with \\(\frac{z^2}{n}\\), and we're left with that scary looking equation at the bottom of Miller's post:
 
-$$
+\\[
 \frac{\widehat{p} + \frac{z^2}{2n} \pm \sqrt{\frac{z^2\widehat{p}(1-\widehat{p})}{n} + \frac{z^4}{4n^2}}}{1+ z^2/n} = \frac{\widehat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
-$$
+\\]
 
 What that expression solves for is the values of p for which \\(\left\|\widehat{p}-p\right\|\\) is exactly \\(z\cdot\sigma_n\\). If we want \\(\left\|\widehat{p} - p\right\| < z\cdot\sigma_n\\), then we want p to be in between those two values. Ie, we want
 
 
-$$
+\\[
 \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} < p < \frac{\widehat{p} + \frac{z^2}{2n} + z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
-$$
+\\]
 
 So this tells us that (if \\(z = 1.96\\)) we are 95% sure that p is at least
 
-$$
-\frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n}
-$$
+\\[ \frac{\widehat{p} + \frac{z^2}{2n} - z\sqrt{\frac{\widehat{p}(1-\widehat{p})}{n} + \frac{z^2}{4n^2}}}{1+ z^2/n} \\]
 
 This then is the lower bound of the Wilson score confidence interval, and what we want to sort by.

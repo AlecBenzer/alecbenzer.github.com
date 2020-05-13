@@ -150,3 +150,8 @@ a {
     content: fa-content($fa-var-info-circle);
   }
 }
+
+.MathJax {
+  font-size: 108% !important;
+  color: lighten($body-color, 15%);
+}
