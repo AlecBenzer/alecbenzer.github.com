@@ -70,4 +70,5 @@ No matter what happens, you always need to add an even number of swaps to get
 back to the right count, which means the total number of swaps will remain at
 whatever pairity it was to begin with.
 
-_(inspired by [Numberphile](https://youtu.be/YI1WqYKHi78), drawings by [Excalidraw](https://excalidraw.com/))_
+Inspired by [Numberphile](https://youtu.be/YI1WqYKHi78). Drawings by [Excalidraw](https://excalidraw.com/).
+{: .footnote}

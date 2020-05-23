@@ -144,4 +144,4 @@ for this is an integer's
 So the most general thing we can say is: if \\(n^2\\) is a multiple of \\(k\\), \\(n\\) is a multiple of \\(\operatorname{rad}(k)\\).
 
 Inspired by [Putnam 2017 A1](https://www.youtube.com/watch?v=WFTw_3J2HU4).
-{: .info}
+{: .footnote}
