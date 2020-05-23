@@ -127,6 +127,21 @@ a {
   color: $body-color;
 }
 
+.home-icons {
+  a {
+    color: $body-color;
+    &:hover {
+      color: lighten($color: $body-color, $amount: 40%);
+    }
+  }
+  i.fas,
+  i.fab,
+  i.far {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 .info {
   background-color: rgb(239, 244, 255);
 
