@@ -120,13 +120,13 @@ a multiple of 12, one of the \\(p_i\\) is 2, one of the \\(p_i\\) is 2
 (again), and one of the \\(p_i\\) is 3. So all we know for sure is that
 \\(n\\) is a multiple of 2*3 = 6.
 
-So it's clear that this property holds for any \\(n\\) that doesn't have any
+So it's clear that this property holds for any \\(k\\) that doesn't have any
 repeats in its prime-factorization. These numbers are called
 [square-free](https://en.wikipedia.org/wiki/Square-free_integer).
 
 But even if our number isn't square-free (like 4, or 12), we can still say
 something, which is that \\(n\\) is a multiple of the number that you get when
-you get rid of all the duplicates in \\(n\\)'s prime factorization. The term
+you get rid of all the duplicates in \\(k\\)'s prime factorization. The term
 for this is an integer's
 [_radical_](https://en.wikipedia.org/wiki/Radical_of_an_integer):
 
