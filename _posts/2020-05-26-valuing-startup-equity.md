@@ -1,7 +1,6 @@
 ---
-title: "How to value startup equity"
+title: "Valuing startup equity"
 layout: post
-listed: false
 ...
 
 The standard answer is "value it at $0".
@@ -22,7 +21,7 @@ In general, you value equity based on how successful you think the company will 
 
 - I could be making $A working at some large tech company
 - Instead, a startup is offering me $B and X% equity
-- $B is probably less than $A, so you have an opportunity cost of $A - $B
+- You have an opportunity cost of $A - $B, which is probably positive
     - If it's not, go to [levels.fyi](https://www.levels.fyi/), convince yourself you could probably get a job at a big tech co if you put your mind to it, and use that number instead
 - Now, see what value the startup would have to be worth for your X% equity to cover that cost, decide how likely you think that is, and make a decision based on that.
 
@@ -68,7 +67,8 @@ One thing I skipped: usually, startups aren't giving you shares directly but are
 
 ## Dilution
 
-Unfortunately, another probabilistic factor you need to account for is [dilution](https://www.investopedia.com/terms/d/dilution.asp).
+[Dilution](https://www.investopedia.com/terms/d/dilution.asp) unfortunately
+complicates things.
 
 When a company says they're giving you X%, what they mean is that they're
 giving you an amount of shares that, *as of right now*, represents X% of the
@@ -84,6 +84,10 @@ How much you get diluted, then, has to do with:
 1. How much money the company needs/wants.
 2. How highly investors value the company.
 
-Which in turn has to do with how well the company is doing and how old it is.
+Which are both probably related to how well the company is doing and how old
+it is.
 
-Keeping with the "staying away from telling you how to value a company" thing, my rule of thumb is just to assume 
+My rule of thumb has been to just to assume some ~standard amount of dilution
+per round, and make a guess at number of rounds to exit. 20% per round is a
+figure I've heard. I once found a site that had some more concrete data on
+this... I'll be sure to link to it if I ever find it again.
