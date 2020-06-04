@@ -8,13 +8,10 @@ layout: page
 Software engineer @ [Level](https://level.com)  
 Formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
-<a href="mailto:alec@alecb.me"><i class="far fa-envelope"></i></a>
-<a href="https://twitter.com/AlecBenzer"><i class="fab fa-twitter"></i></a>
+<a href="mailto:alec@alecb.me"><i class="fas fa-envelope"></i></a>
 <a href="https://www.linkedin.com/in/alecbenzer"><i class="fab fa-linkedin"></i></a>
-<a href="https://news.ycombinator.com/user?id=alecbenzer"><i class="fab fa-hacker-news-square"></i></a>
-<a href="https://www.reddit.com/user/alecbenzer"><i class="fab fa-reddit"></i></a>
-<a href="/feed.xml"><i class="fas fa-rss"></i></a>
 <a href="https://instagram.com/martinkittynyc"><i class="fas fa-cat"></i></a>
+<a href="/feed.xml"><i class="fas fa-rss"></i></a>
 {: .home-icons}
 
 <div style="text-align: center">
