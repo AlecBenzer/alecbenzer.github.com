@@ -15,11 +15,11 @@ html {
 $text-width: 25em;
 
 body {
-  font-family: "Manrope", system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   font-weight: 300;
   max-width: $text-width;
   line-height: 1.6;
-  font-size: 160%;
+  font-size: 190%;
 }
 
 strong {
@@ -30,17 +30,18 @@ h1,
 h2,
 h3,
 h4 {
+  text-align: center;
   font-weight: 200;
 }
 
 // not sure why *1.7
 @media (max-width: $text-width * 1.7) {
   body {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 }
 
-$body-color: #373d3f;
+$body-color: #222525;
 
 body {
   margin: 40px auto;
@@ -75,10 +76,6 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-h1 {
-  text-align: center;
 }
 
 h2 {
