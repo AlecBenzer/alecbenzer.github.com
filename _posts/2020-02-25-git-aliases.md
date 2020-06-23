@@ -1,12 +1,9 @@
 ---
-title: Git aliases
+title: Things I use to use git
 layout: post
 ...
 
-Things I use to use git. A combination of actual git aliases and shell
-functions.
-
-#### `new`
+# `new`
 
 `new` creates a new branch based on current (i.e., up-to-date) `origin/master`:
 
@@ -18,7 +15,7 @@ function new() {
 }
 ```
 
-#### `master`
+# `master`
 
 `master` checks out current `origin/master` (as a detached head). (See also
 ["Don't checkout master locally"](/dont-checkout-master).)
@@ -31,7 +28,7 @@ function master() {
 ```
 
 
-#### `stow`/`unstow`
+# `stow`/`unstow`
 
 Like a branch-specific "stash". I think many people initially assume `git
 stash` will behave kind of like this, but the stash is shared across all
@@ -63,7 +60,7 @@ function unstow() {
 }
 ```
 
-#### `changes`
+# `changes`
 
 What changes have been made from `origin/master`?
 
@@ -71,7 +68,7 @@ What changes have been made from `origin/master`?
 git config --global alias.changes 'diff origin/master...'
 ```
 
-#### `update`
+# `update`
 
 Rebase your commit(s) onto master:
 
@@ -79,7 +76,7 @@ Rebase your commit(s) onto master:
 git config --global alias.update "pull origin master --rebase"
 ```
 
-#### `save`
+# `save`
 
 This is kind of similar to [`stow`](#stowunstow). If you don't currently have
 a change "in progress", it creates a new commit. Otherwise, it just ammends
@@ -97,7 +94,7 @@ function save() {
 
 _TODO: Make this work better with branch pipeling._
 
-#### `branch-cleanup`
+# `branch-cleanup`
 
 Deletes any branches that have already been merged onto master, where
 "merged" means either that the branch has no delta from master, or that a

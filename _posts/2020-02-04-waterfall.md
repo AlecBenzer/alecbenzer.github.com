@@ -13,7 +13,7 @@ _tl;dr_:
 * We didn't quite get this, and tried to split what's really a "design" step
   into two "design" and "implement" steps.
 
-## Building physical things is expensive
+---
 
 I don't know much about making hardware but that won't stop me from
 speculating.
@@ -32,8 +32,6 @@ Because of all this effort, before you start mass-producing a thing, you need
 to be really sure you're doing it right. Finding out part-way through the
 process of mass-producing that you got something wrong is really expensive.
 
-## Design well, then implement
-
 Faced with this, it makes sense to break your process up into two steps:
 
 1. Come up with very specific blueprints of what you're making.
@@ -48,7 +46,7 @@ make sure that the blueprint actually makes sense. If you're doing it well,
 it may involve a lot of speaking with the people who are going to actually
 use the blueprint to mass-produce things and iterating with them.
 
-## The magic of software is that there's no step #2
+But the magic of software is that there's no step #2.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The act of describing a program in unambiguous detail and the act of programming are one and the same.</p>&mdash; Kevlin Henney (@KevlinHenney) <a href="https://twitter.com/KevlinHenney/status/3361631527?ref_src=twsrc%5Etfw">August 17, 2009</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -72,8 +70,6 @@ execute the code, devops is definitely a thing, etc., but it's:
 * b) _Largely_ agnostic to the actual software being executed. Again, the whole
   _point_ of ***soft***ware is that a CPU can execute whatever code you give it
   (vs. having to print specific circuits to do specific things).
-
-## Shoehorning
 
 Nonetheless, we had this "waterfall-y" process that worked for hardware, and it
 had two steps: first design, then implement. So we tried to map both these

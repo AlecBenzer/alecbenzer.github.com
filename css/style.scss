@@ -8,45 +8,75 @@ $fa-font-path: "../fontawesome/webfonts";
 @import "./fontawesome/scss/brands.scss";
 @import "./fontawesome/scss/icons.scss";
 
-html {
-  background-color: rgb(252, 252, 252);
-}
+$body-color: rgb(35, 28, 51);
 
 $text-width: 25em;
 
+$bg-color: rgb(253, 253, 253);
+
+html,
 body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
   font-family: system-ui, sans-serif;
-  font-weight: 300;
+  line-height: 1.3;
+  font-size: 200%;
+  color: $body-color;
+  background-color: darken(adjust-color($bg-color, $blue: 1), 3%);
+}
+
+div#post {
+  min-height: 100%;
+  background-color: $bg-color;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 100px;
   max-width: $text-width;
-  line-height: 1.6;
-  font-size: 190%;
+
+  $shadow-length: 25px;
+  $shadow-blur: 1;
+  $shadow-spread: 0;
+  $shadow-color: #ddd;
+  box-shadow: $shadow-length 0px $shadow-blur * $shadow-length $shadow-spread *
+      $shadow-length $shadow-color,
+    -$shadow-length 0px $shadow-blur * $shadow-length $shadow-spread * $shadow-length
+      $shadow-color;
 }
 
 strong {
   font-weight: 500;
 }
 
+h1.title {
+  font-size: 200%;
+  font-weight: normal;
+  padding-top: 20px;
+}
+
 h1,
 h2,
 h3,
 h4 {
+  font-size: 180%;
   text-align: center;
-  font-weight: 200;
+  font-weight: 500;
 }
 
-// not sure why *1.7
-@media (max-width: $text-width * 1.7) {
+// not sure why *1.9
+@media (max-width: $text-width * 2.6) {
   body {
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
-}
 
-$body-color: #222525;
-
-body {
-  margin: 40px auto;
-  padding: 0 10px;
-  color: $body-color;
+  div#post {
+    padding: 0 15px;
+  }
 }
 
 hr {
@@ -105,6 +135,7 @@ pre {
   margin-left: 20px;
   padding-left: 25px;
   border-left: 2px solid #bbb;
+  white-space: pre-wrap;
 }
 
 blockquote {
@@ -113,15 +144,14 @@ blockquote {
 }
 
 a {
-  color: rgb(76, 76, 240);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+  color: adjust-color($color: $body-color, $alpha: -0.2);
+  text-decoration: underline;
 }
 
-.fa-ul a {
+.fa-ul a,
+div#post-list a {
   color: $body-color;
+  text-decoration: none;
 }
 
 .home-icons {
@@ -190,5 +220,4 @@ a {
 
 .MathJax {
   font-size: 108% !important;
-  color: lighten($body-color, 15%);
 }

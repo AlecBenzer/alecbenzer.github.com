@@ -9,7 +9,7 @@ listed: false
 
 Suppose we have a bunch of stuff that users have either thumbed up or thumbed down. How should we sort them?
 
-## Sort by (thumbs up) - (thumbs down)
+# Sort by (thumbs up) - (thumbs down)
 
 This tends to arbitrarily favor things that have more reviews.
 
@@ -33,7 +33,7 @@ population would have actually rated it favorably.
 In most contexts, we'd gladly give up 2.4% of our positive ratings to get the
 confidence of 1,024 people having rated the item.
 
-## Modeling the problem
+# Modeling the problem
 
 The first thing we'll want to do for developing our correct method is to define the problem in terms of a **random variable**.
 
@@ -95,7 +95,7 @@ The central limit theorem says firstly that \\(E(X_n) = E(X)\\). That is, on ave
 
 So the second thing that the central limit theorem tells us is that \\(X_n\\) is roughly [normally distributed](http://en.wikipedia.org/wiki/Normal_distribution) (with the distribution being closer to a true normal distribution the larger n is). It also tells us that Var(\\(X_n\\)), the **variance** of \\(X_n\\), is equal to \\(\frac{\operatorname{Var}(X)}{n}\\).
 
-## Wait, what's variance?
+# Wait, what's variance?
 
 So we haven't talked about variance yet. To try and be as simple as possible, forget about all of these random variables for a bit, and go back to something really simple, like a list of numbers:
 
@@ -152,7 +152,7 @@ $$
 $$
 
 
-## Confidence Intervals
+# Confidence Intervals
 
 So going back to the central limit theorem, we have that the random variable \\(X_n\\) is normally distributed with mean \\(E(X) = p\\) and variance \\(\operatorname{Var}(X)/n\\). Because of things we know about normal distributions, this can tell us a lot about how \\(\widehat{p}\\) (which is essentially an instance of the random variable \\(X_n\\)) relates to p.
 
@@ -218,7 +218,7 @@ hoping that \\(\widehat{\sigma} \approx \sigma_n\\). And so the lower bound of o
 
 This is sometimes called the lower bound of the "normal approximation interval".
 
-## Wilson score confidence interval
+# Wilson score confidence interval
 
 Our approximation of \\(\sigma_n \approx \widehat{\sigma}\\) is alright, but still not really good enough to use for sorting ratings. In particular, notice what happens at "extreme" values of \\(\widehat{p}\\) (ie, if \\(\widehat{p}\\) is 1 or 0). In these cases, \\(\widehat{p}(1-\widehat{p})\\) will be 0, causing the lower bound of our interval to be just plain old \\(\widehat{p}\\).
 

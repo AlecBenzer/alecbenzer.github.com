@@ -3,9 +3,12 @@ title: "Valuing startup equity"
 layout: post
 ...
 
-The standard answer is "value it at \\$0".
+The standard answer is that you should value startup equity at \\$0.
 
-This is dumb and obviously wrong. *No one* values their startup equity at \\$0. Here's how to check: ask someone if they'll give you their startup equity in exchange for \\$0. If they won't, they value their equity at more than \\$0.
+This is dumb and obviously wrong.
+*No one* values their startup equity at \\$0. Here's how to check: ask
+someone if they'll give you their startup equity in exchange for \\$0. If
+they won't, they value their equity at more than \\$0.
 
 Maybe ask them if they'll give it up for \\$1? They still won't, so they must value it at more than \\$1. \\$1,000? For most people, still no. \\$1,000,000? For a lot of people, yes.
 
@@ -13,7 +16,7 @@ I'm being cranky; I get that the ethos behind "value startup equity at \\$0" is 
 
 This is true, but "value your equity at \\$0" is a bad general way of phrasing this. When you're trying to see if you can afford to buy a house this year, yes, startup equity is worth \\$0. If you're trying to decide if you're being shafted by accepting 0.001% equity in a startup you're set on joining, startup equity is not worth \\$0.
 
-## Break-even valuations
+# Break-even valuations
 
 (The rest of this post is mostly about VC-backed startups.)
 
@@ -65,7 +68,7 @@ The break-even valuation is what people are calculating when they infer valuatio
 One thing I skipped: usually, startups aren't giving you shares directly but are giving you [options](https://www.investopedia.com/terms/s/stockoption.asp): the option to buy a share at some set price/share \\$X, the "strike price". You should in theory factor this into your math, but the opportunity costs are usually so much higher than the strike that it doesn't change things too much.
 {: .info}
 
-## Dilution
+# Dilution
 
 [Dilution](https://www.investopedia.com/terms/d/dilution.asp) unfortunately
 complicates things.

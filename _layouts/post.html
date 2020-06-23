@@ -1,14 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-{% include head.html %}
+  {% include head.html %}
 
-<body>
-  {% if page.title %}
-  <h1>{{ page.title }}</h1>
-  {% endif %}
-  {{ content }}
-  <br>
-  <p style="text-align: center"><em>- <a href="/">alec</a>, {{page.date | date: "%B %-d, %Y"}}</em></p>
-</body>
-
+  <body>
+    <div id="post">
+      {% if page.title %}
+      <h1 class="title">{{ page.title }}</h1>
+      {% endif %} {{ content }}
+      <br />
+      <p style="text-align: center;">
+        <em>- <a href="/">alec</a>, {{page.date | date: "%B %-d, %Y"}}</em>
+      </p>
+    </div>
+  </body>
 </html>
