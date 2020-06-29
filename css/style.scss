@@ -21,32 +21,31 @@ body {
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: "Helvetica Neue", system-ui, sans-serif;
   line-height: 1.3;
-  font-size: 200%;
+  font-size: 150%;
   color: $body-color;
   background-color: darken(adjust-color($bg-color, $blue: 1), 3%);
 }
 
-div#post {
+div#paper {
   min-height: 100%;
   background-color: $bg-color;
   position: absolute;
   top: 0px;
   right: 0;
-  left: 0;
-  margin: 0 auto;
-  padding: 0 100px;
-  max-width: $text-width;
+  left: 15vw;
+  padding: 0 75px;
 
   $shadow-length: 25px;
-  $shadow-blur: 1;
+  $shadow-blur: 2;
   $shadow-spread: 0;
-  $shadow-color: #ddd;
-  box-shadow: $shadow-length 0px $shadow-blur * $shadow-length $shadow-spread *
-      $shadow-length $shadow-color,
-    -$shadow-length 0px $shadow-blur * $shadow-length $shadow-spread * $shadow-length
-      $shadow-color;
+  box-shadow: -$shadow-length 0px $shadow-blur * $shadow-length $shadow-spread *
+    $shadow-length #ddd;
+}
+
+div#text {
+  max-width: $text-width;
 }
 
 strong {
@@ -55,7 +54,6 @@ strong {
 
 h1.title {
   font-size: 200%;
-  font-weight: normal;
   padding-top: 20px;
 }
 
@@ -64,18 +62,18 @@ h2,
 h3,
 h4 {
   font-size: 180%;
-  text-align: center;
-  font-weight: 500;
+  font-weight: normal;
 }
 
-// not sure why *1.9
+// not sure why *2.6
 @media (max-width: $text-width * 2.6) {
   body {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
-  div#post {
+  div#paper {
     padding: 0 15px;
+    left: 0;
   }
 }
 
@@ -135,7 +133,6 @@ pre {
   margin-left: 20px;
   padding-left: 25px;
   border-left: 2px solid #bbb;
-  white-space: pre-wrap;
 }
 
 blockquote {
