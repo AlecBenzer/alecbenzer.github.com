@@ -9,7 +9,7 @@ layout: page
     }
 </style>
 
-eng @ [Level](https://level.com)  
+writes software @ [Level](https://level.com)  
 formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
 <a href="mailto:hi@alecb.me"><i class="fas fa-envelope"></i></a>
@@ -22,8 +22,11 @@ formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
 
 <div id="post-list">
     <ul class="fa-ul" style="margin-left: 35px; display: inline-block; text-align: left">
-        <li><span class="fa-li"><i class="fas fa-pen-alt"></i></span><em>I like to write things sometimes:</em></li>
-        <ul class="fa-ul" style="display: inline-block; text-align: left; margin-left: 10px">
+        <li>
+            <span class="fa-li"><i class="fas fa-pen-alt"></i></span>
+            <em>I like to write words sometimes:</em>
+        </li>
+        <ul class="fa-ul" style="display: inline-block; text-align: left; margin-left: 32px">
             {% for post in site.posts %}
                 {% if post.listed %}
                     <li><a href="{{ post.url }}"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>{{ post.title }}</a></li>
