@@ -1,5 +1,5 @@
 ---
-title: Waterfall
+title: Waterfall, and software as a blueprint
 layout: post
 ...
 
@@ -52,7 +52,7 @@ But the magic of software is that there's no step #2.
 
 Writing software is _exactly_ producing an unambiguous description of how to
 do a thing. Source code _is_ a blueprint: it's just a blueprint implemented
-not by factories and people on assesmbly lines but by CPUs.
+not by factories and people on assembly lines but by CPUs.
 
 Any kind of English-language/block-diagram based specification of a software
 system that tries to be unambiguous but can't actually be executed by a CPU is:
@@ -71,12 +71,14 @@ execute the code, devops is definitely a thing, etc., but it's:
   _point_ of ***soft***ware is that a CPU can execute whatever code you give it
   (vs. having to print specific circuits to do specific things).
 
+---
+
 Nonetheless, we had this "waterfall-y" process that worked for hardware, and it
 had two steps: first design, then implement. So we tried to map both these
 steps to software development, despite the fact that it's really only the
 "design" part.
 
-I think this is the real, core failure of waterfall. It's not neccarily a bad
+I think this is the real, core failure of waterfall. It's not necessarily a bad
 system in the abstract: it's applied to software _incorrectly_.
 
 Going in to step #2, we only have a vague plan of what to do. It hasn't been

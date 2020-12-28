@@ -55,7 +55,7 @@ Similarly, if they kept the equity at .01% but raised the salary to:
 At \\$180,000, you've already broke even, because at that point you have "no risk". Of course that's not quite true, a startup is always going to carry more risk than a stable company (i.e., that you'll lose your job suddenly).
 {: .info}
 
-This model isn't perfect, but I like it, mostly because it boils down to a
+This model isn't perfect, but I like it because it boils down to a
 single number (the break-even valuation) before having to introduce any
 probabilistic reasoning. It doesn't tell you anything about how to decide if
 a company is actually going to be worth \\$X, but at least quantifies the

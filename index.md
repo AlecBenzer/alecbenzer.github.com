@@ -9,14 +9,13 @@ layout: page
     }
 </style>
 
-writes software @ [Level](https://level.com)  
-formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
+writes software @ [level](https://level.com)  
+formerly [imagen](https://imagen.ai), [google](https://google.com/about)
 
 <a href="mailto:hi@alecb.me"><i class="fas fa-envelope"></i></a>
-<a href="https://twitter.com/alecbzr"><i class="fab fa-twitter"></i></a>
-<a href="https://www.linkedin.com/in/alecbenzer"><i class="fab fa-linkedin"></i></a>
-<a href="https://news.ycombinator.com/user?id=alecbenzer"><i class="fab fa-hacker-news"></i></a>
-<a href="https://instagram.com/martinkittynyc"><i class="fas fa-cat"></i></a>
+<a href="https://linkedin.com/in/alecbz"><i class="fab fa-linkedin"></i></a>
+<a href="https://twitter.com/alecbzr"><i class="fab fa-twitter-square"></i></a>
+<a href="https://github.com/alecbz"><i class="fab fa-github"></i></a>
 <a href="/feed.xml"><i class="fas fa-rss"></i></a>
 {: .home-icons}
 
@@ -24,14 +23,14 @@ formerly [Imagen](https://imagen.ai), [Google](https://google.com/about)
     <ul class="fa-ul" style="margin-left: 35px; display: inline-block; text-align: left">
         <li>
             <span class="fa-li"><i class="fas fa-pen-alt"></i></span>
-            <em>I like to write words sometimes:</em>
+            <em>also writes words:</em>
+            <ul class="fa-ul" style="display: inline-block; text-align: left; margin-left: 32px">
+                {% for post in site.posts %}
+                    {% if post.listed %}
+                        <li><a href="{{ post.url }}"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>{{ post.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         </li>
-        <ul class="fa-ul" style="display: inline-block; text-align: left; margin-left: 32px">
-            {% for post in site.posts %}
-                {% if post.listed %}
-                    <li><a href="{{ post.url }}"><span class="fa-li"><i class="fas fa-angle-double-right"></i></span>{{ post.title }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
     </ul>
 </div>
