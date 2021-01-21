@@ -144,14 +144,23 @@ blockquote {
   padding-left: 25px;
 }
 
+$link-color: rgb(67,121,255);
+
 a {
-  color: adjust-color($color: $body-color, $alpha: -0.2);
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: adjust-color($link-color, $alpha: -0.5);
+  }
 }
 
 .fa-ul a,
 div#post-list a {
   color: $body-color;
+  &:hover {
+    color: adjust-color($body-color, $alpha: -0.5);
+  }
   text-decoration: none;
 }
 
@@ -160,7 +169,7 @@ div#post-list a {
   a {
     color: $body-color;
     &:hover {
-      color: lighten($color: $body-color, $amount: 40%);
+      color: adjust-color($color: $body-color, $alpha: -0.5);
     }
   }
   i.fas,
