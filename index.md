@@ -9,8 +9,8 @@ layout: page
     }
 </style>
 
-writes software @ [level](https://level.com)  
-formerly [imagen](https://imagen.ai), [google](https://google.com/about)
+writes software @ [stripe](https://stripe.com/about)  
+formerly [some](https://level.com) [startups](https://imagen.ai), [google](https://google.com/about)
 
 <a href="mailto:hi@alecb.me"><i class="fas fa-envelope"></i></a>
 <a href="https://linkedin.com/in/alecbz"><i class="fab fa-linkedin"></i></a>
