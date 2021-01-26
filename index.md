@@ -9,7 +9,7 @@ layout: page
     }
 </style>
 
-writes software @ [stripe](https://stripe.com/about)  
+writes software @ [stripee](https://stripe.com/about)  
 formerly [some](https://level.com) [startups](https://imagen.ai), [google](https://google.com/about)
 
 <a href="mailto:hi@alecb.me"><i class="fas fa-envelope"></i></a>
