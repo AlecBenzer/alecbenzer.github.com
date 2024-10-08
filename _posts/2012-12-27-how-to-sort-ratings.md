@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to sort ratings
-listed: false
+listed: true
 ...
 
 *(Inspired by ["How Not to Sort By Average Rating"](http://www.evanmiller.org/how-not-to-sort-by-average-rating.html))*
