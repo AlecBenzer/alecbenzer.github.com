@@ -19,6 +19,7 @@ formerly [some](https://level.com) [startups](https://imagen.ai), [google](https
 <a href="/feed.xml"><i class="fas fa-rss"></i></a>
 {: .home-icons}
 
+<!--
 <div id="post-list">
     <ul class="fa-ul" style="margin-left: 35px; display: inline-block; text-align: left">
         <li>
@@ -34,3 +35,4 @@ formerly [some](https://level.com) [startups](https://imagen.ai), [google](https
         </li>
     </ul>
 </div>
+-->
