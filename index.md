@@ -6,6 +6,7 @@ layout: page
 <style>
     h1.title {
         margin-bottom: 0px;
+        text-align: center;
     }
 </style>
 
@@ -14,9 +15,9 @@ formerly [some](https://level.com) [startups](https://imagen.ai), [google](https
 
 <a href="mailto:hi@alecb.me"><i class="fas fa-envelope"></i></a>
 <a href="https://linkedin.com/in/alecbz"><i class="fab fa-linkedin"></i></a>
-<a href="https://twitter.com/alecbzr"><i class="fab fa-twitter-square"></i></a>
-<a href="https://github.com/alecbz"><i class="fab fa-github"></i></a>
-<a href="/feed.xml"><i class="fas fa-rss"></i></a>
+<!--<a href="https://twitter.com/alecbzr"><i class="fab fa-twitter-square"></i></a>-->
+<!--<a href="https://github.com/alecbz"><i class="fab fa-github"></i></a>-->
+<!--<a href="/feed.xml"><i class="fas fa-rss"></i></a>-->
 {: .home-icons}
 
 <!--
